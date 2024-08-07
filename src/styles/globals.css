@@ -67,3 +67,26 @@
     @apply bg-background text-foreground;
   }
 }
+
+.main-article {
+  text-align: center;
+  margin: 20px;
+}
+
+.main-article .item {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.main-article .item h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+}
+
+.main-article .item p {
+  margin: 10px 0 0;
+  font-size: 1em;
+}
