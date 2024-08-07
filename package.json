@@ -43,6 +43,7 @@
     "react-owl-carousel": "^2.3.3",
     "server-only": "^0.0.1",
     "superjson": "^2.2.1",
+    "swiper": "^11.1.9",
     "tailwind": "^4.0.0",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
