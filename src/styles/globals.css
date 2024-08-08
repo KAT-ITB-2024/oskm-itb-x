@@ -68,16 +68,37 @@
   }
 }
 
+/* Existing Styles */
+/* Ensure the parent container of the carousel takes up the full width and height */
 .main-article {
-  text-align: center;
-  margin: 20px;
+  width: 100%;
+  height: 720px; /* Ensure height is 720px */
+  margin: 0;
+  padding: 0;
+  position: relative; /* Allows for absolute positioning of child elements */
 }
 
+/* Style for the Swiper container */
+.swiper-container {
+  width: 100%;
+  height: 100%; /* Ensures the Swiper takes up the full height of its parent */
+}
+
+/* Style for each Swiper slide item */
 .main-article .item {
-  background: #fff;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  background: #183f4e;
+  position: absolute; /* Ensure it is positioned absolutely within the Swiper container */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Cover full width of the container */
+  height: 100%; /* Cover full height of the container */
+  background-size: cover; /* Cover the entire area of the item */
+  background-position: center; /* Center the background image */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure content doesn't overflow the bounds */
 }
 
 .main-article .item h3 {
@@ -87,6 +108,111 @@
 }
 
 .main-article .item p {
-  margin: 10px 0 0;
+  margin: 4px 0 0;
   font-size: 1em;
+}
+
+/* Swiper Styles */
+.swiper-container {
+  width: 100%;
+  height: 100%; /* Ensures the Swiper takes up the full height of its parent */
+}
+
+/* Swiper navigation button styles */
+.swiper-button-next, .swiper-button-prev {
+  color: white; /* Change the color of the navigation buttons to white */
+  opacity: 0%;
+}
+
+/* Styles for the pagination container */
+.swiper-pagination {
+  text-align: center; /* Center pagination bullets */
+  margin-top: -40px; /* Adjust this value to move the pagination up or down */
+}
+
+/* Center the pagination container and adjust top position */
+.swiper-pagination {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center the bullets horizontally */
+  align-items: center; /* Center the bullets vertically */
+  position: absolute; /* Allow positioning within the carousel */
+  width: 100%; /* Ensure it spans the width of the carousel */
+  transform: translateY(-166px);
+}
+
+/* Styles for pagination bullets */
+.swiper-pagination-bullet {
+  background-color: #ffffff; /* White background for all bullets */
+  opacity: 0.5; /* Semi-transparent for non-active bullets */
+  transition: opacity 0.3s, background-color 0.3s, box-shadow 0.3s; /* Smooth transition for opacity, color, and shadow changes */
+  border-radius: 50%; /* Ensure bullets are circular */
+  width: 8px; /* Adjust size as needed */
+  height: 8px; /* Adjust size as needed */
+  margin: 0 4px; /* Add some space between bullets */
+}
+
+/* Styles for the active pagination bullet */
+.swiper-pagination-bullet-active {
+  opacity: 1; /* Fully opaque for the active bullet */
+  background-color: #ffffff; /* White background for the active bullet */
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.7); /* Glowing effect for the active bullet */
+}
+
+/* Optional: Hover effect for pagination bullets */
+.swiper-pagination-bullet:hover {
+  opacity: 0.7; /* Slightly less transparent on hover */
+}
+
+
+/* Optional: Customize the size of the navigation buttons */
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 50px; /* Increased the size */
+}
+
+/* Optional Gradient Overlays for the carousel item */
+.item .overlay-left {
+  position: absolute;
+  width: 299px;
+  height: 100%;
+  left: 0;
+  background: linear-gradient(to right, black, transparent);
+  opacity: 0.4;
+}
+
+.item .overlay-right {
+  position: absolute;
+  width: 299px;
+  height: 100%;
+  right: 0;
+  background: linear-gradient(to left, black, transparent);
+  opacity: 0.4;
+}
+
+/* Style for the text content inside each slide */
+.text-content {
+  background-color: rgba(0, 0, 0, 0.40);
+  padding: 5px;
+  border-radius: 10px;
+  text-align: left;
+  max-width: 470px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  right: 120px;
+  width: 470px;
+  position: relative;
+  top: -200px;
+}
+
+/* Style for the Read More button */
+.carousel-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2D3648;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  width: 120px;
+  text-align: center;
+  line-height: normal;
 }
