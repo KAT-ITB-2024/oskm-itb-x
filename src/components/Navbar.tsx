@@ -7,7 +7,7 @@ import { Menu } from "lucide-react";
 
 function Navbar() {
   return (
-    <header className="p-4">
+    <header className="bg-blue-400 p-4">
       <nav className="relative h-16 rounded-full lg:h-[76px]">
         <Image
           src="/components/navbar.png"

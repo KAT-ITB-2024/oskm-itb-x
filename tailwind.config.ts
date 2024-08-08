@@ -67,14 +67,45 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        infinite_scroll_left: {
+          "100%": { transform: "translateX(-50%)" },
+        },
+        infinite_scroll_right: {
+          "100%": { transform: "translateX(50%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        infinite_scroll_left: "infinite_scroll_left 10s linear infinite",
+        infinite_scroll_right: "infinite_scroll_right 10s linear infinite",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({
+      addUtilities,
+    }: {
+      addUtilities: (utilities: any, variants?: any) => void;
+    }) {
+      addUtilities(
+        {
+          ".scroller": {
+            overflow: "hidden",
+          },
+          ".scroll_inner": {
+            width: "max-content",
+            "flex-wrap": "nowrap",
+            "&:hover": {
+              "animation-play-state": "paused",
+            },
+          },
+        },
+        ["responsive", "hover"],
+      );
+    },
+  ],
 } satisfies Config;
 
 export default config;

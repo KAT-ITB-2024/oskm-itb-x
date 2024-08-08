@@ -1,0 +1,86 @@
+"use client";
+
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+
+interface CountdownProps {
+  targetDate: string;
+}
+
+const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
+  const calculateTimeLeft = () => {
+    const difference = +new Date(targetDate) - +new Date();
+    let timeLeft = {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+    };
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [targetDate]);
+
+  return (
+    <div className="flex flex-col items-center">
+      <div className="flex space-x-2">
+        <div className="flex flex-col items-center">
+          <TimeBubble value={timeLeft.days} />
+          <p>Days</p>
+        </div>
+        <div className="flex flex-col items-center">
+          <TimeBubble value={timeLeft.hours} />
+          <p>Hours</p>
+        </div>
+        <div className="flex flex-col items-center">
+          <TimeBubble value={timeLeft.minutes} />
+          <p>Minutes</p>
+        </div>
+        <div className="flex flex-col items-center">
+          <TimeBubble value={timeLeft.seconds} />
+          <p>Seconds</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+interface TimeBubbleProps {
+  value: number;
+}
+
+const TimeBubble: React.FC<TimeBubbleProps> = ({ value }) => {
+  return (
+    <div className="relative flex h-24 w-24 flex-col items-center justify-center">
+      <Image
+        src="/landing-page/Bubble.svg"
+        alt="Bubble"
+        layout="fill"
+        objectFit="contain"
+      />
+      <div className="absolute text-center">
+        <div className="text-2xl font-bold">{value}</div>
+      </div>
+    </div>
+  );
+};
+
+export default Countdown;
