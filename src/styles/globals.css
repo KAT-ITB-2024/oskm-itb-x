@@ -68,6 +68,7 @@
   }
 }
 
+/* ARTICLE-PAGE -- William Anthony 13223048 */
 /* Existing Styles */
 /* Ensure the parent container of the carousel takes up the full width and height */
 .main-article {
@@ -198,7 +199,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  right: 120px;
+  right: 140px;
   width: 470px;
   position: relative;
   top: -200px;
@@ -216,3 +217,110 @@
   text-align: center;
   line-height: normal;
 }
+
+.mini-card-carousel {
+  width: 100%;
+  padding: 20px;
+}
+
+/* Card Styling */
+.card {
+  width: 300px; /* Fixed width */
+  height: 400px; /* Fixed height */
+  padding: 20px 19px; /* Padding: top/bottom 20px, left/right 19px */
+  border-radius: 20px; /* Rounded corners for all corners */
+  position: relative; /* Ensure positioning for 'top' and 'left' */
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+  overflow: hidden; /* Hide overflow to keep the design neat */
+  text-align: center; /* Center-align text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.card:hover {
+  transform: scale(1.4); /* Enlarge the card to 140% */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Glowing effect on hover */
+}
+
+/* Card Image Styling */
+.card-image {
+  width: 100%; /* Full width of the card */
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Cover the container without distortion */
+  border-radius: 20px; /* Rounded corners for the image */
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2); /* Drop shadow for the image */
+}
+
+/* Card Content Styling */
+.card-content {
+  padding: 10px 0; /* Adjusted padding inside the card */
+}
+
+/* Title Styling */
+.card-title {
+  font-size: 20px; /* Updated size */
+  font-weight: 400;
+  line-height: 24px;
+  text-align: justify;
+  margin: 5px 0; /* Reduced spacing */
+}
+
+/* Author, Date, and Time Styling */
+.card-details {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  margin: 3px 0; /* Reduced spacing */
+}
+
+/* Description Styling */
+.card-description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: justify;
+  color: #666; /* Text color */
+  margin: 5px 0; /* Reduced spacing */
+}
+
+/* Read More Styling */
+.card-read-more {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: right;
+  color: #000; /* Text color */
+  text-decoration: none;
+  margin-top: 5px; /* Reduced spacing */
+}
+
+.card-read-more:hover {
+  text-decoration: underline; /* Optional: add underline on hover */
+}
+
+/* Meta and Stats Styling */
+.card-meta,
+.card-stats {
+  font-size: 12px;
+  color: #999; /* Text color */
+  margin: 3px 0; /* Reduced spacing */
+}
+
+.card-meta span,
+.card-stats span {
+  display: block;
+  margin: 2px 0; /* Reduced spacing */
+}
+
+/* Carousel Container Styling */
+.mini-card-carousel {
+  display: flex; /* Ensure carousel items are displayed in a row */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+  gap: 8px; /* Adjusted spacing between cards in the carousel */
+  padding: 20px; /* Padding around the carousel */
+  width: 1370px; /* Fixed width */
+  height: 440px; /* Fixed height */
+}
+
