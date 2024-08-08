@@ -40,8 +40,8 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
   }, [targetDate]);
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="flex space-x-2">
+    <div className="mb-8 flex flex-col items-center font-mogula text-[#99E0FF] md:text-xl">
+      <div className="flex gap-x-2">
         <div className="flex flex-col items-center">
           <TimeBubble value={timeLeft.days} />
           <p>Days</p>
@@ -69,15 +69,15 @@ interface TimeBubbleProps {
 
 const TimeBubble: React.FC<TimeBubbleProps> = ({ value }) => {
   return (
-    <div className="relative flex h-24 w-24 flex-col items-center justify-center">
+    <div className="relative flex h-20 w-20 flex-col items-center justify-center md:h-32 md:w-32 xl:h-36 xl:w-36">
       <Image
         src="/landing-page/Bubble.svg"
         alt="Bubble"
-        layout="fill"
-        objectFit="contain"
+        width={200}
+        height={200}
       />
       <div className="absolute text-center">
-        <div className="text-2xl font-bold">{value}</div>
+        <div className="text-4xl md:text-6xl">{value}</div>
       </div>
     </div>
   );

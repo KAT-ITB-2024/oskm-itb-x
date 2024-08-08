@@ -10,9 +10,9 @@ interface InfiniteCarouselProps {
 }
 
 const sizeClasses = {
-  large: "w-32 h-32",
-  medium: "w-24 h-24",
-  small: "w-16 h-16",
+  large: "w-32 h-16 md:w-60 md:h-32 xl:w-72 xl:h-36",
+  medium: "w-24 h-16 md:w-40 md:h-32 xl:w-44 xl:h-36",
+  small: "w-12 h-12 md:w-28 md:h-28 xl:w-32 xl:h-32",
 };
 
 const InfiniteCarousel = ({
@@ -49,13 +49,23 @@ const InfiniteCarousel = ({
   }, []);
 
   return (
-    <div ref={scrollerRef} className="w-[200px] scroller">
+    <div ref={scrollerRef} className="w-10/12 scroller">
       <div
-        className={`flex gap-4 py-4 scroll_inner ${direction === "left" ? "animate-infinite_scroll_left" : "animate-infinite_scroll_right"}`}
+        className={`flex gap-2 py-2 scroll_inner md:gap-4 md:py-4 ${
+          direction === "left"
+            ? "animate-infinite_scroll_left"
+            : "animate-infinite_scroll_right"
+        }`}
       >
         {logos.map((logo, index) => {
           return (
-            <div key={index} className={`bg-white p-1 ${sizeClasses[size]}`}>
+            <div
+              key={index}
+              className={`flex flex-col items-center justify-center 
+              rounded-lg border-[0.1px] bg-gradient-to-r 
+              from-blue-300 to-blue-500 p-2 shadow-[0px_4px_10px_rgba(255,255,255,0.5)] 
+              ${sizeClasses[size]}`}
+            >
               <Image
                 src={logo.src}
                 alt={`logo ${index + 1}`}

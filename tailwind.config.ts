@@ -68,10 +68,10 @@ const config = {
           to: { height: "0" },
         },
         infinite_scroll_left: {
-          "100%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0%)" },
         },
         infinite_scroll_right: {
-          "100%": { transform: "translateX(50%)" },
+          "100%": { transform: "translateX(0%)" },
         },
       },
       animation: {
@@ -79,6 +79,15 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         infinite_scroll_left: "infinite_scroll_left 10s linear infinite",
         infinite_scroll_right: "infinite_scroll_right 10s linear infinite",
+      },
+      fontFamily: {
+        rem: "var(--font-rem)",
+        mogula: "var(--font-mogula)",
+      },
+      textShadow: {
+        DEFAULT: "0 2px 4px #FF8CD9",
+        pink: "0 4px 10px #FF8CD9",
+        blue: "0 4px 10px #64B1F7",
       },
     },
   },
@@ -103,6 +112,16 @@ const config = {
           },
         },
         ["responsive", "hover"],
+      );
+    },
+    function ({ matchUtilities, theme }: { matchUtilities: any; theme: any }) {
+      matchUtilities(
+        {
+          "text-shadow": (value: any) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme("textShadow") },
       );
     },
   ],
