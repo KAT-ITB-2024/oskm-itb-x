@@ -6,7 +6,7 @@ import 'keen-slider/keen-slider.min.css';
 import articleData from 'src/app/article/list/article-datas'; // Collect Data, bakal dimanage ko Frendy.
 
 const MiniCardCarousel = () => {
-  const [sliderRef] = useKeenSlider({
+  const [sliderRef, slider] = useKeenSlider({
     loop: true,
     mode: "free",
     slides: {
@@ -27,28 +27,43 @@ const MiniCardCarousel = () => {
   });
 
   return (
-    <div className="mini-card-carousel keen-slider" ref={sliderRef}>
-      {articleData.map((card) => (
-        <div key={card.id} className="card keen-slider__slide">
-          <img src={card.image} alt={card.title} className="card-image" />
-          <div className="card-content">
-            <div className="card-meta">
-              <span className="card-stats">
-                {card.views} | {card.readTime}
-              </span>
+    <div className="mini-card-carousel-wrapper">
+      <button 
+        className="prev-button" 
+        onClick={() => slider.current?.prev()}
+      />
+      
+      <div className="mini-card-carousel keen-slider" ref={sliderRef}>
+        {articleData.map((card, index) => (
+          <div 
+            key={card.id} 
+            className={`card keen-slider__slide ${index === articleData.length - 1 ? 'last-card' : ''}`}
+          >
+            <img src={card.image} alt={card.title} className="card-image" />
+            <div className="card-content">
+              <div className="card-meta">
+                <span className="card-stats">
+                  {card.views} | {card.readTime}
+                </span>
+              </div>
+              <h2 className="card-title">{card.title}</h2>
+              <div className="card-details">
+                <span className="card-date">{card.date}</span> {card.time} by{' '}
+                <span className="card-author">{card.author}</span>
+              </div>
+              <p className="card-description">{card.description}</p>
+              <a href="#" className="card-read-more">
+                {" Read More>>> "}
+              </a>
             </div>
-            <h2 className="card-title">{card.title}</h2>
-            <div className="card-details">
-              <span className="card-date">{card.date}</span> {card.time} by{' '}
-              <span className="card-author">{card.author}</span>
-            </div>
-            <p className="card-description">{card.description}</p>
-            <a href="#" className="card-read-more">
-              {" Read More>>> "}
-            </a>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+      
+      <button 
+        className="next-button" 
+        onClick={() => slider.current?.next()}
+      />
     </div>
   );
 };

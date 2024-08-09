@@ -13,8 +13,9 @@ export default function Page() {
           <br></br>
         </div>
           <MiniSwiper/>
-          <div class="center-container">
-            <button class="article-pagetsx-button">{"More Articles > "}</button>
+        {/*  <CardSwiper/> */}
+          <div className="center-container">
+            <button className="article-pagetsx-button">{"More Articles > "}</button>
           </div>
       </div>
     </>

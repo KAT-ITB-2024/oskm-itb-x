@@ -250,9 +250,46 @@
   line-height: normal;
 }
 
+/* Carousel Container Styling */
 .mini-card-carousel {
+  display: flex; /* Ensure carousel items are displayed in a row */
+  overflow: hidden; 
+  padding: 20px; /* Padding around the carousel */
+  width: 1370px; /* Fixed width */
+  height: 440px; /* Fixed height */
+  position: relative; /* Relative position for absolute elements */
+}
+
+/* Button Styling */
+.mini-card-carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
   width: 100%;
-  padding: 20px;
+  margin: 0 auto;
+}
+
+.prev-button, .next-button {
+  width: 32px; /* Set width to 32px */
+  height: 32px; /* Set height to 32px */
+  background-size: contain; /* Ensure the background image fits */
+  background-repeat: no-repeat; /* Prevent repetition of background image */
+  border: none;
+  cursor: pointer;
+  background-color: transparent; /* Remove any default button background */
+}
+
+.prev-button {
+  background-image: url('/article-icons/navigate_previous.png'); /* Path to the previous button image */
+}
+
+.next-button {
+  background-image: url('/article-icons/navigate_next.png'); /* Path to the next button image */
+}
+
+.prev-button:hover, .next-button:hover {
+  opacity: 0.8; /* Slightly fade the button on hover */
 }
 
 /* Card Styling */
@@ -261,7 +298,6 @@
   height: 400px; /* Fixed height */
   padding: 20px 19px; /* Padding: top/bottom 20px, left/right 19px */
   border-radius: 20px; /* Rounded corners for all corners */
-  position: relative; /* Ensure positioning for 'top' and 'left' */
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
   overflow: hidden; /* Hide overflow to keep the design neat */
@@ -270,8 +306,13 @@
 }
 
 .card:hover {
-  transform: scale(1.4); /* Enlarge the card to 140% */
+  transform: scale(1.1); /* Enlarge the card to 110% */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Glowing effect on hover */
+}
+
+/* Extra Padding for Last Card */
+.last-card {
+  padding-right: 40px; /* Extra padding on the right side of the last card */
 }
 
 /* Card Image Styling */
@@ -346,13 +387,4 @@
   margin: 2px 0; /* Reduced spacing */
 }
 
-/* Carousel Container Styling */
-.mini-card-carousel {
-  display: flex; /* Ensure carousel items are displayed in a row */
-  overflow-x: auto; /* Enable horizontal scrolling if needed */
-  gap: 8px; /* Adjusted spacing between cards in the carousel */
-  padding: 20px; /* Padding around the carousel */
-  width: 1370px; /* Fixed width */
-  height: 440px; /* Fixed height */
-}
 
