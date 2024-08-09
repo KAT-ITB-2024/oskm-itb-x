@@ -63,7 +63,7 @@ const InfiniteCarousel = ({
               key={index}
               className={`flex flex-col items-center justify-center 
               rounded-lg border-[0.1px] bg-gradient-to-r 
-              from-blue-300 to-blue-500 p-2 shadow-[0px_4px_10px_rgba(255,255,255,0.5)] 
+              from-blue-300 to-blue-500 p-2 shadow-[0px_0px_10px_#FFFFFF] 
               ${sizeClasses[size]}`}
             >
               <Image
