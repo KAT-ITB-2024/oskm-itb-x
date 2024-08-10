@@ -77,7 +77,6 @@
   width: 203px; /* Fixed width */
   height: 46px; /* Fixed height */
   display: flex; /* Use flexbox for centering */
-  justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   justify-content: center; /* Center horizontally */
   padding: 8px 20px; /* Padding: top/bottom 8px, left/right 20px */

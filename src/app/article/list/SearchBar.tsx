@@ -142,7 +142,8 @@ const SearchBar = () => {
   };
 
   return (
-    <div>
+    // Search Bar Layout
+    <div style={{ justifyContent: 'center', marginTop: '20px', marginRight: '80px' }}>
       <div className="search-filters" style={{ position: 'relative', display: 'inline-block' }}>
         <input
           type="text"
