@@ -58,7 +58,7 @@ export default function LandingPage() {
       </div>
 
       <div className="relative z-10 mb-32">
-        <Countdown targetDate="2024-08-08T23:59:59" />
+        <Countdown targetDate="2024-08-20T09:00:00" />
         <div className="flex flex-row justify-center gap-x-4 font-rem">
           <Button variant={"pink"} className="relative z-10 p-4 md:text-xl">
             <IoMdDownload className="mr-2 h-4 w-4" />
@@ -196,7 +196,7 @@ export default function LandingPage() {
         <h1 className="mb-6 text-center font-mogula text-3xl text-white text-shadow-pink md:text-4xl xl:text-5xl">
           Our Tenants
         </h1>
-        <div className="relative flex w-9/12 flex-col items-center justify-center rounded-lg border-[0.1px] bg-gradient-to-r shadow-[0px_0px_20px_#FFFFFF] md:w-6/12 lg:py-10 xl:w-4/12">
+        <div className="relative flex w-9/12 flex-col items-center justify-center rounded-lg border-[0.1px] bg-gradient-to-r py-6 shadow-[0px_0px_20px_#FFFFFF] md:w-6/12 lg:py-10 xl:w-4/12">
           {/* Transparent Background Layer */}
           <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-300 to-blue-500 opacity-80"></div>
 

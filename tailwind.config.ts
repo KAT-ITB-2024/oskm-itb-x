@@ -68,10 +68,10 @@ const config = {
           to: { height: "0" },
         },
         infinite_scroll_left: {
-          "100%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
         infinite_scroll_right: {
-          "100%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(50%)" },
         },
       },
       animation: {
@@ -106,9 +106,6 @@ const config = {
           ".scroll_inner": {
             width: "max-content",
             "flex-wrap": "nowrap",
-            "&:hover": {
-              "animation-play-state": "paused",
-            },
           },
         },
         ["responsive", "hover"],
