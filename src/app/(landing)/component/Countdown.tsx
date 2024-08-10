@@ -42,10 +42,13 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
   return (
     <div className="mb-8 flex flex-col items-center font-mogula text-[#99E0FF] md:text-xl">
       <div className="flex gap-x-2">
-        <div className="flex flex-col items-center">
-          <TimeBubble value={timeLeft.days} />
-          <p>Days</p>
-        </div>
+        {/* Hanya tampilkan jika days > 0 */}
+        {timeLeft.days > 0 && (
+          <div className="flex flex-col items-center">
+            <TimeBubble value={timeLeft.days} />
+            <p>Days</p>
+          </div>
+        )}
         <div className="flex flex-col items-center">
           <TimeBubble value={timeLeft.hours} />
           <p>Hours</p>
