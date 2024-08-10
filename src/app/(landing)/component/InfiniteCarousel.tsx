@@ -61,18 +61,22 @@ const InfiniteCarousel = ({
           return (
             <div
               key={index}
-              className={`flex flex-col items-center justify-center 
-              rounded-lg border-[0.1px] bg-gradient-to-r 
-              from-blue-300 to-blue-500 p-2 shadow-[0px_0px_10px_#FFFFFF] 
-              ${sizeClasses[size]}`}
+              className={`relative flex items-center justify-center 
+  rounded-lg p-2 shadow-[0px_0px_16px_#FFFFFF] ${sizeClasses[size]}`}
             >
-              <Image
-                src={logo.src}
-                alt={`logo ${index + 1}`}
-                layout="responsive"
-                width={100}
-                height={100}
-              />
+              {/* Transparent Background Layer */}
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-300 to-blue-500 opacity-60"></div>
+
+              {/* Logo Image */}
+              <div className="relative z-10 flex flex-col items-center justify-center">
+                <Image
+                  src={logo.src}
+                  alt={`logo ${index + 1}`}
+                  layout="responsive"
+                  width={100}
+                  height={100}
+                />
+              </div>
             </div>
           );
         })}

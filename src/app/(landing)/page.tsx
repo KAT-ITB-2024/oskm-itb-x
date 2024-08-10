@@ -6,7 +6,7 @@ import Countdown from "./component/Countdown";
 import Image from "next/image";
 import { IoMdDownload } from "react-icons/io";
 import InfiniteCarousel from "./component/InfiniteCarousel";
-import TimelineCard from "./component/TimelineCard"; // Import the TimelineCard component
+import TimelineCard from "./component/TimelineCard";
 
 export default function LandingPage() {
   const [activeEvent, setActiveEvent] = useState<string | null>(null);
@@ -23,7 +23,7 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="h-[4200px] bg-blue-600">
+    <div className="bg-[url('/landing-page/bg-landing.png')] bg-cover bg-center pb-20">
       <div className="flex flex-col items-center">
         <Image
           src="/logo/logo-oskm.svg"
@@ -196,19 +196,25 @@ export default function LandingPage() {
         <h1 className="mb-6 text-center font-mogula text-3xl text-white text-shadow-pink md:text-4xl xl:text-5xl">
           Our Tenants
         </h1>
-        <div className="relative flex w-9/12 flex-col items-center justify-center rounded-lg border-[0.1px] bg-gradient-to-r from-blue-300 to-blue-500 p-6 shadow-[0px_0px_10px_#FFFFFF] md:w-6/12 lg:py-10 xl:w-4/12">
-          <h1 className="text-center font-mogula text-2xl text-[#0010A4] md:text-3xl lg:text-4xl xl:text-5xl">
-            Calling Out All Tenants
-          </h1>
-          <div className="my-4 font-rem text-white lg:my-8 xl:text-lg">
-            <p className="text-center">
-              For further information please contact:
-            </p>
-            <p className="text-center">+62-812-9237-2312</p>
+        <div className="relative flex w-9/12 flex-col items-center justify-center rounded-lg border-[0.1px] bg-gradient-to-r shadow-[0px_0px_20px_#FFFFFF] md:w-6/12 lg:py-10 xl:w-4/12">
+          {/* Transparent Background Layer */}
+          <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-300 to-blue-500 opacity-80"></div>
+
+          {/* Content */}
+          <div className="relative z-10 flex flex-col items-center">
+            <h1 className="text-center font-mogula text-2xl text-[#0010A4] md:text-3xl lg:text-4xl xl:text-5xl">
+              Calling Out All Tenants
+            </h1>
+            <div className="my-4 font-rem text-white lg:my-8 xl:text-lg">
+              <p className="text-center">
+                For further information please contact:
+              </p>
+              <p className="text-center">+62-812-9237-2312</p>
+            </div>
+            <Button variant="pink" className="px-6 font-rem xl:text-lg">
+              Register Now!
+            </Button>
           </div>
-          <Button variant="pink" className="px-6 font-rem xl:text-lg">
-            Register Now!
-          </Button>
 
           {/* Coral Images */}
           <Image
