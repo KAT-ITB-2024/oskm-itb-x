@@ -40,19 +40,37 @@ export default function LandingPage() {
           height={300}
         />
       </div>
-      <div className="mb-32">
+      <div className="relative bottom-[-160px]">
+        <Image
+          src="/landing-page/penyu.png"
+          alt="penyu"
+          width={500}
+          height={500}
+          className="absolute left-0 z-0 w-5/12 md:w-4/12 lg:w-3/12"
+        />
+        <Image
+          src="/landing-page/pindang.png"
+          alt="pindang"
+          width={500}
+          height={500}
+          className="absolute right-0 z-0 w-5/12 md:w-4/12 lg:w-3/12"
+        />
+      </div>
+
+      <div className="relative z-10 mb-32">
         <Countdown targetDate="2024-08-08T23:59:59" />
         <div className="flex flex-row justify-center gap-x-4 font-rem">
-          <Button variant={"pink"} className="p-4 md:text-xl">
+          <Button variant={"pink"} className="relative z-10 p-4 md:text-xl">
             <IoMdDownload className="mr-2 h-4 w-4" />
             Download Guidebook
           </Button>
-          <Button variant={"pink"} className="p-4 md:text-xl">
+          <Button variant={"pink"} className="relative z-10 p-4 md:text-xl">
             Explore Ocean Now!
           </Button>
         </div>
       </div>
-      <div className="mb-32">
+
+      <div className="relative z-10 mb-32">
         <h1 className="mb-6 text-center font-mogula text-3xl text-white text-shadow-pink md:text-4xl xl:text-5xl">
           Timeline ITB KAT 2024
         </h1>
@@ -104,7 +122,23 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-      <div className="mb-32">
+      <div className="relative -top-[120px] md:-top-[240px] xl:-top-[360px]">
+        <Image
+          src="/landing-page/ikan-oren.svg"
+          alt="penyu"
+          width={500}
+          height={500}
+          className="absolute left-0 z-0 w-5/12 md:w-4/12 lg:w-3/12"
+        />
+        <Image
+          src="/landing-page/penyu-2.svg"
+          alt="pindang"
+          width={500}
+          height={500}
+          className="absolute right-0 z-0 w-5/12 md:w-4/12 lg:w-3/12"
+        />
+      </div>
+      <div className="relative z-10 mb-32">
         <h1 className="mb-6 text-center font-mogula text-3xl text-white text-shadow-pink md:text-4xl xl:text-5xl">
           Our Sponsors
         </h1>
@@ -115,7 +149,23 @@ export default function LandingPage() {
           <InfiniteCarousel logos={logos} direction="right" size="small" />
         </div>
       </div>
-      <div className="mb-32">
+      <div className="relative -top-[100px] md:-top-[120px] xl:-top-[150px]">
+        <Image
+          src="/landing-page/ikan-pindang.svg"
+          alt="ikan-pindang"
+          width={500}
+          height={500}
+          className="absolute left-0 z-0 w-5/12 md:w-4/12 lg:w-3/12"
+        />
+        <Image
+          src="/landing-page/ubur-2.svg"
+          alt="ubur-ubur"
+          width={500}
+          height={500}
+          className="absolute -top-[20px] right-0 z-0 w-4/12 md:w-3/12 lg:-top-[40px] xl:-top-[60px] xl:w-2/12"
+        />
+      </div>
+      <div className="relative z-10 mb-32">
         <h1 className="mb-6 text-center font-mogula text-3xl text-white text-shadow-pink md:text-4xl xl:text-5xl">
           Our Media Partners
         </h1>
@@ -126,7 +176,23 @@ export default function LandingPage() {
           <InfiniteCarousel logos={logos} direction="right" size="small" />
         </div>
       </div>
-      <div className="relative flex flex-col items-center">
+      <div className="relative top-[-60px]">
+        <Image
+          src="/landing-page/ikan-naga.svg"
+          alt="ikan-naga"
+          width={500}
+          height={500}
+          className="absolute left-0 z-10 w-5/12 md:w-4/12 xl:w-3/12"
+        />
+        <Image
+          src="/landing-page/ubur-pink.svg"
+          alt="ubur-pink"
+          width={500}
+          height={500}
+          className="absolute right-0 z-10 w-5/12 md:w-4/12 xl:w-3/12"
+        />
+      </div>
+      <div className="relative z-0 flex flex-col items-center">
         <h1 className="mb-6 text-center font-mogula text-3xl text-white text-shadow-pink md:text-4xl xl:text-5xl">
           Our Tenants
         </h1>
@@ -158,22 +224,6 @@ export default function LandingPage() {
             width={500}
             height={500}
             className="absolute bottom-[-20px] right-[-50px] w-4/12 md:w-3/12"
-          />
-
-          {/* Sea Creature Images */}
-          <Image
-            src="/landing-page/sea-creature-left.svg"
-            alt="tenant"
-            width={500}
-            height={500}
-            className="absolute left-[-50px] top-[-50px] w-4/12 md:w-3/12"
-          />
-          <Image
-            src="/landing-page/sea-creature-right.svg"
-            alt="tenant"
-            width={500}
-            height={500}
-            className="absolute right-[-50px] top-[-50px] w-4/12 md:w-3/12"
           />
         </div>
       </div>
