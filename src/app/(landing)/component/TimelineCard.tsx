@@ -92,7 +92,8 @@ const TimelineCard: React.FC<TimelineCardProps> = ({
                 {/* Large circle for date and title */}
                 <div className="flex h-[60px] items-center md:h-[72px]">
                   <div className="relative flex h-16 w-16 flex-col items-center justify-center">
-                    {index === 0 ? (
+                    {/* Place the jellyfish icon according to the activity */}
+                    {index === 0 && event === "OSKM" ? (
                       <Image
                         src="/landing-page/timeline-detail/ubur.svg"
                         alt="ubur"

@@ -9,11 +9,9 @@ import InfiniteCarousel from "./component/InfiniteCarousel";
 import TimelineCard from "./component/TimelineCard"; // Import the TimelineCard component
 
 export default function LandingPage() {
-  const [activeTimeline, setActiveTimeline] = useState<string | null>(null);
   const [activeEvent, setActiveEvent] = useState<string | null>(null);
 
   const handleTimelineClick = (timeline: string, event: string) => {
-    setActiveTimeline(timeline === activeTimeline ? null : timeline);
     setActiveEvent(event === activeEvent ? null : event);
   };
 
@@ -181,9 +179,64 @@ export default function LandingPage() {
       </div>
 
       {/* Conditional rendering for the TimelineCard */}
-      {activeTimeline && activeEvent && (
+      {activeEvent === "Diklat Terpusat" && (
         <TimelineCard
-          event={activeEvent}
+          event="Diklat Terpusat"
+          days={[
+            {
+              date: "6 Juli 2024",
+              dayTitle: "Day 1 - Pengenalan Materi",
+              activities: [
+                { time: "08.00", description: "Sesi Pembukaan" },
+                { time: "10.00", description: "Pengenalan Dosen" },
+                { time: "13.00", description: "Praktikum" },
+              ],
+            },
+            {
+              date: "7 Juli 2024",
+              dayTitle: "Day 2 - Pendalaman Materi",
+              activities: [
+                { time: "08.00", description: "Materi A" },
+                { time: "10.00", description: "Materi B" },
+              ],
+            },
+            {
+              date: "13 Juli 2024",
+              dayTitle: "Day 3 - Penutupan",
+              activities: [
+                { time: "08.00", description: "Review & Diskusi" },
+                { time: "10.00", description: "Penutupan & Foto Bersama" },
+              ],
+            },
+          ]}
+          onClose={() => setActiveEvent(null)}
+        />
+      )}
+
+      {activeEvent === "ITB Showcase" && (
+        <TimelineCard
+          event="ITB Showcase"
+          days={[
+            {
+              date: "20 Agustus 2024",
+              dayTitle: "Showcase Day",
+              activities: [
+                { time: "09.00", description: "Pembukaan Showcase" },
+                { time: "11.00", description: "Presentasi Tim A" },
+                { time: "14.00", description: "Presentasi Tim B" },
+                {
+                  time: "16.00",
+                  description: "Penutupan & Pengumuman Pemenang",
+                },
+              ],
+            },
+          ]}
+          onClose={() => setActiveEvent(null)}
+        />
+      )}
+      {activeEvent === "OSKM" && (
+        <TimelineCard
+          event="OSKM"
           days={[
             {
               date: "7 Agustus 2024",
@@ -191,7 +244,7 @@ export default function LandingPage() {
               activities: [
                 { time: "07.30", description: "Opening Ceremony" },
                 { time: "10.00", description: "Aktivitas B" },
-                { time: "hh.mm", description: "Aktivitas C" },
+                { time: "13.00", description: "Aktivitas C" },
               ],
             },
             {
@@ -211,7 +264,7 @@ export default function LandingPage() {
               ],
             },
           ]}
-          onClose={() => setActiveTimeline(null)}
+          onClose={() => setActiveEvent(null)}
         />
       )}
     </div>
