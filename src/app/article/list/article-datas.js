@@ -1,4 +1,4 @@
-// article-datas.js
+// src/app/article/list/article-datas.js
 
 const articleData = [
   {
@@ -11,6 +11,7 @@ const articleData = [
     time: '10:00 AM',
     readTime: '2 min',
     views: 1653,
+    selected: true, // This article is selected
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ const articleData = [
     time: '11:00 AM',
     readTime: '3 min',
     views: 1200,
+    selected: false,
   },
   {
     id: 3,
@@ -33,6 +35,7 @@ const articleData = [
     time: '2:00 PM',
     readTime: '5 min',
     views: 980,
+    selected: false,
   },
   {
     id: 4,
@@ -44,6 +47,7 @@ const articleData = [
     time: '3:00 PM',
     readTime: '4 min',
     views: 1550,
+    selected: false,
   },
   {
     id: 5,
@@ -55,6 +59,7 @@ const articleData = [
     time: '4:00 PM',
     readTime: '6 min',
     views: 1100,
+    selected: true, // This article is selected
   },
   {
     id: 6,
@@ -66,6 +71,7 @@ const articleData = [
     time: '5:00 PM',
     readTime: '7 min',
     views: 1300,
+    selected: false,
   },
 ];
 
