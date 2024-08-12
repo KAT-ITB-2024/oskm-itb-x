@@ -174,7 +174,6 @@
 
 /* Styles for pagination bullets */
 .swiper-pagination-bullet {
-  background-color: #ffffff; /* White background for all bullets */
   opacity: 0.5; /* Semi-transparent for non-active bullets */
   transition: opacity 0.3s, background-color 0.3s, box-shadow 0.3s; /* Smooth transition for opacity, color, and shadow changes */
   border-radius: 50%; /* Ensure bullets are circular */

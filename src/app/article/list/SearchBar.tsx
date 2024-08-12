@@ -1,9 +1,11 @@
 // src/app/article/list/SearchBar.tsx
 "use client";
 
-import { useState } from 'react';
-import articleData from './article-datas'; // Import the article data
+import { useState, useEffect } from 'react';
+import articleData from './article-datas';
 import React from 'react';
+import Card from '../components/Card';
+import Image from 'next/image';
 
 interface Article {
   id: number;
@@ -15,13 +17,37 @@ interface Article {
   readTime: string;
   description: string;
   image: string;
-  selected?: boolean; // Assuming a 'selected' property for 'Rekomendasi' filter
+  selected?: boolean;
 }
 
 const SearchBar = () => {
   const [filteredArticles, setFilteredArticles] = useState<Article[]>(articleData);
-  const [found, setFound] = useState<boolean>(true); // To track if articles are found
-  const [showDropdown, setShowDropdown] = useState<boolean>(false); // Toggle for dropdown
+  const [found, setFound] = useState<boolean>(true);
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [filter, setFilter] = useState<string>('Terbaru');
+
+  useEffect(() => {
+    const handleResize = () => {
+      const cardContainer = document.querySelector('.mini-card-container');
+      const card = document.querySelector('.card');
+
+      if (cardContainer && card) {
+        const cardWidth = card.clientWidth;
+        const containerWidth = cardContainer.clientWidth;
+        const cardsPerRow = Math.floor(containerWidth / cardWidth);
+        if (cardsPerRow < 1) {
+          cardContainer.style.gridTemplateColumns = `repeat(1, 1fr)`;
+        } else {
+          cardContainer.style.gridTemplateColumns = `repeat(${cardsPerRow}, 1fr)`;
+        }
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleFilter = (filterType: string) => {
     let sortedArticles: Article[] = [];
@@ -44,96 +70,67 @@ const SearchBar = () => {
     }
 
     setFilteredArticles(sortedArticles);
-    setFound(sortedArticles.length > 0); // Update found state based on filter result
-    setShowDropdown(false); // Close the dropdown after selection
+    setFound(sortedArticles.length > 0);
   };
 
   const renderArticles = () => {
-    const maxItemsPerRow = 4;
     const maxRows = 4;
+    const maxItemsPerRow = Math.min(4, window.innerWidth <= 480 ? 1 : window.innerWidth <= 768 ? 2 : window.innerWidth <= 1024 ? 3 : 4);
     const totalItems = maxItemsPerRow * maxRows;
 
     return (
       <>
         <div
-          className="mini-card-carousel"
+          className="mini-card-container"
           style={{
+            overflow: 'hidden',
+            padding: '20px', // Adjusted padding to fit cards better
+            position: 'relative',
             display: 'grid',
-            gridTemplateColumns: 'repeat(4, 1fr)',
             gap: '20px',
             marginTop: '20px',
+            gridTemplateColumns: `repeat(${maxItemsPerRow}, minmax(0, 1fr))`, // Flexible grid layout
           }}
         >
-          {filteredArticles.slice(0, totalItems).map((card, index) => (
-            <div
+          {filteredArticles.slice(0, totalItems).map((card) => (
+            <Card
               key={card.id}
-              className="card"
-              style={{
-                border: '1px solid #ddd',
-                borderRadius: '8px',
-                overflow: 'hidden',
-              }}
-            >
-              <img src={card.image} alt={card.title} className="card-image" style={{ width: '100%', height: 'auto' }} />
-              <div className="card-content" style={{ padding: '16px' }}>
-                <div className="card-meta">
-                  <span className="card-stats">
-                    {card.views} | {card.readTime}
-                  </span>
-                </div>
-                <h2 className="card-title">{card.title}</h2>
-                <div className="card-details">
-                  <span className="card-date">{card.date}</span> {card.time} by{' '}
-                  <span className="card-author">{card.author}</span>
-                </div>
-                <p className="card-description">{card.description}</p>
-                <a href="#" className="card-read-more">
-                  {" Read More>>> "}
-                </a>
-              </div>
-            </div>
+              id={card.id}
+              title={card.title}
+              date={card.date}
+              time={card.time}
+              author={card.author}
+              views={card.views}
+              readTime={card.readTime}
+              description={card.description}
+              image={card.image}
+            />
           ))}
         </div>
 
-        {/* Handle Remaining Articles */}
         {filteredArticles.length > totalItems && (
           <div
             className="extra-cards"
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(4, 1fr)',
+              gridTemplateColumns: `repeat(${maxItemsPerRow}, minmax(0, 1fr))`,
               gap: '20px',
               marginTop: '20px',
             }}
           >
-            {filteredArticles.slice(totalItems).map((card, index) => (
-              <div
+            {filteredArticles.slice(totalItems).map((card) => (
+              <Card
                 key={card.id}
-                className="card"
-                style={{
-                  border: '1px solid #ddd',
-                  borderRadius: '8px',
-                  overflow: 'hidden',
-                }}
-              >
-                <img src={card.image} alt={card.title} className="card-image" style={{ width: '100%', height: 'auto' }} />
-                <div className="card-content" style={{ padding: '16px' }}>
-                  <div className="card-meta">
-                    <span className="card-stats">
-                      {card.views} | {card.readTime}
-                    </span>
-                  </div>
-                  <h2 className="card-title">{card.title}</h2>
-                  <div className="card-details">
-                    <span className="card-date">{card.date}</span> {card.time} by{' '}
-                    <span className="card-author">{card.author}</span>
-                  </div>
-                  <p className="card-description">{card.description}</p>
-                  <a href="#" className="card-read-more">
-                    {" Read More>>> "}
-                  </a>
-                </div>
-              </div>
+                id={card.id}
+                title={card.title}
+                date={card.date}
+                time={card.time}
+                author={card.author}
+                views={card.views}
+                readTime={card.readTime}
+                description={card.description}
+                image={card.image}
+              />
             ))}
           </div>
         )}
@@ -142,69 +139,98 @@ const SearchBar = () => {
   };
 
   return (
-    // Search Bar Layout
-    <div style={{ justifyContent: 'center', marginTop: '20px', marginRight: '80px' }}>
-      <div className="search-filters" style={{ position: 'relative', display: 'inline-block' }}>
-        <input
-          type="text"
-          placeholder="Cari Artikel..."
-          style={{ padding: '8px', marginRight: '10px', width: '300px' }}
-        />
-        <div style={{ position: 'relative', display: 'inline-block' }}>
-          <button
-            onClick={() => setShowDropdown(!showDropdown)}
+    <div style={{ justifyContent: 'center', padding: '10px' }}>
+      <div
+        className="search-container"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '16px',
+        }}
+      >
+        <div
+          className="search-input-container"
+          style={{
+            width: '100%',
+            height: '48px',
+            padding: '12px 24px',
+            gap: '16px',
+            borderRadius: '8px 0px 0px 0px',
+            position: 'relative',
+            flex: 1,
+          }}
+        >
+          <input
+            type="text"
+            placeholder="Cari artikel berdasarkan judul atau penulis disini..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
             style={{
-              padding: '8px 12px',
-              cursor: 'pointer',
-              backgroundColor: '#007bff',
-              color: 'white',
+              width: '100%',
+              height: '100%',
               border: 'none',
-              borderRadius: '4px',
+              outline: 'none',
+              padding: '12px 24px',
+              borderRadius: '8px',
+            }}
+          />
+        </div>
+
+        <div
+          className="sort-select-container"
+          style={{
+            paddingLeft: '8px',
+            height: '60px',
+            display: 'flex',
+            alignItems: 'center',
+            position: 'relative',
+            gap: '8px',
+          }}
+        >
+          <Image
+            src="/article-icons/filter_alt.png"
+            alt="Filter"
+            width={24}
+            height={24}
+            onClick={() => document.getElementById('filterSelect')?.focus()}
+            style={{
+              cursor: 'pointer',
+            }}
+          />
+          <label
+            htmlFor="filterSelect"
+            style={{
+              cursor: 'pointer',
+              color: '#3678FF',
+            }}
+            onClick={() => document.getElementById('filterSelect')?.focus()}
+          >
+            Urutkan berdasarkan
+          </label>
+          <select
+            id="filterSelect"
+            value={filter}
+            onChange={(e) => {
+              setFilter(e.target.value);
+              handleFilter(e.target.value);
+            }}
+            style={{
+              cursor: 'pointer',
+              padding: '8px 16px',
+              borderRadius: '8px',
+              border: '1px solid #ddd',
+              appearance: 'none',
+              background: 'transparent',
+              color: '#3678FF',
+              fontSize: '16px',
+              fontWeight: 'bold',
             }}
           >
-            Urutkan Berdasarkan
-          </button>
-          {showDropdown && (
-            <ul
-              style={{
-                position: 'absolute',
-                top: '100%',
-                left: '0',
-                backgroundColor: 'white',
-                boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-                listStyleType: 'none',
-                padding: '0',
-                margin: '0',
-                zIndex: 1000,
-                width: '100%',
-              }}
-            >
-              <li
-                style={{ padding: '8px 12px', cursor: 'pointer' }}
-                onClick={() => handleFilter('Terbaru')}
-              >
-                Terbaru
-              </li>
-              <li
-                style={{ padding: '8px 12px', cursor: 'pointer' }}
-                onClick={() => handleFilter('Rekomendasi')}
-              >
-                Rekomendasi
-              </li>
-              <li
-                style={{ padding: '8px 12px', cursor: 'pointer' }}
-                onClick={() => handleFilter('A-Z')}
-              >
-                A-Z
-              </li>
-              <li
-                style={{ padding: '8px 12px', cursor: 'pointer' }}
-                onClick={() => handleFilter('Z-A')}
-              >
-                Z-A
-              </li>
-            </ul>
-          )}
+            <option value="Terbaru">Terbaru</option>
+            <option value="Rekomendasi">Rekomendasi</option>
+            <option value="A-Z">A-Z</option>
+            <option value="Z-A">Z-A</option>
+          </select>
         </div>
       </div>
 
