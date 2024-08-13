@@ -1,9 +1,7 @@
-// src/app/article/list/SearchBar.tsx
 "use client";
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import articleData from './article-datas';
-import React from 'react';
 import Card from '../components/Card';
 import Image from 'next/image';
 
@@ -12,6 +10,8 @@ const SearchBar = () => {
   const [found, setFound] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [filter, setFilter] = useState('Terbaru');
+  const [currentPage, setCurrentPage] = useState(1);
+  const articlesPerPage = 16; // 4 columns * 4 rows
 
   useEffect(() => {
     const handleResize = () => {
@@ -58,12 +58,13 @@ const SearchBar = () => {
 
     setFilteredArticles(sortedArticles);
     setFound(sortedArticles.length > 0);
+    setCurrentPage(1); // Reset to first page after filtering
   };
 
   const renderArticles = () => {
-    const maxRows = 4;
-    const maxItemsPerRow = Math.min(4, window.innerWidth <= 480 ? 1 : window.innerWidth <= 768 ? 2 : window.innerWidth <= 1024 ? 3 : 4);
-    const totalItems = maxItemsPerRow * maxRows;
+    const indexOfLastArticle = currentPage * articlesPerPage;
+    const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
+    const currentArticles = filteredArticles.slice(indexOfFirstArticle, indexOfLastArticle);
 
     return (
       <>
@@ -71,15 +72,17 @@ const SearchBar = () => {
           className="mini-card-container"
           style={{
             overflow: 'hidden',
-            padding: '20px',
+            padding: '10px', // Padding around the card grid
             position: 'relative',
             display: 'grid',
-            gap: '20px',
+            gap: '10px',
             marginTop: '20px',
-            gridTemplateColumns: `repeat(${maxItemsPerRow}, minmax(0, 1fr))`,
+            marginLeft: '20px',  // Margin to center the content
+            marginRight: '20px', // Margin to center the content
+            gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
           }}
         >
-          {filteredArticles.slice(0, totalItems).map((card) => (
+          {currentArticles.map((card) => (
             <Card
               key={card.id}
               id={card.id}
@@ -95,37 +98,72 @@ const SearchBar = () => {
             />
           ))}
         </div>
-
-        {filteredArticles.length > totalItems && (
-          <div
-            className="extra-cards"
-            style={{
-              display: 'grid',
-              gridTemplateColumns: `repeat(${maxItemsPerRow}, minmax(0, 1fr))`,
-              gap: '20px',
-              marginTop: '20px',
-            }}
-          >
-            {filteredArticles.slice(totalItems).map((card) => (
-              <Card
-                key={card.id}
-                id={card.id}
-                title={card.title}
-                date={card.date}
-                time={card.time}
-                author={card.author}
-                views={card.views}
-                readTime={card.readTime}
-                description={card.description}
-                image={card.image}
-                buttonlink={card.buttonlink} // Pass the button link
-              />
-            ))}
-          </div>
-        )}
       </>
     );
   };
+
+  const pageNumbers = [];
+  for (let i = 1; i <= Math.ceil(filteredArticles.length / articlesPerPage); i++) {
+    pageNumbers.push(i);
+  }
+
+  const handleClick = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const renderPagination = () => (
+    <div
+      className="pagination"
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: '30px',
+        gap: '10px',
+        paddingRight: '20px', // Added padding-right for spacing
+      }}
+    >
+      <button
+        onClick={() => handleClick(currentPage - 1)}
+        disabled={currentPage === 1}
+        style={{
+          cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
+          backgroundColor: '#ddd',
+          borderRadius: '4px',
+          padding: '8px 12px',
+        }}
+      >
+        {'<'}
+      </button>
+      {pageNumbers.map((number) => (
+        <button
+          key={number}
+          onClick={() => handleClick(number)}
+          style={{
+            cursor: 'pointer',
+            backgroundColor: number === currentPage ? '#3678FF' : '#ddd',
+            color: number === currentPage ? '#fff' : '#000',
+            borderRadius: '4px',
+            padding: '8px 12px',
+          }}
+        >
+          {number}
+        </button>
+      ))}
+      <button
+        onClick={() => handleClick(currentPage + 1)}
+        disabled={currentPage === pageNumbers.length}
+        style={{
+          cursor: currentPage === pageNumbers.length ? 'not-allowed' : 'pointer',
+          backgroundColor: '#ddd',
+          borderRadius: '4px',
+          padding: '8px 12px',
+        }}
+      >
+        {'>'}
+      </button>
+    </div>
+  );
 
   return (
     <div style={{ justifyContent: 'center', padding: '10px' }}>
@@ -224,7 +262,10 @@ const SearchBar = () => {
       </div>
 
       {found ? (
-        renderArticles()
+        <>
+          {renderArticles()}
+          {renderPagination()}
+        </>
       ) : (
         <div
           style={{
