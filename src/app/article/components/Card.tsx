@@ -11,6 +11,7 @@ interface CardProps {
   readTime: string;
   description: string;
   image: string;
+  buttonlink: string;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -23,6 +24,7 @@ const Card: React.FC<CardProps> = ({
   readTime,
   description,
   image,
+  buttonlink,
 }) => {
   return (
     <div
@@ -38,17 +40,17 @@ const Card: React.FC<CardProps> = ({
       <div className="card-content" style={{ padding: '16px' }}>
         <div className="card-meta">
           <span className="card-stats">
-            {views} | {readTime}
+            {views} views | {readTime} read
           </span>
         </div>
         <h2 className="card-title">{title}</h2>
         <div className="card-details">
-          <span className="card-date">{date}</span> {time} by{' '}
+          <span className="card-date">{date}</span> at {time} by{' '}
           <span className="card-author">{author}</span>
         </div>
         <p className="card-description">{description}</p>
-        <a href="#" className="card-read-more">
-          {" Read More>>> "}
+        <a href={buttonlink} className="card-read-more">
+          {"Read More >>>"}
         </a>
       </div>
     </div>

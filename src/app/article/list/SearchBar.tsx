@@ -7,24 +7,11 @@ import React from 'react';
 import Card from '../components/Card';
 import Image from 'next/image';
 
-interface Article {
-  id: number;
-  title: string;
-  date: string;
-  time: string;
-  author: string;
-  views: number;
-  readTime: string;
-  description: string;
-  image: string;
-  selected?: boolean;
-}
-
 const SearchBar = () => {
-  const [filteredArticles, setFilteredArticles] = useState<Article[]>(articleData);
-  const [found, setFound] = useState<boolean>(true);
-  const [searchQuery, setSearchQuery] = useState<string>('');
-  const [filter, setFilter] = useState<string>('Terbaru');
+  const [filteredArticles, setFilteredArticles] = useState(articleData);
+  const [found, setFound] = useState(true);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filter, setFilter] = useState('Terbaru');
 
   useEffect(() => {
     const handleResize = () => {
@@ -50,7 +37,7 @@ const SearchBar = () => {
   }, []);
 
   const handleFilter = (filterType: string) => {
-    let sortedArticles: Article[] = [];
+    let sortedArticles = [];
 
     switch (filterType) {
       case 'Terbaru':
@@ -84,12 +71,12 @@ const SearchBar = () => {
           className="mini-card-container"
           style={{
             overflow: 'hidden',
-            padding: '20px', // Adjusted padding to fit cards better
+            padding: '20px',
             position: 'relative',
             display: 'grid',
             gap: '20px',
             marginTop: '20px',
-            gridTemplateColumns: `repeat(${maxItemsPerRow}, minmax(0, 1fr))`, // Flexible grid layout
+            gridTemplateColumns: `repeat(${maxItemsPerRow}, minmax(0, 1fr))`,
           }}
         >
           {filteredArticles.slice(0, totalItems).map((card) => (
@@ -104,6 +91,7 @@ const SearchBar = () => {
               readTime={card.readTime}
               description={card.description}
               image={card.image}
+              buttonlink={card.buttonlink} // Pass the button link
             />
           ))}
         </div>
@@ -130,6 +118,7 @@ const SearchBar = () => {
                 readTime={card.readTime}
                 description={card.description}
                 image={card.image}
+                buttonlink={card.buttonlink} // Pass the button link
               />
             ))}
           </div>

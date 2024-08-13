@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <>
       <Swiper /> {/* Section 1 Carousel */}
-      <div> {/* Section 2 Elastic Search */}
+      <div className="pagetsx-article-background"> {/* Section 2 Elastic Search */}
         <br />
         <div style={{ marginLeft: "120px" }}>
           <h2>Read More Articles</h2>

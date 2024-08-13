@@ -72,6 +72,16 @@
 /* Existing Styles */
 /* Ensure the parent container of the carousel takes up the full width and height */
 
+/* Page-tsx background */
+.pagetsx-article-background {
+  background-color: #000D7680; /* Apply semi-transparent background color */
+  background-image: url("/article-icons/BiruBackground1.png"); /* Set the background image */
+  background-size: cover; /* Ensure the background image covers the entire div */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  padding: 20px; /* Add padding to ensure content does not touch the edges */
+}
+
 /* Button pagetsx in Article Styling, exact replica of Figma's Button */
 .article-pagetsx-button {
   width: 203px; /* Fixed width */
@@ -300,6 +310,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
   overflow: hidden; /* Hide overflow to keep the design neat */
   text-align: center; /* Center-align text */
+  position: relative; /* Ensure the child is positioned relative to this element */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
 }
 
@@ -365,6 +376,9 @@
   color: #000; /* Text color */
   text-decoration: none;
   margin-top: 5px; /* Reduced spacing */
+  bottom: 8px;
+  right: 8px;
+  position: absolute; 
 }
 
 .card-read-more:hover {
