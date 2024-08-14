@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { IoStar } from "react-icons/io5";
 
 interface Merchandise {
@@ -14,15 +13,8 @@ export default function MerchandiseSlider({
   merchandises: Merchandise[];
 }) {
   return (
-    <div className="relative flex w-full items-center justify-center">
-      <Image
-        src="/components/merchandise-card.svg"
-        alt="Merchandise Card"
-        className="absolute w-full"
-        width={100}
-        height={100}
-      />
-      <div className="z-10 inline-flex w-full flex-nowrap overflow-hidden bg-[url('/components/slider-background.png')] bg-cover px-[20px] py-[16px]">
+    <div className="relative flex h-[120px] w-full items-start justify-center bg-[url('/components/merchandise-card.svg')] bg-contain bg-left bg-no-repeat sm:h-[200px] sm:items-center">
+      <div className="z-10 inline-flex w-full flex-nowrap overflow-hidden bg-[url('/components/slider-background.png')] bg-cover bg-left bg-no-repeat px-[20px] py-[16px]">
         <ul className="flex animate-infinite-scroll justify-center text-[#0010A4]">
           {merchandises.map((item, index) => (
             <>
