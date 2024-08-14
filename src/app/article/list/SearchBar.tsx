@@ -9,7 +9,7 @@ const SearchBar = () => {
   const [filteredArticles, setFilteredArticles] = useState(articleData);
   const [found, setFound] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
-  const [filter, setFilter] = useState('Terbaru');
+  const [filter, setFilter] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 16; // 4 columns * 4 rows
 
@@ -67,38 +67,36 @@ const SearchBar = () => {
     const currentArticles = filteredArticles.slice(indexOfFirstArticle, indexOfLastArticle);
 
     return (
-      <>
-        <div
-          className="mini-card-container"
-          style={{
-            overflow: 'hidden',
-            padding: '10px', // Padding around the card grid
-            position: 'relative',
-            display: 'grid',
-            gap: '10px',
-            marginTop: '20px',
-            marginLeft: '20px',  // Margin to center the content
-            marginRight: '20px', // Margin to center the content
-            gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
-          }}
-        >
-          {currentArticles.map((card) => (
-            <Card
-              key={card.id}
-              id={card.id}
-              title={card.title}
-              date={card.date}
-              time={card.time}
-              author={card.author}
-              views={card.views}
-              readTime={card.readTime}
-              description={card.description}
-              image={card.image}
-              buttonlink={card.buttonlink} // Pass the button link
-            />
-          ))}
-        </div>
-      </>
+      <div
+        className="mini-card-container"
+        style={{
+          overflow: 'hidden',
+          padding: '10px', // Padding around the card grid
+          position: 'relative',
+          display: 'grid',
+          gap: '10px',
+          marginTop: '20px',
+          marginLeft: '20px',  // Margin to center the content
+          marginRight: '20px', // Margin to center the content
+          gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
+        }}
+      >
+        {currentArticles.map((card) => (
+          <Card
+            key={card.id}
+            id={card.id}
+            title={card.title}
+            date={card.date}
+            time={card.time}
+            author={card.author}
+            views={card.views}
+            readTime={card.readTime}
+            description={card.description}
+            image={card.image}
+            buttonlink={card.buttonlink} // Pass the button link
+          />
+        ))}
+      </div>
     );
   };
 
@@ -119,7 +117,7 @@ const SearchBar = () => {
         justifyContent: 'center',
         alignItems: 'center',
         marginTop: '30px',
-        gap: '10px',
+        gap: '12px', // Adjusted gap
         paddingRight: '20px', // Added padding-right for spacing
       }}
     >
@@ -128,9 +126,12 @@ const SearchBar = () => {
         disabled={currentPage === 1}
         style={{
           cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
-          backgroundColor: '#ddd',
-          borderRadius: '4px',
-          padding: '8px 12px',
+          backgroundColor: '#EE1192',
+          borderRadius: '4px 0px 0px 0px',
+          width: '24px', // Fixed width
+          height: '24px', // Hug height
+          padding: '0px 8.5px', // Padding around text
+          opacity: currentPage === 1 ? 0.5 : 1, // Opacity effect
         }}
       >
         {'<'}
@@ -141,10 +142,13 @@ const SearchBar = () => {
           onClick={() => handleClick(number)}
           style={{
             cursor: 'pointer',
-            backgroundColor: number === currentPage ? '#3678FF' : '#ddd',
+            backgroundColor: number === currentPage ? '#3678FF' : '#EE1192',
             color: number === currentPage ? '#fff' : '#000',
-            borderRadius: '4px',
-            padding: '8px 12px',
+            borderRadius: '4px 0px 0px 0px',
+            width: '24px', // Fixed width
+            height: '24px', // Hug height
+            padding: '0px 8.5px', // Padding around text
+            opacity: 1, // Full opacity for active buttons
           }}
         >
           {number}
@@ -155,9 +159,12 @@ const SearchBar = () => {
         disabled={currentPage === pageNumbers.length}
         style={{
           cursor: currentPage === pageNumbers.length ? 'not-allowed' : 'pointer',
-          backgroundColor: '#ddd',
-          borderRadius: '4px',
-          padding: '8px 12px',
+          backgroundColor: '#EE1192',
+          borderRadius: '4px 0px 0px 0px',
+          width: '24px', // Fixed width
+          height: '24px', // Hug height
+          padding: '0px 8.5px', // Padding around text
+          opacity: currentPage === pageNumbers.length ? 0.5 : 1, // Opacity effect
         }}
       >
         {'>'}
@@ -182,9 +189,10 @@ const SearchBar = () => {
             height: '48px',
             padding: '12px 24px',
             gap: '16px',
-            borderRadius: '8px 0px 0px 0px',
+            borderRadius: '8px',
             position: 'relative',
             flex: 1,
+            backgroundColor: '#F3F4F6', // Background for the search input
           }}
         >
           <input
@@ -199,6 +207,10 @@ const SearchBar = () => {
               outline: 'none',
               padding: '12px 24px',
               borderRadius: '8px',
+              backgroundColor: 'transparent',
+              fontSize: '16px', // Text style for search input
+              fontWeight: 'bold',
+              color: '#000', // Text color for search input
             }}
           />
         </div>
@@ -207,57 +219,65 @@ const SearchBar = () => {
           className="sort-select-container"
           style={{
             paddingLeft: '8px',
-            height: '60px',
+            height: '48px',
             display: 'flex',
             alignItems: 'center',
             position: 'relative',
             gap: '8px',
           }}
         >
-          <Image
-            src="/article-icons/filter_alt.png"
-            alt="Filter"
-            width={24}
-            height={24}
-            onClick={() => document.getElementById('filterSelect')?.focus()}
-            style={{
-              cursor: 'pointer',
-            }}
-          />
-          <label
-            htmlFor="filterSelect"
-            style={{
-              cursor: 'pointer',
-              color: '#3678FF',
-            }}
-            onClick={() => document.getElementById('filterSelect')?.focus()}
-          >
-            Urutkan berdasarkan
-          </label>
-          <select
-            id="filterSelect"
-            value={filter}
-            onChange={(e) => {
-              setFilter(e.target.value);
-              handleFilter(e.target.value);
-            }}
-            style={{
-              cursor: 'pointer',
-              padding: '8px 16px',
-              borderRadius: '8px',
-              border: '1px solid #ddd',
-              appearance: 'none',
-              background: 'transparent',
-              color: '#3678FF',
-              fontSize: '16px',
-              fontWeight: 'bold',
-            }}
-          >
-            <option value="Terbaru">Terbaru</option>
-            <option value="Rekomendasi">Rekomendasi</option>
-            <option value="A-Z">A-Z</option>
-            <option value="Z-A">Z-A</option>
-          </select>
+          <div style={{ position: 'relative', display: 'inline-block', width: '200px' }}>
+            <select
+              id="filterSelect"
+              value={filter}
+              onChange={(e) => {
+                const selectedFilter = e.target.value;
+                if (selectedFilter !== '') {
+                  setFilter(selectedFilter);
+                  handleFilter(selectedFilter);
+                }
+              }}
+              style={{
+                cursor: 'pointer',
+                padding: '12px 24px', // Match padding with search input
+                borderRadius: '8px',
+                border: 'none',
+                backgroundColor: '#F3F4F6', // Match background with search input
+                color: '#000', // Match text color with search input
+                fontSize: '16px', // Match font size with search input
+                width: '100%',
+                paddingLeft: '40px', // Space for the icon and text
+                boxSizing: 'border-box',
+                appearance: 'none',
+              }}
+            >
+              <option value="" disabled hidden> {/*DropDown Opsi :D*/}
+                Urutkan Berdasarkan
+              </option>
+              <option value="Terbaru">Terbaru</option>
+              <option value="Rekomendasi">Rekomendasi</option>
+              <option value="A-Z">A-Z</option>
+              <option value="Z-A">Z-A</option>
+            </select>
+            <div
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '12px',
+                transform: 'translateY(-50%)',
+                pointerEvents: 'none',
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              <Image
+                src="/article-icons/filter_alt.png"
+                alt="Filter"
+                width={24}
+                height={24}
+              />
+            </div>
+          </div>
         </div>
       </div>
 
