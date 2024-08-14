@@ -6,7 +6,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import "src/styles/globals.css"; // Import the custom CSS
 
 const ClientOnlyCarousel: React.FC = () => {
   const [isClient, setIsClient] = useState(false);
