@@ -5,28 +5,47 @@ import articleData from './article-datas';
 import Card from '../components/Card';
 import Image from 'next/image';
 
-const SearchBar = () => {
-  const [filteredArticles, setFilteredArticles] = useState(articleData);
+interface Article {
+  id: number;
+  title: string;
+  date: string;
+  time: string;
+  author: string;
+  views: number;
+  readTime: string;
+  description: string;
+  image: string;
+  buttonlink: string;
+  selected?: boolean;
+}
+
+const SearchBar: React.FC = () => {
+  const [filteredArticles, setFilteredArticles] = useState<Article[]>(articleData);
   const [found, setFound] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [filter, setFilter] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const articlesPerPage = 16; // 4 columns * 4 rows
+
+  // Set articlesPerPage based on screen size
+  const articlesPerPagePC = 16; // 4 columns * 4 rows on PC
+  const articlesPerPageMobile = 4; // 1 column * 4 rows on mobile
+
+  const [articlesPerPage, setArticlesPerPage] = useState(articlesPerPagePC);
 
   useEffect(() => {
     const handleResize = () => {
-      const cardContainer = document.querySelector('.mini-card-container');
-      const card = document.querySelector('.card');
+      if (window.innerWidth <= 768) {
+        setArticlesPerPage(articlesPerPageMobile);
+      } else {
+        setArticlesPerPage(articlesPerPagePC);
+      }
+
+      const cardContainer = document.querySelector('.mini-card-container') as HTMLElement;
+      const card = document.querySelector('.card') as HTMLElement;
 
       if (cardContainer && card) {
-        const cardWidth = card.clientWidth;
-        const containerWidth = cardContainer.clientWidth;
-        const cardsPerRow = Math.floor(containerWidth / cardWidth);
-        if (cardsPerRow < 1) {
-          cardContainer.style.gridTemplateColumns = `repeat(1, 1fr)`;
-        } else {
-          cardContainer.style.gridTemplateColumns = `repeat(${cardsPerRow}, 1fr)`;
-        }
+        const isMobile = window.innerWidth <= 768;
+        cardContainer.style.gridTemplateColumns = isMobile ? '1fr' : 'repeat(4, 1fr)';
       }
     };
 
@@ -37,7 +56,7 @@ const SearchBar = () => {
   }, []);
 
   const handleFilter = (filterType: string) => {
-    let sortedArticles = [];
+    let sortedArticles: Article[] = [];
 
     switch (filterType) {
       case 'Terbaru':
@@ -71,14 +90,15 @@ const SearchBar = () => {
         className="mini-card-container"
         style={{
           overflow: 'hidden',
-          padding: '10px', // Padding around the card grid
+          padding: '10px',
           position: 'relative',
           display: 'grid',
           gap: '10px',
           marginTop: '20px',
-          marginLeft: '20px',  // Margin to center the content
-          marginRight: '20px', // Margin to center the content
-          gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
+          marginLeft: '20px',
+          marginRight: '20px',
+          gridTemplateColumns: window.innerWidth <= 768 ? '1fr' : 'repeat(4, 1fr)', // 1 column on mobile, 4 columns on PC
+          gridTemplateRows: window.innerWidth <= 768 ? 'repeat(4, minmax(0, 1fr))' : 'repeat(4, minmax(0, 1fr))', // 4 rows on mobile
         }}
       >
         {currentArticles.map((card) => (
@@ -93,7 +113,7 @@ const SearchBar = () => {
             readTime={card.readTime}
             description={card.description}
             image={card.image}
-            buttonlink={card.buttonlink} // Pass the button link
+            buttonlink={card.buttonlink}
           />
         ))}
       </div>
@@ -117,8 +137,8 @@ const SearchBar = () => {
         justifyContent: 'center',
         alignItems: 'center',
         marginTop: '30px',
-        gap: '12px', // Adjusted gap
-        paddingRight: '20px', // Added padding-right for spacing
+        gap: '12px',
+        paddingRight: '20px',
       }}
     >
       <button
@@ -128,10 +148,10 @@ const SearchBar = () => {
           cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
           backgroundColor: '#EE1192',
           borderRadius: '4px 0px 0px 0px',
-          width: '24px', // Fixed width
-          height: '24px', // Hug height
-          padding: '0px 8.5px', // Padding around text
-          opacity: currentPage === 1 ? 0.5 : 1, // Opacity effect
+          width: '24px',
+          height: '24px',
+          padding: '0px 8.5px',
+          opacity: currentPage === 1 ? 0.5 : 1,
         }}
       >
         {'<'}
@@ -145,10 +165,10 @@ const SearchBar = () => {
             backgroundColor: number === currentPage ? '#3678FF' : '#EE1192',
             color: number === currentPage ? '#fff' : '#000',
             borderRadius: '4px 0px 0px 0px',
-            width: '24px', // Fixed width
-            height: '24px', // Hug height
-            padding: '0px 8.5px', // Padding around text
-            opacity: 1, // Full opacity for active buttons
+            width: '24px',
+            height: '24px',
+            padding: '0px 8.5px',
+            opacity: 1,
           }}
         >
           {number}
@@ -161,10 +181,10 @@ const SearchBar = () => {
           cursor: currentPage === pageNumbers.length ? 'not-allowed' : 'pointer',
           backgroundColor: '#EE1192',
           borderRadius: '4px 0px 0px 0px',
-          width: '24px', // Fixed width
-          height: '24px', // Hug height
-          padding: '0px 8.5px', // Padding around text
-          opacity: currentPage === pageNumbers.length ? 0.5 : 1, // Opacity effect
+          width: '24px',
+          height: '24px',
+          padding: '0px 8.5px',
+          opacity: currentPage === pageNumbers.length ? 0.5 : 1,
         }}
       >
         {'>'}
@@ -192,7 +212,10 @@ const SearchBar = () => {
             borderRadius: '8px',
             position: 'relative',
             flex: 1,
-            backgroundColor: '#F3F4F6', // Background for the search input
+            backgroundColor: '#F3F4F6',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap',
           }}
         >
           <input
@@ -208,9 +231,12 @@ const SearchBar = () => {
               padding: '12px 24px',
               borderRadius: '8px',
               backgroundColor: 'transparent',
-              fontSize: '16px', // Text style for search input
+              fontSize: '16px',
               fontWeight: 'bold',
-              color: '#000', // Text color for search input
+              color: '#000',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              whiteSpace: 'nowrap',
             }}
           />
         </div>
@@ -226,7 +252,14 @@ const SearchBar = () => {
             gap: '8px',
           }}
         >
-          <div style={{ position: 'relative', display: 'inline-block', width: '200px' }}>
+          <div
+            style={{
+              position: 'relative',
+              display: 'inline-block',
+              width: '48px', // Reduced width to only show the icon
+              overflow: 'hidden', // Hide overflow
+            }}
+          >
             <select
               id="filterSelect"
               value={filter}
@@ -239,19 +272,22 @@ const SearchBar = () => {
               }}
               style={{
                 cursor: 'pointer',
-                padding: '12px 24px', // Match padding with search input
+                padding: '12px 24px',
                 borderRadius: '8px',
                 border: 'none',
-                backgroundColor: '#F3F4F6', // Match background with search input
-                color: '#000', // Match text color with search input
-                fontSize: '16px', // Match font size with search input
+                backgroundColor: '#F3F4F6',
+                color: '#000',
+                fontSize: '16px',
                 width: '100%',
-                paddingLeft: '40px', // Space for the icon and text
+                paddingLeft: '40px',
                 boxSizing: 'border-box',
                 appearance: 'none',
+                whiteSpace: 'nowrap', // Prevent wrapping
+                overflow: 'hidden', // Ensure the dropdown content is clipped
+                textOverflow: 'ellipsis', // Add ellipsis when dropdown content overflows
               }}
             >
-              <option value="" disabled hidden> {/*DropDown Opsi :D*/}
+              <option value="" disabled hidden>
                 Urutkan Berdasarkan
               </option>
               <option value="Terbaru">Terbaru</option>

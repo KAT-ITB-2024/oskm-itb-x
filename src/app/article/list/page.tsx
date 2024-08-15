@@ -9,6 +9,7 @@ export default function Page() {
       >
         <h2>List of Articles</h2>
         <br />
+        <br />
       </div>
       <SearchBar />
     </div>
