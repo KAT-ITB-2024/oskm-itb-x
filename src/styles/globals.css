@@ -234,7 +234,7 @@
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
-  width: 120px;
+  width: 100px;
   text-align: center;
   line-height: normal;
 }
@@ -260,9 +260,10 @@
   margin: 0 auto;
 }
 
+/* Button Styling */
 .prev-button, .next-button {
-  width: 32px !important; /* Set width to 32px */
-  height: 32px !important; /* Set height to 32px */
+  width: 100px !important;  /* Increased width */
+  height: 40px !important; /* Increased height */
   background-size: contain; /* Ensure the background image fits */
   background-repeat: no-repeat; /* Prevent repetition of background image */
   border: none;
@@ -282,12 +283,13 @@
   opacity: 0.8; /* Slightly fade the button on hover */
 }
 
+
 /* Card Styling */
 .card {
-  width: 283px; /* Fixed width */
-  height: 385px; /* Fixed height */
-  padding: 16px 12px; /* Padding: top/bottom 20px, left/right 19px */
-  border-radius: 10px; /* Rounded corners for all corners */
+  width: 300px; /* Fixed width */
+  height: 400px; /* Fixed height */
+  padding: 20px 19px; /* Padding: top/bottom 20px, left/right 19px */
+  border-radius: 20px; /* Rounded corners for all corners */
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
   overflow: hidden; /* Hide overflow to keep the design neat */
