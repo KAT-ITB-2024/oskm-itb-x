@@ -267,10 +267,14 @@ function Footer() {
           />
 
           <div className="flex flex-col text-[#0010A4]">
-            <p className="text-xl">ITB Kampus Jatinangor</p>
-            <p>Jl. Let. Jen. Purn. Dr. (HC) Mashudi No. 1</p>
-            <p>Jatinangor, Kab. Sumedang, Jawa Barat</p>
-            <p>Indonesia 45363</p>
+            <p className="text-lg sm:text-xl">ITB Kampus Jatinangor</p>
+            <p className="text-sm sm:text-base">
+              Jl. Let. Jen. Purn. Dr. (HC) Mashudi No. 1
+            </p>
+            <p className="text-sm sm:text-base">
+              Jatinangor, Kab. Sumedang, Jawa Barat
+            </p>
+            <p className="text-sm sm:text-base">Indonesia 45363</p>
           </div>
         </div>
       </div>
