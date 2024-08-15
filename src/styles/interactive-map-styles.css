@@ -1,0 +1,21 @@
+.scrollbox::-webkit-scrollbar {
+  background: #fb43bd;
+}
+
+.scrollbox::-webkit-scrollbar-track {
+  background: white;
+}
+
+.scrollbox::-webkit-scrollbar-thumb {
+  background: #fb43bd;
+  border-radius: 10px;
+}
+
+.scrollbox::-webkit-scrollbar-thumb:hover {
+  background: #e030a1; /* Darker shade of the scrollbar thumb on hover (optional) */
+}
+
+.scrollbox {
+  scrollbar-color: #fb43bd white;
+  scrollbar-width: thin;
+}

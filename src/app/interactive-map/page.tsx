@@ -1,7 +1,5 @@
-export default function Page() {
-  return (
-    <div>
-      <p>Page</p>
-    </div>
-  );
+import ITBMap from "./components/ITBMap";
+
+export default async function Page() {
+  return <ITBMap />;
 }
