@@ -67,10 +67,9 @@
     @apply bg-background text-foreground;
   }
 }
-
 /* ARTICLE-PAGE -- William Anthony 13223048 */
 /* Existing Styles */
-/* Ensure the parent container of the carousel takes up the full width and height */
+/* Ensure the parent container of the carousel */
 
 /* Page-tsx background */
 .pagetsx-article-background {
@@ -154,32 +153,15 @@
   font-size: 1em;
 }
 
-/* Swiper Styles */
-.swiper-container {
+/* Swiper pagination styles */
+.swiper-pagination-fraction, 
+.swiper-pagination-custom, 
+.swiper-horizontal > .swiper-pagination-bullets, 
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 100px !important; /* Set pagination to be 100px from the bottom */
+  top: auto;
+  left: 0;
   width: 100%;
-  height: 100%; /* Ensures the Swiper takes up the full height of its parent */
-}
-
-/* Swiper navigation button styles */
-.swiper-button-next, .swiper-button-prev {
-  color: white; /* Change the color of the navigation buttons to white */
-  opacity: 0%;
-}
-
-/* Styles for the pagination container */
-.swiper-pagination {
-  text-align: center; /* Center pagination bullets */
-  margin-top: -40px; /* Adjust this value to move the pagination up or down */
-}
-
-/* Center the pagination container and adjust top position */
-.swiper-pagination {
-  display: flex; /* Use flexbox for centering */
-  justify-content: center; /* Center the bullets horizontally */
-  align-items: center; /* Center the bullets vertically */
-  position: absolute; /* Allow positioning within the carousel */
-  width: 100%; /* Ensure it spans the width of the carousel */
-  transform: translateY(-166px);
 }
 
 /* Styles for pagination bullets */
@@ -195,7 +177,7 @@
 /* Styles for the active pagination bullet */
 .swiper-pagination-bullet-active {
   opacity: 1; /* Fully opaque for the active bullet */
-  background-color: #ffffff; /* White background for the active bullet */
+  background-color: #ffffff !important; /* Harus important, ada yang mengantikan warna bullet ini jadi biru tiba-tiba */
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.7); /* Glowing effect for the active bullet */
 }
 
@@ -204,10 +186,10 @@
   opacity: 0.7; /* Slightly less transparent on hover */
 }
 
-
-/* Optional: Customize the size of the navigation buttons */
+/* Customize the navigation buttons */
 .swiper-button-next::after, .swiper-button-prev::after {
   font-size: 50px; /* Increased the size */
+  color: transparent; /* Transparent color for the navigation arrows */
 }
 
 /* Optional Gradient Overlays for the carousel item */
@@ -239,10 +221,9 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  right: 140px;
   width: 470px;
   position: relative;
-  top: -200px;
+  top: -130px;
 }
 
 /* Style for the Read More button */
@@ -275,12 +256,13 @@
   justify-content: space-between;
   position: relative;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
 }
 
 .prev-button, .next-button {
-  width: 32px; /* Set width to 32px */
-  height: 32px; /* Set height to 32px */
+  width: 32px !important; /* Set width to 32px */
+  height: 32px !important; /* Set height to 32px */
   background-size: contain; /* Ensure the background image fits */
   background-repeat: no-repeat; /* Prevent repetition of background image */
   border: none;
@@ -302,10 +284,10 @@
 
 /* Card Styling */
 .card {
-  width: 300px; /* Fixed width */
-  height: 400px; /* Fixed height */
-  padding: 20px 19px; /* Padding: top/bottom 20px, left/right 19px */
-  border-radius: 20px; /* Rounded corners for all corners */
+  width: 283px; /* Fixed width */
+  height: 385px; /* Fixed height */
+  padding: 16px 12px; /* Padding: top/bottom 20px, left/right 19px */
+  border-radius: 10px; /* Rounded corners for all corners */
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
   overflow: hidden; /* Hide overflow to keep the design neat */

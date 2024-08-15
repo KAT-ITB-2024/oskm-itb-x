@@ -2,11 +2,25 @@
 
 import React from 'react';
 import { useKeenSlider } from 'keen-slider/react';
-import 'keen-slider/keen-slider.min.css';
-import articleData from 'src/app/article/list/article-datas'; // Collect Data, bakal dimanage ko Frendy.
+import articleData from 'src/app/article/list/article-datas';
+import "src/styles/globals.css";
 
-const MiniCardCarousel = () => {
-  const [sliderRef, slider] = useKeenSlider({
+interface Article {
+  id: number;  // Updated to number
+  image: string;
+  title: string;
+  views: number;
+  readTime: string;
+  date: string;
+  time: string;
+  author: string;
+  description: string;
+  buttonlink: string;
+  selected: boolean;
+}
+
+const MiniArticleCarousel: React.FC = () => {
+  const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
     loop: true,
     mode: "free",
     slides: {
@@ -52,7 +66,7 @@ const MiniCardCarousel = () => {
                 <span className="card-author">{card.author}</span>
               </div>
               <p className="card-description">{card.description}</p>
-              <a href="#" className="card-read-more">
+              <a href={card.buttonlink} className="card-read-more">
                 {" Read More>>> "}
               </a>
             </div>
@@ -68,4 +82,4 @@ const MiniCardCarousel = () => {
   );
 };
 
-export default MiniCardCarousel;
+export default MiniArticleCarousel;
