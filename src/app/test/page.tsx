@@ -3,7 +3,7 @@ import { Button } from "~/components/ui/button";
 
 function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-4">
+    <main className="flex min-h-screen flex-col items-center justify-center gap-4 bg-blue-300">
       {/* Contoh pemakaian button, tambahkan styling sesuai kebutuhan */}
       <div className="flex flex-col items-center justify-center gap-2">
         <h1>Buttons</h1>
