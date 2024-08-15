@@ -8,6 +8,7 @@ export default function Page() {
       <div className="flex min-h-screen w-full flex-col">
         <About />
         <VisiMisi />
+        <HistoryCarousel />
       </div>
     </div>
   );
