@@ -101,7 +101,7 @@ export default function Page() {
             style={{ width: "1000px", height: "auto" }}
             className="absolute"
           />
-          <h1 className="z-10 w-full text-center text-4xl font-bold capitalize text-white [text-shadow:_0px_0px_60px_rgb(255_255_255_/_0%)] sm:text-6xl md:text-8xl">
+          <h1 className="w-full text-center text-4xl font-bold capitalize text-white [text-shadow:_0px_0px_60px_rgb(255_255_255_/_0%)] sm:text-6xl md:text-8xl">
             Collect Your
             <br />
             <span className="inline text-5xl sm:text-7xl md:text-9xl">
@@ -109,10 +109,10 @@ export default function Page() {
             </span>
           </h1>
         </div>
-        <div className="my-10 flex items-center justify-center sm:mb-0 sm:mt-8">
+        <div className="z-10 my-10 flex items-center justify-center sm:mb-0 sm:mt-8">
           <ul className="flex flex-col gap-3 sm:flex-row sm:gap-10">
             <li>
-              <a className="flex flex-col justify-center gap-3 text-center">
+              <a className="flex flex-col justify-center gap-2 text-center">
                 <h1 className="text-3xl text-[#FEFDA3] [text-shadow:_0px_0px_20px_rgb(255_255_255_/_100%)]">
                   Tokopedia
                 </h1>
