@@ -11,7 +11,7 @@ export default function Page() {
         <div>
         </div>
         <br />
-        <div style={{ marginLeft: "120px" }}>
+        <div style={{ marginLeft: "40px" }}>
           <h2>Read More Articles</h2>
           <br />
         </div>
