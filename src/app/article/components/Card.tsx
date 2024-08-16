@@ -4,27 +4,32 @@ import React from 'react';
 interface CardProps {
   id: number;
   title: string;
-  date: string;
-  time: string;
+  dateTime: Date;
+  // dateTime: string;
+  // date: string;
+  // time: string;
   author: string;
   views: number;
-  readTime: string;
+  likes: number;
+  readTime: number;
+  // readTime: string;
   description: string;
   image: string;
-  buttonlink: string;
+  // buttonlink: string;
 }
 
 const Card: React.FC<CardProps> = ({
   id,
   title,
-  date,
-  time,
+  dateTime,
+  // date,
+  // time,
   author,
   views,
   readTime,
   description,
   image,
-  buttonlink,
+  // buttonlink,
 }) => {
   return (
     <div
@@ -45,11 +50,13 @@ const Card: React.FC<CardProps> = ({
         </div>
         <h2 className="card-title">{title}</h2>
         <div className="card-details">
-          <span className="card-date">{date}</span> at {time} by{' '}
+          <span className="card-date">{dateTime.toString()}</span>
+          {/* <span className="card-date">{date}</span> at {time} by{' '} */}
           <span className="card-author">{author}</span>
         </div>
         <p className="card-description">{description}</p>
-        <a href={buttonlink} className="card-read-more">
+        <a className="card-read-more">
+        {/* <a href={buttonlink} className="card-read-more"> */}
           {"Read More >>>"}
         </a>
       </div>
