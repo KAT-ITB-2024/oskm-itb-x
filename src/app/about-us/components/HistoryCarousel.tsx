@@ -200,14 +200,14 @@ export default function HistoryCarousel() {
         alt="ikan pindang"
         width={185}
         height={250}
-        className="absolute top-28 w-20"
+        className="absolute top-28 w-20 md:w-24 lg:w-32"
       />
       <Image
         src="/about-us/ikan-pindang-2.png"
         alt="ikan pindang"
         width={131}
         height={195}
-        className="absolute bottom-0 right-0 w-20"
+        className="absolute bottom-0 right-0 w-20 md:w-24 lg:w-32"
       />
       <Image
         src="/about-us/coral.png"
