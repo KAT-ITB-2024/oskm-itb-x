@@ -18,7 +18,9 @@ export default function About() {
         className="absolute top-20 hidden h-[800px] w-full lg:block"
       />
       <div className="mx-auto mt-52 w-9/12 text-white lg:mt-64 lg:w-7/12">
-        <h1 className="text-center text-3xl lg:text-5xl">About Us</h1>
+        <h1 className="text-center text-3xl [text-shadow:4px_4px_10px_#0CEBCCBF] lg:text-5xl">
+          About Us
+        </h1>
         <p className="mt-14 text-justify text-xs sm:text-sm md:text-base lg:mt-32 lg:text-lg xl:text-xl">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
           quasi, atque impedit amet eveniet molestiae earum maiores. Assumenda

@@ -5,8 +5,10 @@ export default function VisiMisi() {
     <div className="relative">
       {/* Visi */}
       <div className="ml-6 mt-44 flex items-center md:ml-20 lg:mt-96 xl:ml-44">
-        <div className="basis-3/5 sm:basis-2/3 text-white">
-          <h1 className="text-3xl lg:text-5xl">Visi</h1>
+        <div className="basis-3/5 text-white sm:basis-2/3">
+          <h1 className="text-3xl [text-shadow:4px_4px_10px_#0CEBCCBF] lg:text-5xl">
+            Visi
+          </h1>
           <p className="mt-5 text-justify text-xs sm:text-sm md:text-base lg:mt-10 lg:text-lg xl:text-xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
             nemo sunt quam unde sequi ea ad nam quisquam rerum aliquid adipisci
@@ -35,7 +37,9 @@ export default function VisiMisi() {
           />
         </div>
         <div className="basis-2/3 text-end text-white">
-          <h1 className="text-3xl lg:text-5xl">Misi</h1>
+          <h1 className="text-3xl [text-shadow:4px_4px_10px_#0CEBCCBF] lg:text-5xl">
+            Misi
+          </h1>
           <p className="mt-5 text-justify text-xs sm:text-sm md:text-base lg:mt-10 lg:text-lg xl:text-xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
             nemo sunt quam unde sequi ea ad nam quisquam rerum aliquid adipisci

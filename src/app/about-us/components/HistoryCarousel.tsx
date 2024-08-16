@@ -122,12 +122,14 @@ const BubbleHistory = ({
       <Image
         src="/about-us/bubble.png"
         alt="bubble"
-        width={420}
-        height={420}
-        className="absolute z-10"
+        width={826}
+        height={826}
+        className="absolute z-0"
       />
-      <div className="absolute left-1/2 top-1/2 z-20 w-40 -translate-x-1/2 -translate-y-1/2 md:w-44">
-        <h1 className="text-sm md:text-base lg:text-xl">{title}</h1>
+      <div className="absolute left-1/2 top-1/2 z-10 w-40 -translate-x-1/2 -translate-y-1/2 md:w-44">
+        <h1 className="text-sm [text-shadow:4px_4px_20px_#FF8CD9BF] md:text-base lg:text-xl">
+          {title}
+        </h1>
         <p className="mt-2 text-[8px] lg:mt-4 lg:text-xs">{preview ?? text}</p>
         <Button
           variant={"pink"}
@@ -152,9 +154,11 @@ const CardHistory = ({
 }) => {
   return (
     <div className="relative flex min-h-full flex-col justify-between p-4">
-      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[#FFFEFE33] to-[#FFFEFE99] py-2 opacity-50 shadow-[0px_0px_3.84px_0px_#FFFFFF]"></div>
+      <div className="absolute inset-0 z-0 rounded-lg bg-gradient-to-r from-[#FFFEFE33] to-[#FFFEFE99] py-2 opacity-50 shadow-[0px_0px_3.84px_0px_#FFFFFF]"></div>
       <div className="relative z-10 px-2 text-white">
-        <h1 className="text-center text-lg md:text-xl lg:text-3xl">{title}</h1>
+        <h1 className="text-center text-lg [text-shadow:4px_4px_20px_#FF8CD9BF] md:text-xl lg:text-3xl">
+          {title}
+        </h1>
         <p className="mt-4 text-justify text-xs sm:text-sm md:text-base lg:text-lg">
           {text}
         </p>
@@ -213,7 +217,7 @@ export default function HistoryCarousel() {
         className="absolute -bottom-10"
       />
       <div className="mt-32 px-5">
-        <h1 className="text-center text-3xl text-white lg:text-5xl">
+        <h1 className="text-center text-3xl text-white [text-shadow:4px_4px_10px_#0CEBCCBF] lg:text-5xl">
           Sejarah OSKM
         </h1>
       </div>
