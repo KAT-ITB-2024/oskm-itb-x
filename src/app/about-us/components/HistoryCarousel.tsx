@@ -115,25 +115,25 @@ const BubbleHistory = ({
 }) => {
   return (
     <div
-      className={`relative mx-auto size-[250px] text-center text-white duration-500 md:size-72 lg:size-96 ${
+      className={`relative mx-auto size-48 text-center text-white duration-500 md:size-56 lg:size-72 xl:size-80 2xl:size-96 ${
         isActive ? "scale-125" : ""
       }`}
     >
       <Image
-        src="/about-us/bubble.png"
+        src="/about-us/bubble-history.png"
         alt="bubble"
         width={826}
         height={826}
         className="absolute z-0"
       />
-      <div className="absolute left-1/2 top-1/2 z-10 w-40 -translate-x-1/2 -translate-y-1/2 md:w-44">
-        <h1 className="text-sm [text-shadow:4px_4px_20px_#FF8CD9BF] md:text-base lg:text-xl">
+      <div className="absolute left-1/2 top-1/2 z-10 w-32 -translate-x-1/2 -translate-y-1/2 md:w-36 lg:w-44">
+        <h1 className="text-xs [text-shadow:4px_4px_20px_#FF8CD9BF] md:text-base lg:text-xl">
           {title}
         </h1>
-        <p className="mt-2 text-[8px] lg:mt-4 lg:text-xs">{preview ?? text}</p>
+        <p className="mt-2 text-[8px] lg:mt-3 lg:text-xs">{preview ?? text}</p>
         <Button
           variant={"pink"}
-          className="mt-2 h-6 rounded-sm px-2 text-[8px] font-normal lg:mt-4 lg:h-8 lg:text-xs"
+          className="mt-2 h-5 rounded-sm px-1 text-[6px] font-normal lg:mt-3 lg:h-7 lg:text-[8px]"
           onClick={onReadMoreClick}
         >
           Read More
