@@ -43,29 +43,11 @@ const RenderArticle: React.FC<RenderArticleProps> = ({ filteredArticles }) => {
   };
 
   const renderPagination = () => (
-    <div
-      className="pagination"
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: '30px',
-        gap: '12px',
-        paddingRight: '20px',
-      }}
-    >
+    <div className="pagination">
       <button
         onClick={() => handleClick(currentPage - 1)}
         disabled={currentPage === 1}
-        style={{
-          cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
-          backgroundColor: '#EE1192',
-          borderRadius: '4px 0px 0px 0px',
-          width: '24px',
-          height: '24px',
-          padding: '0px 8.5px',
-          opacity: currentPage === 1 ? 0.5 : 1,
-        }}
+        className={`pagination-button ${currentPage === 1 ? 'disabled' : ''}`}
       >
         {'<'}
       </button>
@@ -73,16 +55,7 @@ const RenderArticle: React.FC<RenderArticleProps> = ({ filteredArticles }) => {
         <button
           key={number}
           onClick={() => handleClick(number)}
-          style={{
-            cursor: 'pointer',
-            backgroundColor: number === currentPage ? '#3678FF' : '#EE1192',
-            color: number === currentPage ? '#fff' : '#000',
-            borderRadius: '4px 0px 0px 0px',
-            width: '24px',
-            height: '24px',
-            padding: '0px 8.5px',
-            opacity: 1,
-          }}
+          className={`pagination-button ${number === currentPage ? 'active' : ''}`}
         >
           {number}
         </button>
@@ -90,15 +63,7 @@ const RenderArticle: React.FC<RenderArticleProps> = ({ filteredArticles }) => {
       <button
         onClick={() => handleClick(currentPage + 1)}
         disabled={currentPage === pageNumbers.length}
-        style={{
-          cursor: currentPage === pageNumbers.length ? 'not-allowed' : 'pointer',
-          backgroundColor: '#EE1192',
-          borderRadius: '4px 0px 0px 0px',
-          width: '24px',
-          height: '24px',
-          padding: '0px 8.5px',
-          opacity: currentPage === pageNumbers.length ? 0.5 : 1,
-        }}
+        className={`pagination-button ${currentPage === pageNumbers.length ? 'disabled' : ''}`}
       >
         {'>'}
       </button>
@@ -106,21 +71,7 @@ const RenderArticle: React.FC<RenderArticleProps> = ({ filteredArticles }) => {
   );
 
   return (
-    <div
-      className="mini-card-container"
-      style={{
-        overflow: 'hidden',
-        padding: '10px',
-        position: 'relative',
-        display: 'grid',
-        gap: '10px',
-        marginTop: '20px',
-        marginLeft: '20px',
-        marginRight: '20px',
-        gridTemplateColumns: window.innerWidth <= 768 ? '1fr' : 'repeat(4, 1fr)',
-        gridTemplateRows: window.innerWidth <= 768 ? 'repeat(4, minmax(0, 1fr))' : 'repeat(4, minmax(0, 1fr))',
-      }}
-    >
+    <div className="mini-card-container">
       {currentArticles.map((card) => (
         <Card
           key={card.id}
