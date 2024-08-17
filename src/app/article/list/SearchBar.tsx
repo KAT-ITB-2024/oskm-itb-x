@@ -49,7 +49,7 @@ const SearchBar: React.FC = () => {
         sortedArticles = [...articleData].sort((a, b) => b.id - a.id);
         break;
       case 'Rekomendasi':
-        sortedArticles = articleData.filter((article) => article.selected);
+        sortedArticles = [...articleData].sort((a, b) => b.views - a.views);
         break;
       case 'A-Z':
         sortedArticles = [...articleData].sort((a, b) => a.title.localeCompare(b.title));
@@ -105,7 +105,6 @@ const SearchBar: React.FC = () => {
               borderRadius: '8px',
               backgroundColor: 'transparent',
               fontSize: '16px',
-              fontWeight: 'bold',
               color: '#000',
               overflow: 'hidden',
               textOverflow: 'ellipsis',
