@@ -71,51 +71,47 @@
 /* Existing Styles */
 /* Ensure the parent container of the carousel */
 
-/* Page-tsx background */
 .pagetsx-article-background {
-  background-color: #000D76; /* Apply semi-transparent background color with hex code */
-  background-image: url("/article-icons/BiruBackground1.png"); /* Set the background image */
-  background-size: cover; /* Ensure the background image covers the entire div */
+  background-color: #000D76; /* Apply background color */
+  background-image: url("/article-icons/BiruBackground1.png"); /* Set background image */
+  background-size: cover; /* Ensure background image covers entire div */
   background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent the background from repeating */
-  position: relative; /* Position relative for placing additional images */
+  background-repeat: no-repeat; /* Prevent background from repeating */
+  position: relative; /* Position relative for placing additional elements */
+  min-height: 500px; /* Example height, adjust as needed */
+  display: flex; /* Ensure flexbox layout for vertical stacking */
+  flex-direction: column; /* Stack children vertically */
 }
 
-.pagetsx-article-background::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 30px;
-  width: 203.5px; 
-  height: 203.5px; 
-  background-image: url("/article-icons/Coral-Pensu.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+.pagetsx-upregion {
+  flex: 1; /* Take up remaining space */
+  display: flex; /* Allow for flexible child positioning */
+  /* Any additional styles specific to upregion */
 }
 
-.pagetsx-article-background::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 10px;
-  width: 203.5px; /* Adjusted width */
-  height: 203.5px; /* Adjusted height */
-  background-image: url("/article-icons/Coral.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+.pagetsx-downregion {
+  height: 100px; /* Set a specific height for downregion */
+  display: flex; /* Align items horizontally */
+  align-items: flex-end; /* Align images to the bottom */
 }
 
-.pagetsx-article-background .downleft-corner {
-  position: absolute;
-  bottom: 0;
-  margin-left: 2px;
-  width: 203.5px; /* Adjusted width */
-  height: 203.5px; /* Adjusted height */
-  background-image: url("/article-icons/coral oren.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+.pagetsx-downregion img {
+  width: 203.5px;
+  height: 203.5px;
 }
 
+.downleft-coral-pensu {
+  margin-right: 0px;
+  margin-left: 260px;
+  position: relative; 
+}
+
+.downleft-coral {
+  width: 300px;
+  height: 300px;
+  margin-left: -120px;
+  position: relative;
+}
 
 .pagetsx-article-background-detailed {
   background-color: #000D7680; /* Apply semi-transparent background color */
