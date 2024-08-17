@@ -73,6 +73,51 @@
 
 /* Page-tsx background */
 .pagetsx-article-background {
+  background-color: #000D76; /* Apply semi-transparent background color with hex code */
+  background-image: url("/article-icons/BiruBackground1.png"); /* Set the background image */
+  background-size: cover; /* Ensure the background image covers the entire div */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  position: relative; /* Position relative for placing additional images */
+}
+
+.pagetsx-article-background::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  width: 203.5px; 
+  height: 203.5px; 
+  background-image: url("/article-icons/Coral-Pensu.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.pagetsx-article-background::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  width: 203.5px; /* Adjusted width */
+  height: 203.5px; /* Adjusted height */
+  background-image: url("/article-icons/Coral.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.pagetsx-article-background .downleft-corner {
+  position: absolute;
+  bottom: 0;
+  margin-left: 2px;
+  width: 203.5px; /* Adjusted width */
+  height: 203.5px; /* Adjusted height */
+  background-image: url("/article-icons/coral oren.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+.pagetsx-article-background-detailed {
   background-color: #000D7680; /* Apply semi-transparent background color */
   background-image: url("/article-icons/BiruBackground1.png"); /* Set the background image */
   background-size: cover; /* Ensure the background image covers the entire div */
