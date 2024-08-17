@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import articleData from './article-datas';
-import Card from '../components/Card';
+import RenderArticle from './renderArticle';
 import Image from 'next/image';
 
 interface Article {
@@ -24,26 +24,12 @@ const SearchBar: React.FC = () => {
   const [found, setFound] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [filter, setFilter] = useState('');
-  const [currentPage, setCurrentPage] = useState(1);
-
-  // Set articlesPerPage based on screen size
-  const articlesPerPagePC = 16; // 4 columns * 4 rows on PC
-  const articlesPerPageMobile = 4; // 1 column * 4 rows on mobile
-
-  const [articlesPerPage, setArticlesPerPage] = useState(articlesPerPagePC);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        setArticlesPerPage(articlesPerPageMobile);
-      } else {
-        setArticlesPerPage(articlesPerPagePC);
-      }
-
       const cardContainer = document.querySelector('.mini-card-container') as HTMLElement;
-      const card = document.querySelector('.card') as HTMLElement;
 
-      if (cardContainer && card) {
+      if (cardContainer) {
         const isMobile = window.innerWidth <= 768;
         cardContainer.style.gridTemplateColumns = isMobile ? '1fr' : 'repeat(4, 1fr)';
       }
@@ -77,120 +63,7 @@ const SearchBar: React.FC = () => {
 
     setFilteredArticles(sortedArticles);
     setFound(sortedArticles.length > 0);
-    setCurrentPage(1); // Reset to first page after filtering
   };
-
-  const renderArticles = () => {
-    const indexOfLastArticle = currentPage * articlesPerPage;
-    const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
-    const currentArticles = filteredArticles.slice(indexOfFirstArticle, indexOfLastArticle);
-
-    return (
-      <div
-        className="mini-card-container"
-        style={{
-          overflow: 'hidden',
-          padding: '10px',
-          position: 'relative',
-          display: 'grid',
-          gap: '10px',
-          marginTop: '20px',
-          marginLeft: '20px',
-          marginRight: '20px',
-          gridTemplateColumns: window.innerWidth <= 768 ? '1fr' : 'repeat(4, 1fr)', // 1 column on mobile, 4 columns on PC
-          gridTemplateRows: window.innerWidth <= 768 ? 'repeat(4, minmax(0, 1fr))' : 'repeat(4, minmax(0, 1fr))', // 4 rows on mobile
-        }}
-      >
-        {currentArticles.map((card) => (
-          <Card
-            key={card.id}
-            id={card.id}
-            title={card.title}
-            date={card.date}
-            time={card.time}
-            author={card.author}
-            views={card.views}
-            readTime={card.readTime}
-            description={card.description}
-            image={card.image}
-            buttonlink={card.buttonlink}
-          />
-        ))}
-      </div>
-    );
-  };
-
-  const pageNumbers = [];
-  for (let i = 1; i <= Math.ceil(filteredArticles.length / articlesPerPage); i++) {
-    pageNumbers.push(i);
-  }
-
-  const handleClick = (pageNumber: number) => {
-    setCurrentPage(pageNumber);
-  };
-
-  const renderPagination = () => (
-    <div
-      className="pagination"
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: '30px',
-        gap: '12px',
-        paddingRight: '20px',
-      }}
-    >
-      <button
-        onClick={() => handleClick(currentPage - 1)}
-        disabled={currentPage === 1}
-        style={{
-          cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
-          backgroundColor: '#EE1192',
-          borderRadius: '4px 0px 0px 0px',
-          width: '24px',
-          height: '24px',
-          padding: '0px 8.5px',
-          opacity: currentPage === 1 ? 0.5 : 1,
-        }}
-      >
-        {'<'}
-      </button>
-      {pageNumbers.map((number) => (
-        <button
-          key={number}
-          onClick={() => handleClick(number)}
-          style={{
-            cursor: 'pointer',
-            backgroundColor: number === currentPage ? '#3678FF' : '#EE1192',
-            color: number === currentPage ? '#fff' : '#000',
-            borderRadius: '4px 0px 0px 0px',
-            width: '24px',
-            height: '24px',
-            padding: '0px 8.5px',
-            opacity: 1,
-          }}
-        >
-          {number}
-        </button>
-      ))}
-      <button
-        onClick={() => handleClick(currentPage + 1)}
-        disabled={currentPage === pageNumbers.length}
-        style={{
-          cursor: currentPage === pageNumbers.length ? 'not-allowed' : 'pointer',
-          backgroundColor: '#EE1192',
-          borderRadius: '4px 0px 0px 0px',
-          width: '24px',
-          height: '24px',
-          padding: '0px 8.5px',
-          opacity: currentPage === pageNumbers.length ? 0.5 : 1,
-        }}
-      >
-        {'>'}
-      </button>
-    </div>
-  );
 
   return (
     <div style={{ justifyContent: 'center', padding: '10px' }}>
@@ -256,8 +129,8 @@ const SearchBar: React.FC = () => {
             style={{
               position: 'relative',
               display: 'inline-block',
-              width: '48px', // Reduced width to only show the icon
-              overflow: 'hidden', // Hide overflow
+              width: '48px',
+              overflow: 'hidden',
             }}
           >
             <select
@@ -282,9 +155,9 @@ const SearchBar: React.FC = () => {
                 paddingLeft: '40px',
                 boxSizing: 'border-box',
                 appearance: 'none',
-                whiteSpace: 'nowrap', // Prevent wrapping
-                overflow: 'hidden', // Ensure the dropdown content is clipped
-                textOverflow: 'ellipsis', // Add ellipsis when dropdown content overflows
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
               }}
             >
               <option value="" disabled hidden>
@@ -318,10 +191,7 @@ const SearchBar: React.FC = () => {
       </div>
 
       {found ? (
-        <>
-          {renderArticles()}
-          {renderPagination()}
-        </>
+        <RenderArticle filteredArticles={filteredArticles} />
       ) : (
         <div
           style={{
