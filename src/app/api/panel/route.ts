@@ -3,7 +3,7 @@ import { renderTrpcPanel } from "@metamorph/trpc-panel";
 import { appRouter } from "../../../server/api/root";
 
 export function GET(_: NextRequest) {
-  const panelHtml = renderTrpcPanel(appRouter, {
+  const panelHtml: string = renderTrpcPanel(appRouter, {
     url: "http://localhost:3000/api/trpc",
     transformer: "superjson",
   });

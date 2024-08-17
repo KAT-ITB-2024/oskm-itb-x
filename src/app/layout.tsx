@@ -19,8 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${rem.variable} ${mogula.variable}`}>
-      <body>
+    <html
+      lang="en"
+      className={`${GeistSans.variable} ${mogula.variable} ${rem.variable}`}
+    >
+      <body className="relative">
         <TRPCReactProvider>
           <Navbar />
           {children}

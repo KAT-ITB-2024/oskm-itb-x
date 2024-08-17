@@ -1,20 +1,11 @@
-"use client";
-
-import { useState } from "react";
 import { Button } from "~/components/ui/button";
 import Countdown from "./component/Countdown";
 import Image from "next/image";
 import { IoMdDownload } from "react-icons/io";
 import InfiniteCarousel from "./component/InfiniteCarousel";
-import TimelineCard from "./component/TimelineCard";
+import { Dialog, DialogContent, DialogTrigger } from "~/components/ui/dialog";
 
 export default function LandingPage() {
-  const [activeEvent, setActiveEvent] = useState<string | null>(null);
-
-  const handleTimelineClick = (timeline: string, event: string) => {
-    setActiveEvent(event === activeEvent ? null : event);
-  };
-
   const logos = [
     { src: "/landing-page/gojek-logo.png" },
     { src: "/landing-page/wardah-logo.png" },
@@ -22,8 +13,80 @@ export default function LandingPage() {
     { src: "/landing-page/pertamina-logo.png" },
   ];
 
+  const daysDikpus = [
+    {
+      date: "6 Juli 2024",
+      dayTitle: "Day 1 - Pengenalan Materi",
+      activities: [
+        { time: "08.00", description: "Sesi Pembukaan" },
+        { time: "10.00", description: "Pengenalan Dosen" },
+        { time: "13.00", description: "Praktikum" },
+      ],
+    },
+    {
+      date: "7 Juli 2024",
+      dayTitle: "Day 2 - Pendalaman Materi",
+      activities: [
+        { time: "08.00", description: "Materi A" },
+        { time: "10.00", description: "Materi B" },
+      ],
+    },
+    {
+      date: "13 Juli 2024",
+      dayTitle: "Day 3 - Penutupan",
+      activities: [
+        { time: "08.00", description: "Review & Diskusi" },
+        { time: "10.00", description: "Penutupan & Foto Bersama" },
+      ],
+    },
+  ];
+
+  const daysITBShowcase = [
+    {
+      date: "20 Agustus 2024",
+      dayTitle: "Showcase Day",
+      activities: [
+        { time: "09.00", description: "Pembukaan Showcase" },
+        { time: "11.00", description: "Presentasi Tim A" },
+        { time: "14.00", description: "Presentasi Tim B" },
+        {
+          time: "16.00",
+          description: "Penutupan & Pengumuman Pemenang",
+        },
+      ],
+    },
+  ];
+
+  const daysOSKM = [
+    {
+      date: "7 Agustus 2024",
+      dayTitle: "Day 1 - Menjadi Mahasiswa",
+      activities: [
+        { time: "07.30", description: "Opening Ceremony" },
+        { time: "10.00", description: "Aktivitas B" },
+        { time: "13.00", description: "Aktivitas C" },
+      ],
+    },
+    {
+      date: "8 Agustus 2024",
+      dayTitle: "Day 2 - Mahasiswa Merdeka",
+      activities: [
+        { time: "07.30", description: "Aktivitas A" },
+        { time: "10.00", description: "Aktivitas B" },
+      ],
+    },
+    {
+      date: "9 Agustus 2024",
+      dayTitle: "Day 3 - Konsistensi Dalam Belajar",
+      activities: [
+        { time: "07.30", description: "Aktivitas A" },
+        { time: "10.00", description: "Aktivitas B" },
+      ],
+    },
+  ];
+
   return (
-    <div className="bg-[url('/landing-page/bg-landing.png')] bg-cover bg-center pb-20">
+    <div className="bg-[url('/landing-page/bg-landing.png')] bg-cover bg-center p-20">
       <div className="flex flex-col items-center">
         <Image
           src="/logo/logo-oskm.svg"
@@ -76,50 +139,367 @@ export default function LandingPage() {
         </h1>
         <div className="flex flex-col items-center font-mogula text-[#C5FFF3] text-shadow-blue">
           <div className="flex justify-center gap-x-20 lg:gap-x-64 xl:gap-x-72">
-            <div
-              className="flex cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12"
-              onClick={() => handleTimelineClick("diklat", "Diklat Terpusat")}
-            >
-              <Image
-                src="/landing-page/icon-dikpus.svg"
-                alt="1"
-                width={500}
-                height={500}
-              />
-              <p className="text-lg font-bold md:text-xl lg:text-2xl">
-                Diklat Terpusat
-              </p>
-              <p className="font-rem text-sm lg:text-lg">6-7 & 13 Juli 2024</p>
-            </div>
-            <div
-              className="flex cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12"
-              onClick={() => handleTimelineClick("showcase", "ITB Showcase")}
-            >
-              <Image
-                src="/landing-page/icon-showcase.svg"
-                alt="2"
-                width={500}
-                height={500}
-              />
-              <p className="text-lg font-bold md:text-xl lg:text-2xl">
-                ITB Showcase
-              </p>
-              <p className="font-rem text-sm lg:text-lg">20 Agustus 2024</p>
-            </div>
+            <Dialog>
+              <DialogTrigger asChild>
+                <div className="flex cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12">
+                  <Image
+                    src="/landing-page/icon-dikpus.svg"
+                    alt="1"
+                    width={500}
+                    height={500}
+                  />
+                  <p className="text-lg font-bold md:text-xl lg:text-2xl">
+                    Diklat Terpusat
+                  </p>
+                  <p className="font-rem text-sm lg:text-lg">
+                    6-7 & 13 Juli 2024
+                  </p>
+                </div>
+              </DialogTrigger>
+              <DialogContent>
+                <div className="relative h-[300px] w-10/12 overflow-y-auto overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.png')] p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
+                  <div className="my-2 text-center font-mogula text-2xl text-[#64B1F7] md:text-3xl xl:text-4xl">
+                    Diklat Terpusat
+                  </div>
+
+                  <div className="relative flex font-rem">
+                    {/* Time Area */}
+                    <div className="flex w-1/2 flex-col items-end pr-6">
+                      {daysDikpus.map((day, index) => (
+                        <div key={index}>
+                          <div className="flex items-center">
+                            <h2 className="relative flex h-[60px] items-center text-xs md:h-[72px] md:text-base xl:text-lg">
+                              <Image
+                                src="/landing-page/timeline-detail/ombak_left.svg"
+                                alt="ombak"
+                                width={120}
+                                height={120}
+                                className="absolute left-[-20px] top-[-12px] w-8/12 md:left-[-40px] md:top-[-36px]"
+                              />
+                              <span className="flex w-32 justify-end rounded-full bg-[#000D76] py-2 pr-2 text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-48">
+                                {day.date}
+                              </span>
+                            </h2>
+                          </div>
+                          <div className="space-y-2">
+                            {day.activities.map((activity, idx) => (
+                              <div
+                                key={idx}
+                                className="flex h-[40px] items-center text-xs text-[#0010A4] md:h-[48px] md:text-sm xl:text-base"
+                              >
+                                <span className="ml-20">{activity.time}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Vertical Line with Circles */}
+                    <div className="absolute bottom-0 left-1/2 top-0 flex w-[2px] flex-col justify-between bg-[#000D76] lg:w-[3px]">
+                      {daysDikpus.map((day, index) => (
+                        <div
+                          key={index}
+                          className="relative flex flex-col items-center"
+                        >
+                          {/* Large circle */}
+                          <div className="flex h-[60px] items-center md:h-[72px]">
+                            <div className="relative flex h-16 w-16 flex-col items-center justify-center">
+                              <div className="h-2/5 w-2/5 rounded-full bg-[#000D76] md:h-1/2 md:w-1/2"></div>
+                            </div>
+                          </div>
+                          <div className="space-y-2">
+                            {day.activities.map((_, idx) => (
+                              <div
+                                key={idx}
+                                className="flex h-[40px] items-center md:h-[48px]"
+                              >
+                                <div className="h-3 w-3 rounded-full bg-[#000D76]"></div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Activity Area */}
+                    <div className="w-1/2 pl-6">
+                      {daysDikpus.map((day, index) => (
+                        <div key={index}>
+                          <div className="relative flex items-center">
+                            <h2 className="flex h-[60px] items-center text-xs text-blue-800 md:h-[72px] md:text-base xl:text-lg">
+                              <span className="relative flex w-32 justify-start rounded-full bg-[#000D76] py-2 pl-4 text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-72 xl:w-96">
+                                {day.dayTitle}
+                                <Image
+                                  src="/landing-page/timeline-detail/ombak_1.svg"
+                                  alt="ombak"
+                                  width={120}
+                                  height={120}
+                                  className="absolute right-[-36px] top-[-18px] w-8/12 md:right-[-40px] md:top-[-30px] md:w-4/12 xl:top-[-44px]"
+                                />
+                              </span>
+                            </h2>
+                          </div>
+                          <div className="space-y-2">
+                            {day.activities.map((activity, idx) => (
+                              <div
+                                key={idx}
+                                className="flex h-[40px] items-center text-xs text-[#0010A4] md:h-[48px] md:text-sm xl:text-base"
+                              >
+                                <span>{activity.description}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </DialogContent>
+            </Dialog>
+            {/* ITB Showcase Dialog */}
+            <Dialog>
+              <DialogTrigger asChild>
+                <div className="flex cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12">
+                  <Image
+                    src="/landing-page/icon-showcase.svg"
+                    alt="2"
+                    width={500}
+                    height={500}
+                  />
+                  <p className="text-lg font-bold md:text-xl lg:text-2xl">
+                    ITB Showcase
+                  </p>
+                  <p className="font-rem text-sm lg:text-lg">20 Agustus 2024</p>
+                </div>
+              </DialogTrigger>
+              <DialogContent>
+                <div className="relative h-[300px] w-10/12 overflow-y-auto overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.png')] p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
+                  <div className="my-2 text-center font-mogula text-2xl text-[#64B1F7] md:text-3xl xl:text-4xl">
+                    ITB Showcase
+                  </div>
+
+                  <div className="relative flex font-rem">
+                    {/* Time Area */}
+                    <div className="flex w-1/2 flex-col items-end pr-6">
+                      {daysITBShowcase.map((day, index) => (
+                        <div key={index}>
+                          <div className="flex items-center">
+                            <h2 className="relative flex h-[60px] items-center text-xs md:h-[72px] md:text-base xl:text-lg">
+                              <Image
+                                src="/landing-page/timeline-detail/ombak_left.svg"
+                                alt="ombak"
+                                width={120}
+                                height={120}
+                                className="absolute left-[-20px] top-[-12px] w-8/12 md:left-[-40px] md:top-[-36px]"
+                              />
+                              <span className="flex w-32 justify-end rounded-full bg-[#000D76] py-2 pr-2 text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-48">
+                                {day.date}
+                              </span>
+                            </h2>
+                          </div>
+                          <div className="space-y-2">
+                            {day.activities.map((activity, idx) => (
+                              <div
+                                key={idx}
+                                className="flex h-[40px] items-center text-xs text-[#0010A4] md:h-[48px] md:text-sm xl:text-base"
+                              >
+                                <span className="ml-20">{activity.time}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Vertical Line with Circles */}
+                    <div className="absolute bottom-0 left-1/2 top-0 flex w-[2px] flex-col justify-between bg-[#000D76] lg:w-[3px]">
+                      {daysITBShowcase.map((day, index) => (
+                        <div
+                          key={index}
+                          className="relative flex flex-col items-center"
+                        >
+                          {/* Large circle */}
+                          <div className="flex h-[60px] items-center md:h-[72px]">
+                            <div className="relative flex h-16 w-16 flex-col items-center justify-center">
+                              <div className="h-2/5 w-2/5 rounded-full bg-[#000D76] md:h-1/2 md:w-1/2"></div>
+                            </div>
+                          </div>
+                          <div className="space-y-2">
+                            {day.activities.map((_, idx) => (
+                              <div
+                                key={idx}
+                                className="flex h-[40px] items-center md:h-[48px]"
+                              >
+                                <div className="h-3 w-3 rounded-full bg-[#000D76]"></div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Activity Area */}
+                    <div className="w-1/2 pl-6">
+                      {daysITBShowcase.map((day, index) => (
+                        <div key={index}>
+                          <div className="relative flex items-center">
+                            <h2 className="flex h-[60px] items-center text-xs text-blue-800 md:h-[72px] md:text-base xl:text-lg">
+                              <span className="relative flex w-32 justify-start rounded-full bg-[#000D76] py-2 pl-4 text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-72 xl:w-96">
+                                {day.dayTitle}
+                                <Image
+                                  src="/landing-page/timeline-detail/ombak_1.svg"
+                                  alt="ombak"
+                                  width={120}
+                                  height={120}
+                                  className="absolute right-[-36px] top-[-18px] w-8/12 md:right-[-40px] md:top-[-30px] md:w-4/12 xl:top-[-44px]"
+                                />
+                              </span>
+                            </h2>
+                          </div>
+                          <div className="space-y-2">
+                            {day.activities.map((activity, idx) => (
+                              <div
+                                key={idx}
+                                className="flex h-[40px] items-center text-xs text-[#0010A4] md:h-[48px] md:text-sm xl:text-base"
+                              >
+                                <span>{activity.description}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
-          <div
-            className="flex w-4/12 cursor-pointer flex-col items-center lg:w-3/12 xl:w-2/12"
-            onClick={() => handleTimelineClick("oskm", "OSKM")}
-          >
-            <Image
-              src="/landing-page/icon-oskm.svg"
-              alt="3"
-              width={500}
-              height={500}
-            />
-            <p className="text-lg font-bold md:text-xl lg:text-2xl">OSKM</p>
-            <p className="font-rem text-sm lg:text-lg">6-9 Agustus 2024</p>
-          </div>
+          {/* OSKM Dialog */}
+          <Dialog>
+            <DialogTrigger asChild>
+              <div className="flex cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12">
+                <Image
+                  src="/landing-page/icon-oskm.svg"
+                  alt="3"
+                  width={500}
+                  height={500}
+                />
+                <p className="text-lg font-bold md:text-xl lg:text-2xl">OSKM</p>
+                <p className="font-rem text-sm lg:text-lg">7-9 Agustus 2024</p>
+              </div>
+            </DialogTrigger>
+            <DialogContent>
+              <div className="relative h-[300px] w-10/12 overflow-y-auto overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.png')] p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
+                <div className="my-2 text-center font-mogula text-2xl text-[#64B1F7] md:text-3xl xl:text-4xl">
+                  OSKM
+                </div>
+
+                <div className="relative flex font-rem">
+                  {/* Time Area */}
+                  <div className="flex w-1/2 flex-col items-end pr-6">
+                    {daysOSKM.map((day, index) => (
+                      <div key={index}>
+                        <div className="flex items-center">
+                          <h2 className="relative flex h-[60px] items-center text-xs md:h-[72px] md:text-base xl:text-lg">
+                            <Image
+                              src="/landing-page/timeline-detail/ombak_left.svg"
+                              alt="ombak"
+                              width={120}
+                              height={120}
+                              className="absolute left-[-20px] top-[-12px] w-8/12 md:left-[-40px] md:top-[-36px]"
+                            />
+                            <span className="flex w-32 justify-end rounded-full bg-[#000D76] py-2 pr-2 text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-48">
+                              {day.date}
+                            </span>
+                          </h2>
+                        </div>
+                        <div className="space-y-2">
+                          {day.activities.map((activity, idx) => (
+                            <div
+                              key={idx}
+                              className="flex h-[40px] items-center text-xs text-[#0010A4] md:h-[48px] md:text-sm xl:text-base"
+                            >
+                              <span className="ml-20">{activity.time}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Vertical Line with Circles */}
+                  <div className="absolute bottom-0 left-1/2 top-0 flex w-[2px] flex-col justify-between bg-[#000D76] lg:w-[3px]">
+                    {daysOSKM.map((day, index) => (
+                      <div
+                        key={index}
+                        className="relative flex flex-col items-center"
+                      >
+                        {/* Large circle */}
+                        <div className="flex h-[60px] items-center md:h-[72px]">
+                          <div className="relative flex h-16 w-16 flex-col items-center justify-center">
+                            {index === 0 ? (
+                              <Image
+                                src="/landing-page/timeline-detail/ubur.svg"
+                                alt="ubur"
+                                width={100}
+                                height={100}
+                                className="absolute"
+                              />
+                            ) : (
+                              <div className="h-2/5 w-2/5 rounded-full bg-[#000D76] md:h-1/2 md:w-1/2"></div>
+                            )}
+                          </div>
+                        </div>
+                        <div className="space-y-2">
+                          {day.activities.map((_, idx) => (
+                            <div
+                              key={idx}
+                              className="flex h-[40px] items-center md:h-[48px]"
+                            >
+                              <div className="h-3 w-3 rounded-full bg-[#000D76]"></div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Activity Area */}
+                  <div className="w-1/2 pl-6">
+                    {daysOSKM.map((day, index) => (
+                      <div key={index}>
+                        <div className="relative flex items-center">
+                          <h2 className="flex h-[60px] items-center text-xs text-blue-800 md:h-[72px] md:text-base xl:text-lg">
+                            <span className="relative flex w-32 justify-start rounded-full bg-[#000D76] py-2 pl-4 text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-72 xl:w-96">
+                              {day.dayTitle}
+                              <Image
+                                src="/landing-page/timeline-detail/ombak_1.svg"
+                                alt="ombak"
+                                width={120}
+                                height={120}
+                                className="absolute right-[-36px] top-[-18px] w-8/12 md:right-[-40px] md:top-[-30px] md:w-4/12 xl:top-[-44px]"
+                              />
+                            </span>
+                          </h2>
+                        </div>
+                        <div className="space-y-2">
+                          {day.activities.map((activity, idx) => (
+                            <div
+                              key={idx}
+                              className="flex h-[40px] items-center text-xs text-[#0010A4] md:h-[48px] md:text-sm xl:text-base"
+                            >
+                              <span>{activity.description}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
       <div className="relative -top-[120px] md:-top-[240px] xl:-top-[360px]">
@@ -233,96 +613,6 @@ export default function LandingPage() {
           />
         </div>
       </div>
-
-      {/* Conditional rendering for the TimelineCard */}
-      {activeEvent === "Diklat Terpusat" && (
-        <TimelineCard
-          event="Diklat Terpusat"
-          days={[
-            {
-              date: "6 Juli 2024",
-              dayTitle: "Day 1 - Pengenalan Materi",
-              activities: [
-                { time: "08.00", description: "Sesi Pembukaan" },
-                { time: "10.00", description: "Pengenalan Dosen" },
-                { time: "13.00", description: "Praktikum" },
-              ],
-            },
-            {
-              date: "7 Juli 2024",
-              dayTitle: "Day 2 - Pendalaman Materi",
-              activities: [
-                { time: "08.00", description: "Materi A" },
-                { time: "10.00", description: "Materi B" },
-              ],
-            },
-            {
-              date: "13 Juli 2024",
-              dayTitle: "Day 3 - Penutupan",
-              activities: [
-                { time: "08.00", description: "Review & Diskusi" },
-                { time: "10.00", description: "Penutupan & Foto Bersama" },
-              ],
-            },
-          ]}
-          onClose={() => setActiveEvent(null)}
-        />
-      )}
-
-      {activeEvent === "ITB Showcase" && (
-        <TimelineCard
-          event="ITB Showcase"
-          days={[
-            {
-              date: "20 Agustus 2024",
-              dayTitle: "Showcase Day",
-              activities: [
-                { time: "09.00", description: "Pembukaan Showcase" },
-                { time: "11.00", description: "Presentasi Tim A" },
-                { time: "14.00", description: "Presentasi Tim B" },
-                {
-                  time: "16.00",
-                  description: "Penutupan & Pengumuman Pemenang",
-                },
-              ],
-            },
-          ]}
-          onClose={() => setActiveEvent(null)}
-        />
-      )}
-      {activeEvent === "OSKM" && (
-        <TimelineCard
-          event="OSKM"
-          days={[
-            {
-              date: "7 Agustus 2024",
-              dayTitle: "Day 1 - Menjadi Mahasiswa",
-              activities: [
-                { time: "07.30", description: "Opening Ceremony" },
-                { time: "10.00", description: "Aktivitas B" },
-                { time: "13.00", description: "Aktivitas C" },
-              ],
-            },
-            {
-              date: "8 Agustus 2024",
-              dayTitle: "Day 2 - Mahasiswa Merdeka",
-              activities: [
-                { time: "07.30", description: "Aktivitas A" },
-                { time: "10.00", description: "Aktivitas B" },
-              ],
-            },
-            {
-              date: "9 Agustus 2024",
-              dayTitle: "Day 3 - Konsistensi Dalam Belajar",
-              activities: [
-                { time: "07.30", description: "Aktivitas A" },
-                { time: "10.00", description: "Aktivitas B" },
-              ],
-            },
-          ]}
-          onClose={() => setActiveEvent(null)}
-        />
-      )}
     </div>
   );
 }
