@@ -28,9 +28,9 @@ const Page: React.FC = () => {
         </div>
         
         <div className="pagetsx-downregion"> {/* Downregion */}
-          <img className="downleft-corner" src="/article-icons/coral-oren.png" alt="Coral Oren" />
+          <img className="bottom-left-image" src="/article-icons/coral-oren.png" alt="Coral Oren" />
+          <img className="bottom-right-image" src="/article-icons/Coral.png" alt="Coral" />
           <img className="downleft-coral-pensu" src="/article-icons/Coral-Pensu.png" alt="Coral Pensu" />
-          <img className="downleft-coral" src="/article-icons/Coral.png" alt="Coral" />
         </div>
       </div>
     </>
