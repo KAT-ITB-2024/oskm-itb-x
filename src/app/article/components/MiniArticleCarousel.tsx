@@ -6,7 +6,7 @@ import articleData from 'src/app/article/list/article-datas';
 import "src/styles/globals.css";
 
 interface Article {
-  id: number;  // Updated to number
+  id: number;  
   image: string;
   title: string;
   views: number;

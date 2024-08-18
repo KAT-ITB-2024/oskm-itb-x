@@ -1,19 +1,18 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from '../components/Card';
 
 interface Article {
   id: number;
   title: string;
-  date: string;
-  time: string;
+  dateTime: Date;
   author: string;
   views: number;
-  readTime: string;
+  likes: number;
+  readTime: number;
   description: string;
   image: string;
-  buttonlink: string;
 }
 
 interface RenderArticleProps {
@@ -28,6 +27,15 @@ const RenderArticle: React.FC<RenderArticleProps> = ({ filteredArticles }) => {
   const [articlesPerPage, setArticlesPerPage] = useState(
     typeof window !== 'undefined' && window.innerWidth <= 768 ? articlesPerPageMobile : articlesPerPagePC
   );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setArticlesPerPage(window.innerWidth <= 768 ? articlesPerPageMobile : articlesPerPagePC);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const indexOfLastArticle = currentPage * articlesPerPage;
   const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
@@ -47,15 +55,15 @@ const RenderArticle: React.FC<RenderArticleProps> = ({ filteredArticles }) => {
       <button
         onClick={() => handleClick(currentPage - 1)}
         disabled={currentPage === 1}
-        className={`pagination-button ${currentPage === 1 ? 'disabled' : ''}`}
+        className={`pagination-button ${currentPage === 1 ? "disabled" : ""}`}
       >
-        {'<'}
+        {"<"}
       </button>
       {pageNumbers.map((number) => (
         <button
           key={number}
           onClick={() => handleClick(number)}
-          className={`pagination-button ${number === currentPage ? 'active' : ''}`}
+          className={`pagination-button ${number === currentPage ? "active" : ""}`}
         >
           {number}
         </button>
@@ -63,9 +71,9 @@ const RenderArticle: React.FC<RenderArticleProps> = ({ filteredArticles }) => {
       <button
         onClick={() => handleClick(currentPage + 1)}
         disabled={currentPage === pageNumbers.length}
-        className={`pagination-button ${currentPage === pageNumbers.length ? 'disabled' : ''}`}
+        className={`pagination-button ${currentPage === pageNumbers.length ? "disabled" : ""}`}
       >
-        {'>'}
+        {">"}
       </button>
     </div>
   );
@@ -77,14 +85,13 @@ const RenderArticle: React.FC<RenderArticleProps> = ({ filteredArticles }) => {
           key={card.id}
           id={card.id}
           title={card.title}
-          date={card.date}
-          time={card.time}
+          dateTime={card.dateTime}
           author={card.author}
           views={card.views}
+          likes={card.likes}
           readTime={card.readTime}
           description={card.description}
           image={card.image}
-          buttonlink={card.buttonlink}
         />
       ))}
       {renderPagination()}
