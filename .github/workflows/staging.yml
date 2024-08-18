@@ -70,7 +70,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Configure Git Access Token
-        run: git config --global url.`https://${{env.GIT_ACCESS_TOKEN}}@github.com/`.insteadOf "https://github.com/"
+        run: git config --global url.`https://${{secrets.GIT_ACCESS_TOKEN}}@github.com/`.insteadOf "https://github.com/"
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
