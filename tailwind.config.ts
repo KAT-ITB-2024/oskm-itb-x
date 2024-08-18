@@ -72,10 +72,6 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      fontFamily: {
-        rem: "var(--font-rem)",
-        mogula: "var(--font-mogula)",
-      },
     },
   },
   plugins: [require("tailwindcss-animate")],

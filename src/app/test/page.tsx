@@ -3,11 +3,11 @@ import { Button } from "~/components/ui/button";
 
 function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-4 bg-blue-300">
+    <main className="flex min-h-screen flex-col items-center justify-center gap-4">
       {/* Contoh pemakaian button, tambahkan styling sesuai kebutuhan */}
       <div className="flex flex-col items-center justify-center gap-2">
         <h1>Buttons</h1>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex gap-4">
           <Button variant={"pink"}>Open</Button>
           <Button variant={"pinkoutline"}>Download Guidebook</Button>
           <Button variant={"yellow"}>OceanLog</Button>
