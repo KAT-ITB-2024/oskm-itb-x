@@ -683,7 +683,7 @@
   width: 30%; /* Adjust as needed */
 }
 
-{/* Keyframes for Horizontal Swimming Animation
+/* Keyframes for Horizontal Swimming Animation
 @keyframes swim-horizontal {
   0% {
     transform: translateX(-50%) translateY(0);
@@ -771,8 +771,7 @@
   100% {
     bottom: 100vh;
     opacity: 0;
-    transform: translateX(-50%) scale(1) translateY(-200px);
   }
-*/}
+}*/
 
 
