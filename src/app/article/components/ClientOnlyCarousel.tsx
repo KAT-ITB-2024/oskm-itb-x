@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-// Import OwlCarousel for creating a web slider
+// IGajadi di Pakai karena error melulu.
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
   ssr: false,
 });

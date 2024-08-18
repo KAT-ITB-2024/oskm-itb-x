@@ -2,21 +2,23 @@ import React from "react";
 import Swiper from "src/app/article/components/SwiperCarousel";
 import MiniSwiper from "src/app/article/components/MiniArticleCarousel";
 
-export default function Page() {
+const Page: React.FC = () => {
   return (
     <>
       <Swiper /> {/* Section 1 Carousel */}
+      
       <div className="pagetsx-article-background"> {/* Section 2 Elastic Search */}
-        {/*Bagian ada Animasinya (Bakal di Implementasi setelah fungsionalitas dasarnya terpenuhi!!!*/}
-        <div>
+        <div className="pagetsx-upregion"> {/* Upregion */}
+          {/* Content for the upper part of the section */}
         </div>
-        <br />
+        
         <div style={{ marginLeft: "40px" }}>
+          <br/>
           <h2>Read More Articles</h2>
-          <br />
+          <br/>
         </div>
         <MiniSwiper />
-        {/* Untuk Kartunya ya */}
+        {/* For the cards */}
         <div className="center-container">
           <a href="/article/list">
             <button className="article-pagetsx-button">
@@ -24,7 +26,15 @@ export default function Page() {
             </button>
           </a>
         </div>
+        
+        <div className="pagetsx-downregion"> {/* Downregion */}
+          <img className="bottom-left-image" src="/article-icons/coral-oren.png" alt="Coral Oren" />
+          <img className="bottom-right-image" src="/article-icons/Coral.png" alt="Coral" />
+          <img className="downleft-coral-pensu" src="/article-icons/Coral-Pensu.png" alt="Coral Pensu" />
+        </div>
       </div>
     </>
   );
-}
+};
+
+export default Page;

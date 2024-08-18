@@ -71,8 +71,63 @@
 /* Existing Styles */
 /* Ensure the parent container of the carousel */
 
-/* Page-tsx background */
 .pagetsx-article-background {
+  background-color: #000D76; /* Apply background color */
+  background-image: url("/article-icons/BiruBackground1.png"); /* Set background image */
+  background-size: cover; /* Ensure background image covers entire div */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent background from repeating */
+  position: relative; /* Position relative for placing additional elements */
+  min-height: 500px; /* Example height, adjust as needed */
+  display: flex; /* Ensure flexbox layout for vertical stacking */
+  flex-direction: column; /* Stack children vertically */
+}
+
+.pagetsx-upregion {
+  flex: 1; /* Take up remaining space */
+  display: flex; /* Allow for flexible child positioning */
+  /* Any additional styles specific to upregion */
+}
+
+.pagetsx-downregion {
+  height: 500px ; 
+  display: flex; /* Align items horizontally */
+  align-items: flex-end; /* Align images to the bottom */
+  position: relative; /* Required for absolutely positioned children */
+}
+
+/* Class untuk gambar di ujung kiri bawah */
+.bottom-left-image {
+  height: auto; /* Maintain aspect ratio */
+  width: auto; /* Adjust width automatically */
+  position: absolute;
+  bottom: 0; /* Align to the bottom */
+  left: 0; /* Align to the left */
+  max-width: 50%; /* Ensure it does not exceed half of the screen width */
+  max-height: 100%; /* Prevent image from overflowing vertically */
+}
+
+/* Class untuk gambar di ujung kanan bawah */
+.bottom-right-image {
+  height: auto; /* Maintain aspect ratio */
+  width: auto; /* Adjust width automatically */
+  position: absolute;
+  bottom: 0; /* Align to the bottom */
+  right: 0; /* Align to the right */
+  max-width: 50%; /* Ensure it does not exceed half of the screen width */
+  max-height: 100%; /* Prevent image from overflowing vertically */
+}
+
+.downleft-coral-pensu {
+  height: 50%; /* Make this image smaller */
+  width: 50%; /* Maintain aspect ratio */
+  margin-left: auto; /* Adjust positioning as needed */
+  position: relative;
+}
+
+
+
+.pagetsx-article-background-detailed {
   background-color: #000D7680; /* Apply semi-transparent background color */
   background-image: url("/article-icons/BiruBackground1.png"); /* Set the background image */
   background-size: cover; /* Ensure the background image covers the entire div */
@@ -110,6 +165,8 @@
   align-items: center; /* Center vertically (optional) */
   height: 40vh; /* Full viewport height (optional, for vertical centering) */
 }
+
+
 
 .main-article {
   width: 100%;
@@ -292,7 +349,7 @@
   padding: 20px 15px; /* Padding: top/bottom 20px, left/right 15px */
   border-radius: 20px; /* Rounded corners for all corners */
   background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+  box-shadow: 0 4px 8px #64B1F7BF; /* Box shadow for a subtle effect */
   overflow: hidden; /* Hide overflow to keep the design neat */
   text-align: center; /* Center-align text */
   position: relative; /* Ensure the child is positioned relative to this element */
@@ -314,7 +371,7 @@
 /* Card Hover Effect */
 .card:hover {
   transform: scale(1.1); /* Enlarge the card to 110% */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Glowing effect on hover */
+  box-shadow: 0 0 15px #64B1F7BF; /* Glowing effect on hover */
 }
 
 /* Extra Padding for Last Card */
@@ -405,7 +462,152 @@
   }
 }
 
+/*Styling untuk Article List*/
+.search-bar-container {
+  justify-content: center;
+  padding: 10px;
+}
 
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-input-container {
+  width: 100%;
+  height: 48px;
+  padding: 12px 24px;
+  gap: 16px;
+  border-radius: 8px;
+  position: relative;
+  flex: 1;
+  background-color: #F3F4F6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-input-container input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: transparent;
+  font-size: 16px;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sort-select-container {
+  padding-left: 8px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 8px;
+}
+
+.sort-select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  overflow: hidden;
+}
+
+.sort-select-wrapper select {
+  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  background-color: #F3F4F6;
+  color: #000;
+  font-size: 16px;
+  width: 100%;
+  padding-left: 40px;
+  box-sizing: border-box;
+  appearance: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sort-icon-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.no-articles-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.no-articles-found img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.mini-card-container {
+  overflow: hidden;
+  padding: 10px;
+  position: relative;
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 768px) {
+  .mini-card-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 12px;
+  padding-right: 20px;
+}
+
+.pagination-button {
+  cursor: pointer;
+  background-color: #EE1192;
+  border-radius: 4px 0px 0px 0px;
+  width: 24px;
+  height: 24px;
+  padding: 0px 8.5px;
+  color: #000;
+}
+
+.pagination-button.active {
+  background-color: #3678FF;
+  color: #fff;
+}
+
+.pagination-button.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
 
 
 

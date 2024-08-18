@@ -66,7 +66,7 @@ const SearchBar: React.FC = () => {
       ) as HTMLElement;
       const card = document.querySelector(".card") as HTMLElement;
 
-      if (cardContainer && card) {
+      if (cardContainer) {
         const isMobile = window.innerWidth <= 768;
         cardContainer.style.gridTemplateColumns = isMobile
           ? "1fr"
@@ -361,10 +361,7 @@ const SearchBar: React.FC = () => {
       </div>
 
       {found ? (
-        <>
-          {renderArticles()}
-          {renderPagination()}
-        </>
+        <RenderArticle filteredArticles={filteredArticles} />
       ) : (
         <div
           style={{
