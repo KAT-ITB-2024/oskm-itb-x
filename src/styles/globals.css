@@ -609,5 +609,170 @@
   opacity: 0.5;
 }
 
+/*ANIMATIONS OF BACKGROUND (Gerakin Imagenya)*/
+/* General Styling for Animated Objects */
+/* General Styling for Animated Objects */
+.horizontal-animated-object {
+  position: absolute;
+  z-index: 10;
+  animation: swim-horizontal 5s infinite ease-in-out;
+}
+
+.vertical-animated-object {
+  position: absolute;
+  z-index: 10;
+  animation: swim-vertical 4s infinite ease-in-out;
+}
+
+.animated-container {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  max-width: 100%;
+  margin: 0 auto;
+  top: 10px;
+  z-index: -1; /* Places the container behind other elements */
+}
+
+/* Seaweed Image (Static) */
+.seaweed-image {
+  width: 100px; /* Adjust size as needed */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2; /* Lower z-index to stay behind other images */
+}
+
+/* Bubble Image */
+.bubble-image {
+  width: 40px; /* Minimum width */
+  max-width: 80px; /* Maximum width */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  animation: float-bubble 8s linear infinite, bubble-horizontal 3s ease-in-out infinite;
+}
+
+/* Turtle and Fish Specific Positioning */
+.turtle-image {
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto; /* Adjust as needed */
+}
+
+.fish-image {
+  top: 20%;
+  right: 10%;
+  width: auto; /* Adjust as needed */
+}
+
+/* Orange Jellyfish and Fish School Specific Positioning */
+.orangejelly-image {
+  top: 10%;
+  right: 0px;
+  width: 30%; /* Adjust as needed */
+}
+
+.fishs-image {
+  top: 10%;
+  left: 0px;
+  width: 30%; /* Adjust as needed */
+}
+
+{/* Keyframes for Horizontal Swimming Animation
+@keyframes swim-horizontal {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes swim-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes float-bubble {
+  0% {
+    bottom: -50px;
+    opacity: 0.8;
+    transform: translateX(-50%) scale(1) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.1) translateY(-100px);
+  }
+  100% {
+    bottom: 100vh;
+    opacity: 0;
+    transform: translateX(-50%) scale(1) translateY(-200px);
+  }
+}
+
+
+@keyframes bubble-horizontal {
+  0%, 100% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(-45%);
+  }
+}
+
+@keyframes swim-horizontal {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes swim-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes float-bubble {
+  0% {
+    bottom: -50px;
+    opacity: 0.8;
+    transform: translateX(-50%) scale(1) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.1) translateY(-100px);
+  }
+  100% {
+    bottom: 100vh;
+    opacity: 0;
+    transform: translateX(-50%) scale(1) translateY(-200px);
+  }
+*/}
 
 

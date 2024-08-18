@@ -1,17 +1,19 @@
+"use client";
+
 import React from "react";
 import Swiper from "src/app/article/components/SwiperCarousel";
 import MiniSwiper from "src/app/article/components/MiniArticleCarousel";
+import BgImages1 from "src/app/article/components/BgImages1";  // Import the BgImages1 component
 
 const Page: React.FC = () => {
   return (
-    <>
+    <div style={{ position: "relative", zIndex: 1 }}> {/* Ensures images are behind content */}
       <Swiper /> {/* Section 1 Carousel */}
-      
+
       <div className="pagetsx-article-background"> {/* Section 2 Elastic Search */}
-        <div className="pagetsx-upregion"> {/* Upregion */}
-          {/* Content for the upper part of the section */}
-        </div>
         
+        {/* Animation slide up */}
+
         <div style={{ marginLeft: "40px" }}>
           <br/>
           <h2>Read More Articles</h2>
@@ -26,14 +28,14 @@ const Page: React.FC = () => {
             </button>
           </a>
         </div>
-        
+
         <div className="pagetsx-downregion"> {/* Downregion */}
           <img className="bottom-left-image" src="/article-icons/coral-oren.png" alt="Coral Oren" />
           <img className="bottom-right-image" src="/article-icons/Coral.png" alt="Coral" />
           <img className="downleft-coral-pensu" src="/article-icons/Coral-Pensu.png" alt="Coral Pensu" />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

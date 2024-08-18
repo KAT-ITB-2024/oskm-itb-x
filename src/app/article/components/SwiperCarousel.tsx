@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import BgImages1 from "./BgImages1"; // Import BgImages1
 
 const ClientOnlyCarousel: React.FC = () => {
   const [isClient, setIsClient] = useState(false);
@@ -72,6 +73,7 @@ const ClientOnlyCarousel: React.FC = () => {
               className="item"
               style={{
                 backgroundImage: `url(${article.bgImage})`,
+                position: "relative", // Ensure relative positioning for child elements
               }}
             >
               {/* Optional Gradient Overlays
@@ -91,6 +93,22 @@ const ClientOnlyCarousel: React.FC = () => {
                   </a>
                 )}
               </div>
+
+              {/* Insert BgImages1 component (contains moving images) */}
+              <BgImages1 />
+
+              {/* Static bottom image with full width */}
+              <img
+                src="/article-icons/pagetsx-article-wave.png"
+                alt="Wave Image"
+                style={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: 0,
+                  width: "100%",
+                  zIndex: 0, // Ensure it appears behind other content
+                }}
+              />
             </div>
           </SwiperSlide>
         ))}
