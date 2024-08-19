@@ -25,15 +25,15 @@ const BgImages1: React.FC = () => {
     container: {
       position: "absolute" as "absolute", // Make the container absolute
       top: 0,
-      left: 0,
-      width: "120%",
+      left: -80,
+      width: "135%",
       height: "100%", // Expand to cover entire SwiperSlide area
       overflow: "hidden",
       zIndex: 1,
       pointerEvents: "none", // Prevent interaction with the background elements
     },
     seaweedImage: {
-      width: "40%", // Seaweed size set to 40% of the width of the container
+      width: "40%", // Seaweed size set to 30% of the width of the container
       position: "absolute" as "absolute",
       top: "65%", // Position seaweed at the center-bottom of the container
       left: "50%",
@@ -71,7 +71,7 @@ const BgImages1: React.FC = () => {
     fishsImage: {
       position: "absolute" as "absolute",
       top: "10%",
-      left: "0%",
+      left: "10%",
       width: "20%",
       zIndex: 1,
       animation: "swimVertical 4s infinite ease-in-out",
@@ -83,28 +83,6 @@ const BgImages1: React.FC = () => {
       width: "20%",
       zIndex: 1,
       animation: "swimVertical 4s infinite ease-in-out",
-    },
-    bluejellyImage: {
-      position: "absolute" as "absolute",
-      top: "70%", // Slightly above the orange jellyfish
-      right: "25%", // Positioned to the left of the orange jellyfish
-      width: "15%",
-      zIndex: 1,
-      animation: "swimVerticalSlow 8s infinite ease-in-out", // Similar animation but slower
-    },
-    leftCornerCoral: {
-      position: "absolute" as "absolute",
-      bottom: 0,
-      left: 0,
-      width: "20%",
-      zIndex: 1,
-    },
-    leftCornerCoral2: {
-      position: "absolute" as "absolute",
-      bottom: 0,
-      left: "2%", // Positioned next to the first coral
-      width: "15%",
-      zIndex: 1,
     },
     keyframes: `
       @keyframes swimHorizontal {
@@ -120,18 +98,6 @@ const BgImages1: React.FC = () => {
       }
 
       @keyframes swimVertical {
-        0% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-15px);
-        }
-        100% {
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes swimVerticalSlow {
         0% {
           transform: translateY(0);
         }
@@ -196,20 +162,6 @@ const BgImages1: React.FC = () => {
         style={styles.seaweedImage}
       />
 
-      {/* Left Corner Corals */}
-      <img 
-        className="left-corner-coral" 
-        src="/article-icons/leftcornercoral.png" 
-        alt="Left Corner Coral"
-        style={styles.leftCornerCoral}
-      />
-      <img 
-        className="left-corner-coral-2" 
-        src="/article-icons/leftcornercoral2.png" 
-        alt="Left Corner Coral 2"
-        style={styles.leftCornerCoral2}
-      />
-
       {/* Dynamic Bubbles */}
       {[...Array(10)].map((_, i) => (
         <img 
@@ -233,12 +185,6 @@ const BgImages1: React.FC = () => {
         src="/article-icons/orangejelly.png" 
         alt="Orange Jellyfish"
         style={styles.orangejellyImage}
-      />
-      <img 
-        className="vertical-animated-object bluejelly-image" 
-        src="/article-icons/bluejelly.png" 
-        alt="Blue Jellyfish"
-        style={styles.bluejellyImage}
       />
     </div>
   );
