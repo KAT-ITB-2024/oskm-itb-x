@@ -4,32 +4,24 @@ import React from 'react';
 interface CardProps {
   id: number;
   title: string;
-  dateTime: Date;
-  // dateTime: string;
-  // date: string;
-  // time: string;
+  createdAt: Date;
   author: string;
   views: number;
   likes: number;
   readTime: number;
-  // readTime: string;
   description: string;
   image: string;
-  // buttonlink: string;
 }
 
 const Card: React.FC<CardProps> = ({
   id,
   title,
-  dateTime,
-  // date,
-  // time,
+  createdAt,
   author,
   views,
   readTime,
   description,
   image,
-  // buttonlink,
 }) => {
   return (
     <div
@@ -50,7 +42,7 @@ const Card: React.FC<CardProps> = ({
         </div>
         <h2 className="card-title">{title}</h2>
         <div className="card-details">
-          <span className="card-date">{dateTime.toString()}</span>
+          <span className="card-date">{createdAt && createdAt.toString()}</span>
           {/* <span className="card-date">{date}</span> at {time} by{' '} */}
           <span className="card-author">{author}</span>
         </div>

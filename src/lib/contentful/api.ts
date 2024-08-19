@@ -10,6 +10,7 @@ const ARTICLE_GRAPHQL_FIELDS = `
   image {
     url
   }
+  createdAt
 `;
 
 async function fetchGraphQL(query: string, preview = false) {

@@ -6,11 +6,11 @@ interface Article {
   title: string;
   description: string;
   author: string;
-  dateTime: Date;
+  createdAt: Date;
   views: number;
   likes: number;
   readTime: number;
-  image: string;
+  image: { url: string };
 }
 
 export const useArticles = () => {
