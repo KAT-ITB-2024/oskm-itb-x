@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^1.1.0",
-    "@katitb2024/database": "git+ssh://git@github.com:KAT-ITB-2024/database-oskm.git#master",
+    "@katitb2024/database": "git+https://github.com/KAT-ITB-2024/database-oskm.git#master",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
