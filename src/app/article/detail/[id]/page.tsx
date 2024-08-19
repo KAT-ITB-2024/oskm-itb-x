@@ -85,7 +85,7 @@ const Page: React.FC = () => {
   );
 };
 
-//
+// Styles Page disimpan disini biar enak diatur sebelum diletakkan di Global.css//
 const styles = {
   pageContainer: {
     maxWidth: '100%',
