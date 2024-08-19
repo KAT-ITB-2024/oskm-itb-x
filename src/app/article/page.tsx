@@ -9,6 +9,7 @@ const Page: React.FC = () => {
   return (
     <div style={{ position: "relative", zIndex: 1 }}> {/* Ensures images are behind content */}
       <Swiper /> {/* Section 1 Carousel */}
+      
 
       <div className="pagetsx-article-background"> {/* Section 2 Elastic Search */}
         

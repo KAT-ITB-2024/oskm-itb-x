@@ -170,7 +170,7 @@
 
 .main-article {
   width: 100%;
-  height: 720px; /* Ensure height is 720px */
+  height: 840px; 
   margin: 0;
   padding: 0;
   position: relative; /* Allows for absolute positioning of child elements */
@@ -228,7 +228,8 @@
   border-radius: 50%; /* Ensure bullets are circular */
   width: 8px; /* Adjust size as needed */
   height: 8px; /* Adjust size as needed */
-  margin: 0 4px; /* Add some space between bullets */
+  margin: 0 4px; 
+  z-index: 9999; /* Biar didepan T_T Gimana ya */
 }
 
 /* Styles for the active pagination bullet */

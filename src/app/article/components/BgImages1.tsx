@@ -29,25 +29,24 @@ const BgImages1: React.FC = () => {
       width: "120%",
       height: "100%", // Expand to cover entire SwiperSlide area
       overflow: "hidden",
-      zIndex: 1,
+      zIndex: 6,
       pointerEvents: "none", // Prevent interaction with the background elements
     },
     seaweedImage: {
-      width: "40%", // Seaweed size set to 40% of the width of the container
+      width: "40%", 
       position: "absolute" as "absolute",
-      top: "65%", // Position seaweed at the center-bottom of the container
+      top: "67.5%",
       left: "50%",
       transform: "translateX(-50%)",
-      zIndex: 1,
+      zIndex: 2,
     },
     bubbleImage: {
       width: "40px",
       maxWidth: "80px",
       position: "absolute" as "absolute",
-      bottom: 0,
       left: "50%",
       transform: "translateX(-50%)",
-      zIndex: 1,
+      zIndex: 5,
       animation: "floatBubble 8s linear infinite, bubbleHorizontal 3s ease-in-out infinite",
     },
     turtleImage: {
