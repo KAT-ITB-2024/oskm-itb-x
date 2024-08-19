@@ -27,6 +27,7 @@ export default function Page() {
             pharetra scelerisque, elementum sed ante.
           </p>
         </div>
+
         {/* UKM */}
         <div className="flex flex-col items-center gap-y-6">
           <Image
@@ -54,6 +55,7 @@ export default function Page() {
             Explore Now!
           </Button>
         </div>
+
         {/* BSO */}
         <div className="flex flex-col items-center gap-y-6">
           <Image
@@ -81,6 +83,7 @@ export default function Page() {
             Explore Now!
           </Button>
         </div>
+
         {/* HMJ */}
         <div className="flex flex-col items-center gap-y-6">
           <Image
