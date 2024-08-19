@@ -85,7 +85,7 @@ const Page: React.FC = () => {
   );
 };
 
-// Inline styles
+//
 const styles = {
   pageContainer: {
     maxWidth: '100%',
@@ -95,7 +95,6 @@ const styles = {
     backgroundSize: 'cover',
     borderRadius: '16px',
     fontFamily: 'REM, sans-serif',
-    color: '#ffffff', // Make all text white
   },
   articleTitle: {
     fontFamily: 'Mogula, sans-serif',
@@ -103,11 +102,13 @@ const styles = {
     fontWeight: 'bold',
     textAlign: 'center' as const,
     marginBottom: '10px',
+    color: '#ffffff', // Make all text white
   },
   articleDate: {
     fontSize: '1rem',
     textAlign: 'center' as const,
     marginBottom: '20px',
+    color: '#ffffff', // Make all text white
   },
   statsContainer: {
     display: 'flex',
@@ -119,10 +120,11 @@ const styles = {
     marginBottom: '20px',
     maxWidth: '90%',
     margin: '0 auto',
+    color: '#ffffff', // Make all text white
   },
   statsItem: {
     display: 'inline-block',
-    fontSize: '1rem', // Same font size for all items
+    fontSize: '1rem', 
   },
   articleImageContainer: {
     textAlign: 'center' as const,
@@ -133,14 +135,15 @@ const styles = {
     maxWidth: '600px',
     height: 'auto',
     borderRadius: '20px',
+    margin: '0 auto',
   },
   articleDescriptionContainer: {
-    width: '75%',
-    margin: '0 auto', // Center the description box
+    width: '75%', // Center the description box
     padding: '10px',
     borderRadius: '8px',
     marginBottom: '20px',
-    backgroundColor: 'rgba(255, 255, 255, 0.2)', // Transparent background
+    margin: '0 auto',
+    color: '#ffffff', // Make all text white
   },
   articleDescription: {
     fontSize: '1rem',
@@ -157,7 +160,7 @@ const styles = {
     height: '50px',
   },
   spacer: {
-    height: '20px',
+    height: '50px',
   },
   largeSpacer: {
     height: '100px',
