@@ -10,7 +10,7 @@ on:
 
 jobs:
   # Build job
-  build:
+  build-and-deploy:
     runs-on: self-hosted
     environment: staging
     env:
@@ -46,14 +46,6 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-      # - name: Setup Pages
-      #   uses: actions/configure-pages@v5
-      #   with:
-      #     # Automatically inject basePath in your Next.js configuration file and disable
-      #     # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
-      #     #
-      #     # You may remove this line if you want to manage the configuration yourself.
-      #     static_site_generator: next
       - name: Restore cache
         uses: actions/cache@v4
         with:
@@ -64,20 +56,26 @@ jobs:
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
-      - name: Configure Git
-        run: git config --global url."git@github.com:".insteadOf "git://github.com/"
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
-
-  # Deployment job
-  deploy:
-    environment: staging
-    runs-on: self-hosted
-    needs: build
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
       - name: Restart pm2
         run: pm2 restart pm2.config.json
+
+
+  # # Deployment job
+  # deploy:
+  #   environment: staging
+  #   runs-on: self-hosted
+  #   needs: build
+  #   env:
+  #     DATABASE_URL: ${{ secrets.DATABASE_URL }}
+  #     NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
+  #     NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
+  #     MAILER_FROM: ${{ secrets.MAILER_FROM }}
+  #     MAILER_CLIENT_ID: ${{ secrets.MAILER_CLIENT_ID }}
+  #     MAILER_CLIENT_SECRET: ${{ secrets.MAILER_CLIENT_SECRET }}
+  #     MAILER_REFRESH_TOKEN: ${{ secrets.MAILER_REFRESH_TOKEN }}
+  #   steps:
+      
