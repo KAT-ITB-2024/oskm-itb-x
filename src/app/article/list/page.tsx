@@ -131,6 +131,13 @@ export default function Page() {
         )}
         {renderPagination()}
       </div>
+
+      {/*Div ini untuk background yang ada Figma ya Ko :D */}
+      <div className="pagetsx-downregion"> {/* Downregion */}
+          <img className="bottom-left-image" src="/article-icons/coral-oren.png" alt="Coral Oren" />
+          <img className="bottom-right-image" src="/article-icons/Coral.png" alt="Coral" />
+          <img className="downleft-coral-pensu" src="/article-icons/Coral-Pensu.png" alt="Coral Pensu" />
+      </div>
     </div>
   );
 }
