@@ -4,7 +4,7 @@
         "name": "oskm",
         "script": "yarn",
         "args": "start",
-        "instances": "max",
+        "instances": 1,
         "exec_mode": "cluster"
       }
     ]
