@@ -1,11 +1,21 @@
 import Image from "next/image";
+import CarouselKegiatan from "./components/carousel-kegiatan";
 
 export default function DetailPage() {
+  const images = [
+    "/itb-x/detail/hmif-1.png",
+    "/itb-x/detail/hmif-2.jpg",
+    "/itb-x/detail/hmif-3.jpg",
+    "/itb-x/detail/hmif-4.jpg",
+  ];
+
   return (
     <main className="min-h-screen bg-[url('/itb-x/bg-detail.png')] bg-cover bg-center py-20">
       <div className="mx-10 mt-20 flex flex-col items-center justify-center gap-y-20 lg:mx-16 xl:mx-24">
         {/* images carousel */}
-        <div></div>
+        <div>
+          <CarouselKegiatan images={images} />
+        </div>
         {/* hari jadi */}
         <div className="flex w-full flex-col items-center rounded-[40px] bg-[url('/itb-x/bg-detail.png')] bg-cover bg-center py-8 font-mogula text-3xl text-white lg:py-12 lg:text-4xl">
           <p>Hari Jadi</p>
@@ -15,7 +25,7 @@ export default function DetailPage() {
         <div>
           <div className="mb-6 flex flex-row items-center justify-between">
             <div className="h-8 w-24 rounded-2xl bg-[url('/itb-x/bg-line.png')] bg-cover bg-center md:w-4/12 lg:w-5/12"></div>
-            <h1 className="font-mogula text-3xl text-white lg:text-4xl">
+            <h1 className="font-mogula text-3xl text-white lg:text-4xl xl:text-5xl">
               About Us
             </h1>
             <div className="h-8 w-24 rounded-2xl bg-[url('/itb-x/bg-line.png')] bg-cover bg-center md:w-4/12 lg:w-5/12"></div>
@@ -65,7 +75,7 @@ export default function DetailPage() {
         <div>
           <div className="mb-6 flex flex-row items-center justify-between">
             <div className="h-8 w-24 rounded-2xl bg-[url('/itb-x/bg-line.png')] bg-cover bg-center md:w-4/12 lg:w-5/12"></div>
-            <h1 className="font-mogula text-3xl text-white lg:text-4xl">
+            <h1 className="font-mogula text-3xl text-white lg:text-4xl xl:text-5xl">
               Visi
             </h1>
             <div className="h-8 w-24 rounded-2xl bg-[url('/itb-x/bg-line.png')] bg-cover bg-center md:w-4/12 lg:w-5/12"></div>
