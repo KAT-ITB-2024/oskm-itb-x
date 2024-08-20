@@ -56,6 +56,36 @@ jobs:
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
+      - name: Check secrets exist
+        run: |
+          if [ -z "${{ env.DATABASE_URL }}" ]; then
+            echo "DATABASE_URL secret is missing"
+            exit 1
+          fi
+          if [ -z "${{ env.NEXTAUTH_SECRET }}" ]; then
+            echo "NEXTAUTH_SECRET secret is missing"
+            exit 1
+          fi
+          if [ -z "${{ env.NEXTAUTH_URL }}" ]; then
+            echo "NEXTAUTH_URL secret is missing"
+            exit 1
+          fi
+          if [ -z "${{ env.MAILER_FROM }}" ]; then
+            echo "MAILER_FROM secret is missing"
+            exit 1
+          fi
+          if [ -z "${{ env.MAILER_CLIENT_ID }}" ]; then
+            echo "MAILER_CLIENT_ID secret is missing"
+            exit 1
+          fi
+          if [ -z "${{ env.MAILER_CLIENT_SECRET }}" ]; then
+            echo "MAILER_CLIENT_SECRET secret is missing"
+            exit 1
+          fi
+          if [ -z "${{ env.MAILER_REFRESH_TOKEN }}" ]; then
+            echo "MAILER_REFRESH_TOKEN secret is missing"
+            exit 1
+          fi
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
