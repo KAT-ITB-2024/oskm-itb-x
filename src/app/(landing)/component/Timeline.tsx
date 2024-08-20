@@ -1,7 +1,7 @@
 export default function Timeline() {
   return (
     <div>
-      <p>Timeline</p>
+      <p>Timeline Cobain</p>
     </div>
   );
 }
