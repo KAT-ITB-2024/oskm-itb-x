@@ -431,30 +431,47 @@
 
 /* Title Styling */
 .card-title {
-  font-size: 20px; /* Updated size */
+  font-family: mogula;
+  font-size: 17.75px;
   font-weight: 400;
-  line-height: 24px;
-  text-align: justify;
-  margin: 3px 0; /* Reduced spacing */
+  line-height: 21.31px;
+  text-align: justified;
+  text-shadow: 3.55px 5.33px 44.39px 0px #64B1F7;
+  color: #0010A4; /* Text color */
+  width: 249.45px;
+  height: 45.27px;
+  gap: 0px;
+  opacity: 0px;
+
 }
 
 /* Author, Date, and Time Styling */
 .card-details {
-  font-size: 12px;
+  font-family: REM;
+  font-size: 10.65px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 15.98px;
   text-align: left;
-  margin: 2px 0; /* Reduced spacing to bring closer to title */
+  width: 249.45px;
+  height: 16px;
+  gap: 0px;
+  opacity: 0px;
+  color: #9EA2AD;    
 }
 
 /* Description Styling */
 .card-description {
-  font-size: 14px;
+  width: 249.45px;
+  height: 73.68px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: REM;
+  font-size: 12.43px;
   font-weight: 400;
-  line-height: 21px;
-  text-align: justify;
-  color: #666; /* Text color */
-  margin: 4px 0; /* Reduced spacing */
+  line-height: 18.64px;
+  text-align: justified;
+  color: #3678FF;
+    
 }
 
 /* Read More Styling */
@@ -462,10 +479,9 @@
   display: block;
   font-size: 12px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 16px;
   text-align: right;
-  color: #000; /* Text color */
-  text-decoration: none;
+  color: #FB43BD; /* Text color */
   margin-top: 5px; /* Reduced spacing */
   bottom: 8px;
   right: 8px;
