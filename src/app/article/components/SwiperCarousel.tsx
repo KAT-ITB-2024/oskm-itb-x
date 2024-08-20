@@ -59,16 +59,20 @@ const ClientOnlyCarousel: React.FC = () => {
     <div className="main-article">
       {/* Insert BgImages1 component (contains moving images) */}
       <BgImages1 />
-      {/* Static bottom image with full width */}
+      
+      {/* Wave Image */}
       <img src="/article-icons/pagetsx-article-wave.png" alt="Wave Image"
         style={{
         position: "absolute",
         bottom: 0,
         left: 0,
         width: "100%",
+        height: "40%",
         zIndex: 3, // Ensure it appears behind other content
          }} 
               />
+
+
       <Swiper
         className="swiper-container"
         modules={[Navigation, Pagination, Autoplay]}

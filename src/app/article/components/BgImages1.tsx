@@ -4,14 +4,13 @@ import React, { useEffect } from "react";
 
 const BgImages1: React.FC = () => {
   useEffect(() => {
-    // Scroll event listener for bubbles
     const handleScroll = () => {
       const bubbles = document.querySelectorAll('.bubble-image');
       bubbles.forEach((bubble: any) => {
         const rect = bubble.getBoundingClientRect();
         bubble.style.transform = `translateY(${window.scrollY * -0.5}px) translateX(${Math.sin(window.scrollY * 0.1) * 10}px)`;
         if (rect.bottom < 0) {
-          bubble.style.display = 'none'; // Hide bubbles when they move out of bounds
+          bubble.style.display = 'none'; 
         }
       });
     };
@@ -20,52 +19,59 @@ const BgImages1: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Inline styles for keyframes and animations
   const styles = {
     container: {
-      position: "absolute" as "absolute", // Make the container absolute
+      position: "absolute" as "absolute",
       top: 0,
       left: 0,
       width: "120%",
-      height: "100%", // Expand to cover entire SwiperSlide area
+      height: "100%",
       overflow: "hidden",
       zIndex: 6,
-      pointerEvents: "none", // Prevent interaction with the background elements
+      pointerEvents: "none",
+    },
+    oceanContainer: {
+      position: "absolute" as "absolute",
+      bottom: 0,
+      left: 0,
+      width: "100%",
+      height: "690px", 
+      zIndex: 2,
+      overflow: "hidden", // Ensure no overflow outside the div
+    },
+    waveImage: {
+      position: "absolute" as "absolute",
+      bottom: 0,
+      left: 0,
+      width: "100%",
+      height: "40%",
+      zIndex: 3, // Ensure it appears behind other content
     },
     seaweedImage: {
-      width: "40%", 
       position: "absolute" as "absolute",
-      top: "67.5%",
+      bottom: "60%",
       left: "50%",
       transform: "translateX(-50%)",
-      zIndex: 2,
-    },
-    bubbleImage: {
-      width: "40px",
-      maxWidth: "80px",
-      position: "absolute" as "absolute",
-      left: "50%",
-      transform: "translateX(-50%)",
-      zIndex: 5,
-      animation: "floatBubble 8s linear infinite, bubbleHorizontal 3s ease-in-out infinite",
+      width: "30%",
+      zIndex: 4,
     },
     turtleImage: {
       position: "absolute" as "absolute",
-      top: "65%",
+      bottom: "70%",
       left: "45%",
       transform: "translateX(-50%)",
-      width: "40%",
-      zIndex: 2,
+      width: "30%",
+      zIndex: 4,
       animation: "swimHorizontal 5s infinite ease-in-out",
     },
     fishImage: {
       position: "absolute" as "absolute",
-      top: "74%", 
-      left: "25%", // Place fish to the left of the turtle
+      bottom: "45%",
+      left: "25%",
       transform: "translateX(-50%)",
-      width: "15%",
-      zIndex: 2,
-      animation: "swimHorizontal 5s infinite ease-in-out", // Same animation as the turtle
+      width: "20%",
+      zIndex: 4,
+      animation: "swimHorizontal 5s infinite ease-in-out",
     },
     fishsImage: {
       position: "absolute" as "absolute",
@@ -85,11 +91,11 @@ const BgImages1: React.FC = () => {
     },
     bluejellyImage: {
       position: "absolute" as "absolute",
-      top: "70%", // Slightly above the orange jellyfish
-      right: "25%", // Positioned to the left of the orange jellyfish
+      top: "70%",
+      right: "25%",
       width: "15%",
       zIndex: 1,
-      animation: "swimVerticalSlow 8s infinite ease-in-out", // Similar animation but slower
+      animation: "swimVerticalSlow 8s infinite ease-in-out",
     },
     leftCornerCoral: {
       position: "absolute" as "absolute",
@@ -101,9 +107,18 @@ const BgImages1: React.FC = () => {
     leftCornerCoral2: {
       position: "absolute" as "absolute",
       bottom: 0,
-      left: "2%", // Positioned next to the first coral
+      left: "2%",
       width: "15%",
       zIndex: 1,
+    },
+    bubbleImage: {
+      width: "40px",
+      maxWidth: "80px",
+      position: "absolute" as "absolute",
+      left: "50%",
+      transform: "translateX(-50%)",
+      zIndex: 5,
+      animation: "floatBubble 8s linear infinite, bubbleHorizontal 3s ease-in-out infinite",
     },
     keyframes: `
       @keyframes swimHorizontal {
@@ -166,6 +181,102 @@ const BgImages1: React.FC = () => {
           transform: translateX(-45%);
         }
       }
+
+      @media (min-width: 1024px) {
+        .seaweed-image {
+          width: 35%;
+          bottom: 10%;
+        }
+        .turtle-image {
+          bottom: 15%;
+          left: 45%;
+          width: 35%;
+        }
+        .fish-image {
+          bottom: 20%;
+          left: 25%;
+          width: 20%;
+        }
+        .bubble-image {
+          width: 50px;
+          max-width: 100px;
+        }
+        .fishs-image {
+          width: 25%;
+        }
+        .orangejelly-image,
+        .bluejelly-image {
+          width: 25%;
+        }
+        .left-corner-coral,
+        .left-corner-coral-2 {
+          width: 25%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .seaweed-image {
+          width: 30%;
+          bottom: 10%;
+        }
+        .turtle-image {
+          bottom: 12%;
+          left: 40%;
+          width: 30%;
+        }
+        .fish-image {
+          bottom: 15%;
+          left: 20%;
+          width: 15%;
+        }
+        .bubble-image {
+          width: 20px;
+          max-width: 40px;
+        }
+        .fishs-image {
+          width: 15%;
+        }
+        .orangejelly-image,
+        .bluejelly-image {
+          width: 15%;
+        }
+        .left-corner-coral,
+        .left-corner-coral-2 {
+          width: 15%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .seaweed-image {
+          width: 25%;
+          bottom: 8%;
+        }
+        .turtle-image {
+          bottom: 10%;
+          left: 35%;
+          width: 25%;
+        }
+        .fish-image {
+          bottom: 12%;
+          left: 15%;
+          width: 12%;
+        }
+        .bubble-image {
+          width: 15px;
+          max-width: 30px;
+        }
+        .fishs-image {
+          width: 12%;
+        }
+        .orangejelly-image,
+        .bluejelly-image {
+          width: 12%;
+        }
+        .left-corner-coral,
+        .left-corner-coral-2 {
+          width: 12%;
+        }
+      }
     `,
   };
 
@@ -173,29 +284,36 @@ const BgImages1: React.FC = () => {
     <div style={styles.container}>
       <style>{styles.keyframes}</style>
 
-      {/* Turtle and Fish with Horizontal Animation */}
-      <img 
-        className="horizontal-animated-object turtle-image" 
-        src="/article-icons/turtle.png" 
-        alt="Turtle"
-        style={styles.turtleImage}
-      />
-      <img 
-        className="horizontal-animated-object fish-image" 
-        src="/article-icons/fish.png" 
-        alt="Fish"
-        style={styles.fishImage}
-      />
+      {/* Ocean container with wave and marine life */}
+      <div style={styles.oceanContainer}>
+        {/* Wave Image */}
+        <img
+          src="/article-icons/pagetsx-article-wave.png"
+          alt="Wave Image"
+          style={styles.waveImage}
+        />
+        
+        {/* Seaweed, Turtle, and Fish */}
+        <img 
+          className="seaweed-image" 
+          src="/article-icons/seaweed.png" 
+          alt="Seaweed"
+          style={styles.seaweedImage}
+        />
+        <img 
+          className="turtle-image" 
+          src="/article-icons/turtle.png" 
+          alt="Turtle"
+          style={styles.turtleImage}
+        />
+        <img 
+          className="fish-image" 
+          src="/article-icons/fish.png" 
+          alt="Fish"
+          style={styles.fishImage}
+        />
+      </div>
 
-      {/* Seaweed in the Center-Bottom */}
-      <img 
-        className="seaweed-image" 
-        src="/article-icons/seaweed.png" 
-        alt="Seaweed"
-        style={styles.seaweedImage}
-      />
-
-      {/* Left Corner Corals */}
       <img 
         className="left-corner-coral" 
         src="/article-icons/leftcornercoral.png" 
@@ -209,7 +327,6 @@ const BgImages1: React.FC = () => {
         style={styles.leftCornerCoral2}
       />
 
-      {/* Dynamic Bubbles */}
       {[...Array(10)].map((_, i) => (
         <img 
           key={i}
@@ -220,21 +337,20 @@ const BgImages1: React.FC = () => {
         />
       ))}
 
-      {/* Fishs and Orange Jellyfish with Vertical Animation */}
       <img 
-        className="vertical-animated-object fishs-image" 
+        className="fishs-image" 
         src="/article-icons/fishs.png" 
         alt="Fish School"
         style={styles.fishsImage}
       />
       <img 
-        className="vertical-animated-object orangejelly-image" 
+        className="orangejelly-image" 
         src="/article-icons/orangejelly.png" 
         alt="Orange Jellyfish"
         style={styles.orangejellyImage}
       />
       <img 
-        className="vertical-animated-object bluejelly-image" 
+        className="bluejelly-image" 
         src="/article-icons/bluejelly.png" 
         alt="Blue Jellyfish"
         style={styles.bluejellyImage}

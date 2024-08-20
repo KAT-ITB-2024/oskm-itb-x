@@ -84,46 +84,76 @@
 }
 
 .pagetsx-upregion {
-  flex: 1; /* Take up remaining space */
-  display: flex; /* Allow for flexible child positioning */
-  /* Any additional styles specific to upregion */
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Adjusting for smaller screens */
 }
 
 .pagetsx-downregion {
-  height: 500px ; 
-  display: flex; /* Align items horizontally */
-  align-items: flex-end; /* Align images to the bottom */
-  position: relative; /* Required for absolutely positioned children */
+  height: 300px; /* Default height, can adjust for larger screens later */
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  justify-content: space-between; /* Distribute images evenly */
 }
 
-/* Class untuk gambar di ujung kiri bawah */
+.bottom-left-image,
+.bottom-right-image,
+.downleft-coral-pensu {
+  height: auto;
+  width: auto;
+  max-width: 50%;
+  max-height: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
 .bottom-left-image {
-  height: auto; /* Maintain aspect ratio */
-  width: auto; /* Adjust width automatically */
-  position: absolute;
-  bottom: 0; /* Align to the bottom */
-  left: 0; /* Align to the left */
-  max-width: 50%; /* Ensure it does not exceed half of the screen width */
-  max-height: 100%; /* Prevent image from overflowing vertically */
+  left: 0;
 }
 
-/* Class untuk gambar di ujung kanan bawah */
 .bottom-right-image {
-  height: auto; /* Maintain aspect ratio */
-  width: auto; /* Adjust width automatically */
-  position: absolute;
-  bottom: 0; /* Align to the bottom */
-  right: 0; /* Align to the right */
-  max-width: 50%; /* Ensure it does not exceed half of the screen width */
-  max-height: 100%; /* Prevent image from overflowing vertically */
+  right: 0;
 }
 
 .downleft-coral-pensu {
-  height: 50%; /* Make this image smaller */
-  width: 50%; /* Maintain aspect ratio */
-  margin-left: auto; /* Adjust positioning as needed */
-  position: relative;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+  bottom: 20px; /* Add some margin from the bottom */
 }
+
+/* Responsiveness for mobile devices */
+@media (max-width: 768px) {
+  .pagetsx-downregion {
+    height: 200px; /* Adjust height for smaller screens */
+  }
+
+  .bottom-left-image,
+  .bottom-right-image,
+  .downleft-coral-pensu {
+    max-width: 40%; /* Make images smaller */
+    max-height: 80%;
+  }
+
+  .downleft-coral-pensu {
+    bottom: 10px; /* Adjust positioning for smaller screens */
+  }
+}
+
+/* Responsiveness for larger screens */
+@media (min-width: 1024px) {
+  .pagetsx-downregion {
+    height: 500px; /* Adjust height for larger screens */
+  }
+
+  .bottom-left-image,
+  .bottom-right-image,
+  .downleft-coral-pensu {
+    max-width: 25%; /* Make images larger */
+    max-height: 90%;
+  }
+}
+
 
 
 

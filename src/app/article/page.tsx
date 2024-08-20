@@ -3,7 +3,6 @@
 import React from "react";
 import Swiper from "src/app/article/components/SwiperCarousel";
 import MiniSwiper from "src/app/article/components/MiniArticleCarousel";
-import BgImages1 from "src/app/article/components/BgImages1";  // Import the BgImages1 component
 
 const Page: React.FC = () => {
   return (

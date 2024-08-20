@@ -75,10 +75,14 @@ const Page: React.FC = () => {
         </div>
 
         {/* Spacer before the button */}
-        <div style={styles.spacer}></div>
+        <div style={styles.spacer}/>
 
         {/* MiniArticleCarousel Component */}
         <MiniArticleCarousel />
+
+        {/* Spacer below the button */}
+        <div style={styles.spacer}/>
+
 
       </div>
     </>
@@ -93,7 +97,6 @@ const styles = {
     padding: '20px',
     backgroundImage: `url('/article-icons/BiruBackground1.png')`,
     backgroundSize: 'cover',
-    borderRadius: '16px',
     fontFamily: 'REM, sans-serif',
   },
   articleTitle: {
