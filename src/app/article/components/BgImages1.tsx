@@ -36,7 +36,7 @@ const BgImages1: React.FC = () => {
       left: 0,
       width: "100%",
       height: "690px", 
-      zIndex: 2,
+      zIndex: 0,
       overflow: "hidden", // Ensure no overflow outside the div
     },
     waveImage: {
@@ -45,7 +45,7 @@ const BgImages1: React.FC = () => {
       left: 0,
       width: "100%",
       height: "40%",
-      zIndex: 3, // Ensure it appears behind other content
+      zIndex: 0, 
     },
     seaweedImage: {
       position: "absolute" as "absolute",
@@ -66,8 +66,8 @@ const BgImages1: React.FC = () => {
     },
     fishImage: {
       position: "absolute" as "absolute",
-      bottom: "45%",
-      left: "25%",
+      bottom: "15%",
+      right: "25%",
       transform: "translateX(-50%)",
       width: "20%",
       zIndex: 4,
@@ -75,7 +75,7 @@ const BgImages1: React.FC = () => {
     },
     fishsImage: {
       position: "absolute" as "absolute",
-      top: "10%",
+      bottom: "10%",
       left: "0%",
       width: "20%",
       zIndex: 1,
@@ -322,7 +322,7 @@ const BgImages1: React.FC = () => {
       />
       <img 
         className="left-corner-coral-2" 
-        src="/article-icons/leftcornercoral2.png" 
+        src="/article-icons/anema.png" 
         alt="Left Corner Coral 2"
         style={styles.leftCornerCoral2}
       />
@@ -336,19 +336,6 @@ const BgImages1: React.FC = () => {
           style={styles.bubbleImage}
         />
       ))}
-
-      <img 
-        className="fishs-image" 
-        src="/article-icons/fishs.png" 
-        alt="Fish School"
-        style={styles.fishsImage}
-      />
-      <img 
-        className="orangejelly-image" 
-        src="/article-icons/orangejelly.png" 
-        alt="Orange Jellyfish"
-        style={styles.orangejellyImage}
-      />
       <img 
         className="bluejelly-image" 
         src="/article-icons/bluejelly.png" 

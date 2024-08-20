@@ -83,26 +83,20 @@
   flex-direction: column; /* Stack children vertically */
 }
 
-.pagetsx-upregion {
-  flex: 1;
-  display: flex;
-  flex-direction: column; /* Adjusting for smaller screens */
-}
-
 .pagetsx-downregion {
-  height: 300px; /* Default height, can adjust for larger screens later */
-  display: flex;
-  align-items: flex-end;
+  height: 500px;
   position: relative;
-  justify-content: space-between; /* Distribute images evenly */
+  display: flex;
+  justify-content: space-between; /* Align images to opposite sides */
+  align-items: flex-end; /* Align images to the bottom */
 }
 
+/* Bottom left and right images with the same size */
 .bottom-left-image,
-.bottom-right-image,
-.downleft-coral-pensu {
+.bottom-right-image {
   height: auto;
   width: auto;
-  max-width: 50%;
+  max-width: 50%; /* Max width 50% for both images */
   max-height: 100%;
   position: absolute;
   bottom: 0;
@@ -116,44 +110,55 @@
   right: 0;
 }
 
+/* Coral Pensu image, slightly smaller */
 .downleft-coral-pensu {
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%);
-  bottom: 20px; /* Add some margin from the bottom */
+  height: auto;
+  width: auto;
+  max-width: 20%; /* Smaller than the other images */
+  max-height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 5%; /* Position slightly to the left of the right image */
+  margin-right: 0px; /* No gap */
 }
 
 /* Responsiveness for mobile devices */
 @media (max-width: 768px) {
   .pagetsx-downregion {
-    height: 200px; /* Adjust height for smaller screens */
+    height: 200px; /* Adjust the region height for mobile */
   }
 
   .bottom-left-image,
-  .bottom-right-image,
-  .downleft-coral-pensu {
-    max-width: 40%; /* Make images smaller */
-    max-height: 80%;
+  .bottom-right-image {
+    max-width: 50%; /* Both images should take up to 50% width */
+    max-height: 80%; /* Keep height proportionate */
   }
 
   .downleft-coral-pensu {
-    bottom: 10px; /* Adjust positioning for smaller screens */
+    max-width: 30%; /* Smaller than the other images on mobile */
+    max-height: 80%;
+    right: 10%; /* Slightly reposition on mobile */
   }
 }
 
 /* Responsiveness for larger screens */
 @media (min-width: 1024px) {
   .pagetsx-downregion {
-    height: 500px; /* Adjust height for larger screens */
+    height: 500px; /* Larger region for desktops */
   }
 
   .bottom-left-image,
-  .bottom-right-image,
+  .bottom-right-image {
+    max-width: 50%; /* Consistent max width for larger screens */
+    max-height: 90%; /* Adjust for larger screens */
+  }
+
   .downleft-coral-pensu {
-    max-width: 25%; /* Make images larger */
+    max-width: 20%; /* Slightly smaller than the others */
     max-height: 90%;
+    right: 5%; /* Maintain right positioning */
   }
 }
-
 
 
 

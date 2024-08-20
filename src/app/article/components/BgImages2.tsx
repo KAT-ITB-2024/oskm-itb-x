@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 
-const BgImages1: React.FC = () => {
+const BgImages2: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const bubbles = document.querySelectorAll('.bubble-image');
@@ -332,4 +332,4 @@ const BgImages1: React.FC = () => {
   );
 };
 
-export default BgImages1;
+export default BgImages2;

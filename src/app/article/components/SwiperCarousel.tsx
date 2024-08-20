@@ -60,7 +60,7 @@ const ClientOnlyCarousel: React.FC = () => {
       {/* Insert BgImages1 component (contains moving images) */}
       <BgImages1 />
       
-      {/* Wave Image */}
+      {/* Wave Image 
       <img src="/article-icons/pagetsx-article-wave.png" alt="Wave Image"
         style={{
         position: "absolute",
@@ -70,7 +70,7 @@ const ClientOnlyCarousel: React.FC = () => {
         height: "40%",
         zIndex: 3, // Ensure it appears behind other content
          }} 
-              />
+              />*/}
 
 
       <Swiper

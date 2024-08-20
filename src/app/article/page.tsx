@@ -34,6 +34,8 @@ const Page: React.FC = () => {
           <img className="bottom-right-image" src="/article-icons/Coral.png" alt="Coral" />
           <img className="downleft-coral-pensu" src="/article-icons/Coral-Pensu.png" alt="Coral Pensu" />
         </div>
+
+
       </div>
     </div>
   );
