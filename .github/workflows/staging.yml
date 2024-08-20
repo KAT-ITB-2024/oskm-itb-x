@@ -82,6 +82,6 @@ jobs:
     needs: build
     steps:
       - name: Change Directory
-        run: cd ${{ github.workspace }}
+        run: cd ${{ github.workspace }}/..
       - name: Restart pm2
         run: pm2 restart pm2.config.json
