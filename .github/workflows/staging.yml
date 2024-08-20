@@ -90,9 +90,17 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      - name: Set environment variables for PM2
+        run: |
+          echo DATABASE_URL=${{ env.DATABASE_URL }} >> .env
+          echo NEXTAUTH_SECRET=${{ env.NEXTAUTH_SECRET }} >> .env
+          echo NEXTAUTH_URL=${{ env.NEXTAUTH_URL }} >> .env
+          echo MAILER_FROM=${{ env.MAILER_FROM }} >> .env
+          echo MAILER_CLIENT_ID=${{ env.MAILER_CLIENT_ID }} >> .env
+          echo MAILER_CLIENT_SECRET=${{ env.MAILER_CLIENT_SECRET }} >> .env
+          echo MAILER_REFRESH_TOKEN=${{ env.MAILER_REFRESH_TOKEN }} >> .env
       - name: Restart pm2
         run: pm2 restart pm2.config.json
-
 
   # # Deployment job
   # deploy:
