@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 const BgImages2: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
-      const bubbles = document.querySelectorAll('.bubble-image, .BubbleonOrangeTentacle');
+      const bubbles = document.querySelectorAll('.bubble-image');
       bubbles.forEach((bubble: any) => {
         const rect = bubble.getBoundingClientRect();
         bubble.style.transform = `translateY(${window.scrollY * -0.5}px) translateX(${Math.sin(window.scrollY * 0.1) * 10}px)`;
@@ -33,14 +33,14 @@ const BgImages2: React.FC = () => {
     seaweedImage: {
       width: "35%",
       position: "absolute" as "absolute",
-      bottom: "calc(5% - 40px)", 
+      bottom: "calc(5% - 40px)", // Lowered by 40px
       left: "50%",
       transform: "translateX(-50%)",
       zIndex: 2,
     },
     turtleImage: {
       position: "absolute" as "absolute",
-      bottom: "calc(10% - 40px)", 
+      bottom: "calc(10% - 40px)", // Lowered by 40px
       left: "45%",
       transform: "translateX(-50%)",
       width: "35%",
@@ -49,7 +49,7 @@ const BgImages2: React.FC = () => {
     },
     fishImage: {
       position: "absolute" as "absolute",
-      bottom: "calc(15% - 40px)", 
+      bottom: "calc(15% - 40px)", // Lowered by 40px
       left: "25%",
       transform: "translateX(-50%)",
       width: "20%",
@@ -79,14 +79,6 @@ const BgImages2: React.FC = () => {
       width: "15%",
       zIndex: 1,
       animation: "swimVerticalSlow 8s infinite ease-in-out",
-    },
-    BubbleonOrangeTentacle: {
-      position: "absolute" as "absolute",
-      top: "calc(50% + 20px)", // Posisi di atas orangejelly
-      right: "calc(10% + 15px)", // Slight offset from orangejelly
-      width: "10%",
-      zIndex: 1,
-      animation: "swimVertical 4s infinite ease-in-out",
     },
     leftCornerCoral: {
       position: "absolute" as "absolute",
@@ -228,8 +220,7 @@ const BgImages2: React.FC = () => {
           width: 15%;
         }
         .orangejelly-image,
-        .bluejelly-image,
-        .BubbleonOrangeTentacle {
+        .bluejelly-image {
           width: 15%;
         }
         .left-corner-coral,
@@ -261,8 +252,7 @@ const BgImages2: React.FC = () => {
           width: 12%;
         }
         .orangejelly-image,
-        .bluejelly-image,
-        .BubbleonOrangeTentacle {
+        .bluejelly-image {
           width: 12%;
         }
         .left-corner-coral,
@@ -337,14 +327,6 @@ const BgImages2: React.FC = () => {
         src="/article-icons/bluejelly.png" 
         alt="Blue Jellyfish"
         style={styles.bluejellyImage}
-      />
-
-      {/* Bubble on Orange Jellyfish */}
-      <img 
-        className="BubbleonOrangeTentacle" 
-        src="/article-icons/bubble.png" 
-        alt="Bubble on Orange Tentacle"
-        style={styles.BubbleonOrangeTentacle}
       />
     </div>
   );
