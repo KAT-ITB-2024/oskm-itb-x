@@ -54,13 +54,13 @@ const Page: React.FC = () => {
 
         <div style={styles.statsContainer}>
           <div style={styles.statsItem}>
-            👤 {selectedArticle.author}
+            <img src="/article-icons/author.png" alt="Author" style={styles.statsIcon} /> {selectedArticle.author}
           </div>
           <div style={styles.statsItem}>
-            👁️ {selectedArticle.views}
+            <img src="/article-icons/views_eye.png" alt="Views" style={styles.statsIcon} /> {selectedArticle.views}
           </div>
           <div style={styles.statsItem}>
-            ⏳ {selectedArticle.readTime} min read
+            <img src="/article-icons/timer.png" alt="Read Time" style={styles.statsIcon} /> {selectedArticle.readTime} min read
           </div>
         </div>
 
@@ -83,7 +83,6 @@ const Page: React.FC = () => {
         {/* Spacer below the button */}
         <div style={styles.spacer}/>
 
-
       </div>
     </>
   );
@@ -98,11 +97,15 @@ const styles = {
     backgroundImage: `url('/article-icons/BiruBackground1.png')`,
     backgroundSize: 'cover',
     fontFamily: 'REM, sans-serif',
+    display: 'flex', // Menggunakan flexbox
+    flexDirection: 'column' as const,
+    alignItems: 'center', // Pastikan konten berada di tengah
   },
   articleTitle: {
     fontFamily: 'Mogula, sans-serif',
-    fontSize: '2rem',
-    fontWeight: 'bold',
+    fontSize: '64px',
+    fontWeight: '400',
+    lineHeight: '76.8px',
     textAlign: 'center' as const,
     marginBottom: '10px',
     color: '#ffffff', // Make all text white
@@ -114,20 +117,26 @@ const styles = {
     color: '#ffffff', // Make all text white
   },
   statsContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    gap: '10px',
-    backgroundColor: 'rgba(255, 255, 255, 0.2)',
-    padding: '10px',
-    borderRadius: '8px',
-    marginBottom: '20px',
-    maxWidth: '90%',
-    margin: '0 auto',
-    color: '#ffffff', // Make all text white
+    display: 'flex', // Gunakan flexbox
+    justifyContent: 'center', // Pastikan berada di tengah
+    alignItems: 'center',
+    padding: '0px 16px', // Padding horizontal tetap
+    gap: '8px',
+    borderRadius: '10cm', // Border-radius 10cm sesuai permintaan
+    height: '32px', // Fixed height
+    background: 'linear-gradient(166.31deg, rgba(255, 254, 254, 0.36) 9.26%, rgba(255, 202, 224, 0.48) 89.28%)',
+    boxShadow: '0px 0px 10px 0px #FFFFFF',
+    margin: '20px 0', // Ruang di atas dan bawah
   },
   statsItem: {
-    display: 'inline-block',
-    fontSize: '1rem', 
+    display: 'inline-flex', // Menggunakan inline-flex agar teks dan gambar sejajar
+    alignItems: 'center',
+    fontSize: '1rem',
+  },
+  statsIcon: {
+    width: '20px', // Lebar icon
+    height: '20px', // Tinggi icon
+    marginRight: '8px', // Memberi jarak antara icon dan teks
   },
   articleImageContainer: {
     textAlign: 'center' as const,
@@ -171,15 +180,16 @@ const styles = {
 
   // Media query for mobile responsiveness
   '@media (max-width: 768px)': {
-    articleTitle: {
-      fontSize: '1.5rem',
-    },
     statsContainer: {
-      flexDirection: 'column' as const,
-      alignItems: 'center',
+      flexDirection: 'column', // Mengubah layout menjadi kolom di perangkat kecil
+      borderRadius: '10cm', // Border-radius tetap sama
+      width: '100%', // Lebar 100% untuk layar kecil
     },
     statsItem: {
       fontSize: '0.875rem',
+    },
+    articleTitle: {
+      fontSize: '1.5rem',
     },
     articleDescriptionContainer: {
       width: '90%', // Expand to 90% width on smaller screens
