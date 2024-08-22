@@ -1,12 +1,13 @@
 "use client";
 
-import React from 'react';
-import { useKeenSlider } from 'keen-slider/react';
-import articleData from 'src/app/article/list/article-datas';
+import React, { useEffect, useState } from "react";
+import { useKeenSlider } from "keen-slider/react";
+// import articleData from 'src/app/article/list/article-datas';
 import "src/styles/globals.css";
+import { getAllArticles } from "~/lib/contentful/api";
 
 interface Article {
-  id: number;  
+  id: number;
   image: string;
   title: string;
   views: number;
@@ -40,44 +41,52 @@ const MiniArticleCarousel: React.FC = () => {
     },
   });
 
+  const [articles, setArticles] = useState<Article[]>([]);
+
+  useEffect(() => {
+    getAllArticles({ randomize: true })
+      .then((articles) => {
+        setArticles(articles);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
   return (
     <div className="mini-card-carousel-wrapper">
-      <button 
-        className="prev-button" 
-        onClick={() => slider.current?.prev()}
-      />
-      
+      <button className="prev-button" onClick={() => slider.current?.prev()} />
+
       <div className="mini-card-carousel keen-slider" ref={sliderRef}>
-        {articleData.map((card, index) => (
-          <div 
-            key={card.id} 
-            className={`card keen-slider__slide ${index === articleData.length - 1 ? 'last-card' : ''}`}
-          >
-            <img src={card.image} alt={card.title} className="card-image" />
-            <div className="card-content">
-              <div className="card-meta">
-                <span className="card-stats">
-                  {card.views} | {card.readTime}
-                </span>
+        {articles &&
+          articles.length !== 0 &&
+          articles.map((card, index) => (
+            <div
+              key={card.id}
+              className={`card keen-slider__slide ${index === articles.length - 1 ? "last-card" : ""}`}
+            >
+              <img src={card.image} alt={card.title} className="card-image" />
+              <div className="card-content">
+                <div className="card-meta">
+                  <span className="card-stats">
+                    {card.views} | {card.readTime}
+                  </span>
+                </div>
+                <h2 className="card-title">{card.title}</h2>
+                <div className="card-details">
+                  <span className="card-date">{card.date}</span> {card.time} by{" "}
+                  <span className="card-author">{card.author}</span>
+                </div>
+                <p className="card-description">{card.description}</p>
+                <a href={card.buttonlink} className="card-read-more">
+                  {" Read More>>> "}
+                </a>
               </div>
-              <h2 className="card-title">{card.title}</h2>
-              <div className="card-details">
-                <span className="card-date">{card.date}</span> {card.time} by{' '}
-                <span className="card-author">{card.author}</span>
-              </div>
-              <p className="card-description">{card.description}</p>
-              <a href={card.buttonlink} className="card-read-more">
-                {" Read More>>> "}
-              </a>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
-      
-      <button 
-        className="next-button" 
-        onClick={() => slider.current?.next()}
-      />
+
+      <button className="next-button" onClick={() => slider.current?.next()} />
     </div>
   );
 };
