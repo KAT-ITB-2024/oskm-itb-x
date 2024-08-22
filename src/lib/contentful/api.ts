@@ -38,10 +38,54 @@ function extractArticleEntries(fetchResponse: {
   return fetchResponse?.data?.articlesCollection?.items;
 }
 
-export async function getAllArticles(isDraftMode = false) {
+export async function getAllArticles({
+  isDraftMode = false,
+  search = null,
+  filter = "Terbaru",
+  randomize = false,
+  offset = 0,
+  limit = 16,
+}: {
+  isDraftMode?: boolean;
+  search?: string | null;
+  filter?: "Terbaru" | "Rekomendasi" | "A-Z" | "Z-A";
+  randomize?: boolean;
+  offset?: number;
+  limit?: number;
+}) {
+  const searchQuery = search
+    ? `OR: [
+    { title_contains: "${search}" },
+    { author_contains: "${search}" },
+    { description_contains: "${search}" },
+  ]`
+    : "";
+
+  let orderBy = "createdAt_DESC";
+  switch (filter) {
+    case "Terbaru":
+      orderBy = "createdAt_DESC";
+      break;
+    case "Rekomendasi":
+      orderBy = "views_DESC";
+      break;
+    case "A-Z":
+      orderBy = "title_ASC";
+      break;
+    case "Z-A":
+      orderBy = "title_DESC";
+      break;
+  }
+
   const articles = await fetchGraphQL(
     `query {
-      articlesCollection(where: {slug_exists: true}, order: views_DESC, preview: ${isDraftMode}) {
+      articlesCollection(
+          where: {${searchQuery} slug_exists: true},
+          order: ${orderBy},
+          preview: ${isDraftMode},
+          skip: ${offset},
+          limit: ${limit}
+        ) {
         items {
           ${ARTICLE_GRAPHQL_FIELDS}
         }
@@ -50,7 +94,13 @@ export async function getAllArticles(isDraftMode = false) {
   `,
     isDraftMode,
   );
-  return extractArticleEntries(articles);
+  const articlesEntries = extractArticleEntries(articles);
+
+  if (randomize) {
+    return articlesEntries.sort(() => Math.random() - 0.5);
+  }
+
+  return articlesEntries;
 }
 
 export async function getArticle(slug: any, isDraftMode = false) {

@@ -1,0 +1,1 @@
+export type FilterOption = "Terbaru" | "Rekomendasi" | "A-Z" | "Z-A";

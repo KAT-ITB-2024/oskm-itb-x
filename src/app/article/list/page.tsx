@@ -2,23 +2,11 @@
 
 import { useEffect, useState } from "react";
 import SearchBar from "src/app/article/list/SearchBar";
-import { useArticles } from "../data/articles";
 import Card from "../components/Card";
-
-interface Article {
-  id: number;
-  title: string;
-  description: string;
-  author: string;
-  createdAt: Date;
-  views: number;
-  likes: number;
-  readTime: number;
-  image: { url: string };
-}
+import { getAllArticles } from "~/lib/contentful/api";
+import { Article } from "~/types/articles/articleType";
 
 export default function Page() {
-  const articleData = useArticles();
   const [filteredArticles, setFilteredArticles] = useState<Article[]>([]);
 
   const articlesPerPagePC = 16;
@@ -32,8 +20,14 @@ export default function Page() {
   );
 
   useEffect(() => {
-    setFilteredArticles(articleData);
-  }, [articleData]);
+    getAllArticles({})
+      .then((articles) => {
+        setFilteredArticles(articles);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -103,7 +97,7 @@ export default function Page() {
         <h2>List of Articles</h2>
       </div>
 
-      <SearchBar />
+      <SearchBar setFilteredArticles={setFilteredArticles} />
 
       <div className="mini-card-container">
         {filteredArticles && filteredArticles.length > 0 ? (
@@ -133,10 +127,24 @@ export default function Page() {
       </div>
 
       {/*Div ini untuk background yang ada Figma ya Ko :D */}
-      <div className="pagetsx-downregion"> {/* Downregion */}
-          <img className="bottom-left-image" src="/article-icons/coral-oren.png" alt="Coral Oren" />
-          <img className="bottom-right-image" src="/article-icons/Coral.png" alt="Coral" />
-          <img className="downleft-coral-pensu" src="/article-icons/Coral-Pensu.png" alt="Coral Pensu" />
+      <div className="pagetsx-downregion">
+        {" "}
+        {/* Downregion */}
+        <img
+          className="bottom-left-image"
+          src="/article-icons/coral-oren.png"
+          alt="Coral Oren"
+        />
+        <img
+          className="bottom-right-image"
+          src="/article-icons/Coral.png"
+          alt="Coral"
+        />
+        <img
+          className="downleft-coral-pensu"
+          src="/article-icons/Coral-Pensu.png"
+          alt="Coral Pensu"
+        />
       </div>
     </div>
   );

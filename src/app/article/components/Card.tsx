@@ -4,7 +4,7 @@ import React from 'react';
 interface CardProps {
   id: number;
   title: string;
-  createdAt: Date;
+  createdAt: string;
   author: string;
   views: number;
   likes: number;
@@ -23,6 +23,18 @@ const Card: React.FC<CardProps> = ({
   description,
   image,
 }) => {
+  const date = new Date(createdAt).toLocaleDateString("id-ID", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
+  const time = new Date(createdAt).toLocaleTimeString("id-ID", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  });
+
   return (
     <div
       key={id}
@@ -42,8 +54,7 @@ const Card: React.FC<CardProps> = ({
         </div>
         <h2 className="card-title">{title}</h2>
         <div className="card-details">
-          <span className="card-date">{createdAt && createdAt.toString()}</span>
-          {/* <span className="card-date">{date}</span> at {time} by{' '} */}
+          <span className="card-date">{`${date} ${time} by `}</span>
           <span className="card-author">{author}</span>
         </div>
         <p className="card-description">{description}</p>
