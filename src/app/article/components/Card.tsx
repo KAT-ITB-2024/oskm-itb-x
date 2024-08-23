@@ -43,6 +43,9 @@ const Card: React.FC<CardProps> = ({
   return (
     <div
       style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
         width: '240px',
         height: '400px',
         padding: '20px 15px',
@@ -69,14 +72,15 @@ const Card: React.FC<CardProps> = ({
         src={image}
         alt={title}
         style={{
-          width: '100%',
-          height: '200px',
-          objectFit: 'cover',
+          width: '200px',    // Set the width to 200px
+          height: '300px',   // Set the height to 300px
+          objectFit: 'cover', // Ensure the image covers the area without distortion
           borderRadius: '20px',
           boxShadow: '0 6px 6px rgba(0, 0, 0, 0.2)',
+          margin: '0 auto',  // Center the image horizontally within the card
         }}
       />
-      <div style={{ padding: '5px 0' }}>
+      <div style={{ flex: '1', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '5px 0' }}>
         <div style={{ fontSize: '12px', color: '#999', margin: '2px 0' }}>
           <span>
             {views} views | {readTime} min read
@@ -91,8 +95,8 @@ const Card: React.FC<CardProps> = ({
             textAlign: 'justify',
             textShadow: '3.55px 5.33px 44.39px 0px #64B1F7',
             color: '#0010A4',
-            width: '249.45px',
-            height: '45.27px',
+            width: '100%',
+            height: 'auto',
             margin: 0,
           }}
         >
@@ -105,8 +109,7 @@ const Card: React.FC<CardProps> = ({
             fontWeight: 400,
             lineHeight: '15.98px',
             textAlign: 'left',
-            width: '249.45px',
-            height: '16px',
+            width: '100%',
             color: '#9EA2AD',
             margin: 0,
           }}
@@ -123,8 +126,8 @@ const Card: React.FC<CardProps> = ({
             textAlign: 'justify',
             color: '#3678FF',
             margin: '16px 0',
-            width: '249.45px',
-            height: '73.68px',
+            width: '100%',
+            height: 'auto',
           }}
         >
           {truncatedDescription}
