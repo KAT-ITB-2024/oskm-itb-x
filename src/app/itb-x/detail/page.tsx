@@ -1,5 +1,13 @@
 import Image from "next/image";
 import CarouselKegiatan from "./components/carousel-kegiatan";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "~/components/ui/carousel";
+import CardPreview from "./components/card-preview";
 
 export default function DetailPage() {
   const images = [
@@ -7,6 +15,33 @@ export default function DetailPage() {
     "/itb-x/detail/hmif-2.jpg",
     "/itb-x/detail/hmif-3.jpg",
     "/itb-x/detail/hmif-4.jpg",
+  ];
+
+  const lembagaData = [
+    {
+      title: "HMIF",
+      subtitle: "Himpunan Mahasiswa Informatika",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae ipsum ac turpis tempor tristique. Proin sit amet tristique leo. Duis iaculis lorem sit amet turpis auctor suscipit. Suspendisse potenti. Proin commodo nisl at nulla scelerisque, eu tempor elit finibus. Duis tristique ex metus, ut imperdiet quam commodo non. Sed sodales nibh in urna condimentum convallis. Praesent et blandit ipsum. Aliquam arcu metus, posuere sit amet urna vel, gravida pulvinar magna. In hac habitasse platea dictumst. Maecenas vitae faucibus lacus. Cras ultricies, velit id molestie malesuada, est ipsum aliquet neque, eget efficitur justo arcu eget sapien. Etiam auctor quis urna ac pulvinar. Suspendisse porta suscipit luctus. Donec nec rutrum justo, vel molestie ante. ",
+      image: "/itb-x/detail/logo-hmif.png",
+    },
+    {
+      title: "HIMAFI",
+      subtitle: "Himpunan Mahasiswa Fisika",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae ipsum ac turpis tempor tristique. Proin sit amet tristique leo. Duis iaculis lorem sit amet turpis auctor suscipit. Suspendisse potenti. Proin commodo nisl at nulla scelerisque, eu tempor elit finibus. Duis tristique ex metus, ut imperdiet quam commodo non. Sed sodales nibh in urna condimentum convallis. Praesent et blandit ipsum. Aliquam arcu metus, posuere sit amet urna vel, gravida pulvinar magna. In hac habitasse platea dictumst. Maecenas vitae faucibus lacus. Cras ultricies, velit id molestie malesuada, est ipsum aliquet neque, eget efficitur justo arcu eget sapien. Etiam auctor quis urna ac pulvinar. Suspendisse porta suscipit luctus. Donec nec rutrum justo, vel molestie ante.",
+      image: "/itb-x/detail/himafi-logo.png",
+    },
+    {
+      title: "HMS",
+      subtitle: "Himpunan Mahasiswa Sipil",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae ipsum ac turpis tempor tristique. Proin sit amet tristique leo. Duis iaculis lorem sit amet turpis auctor suscipit. Suspendisse potenti. Proin commodo nisl at nulla scelerisque, eu tempor elit finibus. Duis tristique ex metus, ut imperdiet quam commodo non. Sed sodales nibh in urna condimentum convallis. Praesent et blandit ipsum. Aliquam arcu metus, posuere sit amet urna vel, gravida pulvinar magna. In hac habitasse platea dictumst. Maecenas vitae faucibus lacus. Cras ultricies, velit id molestie malesuada, est ipsum aliquet neque, eget efficitur justo arcu eget sapien. Etiam auctor quis urna ac pulvinar. Suspendisse porta suscipit luctus. Donec nec rutrum justo, vel molestie ante.",
+      image: "/itb-x/detail/hms-logo.png",
+    },
+    {
+      title: "HMTI",
+      subtitle: "Himpunan Mahasiswa Teknik Industri",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae ipsum ac turpis tempor tristique. Proin sit amet tristique leo. Duis iaculis lorem sit amet turpis auctor suscipit. Suspendisse potenti. Proin commodo nisl at nulla scelerisque, eu tempor elit finibus. Duis tristique ex metus, ut imperdiet quam commodo non. Sed sodales nibh in urna condimentum convallis. Praesent et blandit ipsum. Aliquam arcu metus, posuere sit amet urna vel, gravida pulvinar magna. In hac habitasse platea dictumst. Maecenas vitae faucibus lacus. Cras ultricies, velit id molestie malesuada, est ipsum aliquet neque, eget efficitur justo arcu eget sapien. Etiam auctor quis urna ac pulvinar. Suspendisse porta suscipit luctus. Donec nec rutrum justo, vel molestie ante.",
+      image: "/itb-x/detail/hmti-logo.png",
+    },
   ];
 
   return (
@@ -152,7 +187,29 @@ export default function DetailPage() {
           />
         </div>
         {/* lembaga carousel */}
-        <div></div>
+        <div className="flex w-full items-center justify-center">
+          <Carousel opts={{ align: "start" }} className="w-full">
+            <CarouselContent className="mx-6 ml-0">
+              {lembagaData.map((lembaga, index) => (
+                <CarouselItem
+                  key={index}
+                  className="p-8 md:basis-1/2 lg:basis-1/3"
+                >
+                  <div className="p-1">
+                    <CardPreview
+                      title={lembaga.title}
+                      subtitle={lembaga.subtitle}
+                      desc={lembaga.desc}
+                      image={lembaga.image}
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
       </div>
     </main>
   );
