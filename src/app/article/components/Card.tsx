@@ -1,4 +1,3 @@
-// src/app/article/components/Card.tsx
 "use client";
 
 import React from 'react';
@@ -38,52 +37,112 @@ const Card: React.FC<CardProps> = ({
     second: "2-digit",
   });
 
-  // Kalau misalnya deskripsinya lebih 100 karakter maka diubah jadi "..." lanjutannya
   const truncatedDescription =
     description.length > 100 ? `${description.slice(0, 100)}...` : description;
 
   return (
     <div
-      key={id}
-      className="card"
       style={{
-        border: '1px solid #ddd',
-        borderRadius: '8px',
+        width: '240px',
+        height: '400px',
+        padding: '20px 15px',
+        borderRadius: '20px',
+        backgroundColor: 'white',
+        boxShadow: '0 4px 8px #64B1F7BF',
         overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
-        height: '100%',
+        textAlign: 'center',
+        position: 'relative',
+        transition: 'transform 0.3s ease, boxShadow 0.3s ease',
+        margin: '0 auto',
+        transform: 'scale(1)',
+      }}
+      onMouseEnter={(e) => {
+        (e.currentTarget as HTMLDivElement).style.transform = 'scale(1.1)';
+        (e.currentTarget as HTMLDivElement).style.boxShadow = '0 0 15px #64B1F7BF';
+      }}
+      onMouseLeave={(e) => {
+        (e.currentTarget as HTMLDivElement).style.transform = 'scale(1)';
+        (e.currentTarget as HTMLDivElement).style.boxShadow = '0 4px 8px #64B1F7BF';
       }}
     >
       <img
-        src={image} // Access the url from the image object
+        src={image}
         alt={title}
-        className="card-image"
-        style={{ width: '100%', height: 'auto' }}
+        style={{
+          width: '100%',
+          height: '200px',
+          objectFit: 'cover',
+          borderRadius: '20px',
+          boxShadow: '0 6px 6px rgba(0, 0, 0, 0.2)',
+        }}
       />
-      <div className="card-content" style={{ padding: '16px', flex: '1' }}>
-        <div className="card-meta" style={{ marginBottom: '8px' }}>
-          <span className="card-stats">
+      <div style={{ padding: '5px 0' }}>
+        <div style={{ fontSize: '12px', color: '#999', margin: '2px 0' }}>
+          <span>
             {views} views | {readTime} min read
           </span>
         </div>
-        <h2 className="card-title" style={{ fontSize: '1.25rem', marginBottom: '8px' }}>
+        <h2
+          style={{
+            fontFamily: 'mogula',
+            fontSize: '17.75px',
+            fontWeight: 400,
+            lineHeight: '21.31px',
+            textAlign: 'justify',
+            textShadow: '3.55px 5.33px 44.39px 0px #64B1F7',
+            color: '#0010A4',
+            width: '249.45px',
+            height: '45.27px',
+            margin: 0,
+          }}
+        >
           {title}
         </h2>
-        <div className="card-details" style={{ marginBottom: '16px' }}>
-          <span className="card-date" style={{ fontSize: '0.875rem', color: '#555' }}>
-            {`${date} ${time} by `}
-          </span>
-          <span className="card-author" style={{ fontSize: '0.875rem', color: '#007bff' }}>
-            {author}
-          </span>
+        <div
+          style={{
+            fontFamily: 'REM',
+            fontSize: '10.65px',
+            fontWeight: 400,
+            lineHeight: '15.98px',
+            textAlign: 'left',
+            width: '249.45px',
+            height: '16px',
+            color: '#9EA2AD',
+            margin: 0,
+          }}
+        >
+          <span>{`${date} ${time} by `}</span>
+          <span style={{ color: '#007bff' }}>{author}</span>
         </div>
-        <p className="card-description" style={{ fontSize: '1rem', marginBottom: '16px' }}>
+        <p
+          style={{
+            fontFamily: 'REM',
+            fontSize: '12.43px',
+            fontWeight: 400,
+            lineHeight: '18.64px',
+            textAlign: 'justify',
+            color: '#3678FF',
+            margin: '16px 0',
+            width: '249.45px',
+            height: '73.68px',
+          }}
+        >
           {truncatedDescription}
         </p>
         <a
           href={`/article/detail/${id}`}
-          className="card-read-more"
+          style={{
+            display: 'block',
+            fontSize: '12px',
+            fontWeight: 400,
+            lineHeight: '16px',
+            textAlign: 'right',
+            color: '#FB43BD',
+            marginTop: '5px',
+            position: 'absolute',
+            bottom: '8px',
+            right: '8px',
+          }}
         >
           {"Read More >>>"}
         </a>
