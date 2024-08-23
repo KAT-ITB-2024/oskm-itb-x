@@ -86,7 +86,7 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="bg-[url('/landing-page/bg-landing.png')] bg-cover bg-center p-20">
+    <div className="bg-[url('/landing-page/bg-landing.png')] bg-cover bg-center py-20">
       <div className="flex flex-col items-center">
         <Image
           src="/logo/logo-oskm.svg"
@@ -97,7 +97,7 @@ export default function LandingPage() {
         />
         <Image
           src="/landing-page/oskm-word.svg"
-          className="-mt-20 w-5/12 md:-mt-32 lg:w-3/12 xl:-mt-36 xl:w-2/12"
+          className="-mt-12 w-5/12 md:-mt-32 lg:w-3/12 xl:-mt-36 xl:w-2/12"
           alt="title"
           width={300}
           height={300}
@@ -120,9 +120,9 @@ export default function LandingPage() {
         />
       </div>
 
-      <div className="relative z-10 mb-32">
+      <div className="relative z-10 mx-20 mb-32">
         <Countdown targetDate="2024-08-20T09:00:00" />
-        <div className="flex flex-row justify-center gap-x-4 font-rem">
+        <div className="flex flex-col justify-center gap-y-6 font-rem md:flex-row md:gap-x-4">
           <Button variant={"pink"} className="relative z-10 p-4 md:text-xl">
             <IoMdDownload className="mr-2 h-4 w-4" />
             Download Guidebook
@@ -133,7 +133,7 @@ export default function LandingPage() {
         </div>
       </div>
 
-      <div className="relative z-10 mb-32">
+      <div className="relative z-10 mx-12 mb-32">
         <h1 className="mb-6 text-center font-mogula text-3xl text-white text-shadow-pink md:text-4xl xl:text-5xl">
           Timeline ITB KAT 2024
         </h1>
@@ -148,17 +148,19 @@ export default function LandingPage() {
                     width={500}
                     height={500}
                   />
-                  <p className="text-lg font-bold md:text-xl lg:text-2xl">
-                    Diklat Terpusat
-                  </p>
-                  <p className="font-rem text-sm lg:text-lg">
-                    6-7 & 13 Juli 2024
-                  </p>
+                  <div className="text-center">
+                    <p className="text-lg font-bold md:text-xl lg:text-2xl">
+                      Diklat Terpusat
+                    </p>
+                    <p className="font-rem text-sm lg:text-lg">
+                      6-7 & 13 Juli 2024
+                    </p>
+                  </div>
                 </div>
               </DialogTrigger>
               <DialogContent>
                 <div className="relative h-[300px] w-10/12 overflow-y-auto overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.png')] p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
-                  <div className="my-2 text-center font-mogula text-2xl text-[#64B1F7] md:text-3xl xl:text-4xl">
+                  <div className="my-2 text-center font-mogula text-2xl text-[#99E0FF] md:text-3xl xl:text-4xl">
                     Diklat Terpusat
                   </div>
 
@@ -267,15 +269,19 @@ export default function LandingPage() {
                     width={500}
                     height={500}
                   />
-                  <p className="text-lg font-bold md:text-xl lg:text-2xl">
-                    ITB Showcase
-                  </p>
-                  <p className="font-rem text-sm lg:text-lg">20 Agustus 2024</p>
+                  <div className="text-center">
+                    <p className="text-lg font-bold md:text-xl lg:text-2xl">
+                      ITB Showcase
+                    </p>
+                    <p className="font-rem text-sm lg:text-lg">
+                      20 Agustus 2024
+                    </p>
+                  </div>
                 </div>
               </DialogTrigger>
               <DialogContent>
                 <div className="relative h-[300px] w-10/12 overflow-y-auto overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.png')] p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
-                  <div className="my-2 text-center font-mogula text-2xl text-[#64B1F7] md:text-3xl xl:text-4xl">
+                  <div className="my-2 text-center font-mogula text-2xl text-[#99E0FF] md:text-3xl xl:text-4xl">
                     ITB Showcase
                   </div>
 
@@ -378,20 +384,26 @@ export default function LandingPage() {
           {/* OSKM Dialog */}
           <Dialog>
             <DialogTrigger asChild>
-              <div className="flex cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12">
+              <div className="flex w-5/12 cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12">
                 <Image
                   src="/landing-page/icon-oskm.svg"
                   alt="3"
                   width={500}
                   height={500}
                 />
-                <p className="text-lg font-bold md:text-xl lg:text-2xl">OSKM</p>
-                <p className="font-rem text-sm lg:text-lg">7-9 Agustus 2024</p>
+                <div className="text-center">
+                  <p className="text-lg font-bold md:text-xl lg:text-2xl">
+                    OSKM
+                  </p>
+                  <p className="font-rem text-sm lg:text-lg">
+                    7-9 Agustus 2024
+                  </p>
+                </div>
               </div>
             </DialogTrigger>
             <DialogContent>
               <div className="relative h-[300px] w-10/12 overflow-y-auto overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.png')] p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
-                <div className="my-2 text-center font-mogula text-2xl text-[#64B1F7] md:text-3xl xl:text-4xl">
+                <div className="my-2 text-center font-mogula text-2xl text-[#99E0FF] md:text-3xl xl:text-4xl">
                   OSKM
                 </div>
 

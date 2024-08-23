@@ -73,12 +73,17 @@ const config = {
         infinite_scroll_right: {
           "100%": { transform: "translateX(50%)" },
         },
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         infinite_scroll_left: "infinite_scroll_left 10s linear infinite",
         infinite_scroll_right: "infinite_scroll_right 10s linear infinite",
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
       },
       fontFamily: {
         rem: "var(--font-rem)",
