@@ -189,7 +189,7 @@ export default function DetailPage() {
         {/* lembaga carousel */}
         <div className="flex w-full items-center justify-center">
           <Carousel opts={{ align: "start" }} className="w-full">
-            <CarouselContent className="mx-6 ml-0">
+            <CarouselContent className="mx-6">
               {lembagaData.map((lembaga, index) => (
                 <CarouselItem
                   key={index}

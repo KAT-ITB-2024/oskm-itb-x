@@ -25,12 +25,6 @@ const CarouselKegiatan: React.FC<CarouselKegiatanProps> = ({
     setCurrentIndex((prevIndex) => (prevIndex + 1) % imageCount);
   }, [imageCount]);
 
-  const goToPrev = React.useCallback(() => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? imageCount - 1 : prevIndex - 1,
-    );
-  }, [imageCount]);
-
   React.useEffect(() => {
     if (isCarouselActive) {
       const autoplay = setInterval(() => {
