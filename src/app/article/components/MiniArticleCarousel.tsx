@@ -2,23 +2,9 @@
 
 import React, { useEffect, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
-// import articleData from 'src/app/article/list/article-datas';
 import "src/styles/globals.css";
 import { getAllArticles } from "~/lib/contentful/api";
-
-interface Article {
-  id: number;
-  image: string;
-  title: string;
-  views: number;
-  readTime: string;
-  date: string;
-  time: string;
-  author: string;
-  description: string;
-  buttonlink: string;
-  selected: boolean;
-}
+import Card from "src/app/article/components/Card.tsx"; // Import komponen Card
 
 const MiniArticleCarousel: React.FC = () => {
   const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
@@ -63,25 +49,18 @@ const MiniArticleCarousel: React.FC = () => {
           articles.map((card, index) => (
             <div
               key={card.id}
-              className={`card keen-slider__slide ${index === articles.length - 1 ? "last-card" : ""}`}
+              className="keen-slider__slide"
             >
-              <img src={card.image} alt={card.title} className="card-image" />
-              <div className="card-content">
-                <div className="card-meta">
-                  <span className="card-stats">
-                    {card.views} | {card.readTime}
-                  </span>
-                </div>
-                <h2 className="card-title">{card.title}</h2>
-                <div className="card-details">
-                  <span className="card-date">{card.date}</span> {card.time} by{" "}
-                  <span className="card-author">{card.author}</span>
-                </div>
-                <p className="card-description">{card.description}</p>
-                <a href={card.buttonlink} className="card-read-more">
-                  {" Read More>>> "}
-                </a>
-              </div>
+              <Card
+                id={card.id}
+                title={card.title}
+                createdAt={card.createdAt}
+                author={card.author}
+                views={card.views}
+                readTime={card.readTime}
+                description={card.description}
+                image={card.image.url} 
+              />
             </div>
           ))}
       </div>

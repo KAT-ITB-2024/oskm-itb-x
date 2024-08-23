@@ -10,7 +10,7 @@ const BgImages1: React.FC = () => {
         const rect = bubble.getBoundingClientRect();
         bubble.style.transform = `translateY(${window.scrollY * -0.5}px) translateX(${Math.sin(window.scrollY * 0.1) * 10}px)`;
         if (rect.bottom < 0) {
-          bubble.style.display = 'none'; 
+          bubble.style.display = 'none';
         }
       });
     };
@@ -35,9 +35,9 @@ const BgImages1: React.FC = () => {
       bottom: 0,
       left: 0,
       width: "100%",
-      height: "690px", 
+      height: "690px",
       zIndex: 0,
-      overflow: "hidden", // Ensure no overflow outside the div
+      overflow: "hidden",
     },
     waveImage: {
       position: "absolute" as "absolute",
@@ -45,7 +45,7 @@ const BgImages1: React.FC = () => {
       left: 0,
       width: "100%",
       height: "40%",
-      zIndex: 0, 
+      zIndex: 0,
     },
     seaweedImage: {
       position: "absolute" as "absolute",
@@ -57,7 +57,7 @@ const BgImages1: React.FC = () => {
     },
     turtleImage: {
       position: "absolute" as "absolute",
-      bottom: "70%",
+      bottom: "3%", 
       left: "45%",
       transform: "translateX(-50%)",
       width: "30%",
@@ -66,7 +66,7 @@ const BgImages1: React.FC = () => {
     },
     fishImage: {
       position: "absolute" as "absolute",
-      bottom: "15%",
+      bottom: "2%", 
       right: "25%",
       transform: "translateX(-50%)",
       width: "20%",
@@ -91,7 +91,7 @@ const BgImages1: React.FC = () => {
     },
     bluejellyImage: {
       position: "absolute" as "absolute",
-      top: "70%",
+      bottom: "5%", 
       right: "25%",
       width: "15%",
       zIndex: 1,
@@ -292,53 +292,53 @@ const BgImages1: React.FC = () => {
           alt="Wave Image"
           style={styles.waveImage}
         />
-        
+
         {/* Seaweed, Turtle, and Fish */}
-        <img 
-          className="seaweed-image" 
-          src="/article-icons/seaweed.png" 
+        <img
+          className="seaweed-image"
+          src="/article-icons/seaweed.png"
           alt="Seaweed"
           style={styles.seaweedImage}
         />
-        <img 
-          className="turtle-image" 
-          src="/article-icons/turtle.png" 
+        <img
+          className="turtle-image"
+          src="/article-icons/turtle.png"
           alt="Turtle"
           style={styles.turtleImage}
         />
-        <img 
-          className="fish-image" 
-          src="/article-icons/fish.png" 
+        <img
+          className="fish-image"
+          src="/article-icons/fish.png"
           alt="Fish"
           style={styles.fishImage}
         />
       </div>
 
-      <img 
-        className="left-corner-coral" 
-        src="/article-icons/leftcornercoral.png" 
+      <img
+        className="left-corner-coral"
+        src="/article-icons/leftcornercoral.png"
         alt="Left Corner Coral"
         style={styles.leftCornerCoral}
       />
-      <img 
-        className="left-corner-coral-2" 
-        src="/article-icons/anema.png" 
+      <img
+        className="left-corner-coral-2"
+        src="/article-icons/anema.png"
         alt="Left Corner Coral 2"
         style={styles.leftCornerCoral2}
       />
 
       {[...Array(10)].map((_, i) => (
-        <img 
+        <img
           key={i}
-          className="bubble-image" 
-          src="/article-icons/bubble.png" 
+          className="bubble-image"
+          src="/article-icons/bubble.png"
           alt="Bubble"
           style={styles.bubbleImage}
         />
       ))}
-      <img 
-        className="bluejelly-image" 
-        src="/article-icons/bluejelly.png" 
+      <img
+        className="bluejelly-image"
+        src="/article-icons/bluejelly.png"
         alt="Blue Jellyfish"
         style={styles.bluejellyImage}
       />
