@@ -50,15 +50,15 @@ const BgImages2: React.FC = () => {
       top: "70%",
       right: "25%",
       width: "15%",
-      zIndex: 1,
+      zIndex: 0,
       animation: "swimVerticalSlow 8s infinite ease-in-out",
     },
     BubbleonOrangeTentacle: {
       position: "absolute" as "absolute",
-      top: "calc(50% + 20px)", // Posisi di atas orangejelly
-      right: "calc(10% + 15px)", // Slight offset from orangejelly
-      width: "10%",
-      zIndex: 1,
+      top: "calc(50% - 120px)", // Posisi di atas orangejelly
+      right: "calc(10% + 120px)", // Slight offset from orangejelly
+      width: "25%",
+      zIndex: 0,
       animation: "swimVertical 4s infinite ease-in-out",
     },
     leftCornerCoral: {
