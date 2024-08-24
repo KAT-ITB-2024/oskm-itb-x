@@ -134,9 +134,9 @@ const styles = {
     fontSize: '1rem',
   },
   statsIcon: {
-    width: '20px', // Lebar icon
-    height: '20px', // Tinggi icon
-    marginRight: '8px', // Memberi jarak antara icon dan teks
+    width: '20px', 
+    height: '20px', 
+    marginRight: '8px', 
   },
   articleImageContainer: {
     textAlign: 'center' as const,
@@ -150,12 +150,12 @@ const styles = {
     margin: '0 auto',
   },
   articleDescriptionContainer: {
-    width: '75%', // Center the description box
+    width: '75%', 
     padding: '10px',
     borderRadius: '8px',
     marginBottom: '20px',
     margin: '0 auto',
-    color: '#ffffff', // Make all text white
+    color: '#ffffff', 
   },
   articleDescription: {
     fontSize: '1rem',
@@ -178,12 +178,11 @@ const styles = {
     height: '100px',
   },
 
-  // Media query for mobile responsiveness
   '@media (max-width: 768px)': {
     statsContainer: {
-      flexDirection: 'column', // Mengubah layout menjadi kolom di perangkat kecil
-      borderRadius: '10cm', // Border-radius tetap sama
-      width: '100%', // Lebar 100% untuk layar kecil
+      flexDirection: 'column', 
+      borderRadius: '10cm', 
+      width: '100%',
     },
     statsItem: {
       fontSize: '0.875rem',

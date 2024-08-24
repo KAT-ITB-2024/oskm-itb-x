@@ -114,7 +114,7 @@ const Card: React.FC<CardProps> = ({
             margin: 0,
           }}
         >
-          <span>{`${date} ${time} by `}</span>
+          <span>{`${date} ${time} oleh `}</span>
           <span style={{ color: '#007bff' }}>{author}</span>
         </div>
         <p

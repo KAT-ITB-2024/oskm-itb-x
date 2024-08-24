@@ -9,15 +9,9 @@ import BgImages2 from "../components/BgImages2";
 
 export default function Page() {
   const [filteredArticles, setFilteredArticles] = useState<Article[]>([]);
-
-  const articlesPerPagePC = 16;
-  const articlesPerPageMobile = 4;
-
   const [currentPage, setCurrentPage] = useState(1);
   const [articlesPerPage, setArticlesPerPage] = useState(
-    typeof window !== "undefined" && window.innerWidth <= 768
-      ? articlesPerPageMobile
-      : articlesPerPagePC,
+    typeof window !== "undefined" && window.innerWidth <= 768 ? 4 : 16
   );
 
   useEffect(() => {
@@ -33,7 +27,7 @@ export default function Page() {
   useEffect(() => {
     const handleResize = () => {
       setArticlesPerPage(
-        window.innerWidth <= 768 ? articlesPerPageMobile : articlesPerPagePC,
+        window.innerWidth <= 768 ? 4 : 16
       );
     };
 
@@ -41,16 +35,11 @@ export default function Page() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const pageNumbers: number[] = [];
-  if (filteredArticles) {
-    for (
-      let i = 1;
-      i <= Math.ceil(filteredArticles.length / articlesPerPage);
-      i++
-    ) {
-      pageNumbers.push(i);
-    }
-  }
+  const indexOfLastCard = currentPage * articlesPerPage;
+  const indexOfFirstCard = indexOfLastCard - articlesPerPage;
+  const currentCards = filteredArticles.slice(indexOfFirstCard, indexOfLastCard);
+
+  const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
 
   const handleClick = (pageNumber: number) => {
     setCurrentPage(pageNumber);
@@ -65,19 +54,19 @@ export default function Page() {
       >
         {"<"}
       </button>
-      {pageNumbers.map((number) => (
+      {Array.from({ length: totalPages }, (_, index) => (
         <button
-          key={number}
-          onClick={() => handleClick(number)}
-          className={`pagination-button ${number === currentPage ? "active" : ""}`}
+          key={index + 1}
+          onClick={() => handleClick(index + 1)}
+          className={`pagination-button ${index + 1 === currentPage ? "active" : ""}`}
         >
-          {number}
+          {index + 1}
         </button>
       ))}
       <button
         onClick={() => handleClick(currentPage + 1)}
-        disabled={currentPage === pageNumbers.length}
-        className={`pagination-button ${currentPage === pageNumbers.length ? "disabled" : ""}`}
+        disabled={currentPage === totalPages}
+        className={`pagination-button ${currentPage === totalPages ? "disabled" : ""}`}
       >
         {">"}
       </button>
@@ -86,7 +75,7 @@ export default function Page() {
 
   return (
     <div className="pagetsx-article-background">
-      <BgImages2/>
+      <BgImages2 />
       <br />
       <br />
       <br />
@@ -101,9 +90,9 @@ export default function Page() {
 
       <SearchBar setFilteredArticles={setFilteredArticles} />
 
-      <div className="mini-card-container">
-        {filteredArticles && filteredArticles.length > 0 ? (
-          filteredArticles.map((card) => (
+      <div className="card-container">
+        {currentCards.length > 0 ? (
+          currentCards.map((card) => (
             <Card
               key={card.id}
               id={card.id}
@@ -125,13 +114,11 @@ export default function Page() {
             />
           </div>
         )}
-        {renderPagination()}
       </div>
 
-      {/*Div ini untuk background yang ada Figma ya Ko :D */}
+      {totalPages > 1 && renderPagination()}
+
       <div className="pagetsx-downregion">
-        {" "}
-        {/* Downregion */}
         <img
           className="bottom-left-image"
           src="/article-icons/coral-oren.png"
@@ -148,6 +135,72 @@ export default function Page() {
           alt="Coral Pensu"
         />
       </div>
+
+      <style jsx>{`
+        .card-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: 16px;
+          max-width: 100%;
+          margin: 0 auto;
+        }
+
+        .card {
+          background: #fff;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          padding: 16px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+          .card-container {
+            grid-template-columns: repeat(1, 1fr);
+          }
+        }
+
+        @media (min-width: 769px) {
+          .card-container {
+            grid-template-columns: repeat(4, 1fr);
+          }
+        }
+
+        .pagination {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 30px;
+          gap: 12px;
+          padding-right: 20px;
+        }
+
+        .pagination-button {
+          cursor: pointer;
+          background-color: #EE1192;
+          border-radius: 4px 0 0 0;
+          width: 24px;
+          height: 24px;
+          padding: 0 8.5px;
+          color: #000;
+        }
+
+        .pagination-button.active {
+          background-color: #3678FF;
+          color: #fff;
+        }
+
+        .pagination-button.disabled {
+          cursor: not-allowed;
+          opacity: 0.5;
+        }
+
+        .pagination-box {
+          display: flex;
+          justify-content: center;
+          margin-top: 20px;
+        }
+      `}</style>
     </div>
   );
 }

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css"; // Pastikan CSS sudah di-import secara global
+import "keen-slider/keen-slider.min.css"; // Ensure CSS is imported globally
 import { getAllArticles } from "~/lib/contentful/api";
 import Card from "src/app/article/components/Card";
 
@@ -10,10 +10,10 @@ const MiniArticleCarousel: React.FC = () => {
   const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
     loop: true,
     mode: "free-snap",
-    rtl: true, // Aktifkan mode RTL
+    rtl: true, // RTL mode
     slides: {
-      perView: 4, // Menampilkan 4 kartu sekaligus pada layar besar
-      spacing: 15, // Jarak antara kartu yang lebih kecil
+      perView: 4, // Show 4 cards at once on large screens
+      spacing: 15,
     },
     breakpoints: {
       "(max-width: 1024px)": {
@@ -23,7 +23,7 @@ const MiniArticleCarousel: React.FC = () => {
         slides: { perView: 2, spacing: 10 },
       },
       "(max-width: 640px)": {
-        slides: { perView: 1, spacing: 10 }, // Menampilkan 1 kartu pada layar kecil
+        slides: { perView: 1, spacing: 10 }, // Show 1 card on small screens
       },
     },
   });
@@ -34,7 +34,7 @@ const MiniArticleCarousel: React.FC = () => {
   useEffect(() => {
     getAllArticles({ randomize: true })
       .then((fetchedArticles) => {
-        setArticles(fetchedArticles.slice(0, 10)); // Memuat 10 artikel pertama
+        setArticles(fetchedArticles.slice(0, 10)); // Load the first 10 articles
       })
       .catch((error) => {
         console.error("Error fetching articles:", error);
@@ -48,14 +48,14 @@ const MiniArticleCarousel: React.FC = () => {
   // Function to go to the previous slide (RTL: moves left)
   const goToPrevious = () => {
     if (sliderInstance.current) {
-      sliderInstance.current.next(); // Dalam RTL, next menggerakkan slider ke kiri
+      sliderInstance.current.prev(); // RTL: prev moves slider to the right
     }
   };
 
   // Function to go to the next slide (RTL: moves right)
   const goToNext = () => {
     if (sliderInstance.current) {
-      sliderInstance.current.prev(); // Dalam RTL, prev menggerakkan slider ke kanan
+      sliderInstance.current.next(); // RTL: next moves slider to the left
     }
   };
 
@@ -66,14 +66,16 @@ const MiniArticleCarousel: React.FC = () => {
         position: "relative",
         width: "100%",
         height: "500px",
-        padding: "0 20px",
+        padding: "0 10px", // Adjust padding for better fit on smaller screens
         boxSizing: "border-box",
         overflow: "hidden",
-        direction: "rtl", // Pastikan ini untuk mengaktifkan RTL pada elemen
+        direction: "rtl", // Ensure RTL is active
       }}
     >
-      <button className="next-button" onClick={goToNext}>
-      </button>
+      <button
+        className="next-button"
+        onClick={goToNext}
+      />
 
       <div
         className="mini-card-carousel keen-slider"
@@ -82,6 +84,7 @@ const MiniArticleCarousel: React.FC = () => {
           height: "100%",
           transition: "transform 0.5s ease-in-out",
           overflow: "hidden",
+          display: "flex",
         }}
       >
         {articles.map((card) => (
@@ -89,7 +92,7 @@ const MiniArticleCarousel: React.FC = () => {
             key={card.id}
             className="keen-slider__slide"
             style={{
-              padding: "0 10px",
+              padding: "0 5px", // Reduce padding between cards
               boxSizing: "border-box",
             }}
           >
@@ -107,8 +110,10 @@ const MiniArticleCarousel: React.FC = () => {
         ))}
       </div>
 
-      <button className="prev-button" onClick={goToPrevious}>
-      </button>
+      <button
+        className="prev-button"
+        onClick={goToPrevious}
+      />
     </div>
   );
 };
