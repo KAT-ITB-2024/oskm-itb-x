@@ -6,7 +6,7 @@ const BgImages2: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const bubbles = document.querySelectorAll('.bubble-image, .BubbleonOrangeTentacle');
-      bubbles.forEach((bubble: any) => {
+      bubbles.forEach((bubble: HTMLElement) => {
         const rect = bubble.getBoundingClientRect();
         bubble.style.transform = `translateY(${window.scrollY * -0.5}px) translateX(${Math.sin(window.scrollY * 0.1) * 10}px)`;
         if (rect.bottom < 0) {
@@ -27,41 +27,14 @@ const BgImages2: React.FC = () => {
       width: "120%",
       height: "100%",
       overflow: "hidden",
-      zIndex: 6,
       pointerEvents: "none",
-    },
-    seaweedImage: {
-      width: "35%",
-      position: "absolute" as "absolute",
-      bottom: "calc(5% - 40px)", 
-      left: "50%",
-      transform: "translateX(-50%)",
-      zIndex: 2,
-    },
-    turtleImage: {
-      position: "absolute" as "absolute",
-      bottom: "calc(10% - 40px)", 
-      left: "45%",
-      transform: "translateX(-50%)",
-      width: "35%",
-      zIndex: 2,
-      animation: "swimHorizontal 5s infinite ease-in-out",
-    },
-    fishImage: {
-      position: "absolute" as "absolute",
-      bottom: "calc(15% - 40px)", 
-      left: "25%",
-      transform: "translateX(-50%)",
-      width: "20%",
-      zIndex: 2,
-      animation: "swimHorizontal 5s infinite ease-in-out",
     },
     fishsImage: {
       position: "absolute" as "absolute",
       top: "10%",
       left: "0%",
       width: "20%",
-      zIndex: 1,
+      zIndex: 0,
       animation: "swimVertical 4s infinite ease-in-out",
     },
     orangejellyImage: {
@@ -69,7 +42,7 @@ const BgImages2: React.FC = () => {
       top: "50%",
       right: "10%",
       width: "20%",
-      zIndex: 1,
+      zIndex: 0,
       animation: "swimVertical 4s infinite ease-in-out",
     },
     bluejellyImage: {
@@ -174,15 +147,6 @@ const BgImages2: React.FC = () => {
       }
 
       @media (min-width: 1024px) {
-        .seaweed-image {
-          width: 35%;
-          bottom: calc(5% - 40px);
-        }
-        .turtle-image {
-          bottom: calc(10% - 40px);
-          left: 45%;
-          width: 35%;
-        }
         .fish-image {
           bottom: calc(15% - 40px);
           left: 25%;
@@ -206,15 +170,6 @@ const BgImages2: React.FC = () => {
       }
 
       @media (max-width: 768px) {
-        .seaweed-image {
-          width: 30%;
-          bottom: calc(5% - 40px);
-        }
-        .turtle-image {
-          bottom: calc(8% - 40px);
-          left: 40%;
-          width: 30%;
-        }
         .fish-image {
           bottom: calc(12% - 40px);
           left: 20%;
@@ -239,20 +194,6 @@ const BgImages2: React.FC = () => {
       }
 
       @media (max-width: 480px) {
-        .seaweed-image {
-          width: 25%;
-          bottom: calc(3% - 40px);
-        }
-        .turtle-image {
-          bottom: calc(5% - 40px);
-          left: 35%;
-          width: 25%;
-        }
-        .fish-image {
-          bottom: calc(10% - 40px);
-          left: 15%;
-          width: 12%;
-        }
         .bubble-image {
           width: 15px;
           max-width: 30px;
@@ -276,27 +217,6 @@ const BgImages2: React.FC = () => {
   return (
     <div style={styles.container}>
       <style>{styles.keyframes}</style>
-
-      <img 
-        className="seaweed-image" 
-        src="/article-icons/seaweed.png" 
-        alt="Seaweed"
-        style={styles.seaweedImage}
-      />
-
-      <img 
-        className="turtle-image" 
-        src="/article-icons/turtle.png" 
-        alt="Turtle"
-        style={styles.turtleImage}
-      />
-      <img 
-        className="fish-image" 
-        src="/article-icons/fish.png" 
-        alt="Fish"
-        style={styles.fishImage}
-      />
-
       <img 
         className="left-corner-coral" 
         src="/article-icons/leftcornercoral.png" 

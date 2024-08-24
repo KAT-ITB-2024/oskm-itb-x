@@ -5,6 +5,7 @@ import SearchBar from "src/app/article/list/SearchBar";
 import Card from "../components/Card";
 import { getAllArticles } from "~/lib/contentful/api";
 import { Article } from "~/types/articles/articleType";
+import BgImages2 from "../components/BgImages2";
 
 export default function Page() {
   const [filteredArticles, setFilteredArticles] = useState<Article[]>([]);
@@ -85,6 +86,7 @@ export default function Page() {
 
   return (
     <div className="pagetsx-article-background">
+      <BgImages2/>
       <br />
       <br />
       <br />
