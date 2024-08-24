@@ -1,5 +1,5 @@
-import ITBMap from "./components/ITBMap";
+import ITBMapLibre from "./components/open-source-components/ITBMapLibre";
 
 export default async function Page() {
-  return <ITBMap />;
+  return <ITBMapLibre />;
 }

@@ -1,9 +1,6 @@
 .scrollbox::-webkit-scrollbar {
   background: #fb43bd;
-}
-
-.scrollbox::-webkit-scrollbar-track {
-  background: white;
+  width: 8px;
 }
 
 .scrollbox::-webkit-scrollbar-thumb {
@@ -12,7 +9,7 @@
 }
 
 .scrollbox::-webkit-scrollbar-thumb:hover {
-  background: #e030a1; /* Darker shade of the scrollbar thumb on hover (optional) */
+  background: #e030a1;
 }
 
 .scrollbox {

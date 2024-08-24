@@ -5,7 +5,7 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <footer className="relative h-[400px] lg:h-[175px]">
+    <footer className="relative z-[300] h-[400px] lg:h-[175px]">
       {/* Desktop */}
       <Image
         src="/components/footer-desktop.png"
