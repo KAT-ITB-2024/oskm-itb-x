@@ -1,0 +1,18 @@
+.scrollbox::-webkit-scrollbar {
+  background: #fb43bd;
+  width: 8px;
+}
+
+.scrollbox::-webkit-scrollbar-thumb {
+  background: #fb43bd;
+  border-radius: 10px;
+}
+
+.scrollbox::-webkit-scrollbar-thumb:hover {
+  background: #e030a1;
+}
+
+.scrollbox {
+  scrollbar-color: #fb43bd white;
+  scrollbar-width: thin;
+}

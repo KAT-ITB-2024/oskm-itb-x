@@ -1,0 +1,6 @@
+#popup-container {
+  background-image: url("/components/map-popup-bckg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
