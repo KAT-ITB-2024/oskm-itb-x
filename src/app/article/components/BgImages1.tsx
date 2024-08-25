@@ -58,8 +58,8 @@ const BgImages1: React.FC = () => {
       alignSelf: "center", // Tepat di tengah
     },
     turtleImage: {
-      position: "absolute" as "absolute",
-      bottom: "5%",
+      position: "relative" as "relative",
+      transform: "translateY(15%)", 
       left: "30%",  // Menggeser turtle ke kiri
       width: "35%",
       zIndex: 4,
@@ -69,15 +69,15 @@ const BgImages1: React.FC = () => {
       position: "relative" as "relative",
       bottom: "10%",
       left: "-40%",  // Menggeser fish lebih ke kiri
-      width: "40%",
+      width: "25%",  // Mengecilkan ukuran fish
       zIndex: 4,
       animation: "swimVerticalSlow 8s infinite ease-in-out",
     },
     bluejellyImage: {
       position: "absolute" as "absolute",
       bottom: "5%",
-      right: "25%",
-      width: "15%",
+      right: "35%",
+      width: "10%",
       zIndex: 1,
       animation: "swimVerticalSlow 8s infinite ease-in-out",
     },
@@ -98,18 +98,18 @@ const BgImages1: React.FC = () => {
     rightCornerCoral: {
       position: "absolute" as "absolute",
       bottom: 0,
-      right: 0,
-      width: "20%",
+      right: "10%",  // Menggeser lebih masuk ke dalam frame
+      width: "18%",  // Sesuaikan ukuran agar lebih pas
       zIndex: 1,
-      display: "none", // Disembunyikan pada mobile
+      display: "block", // Tampilkan pada semua viewport
     },
     rightCornerCoral2: {
       position: "absolute" as "absolute",
       bottom: 0,
-      right: "2%",
-      width: "15%",
+      right: "20%",  // Posisi tepat di samping rightCornerCoral
+      width: "15%",  // Sesuaikan ukuran agar lebih pas
       zIndex: 1,
-      display: "none", // Disembunyikan pada mobile
+      display: "block", // Tampilkan pada semua viewport
     },
     keyframes: `
       @keyframes swimVerticalSlow {
@@ -129,12 +129,12 @@ const BgImages1: React.FC = () => {
           width: 35%;
         }
         .turtle-image {
-          bottom: 15%;
+          transform: translateY(-8%);  // Menyesuaikan transform turtle pada viewport lebih besar
           width: 35%;
         }
         .fish-image {
           bottom: 20%;
-          width: 20%;
+          width: 18%;  // Mengecilkan ukuran fish pada viewport lebih besar
         }
         .bluejelly-image {
           width: 25%;
@@ -144,7 +144,7 @@ const BgImages1: React.FC = () => {
         .right-corner-coral,
         .right-corner-coral-2 {
           width: 25%;
-          display: block; /* Menampilkan elemen RightCornerCoral hanya pada non-mobile */
+          display: block; /* Menampilkan elemen RightCornerCoral pada non-mobile */
         }
       }
 
@@ -153,12 +153,12 @@ const BgImages1: React.FC = () => {
           width: 30%;
         }
         .turtle-image {
-          bottom: 12%;
+          transform: translateY(-6%);
           width: 30%;
         }
         .fish-image {
           bottom: 15%;
-          width: 15%;
+          width: 14%;  // Mengecilkan ukuran fish pada viewport lebih kecil
         }
         .bluejelly-image {
           width: 15%;
@@ -166,6 +166,14 @@ const BgImages1: React.FC = () => {
         .left-corner-coral,
         .left-corner-coral-2 {
           width: 15%;
+        }
+        .right-corner-coral {
+          right: "4%";  // Sesuaikan pada viewport lebih kecil
+          width: 17%;
+        }
+        .right-corner-coral-2 {
+          right: "-3%";  // Sesuaikan posisi di samping rightCornerCoral pada viewport lebih kecil
+          width: 14%;
         }
       }
 
@@ -174,18 +182,26 @@ const BgImages1: React.FC = () => {
           width: 25%;
         }
         .turtle-image {
-          bottom: 10%;
+          transform: translateY(-5%);  // Sesuaikan posisi turtle pada viewport lebih kecil
           width: 25%;
         }
         .fish-image {
           bottom: 12%;
-          width: 12%;
+          width: 12%;  // Sesuaikan ukuran fish pada viewport lebih kecil
         }
         .bluejelly-image {
           width: 12%;
         }
         .left-corner-coral,
         .left-corner-coral-2 {
+          width: 12%;
+        }
+        .right-corner-coral {
+          right: "3%";  // Sesuaikan lebih dalam frame pada viewport lebih kecil
+          width: 15%;
+        }
+        .right-corner-coral-2 {
+          right: "-5%";  // Sesuaikan posisi di samping rightCornerCoral pada viewport lebih kecil
           width: 12%;
         }
       }
@@ -242,7 +258,7 @@ const BgImages1: React.FC = () => {
 
       <img
         className="right-corner-coral"
-        src="/article-icons/rightcornercoral.png"
+        src="/article-icons/leftcornercoral.png"
         alt="Right Corner Coral"
         style={styles.rightCornerCoral}
       />
