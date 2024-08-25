@@ -33,10 +33,10 @@ const BgImages1: React.FC = () => {
     },
     responsiveContainer: {
       display: "flex",
-      flexDirection: "column" as "column", // Default vertikal
+      flexDirection: "column" as "column",
       position: "absolute" as "absolute",
       bottom: 0,
-      left: "20%",  // Menggeser container ke kiri
+      left: "20%",
       width: "60%",
       height: "auto",
       zIndex: 4,
@@ -52,26 +52,26 @@ const BgImages1: React.FC = () => {
     },
     seaweedImage: {
       position: "absolute" as "absolute",
-      bottom: "-10%",  // Agak di bawah turtle
+      bottom: "-10%",
       width: "40%",
       zIndex: 2,
-      alignSelf: "center", // Tepat di tengah
+      alignSelf: "center",
     },
     turtleImage: {
       position: "relative" as "relative",
-      transform: "translateY(15%)", 
-      left: "30%",  // Menggeser turtle ke kiri
+      transform: "translateY(15%)",
+      left: "30%",
       width: "35%",
       zIndex: 4,
-      animation: "swimVerticalSlow 8s infinite ease-in-out",
+      animation: "swimVerticalSlow 6s infinite ease-in-out, swimHorizontal 10s infinite linear",
     },
     fishImage: {
       position: "relative" as "relative",
       bottom: "10%",
-      left: "-40%",  // Menggeser fish lebih ke kiri
-      width: "25%",  // Mengecilkan ukuran fish
+      left: "-40%",
+      width: "25%",
       zIndex: 4,
-      animation: "swimVerticalSlow 8s infinite ease-in-out",
+      animation: "swimVerticalFast 4s infinite ease-in-out, swimHorizontal 8s infinite linear reverse",
     },
     bluejellyImage: {
       position: "absolute" as "absolute",
@@ -79,7 +79,7 @@ const BgImages1: React.FC = () => {
       right: "35%",
       width: "10%",
       zIndex: 1,
-      animation: "swimVerticalSlow 8s infinite ease-in-out",
+      animation: "swimVerticalSlow 8s infinite ease-in-out, swimDiagonal 12s infinite linear",
     },
     leftCornerCoral: {
       position: "absolute" as "absolute",
@@ -98,18 +98,18 @@ const BgImages1: React.FC = () => {
     rightCornerCoral: {
       position: "absolute" as "absolute",
       bottom: 0,
-      right: "10%",  // Menggeser lebih masuk ke dalam frame
-      width: "18%",  // Sesuaikan ukuran agar lebih pas
+      right: "10%",
+      width: "18%",
       zIndex: 1,
-      display: "block", // Tampilkan pada semua viewport
+      display: "block",
     },
     rightCornerCoral2: {
       position: "absolute" as "absolute",
       bottom: 0,
-      right: "20%",  // Posisi tepat di samping rightCornerCoral
-      width: "15%",  // Sesuaikan ukuran agar lebih pas
+      right: "20%",
+      width: "15%",
       zIndex: 1,
-      display: "block", // Tampilkan pada semua viewport
+      display: "block",
     },
     keyframes: `
       @keyframes swimVerticalSlow {
@@ -124,17 +124,53 @@ const BgImages1: React.FC = () => {
         }
       }
 
+      @keyframes swimVerticalFast {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-30px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes swimHorizontal {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(30px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes swimDiagonal {
+        0% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(-20px, -20px);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+
       @media (min-width: 768px) {
         .seaweed-image {
           width: 35%;
         }
         .turtle-image {
-          transform: translateY(-8%);  // Menyesuaikan transform turtle pada viewport lebih besar
+          transform: translateY(-8%);
           width: 35%;
         }
         .fish-image {
           bottom: 20%;
-          width: 18%;  // Mengecilkan ukuran fish pada viewport lebih besar
+          width: 18%;
         }
         .bluejelly-image {
           width: 25%;
@@ -144,7 +180,7 @@ const BgImages1: React.FC = () => {
         .right-corner-coral,
         .right-corner-coral-2 {
           width: 25%;
-          display: block; /* Menampilkan elemen RightCornerCoral pada non-mobile */
+          display: block;
         }
       }
 
@@ -158,7 +194,7 @@ const BgImages1: React.FC = () => {
         }
         .fish-image {
           bottom: 15%;
-          width: 14%;  // Mengecilkan ukuran fish pada viewport lebih kecil
+          width: 14%;
         }
         .bluejelly-image {
           width: 15%;
@@ -168,11 +204,11 @@ const BgImages1: React.FC = () => {
           width: 15%;
         }
         .right-corner-coral {
-          right: "4%";  // Sesuaikan pada viewport lebih kecil
+          right: 4%;
           width: 17%;
         }
         .right-corner-coral-2 {
-          right: "-3%";  // Sesuaikan posisi di samping rightCornerCoral pada viewport lebih kecil
+          right: -3%;
           width: 14%;
         }
       }
@@ -182,12 +218,12 @@ const BgImages1: React.FC = () => {
           width: 25%;
         }
         .turtle-image {
-          transform: translateY(-5%);  // Sesuaikan posisi turtle pada viewport lebih kecil
+          transform: translateY(-5%);
           width: 25%;
         }
         .fish-image {
           bottom: 12%;
-          width: 12%;  // Sesuaikan ukuran fish pada viewport lebih kecil
+          width: 12%;
         }
         .bluejelly-image {
           width: 12%;
@@ -197,11 +233,11 @@ const BgImages1: React.FC = () => {
           width: 12%;
         }
         .right-corner-coral {
-          right: "3%";  // Sesuaikan lebih dalam frame pada viewport lebih kecil
+          right: 3%;
           width: 15%;
         }
         .right-corner-coral-2 {
-          right: "-5%";  // Sesuaikan posisi di samping rightCornerCoral pada viewport lebih kecil
+          right: -5%;
           width: 12%;
         }
       }

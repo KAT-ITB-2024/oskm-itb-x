@@ -3,6 +3,7 @@
 import React from "react";
 import Swiper from "src/app/article/components/SwiperCarousel";
 import MiniSwiper from "src/app/article/components/MiniArticleCarousel";
+{/* import BgAnimation1 from "src/app/article/components/BgAnimation1"; */}
 
 const Page: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const Page: React.FC = () => {
 
       <div className="pagetsx-article-background"> {/* Section 2 Elastic Search */}
         
-        {/* Animation slide up */}
+        {/* Animation slide up (SCRAPPED?)*/}
 
         <div style={{ marginLeft: "40px" }}>
           <br/>

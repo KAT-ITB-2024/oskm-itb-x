@@ -250,7 +250,7 @@
 .swiper-pagination-custom, 
 .swiper-horizontal > .swiper-pagination-bullets, 
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 100px !important; /* Set pagination to be 100px from the bottom */
+  bottom: 360px !important; /* Set pagination to be 100px from the bottom */
   top: auto;
   left: 0;
   width: 100%;
