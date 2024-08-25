@@ -61,7 +61,7 @@ const MiniArticleCarousel: React.FC = () => {
         className="prev-button"
         onClick={() => sliderInstance.current?.prev()}
       >
-        {/* Optional content, leave empty if using background images */}
+        {/* Pakai bg image nya */}
       </button>
 
       <div
@@ -100,7 +100,7 @@ const MiniArticleCarousel: React.FC = () => {
         className="next-button"
         onClick={() => sliderInstance.current?.next()}
       >
-        {/* Optional content, leave empty if using background images */}
+        {/* Menggunakan bg image */}
       </button>
     </div>
   );
