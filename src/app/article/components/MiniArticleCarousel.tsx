@@ -11,29 +11,41 @@ const MiniArticleCarousel: React.FC = () => {
     loop: true,
     mode: "free-snap",
     slides: {
-      perView: 4, // Show 4 cards at once on larger screens
-      spacing: 15, // Reduced space between cards
+      perView: 4,
+      spacing: 0,
     },
     breakpoints: {
       "(max-width: 1024px)": {
-        slides: { perView: 3, spacing: 15 },
+        slides: { perView: 3, spacing: 0 },
       },
       "(max-width: 768px)": {
-        slides: { perView: 2, spacing: 10 },
+        slides: { perView: 2, spacing: 0 },
       },
       "(max-width: 640px)": {
-        slides: { perView: 1, spacing: 10 }, // Show 1 card at a time on small screens
+        slides: { perView: 1, spacing: 0 },
       },
+    },
+    slideChanged(slider) {
+      const currentSlide = slider.track.details.rel;
+      const totalSlides = slider.track.details.slides.length;
+
+      if (currentSlide + 4 >= totalSlides) {
+        loadMoreArticles();
+      }
     },
   });
 
   const [articles, setArticles] = useState<Article[]>([]);
+  const [visibleArticles, setVisibleArticles] = useState<Article[]>([]);
   const sliderInstance = useRef<KeenSliderInstance | null>(null);
+  const [currentBatch, setCurrentBatch] = useState(0);
+  const articlesPerBatch = 10;
 
   useEffect(() => {
     getAllArticles({ randomize: true })
       .then((fetchedArticles) => {
-        setArticles(fetchedArticles.slice(0, 10)); // Load only 10 articles initially
+        setArticles(fetchedArticles);
+        setVisibleArticles(fetchedArticles.slice(0, articlesPerBatch));
       })
       .catch((error) => {
         console.error(error);
@@ -41,9 +53,21 @@ const MiniArticleCarousel: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    // Set the slider instance when the slider is initialized
     sliderInstance.current = slider;
   }, [slider]);
+
+  const loadMoreArticles = () => {
+    const nextBatch = currentBatch + 1;
+    const nextArticles = articles.slice(
+      nextBatch * articlesPerBatch,
+      (nextBatch + 1) * articlesPerBatch
+    );
+
+    if (nextArticles.length > 0) {
+      setVisibleArticles((prev) => [...prev, ...nextArticles]);
+      setCurrentBatch(nextBatch);
+    }
+  };
 
   return (
     <div
@@ -51,8 +75,8 @@ const MiniArticleCarousel: React.FC = () => {
       style={{
         position: "relative",
         width: "100%",
-        height: "500px", // Height of the carousel for taller cards
-        padding: "0 20px", // Reduced padding left and right
+        height: "600px",
+        padding: "0 20px",
         boxSizing: "border-box",
         overflow: "hidden",
       }}
@@ -68,17 +92,17 @@ const MiniArticleCarousel: React.FC = () => {
         className="mini-card-carousel keen-slider"
         ref={sliderRef}
         style={{
-          height: "100%", // Full height for taller cards
-          transition: "transform 0.5s ease-in-out", // Smooth animation
-          overflow: "hidden", // Ensure no overflow of content
+          height: "100%",
+          transition: "transform 0.5s ease-in-out",
+          overflow: "hidden",
         }}
       >
-        {articles.map((card) => (
+        {visibleArticles.map((card) => (
           <div
             key={card.id}
             className="keen-slider__slide"
             style={{
-              padding: "0 10px", // Reduced padding for each card
+              padding: "30px 30px",
               boxSizing: "border-box",
             }}
           >
