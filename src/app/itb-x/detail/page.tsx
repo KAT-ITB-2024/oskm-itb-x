@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function DetailPage() {
   return (
     <main className="min-h-screen bg-[url('/itb-x/bg-detail.png')] bg-cover bg-center py-20">

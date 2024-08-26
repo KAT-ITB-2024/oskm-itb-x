@@ -5,7 +5,6 @@ import { GeistSans } from "geist/font/sans";
 import { TRPCReactProvider } from "~/trpc/react";
 import Navbar from "~/components/Navbar";
 import Footer from "~/components/Footer";
-
 import { mogula, rem } from "./fonts";
 
 export const metadata = {
