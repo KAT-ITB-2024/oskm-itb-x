@@ -1,0 +1,170 @@
+[
+  {
+    "nama_lokasi": "Amphitheater",
+    "latitude": -6.927218,
+    "longitude": 107.769,
+    "deskripsi": "Sebuah lapangan berbentuk lingkaran dengan tangga-tangga di sebagian sisi lingkarnya. Biasa digunakan untuk berkumpul.",
+    "src": "/maps/jatinangor_images/image4.png"
+  },
+  {
+    "nama_lokasi": "Lapangan Sepak Bola",
+    "latitude": -6.925605,
+    "longitude": 107.767814,
+    "deskripsi": "Sebuah lapangan bola yang dikelilingi oleh track lari. Biasa digunakan untuk berolah raga.",
+    "src": "/maps/jatinangor_images/image2.png"
+  },
+  {
+    "nama_lokasi": "GKU 2",
+    "latitude": -6.929651,
+    "longitude": 107.7688865,
+    "deskripsi": "Sebuah gedung perkuliahan umum yang di lantai paling dasarnya terdapat kantin.",
+    "src": "/maps/jatinangor_images/image5.jpg"
+  },
+  {
+    "nama_lokasi": "GSG I",
+    "latitude": -6.926394,
+    "longitude": 107.76955,
+    "deskripsi": "Sebuah gedung tertutup serbaguna yang di dalamnya bisa dijadikan untuk lapangan basket, lapangan bulu tangkis, maupun lapangan futsal.",
+    "src": "/maps/jatinangor_images/image15.png"
+  },
+  {
+    "nama_lokasi": "Gedung KOICA",
+    "latitude": -6.9275546,
+    "longitude": 107.7700049,
+    "deskripsi": "Sebuah gedung kuliah, kerja sama antara ITB dengan Cyber-Korea",
+    "src": "/maps/jatinangor_images/image9.png"
+  },
+  {
+    "nama_lokasi": "Masjid Al-Jabbar",
+    "latitude": -6.9326048,
+    "longitude": 107.7713949,
+    "deskripsi": "Sebuah masjid yang berdekatan langsung dengan ITB Jatinangor yang terletak di bagian Tenggara ITB Jatinangor",
+    "src": "/maps/jatinangor_images/image22.png"
+  },
+  {
+    "nama_lokasi": "Museum Zoologi",
+    "latitude": -6.9320314,
+    "longitude": 107.771348,
+    "deskripsi": "Sebuah gedung yang berisikan koleksi-koleksi dari prodi SITH berupa awetan kering dalam bentuk offset, balgh (lembaran kulit), dan artikulasi rangka hewan serta awetan basah dari rentang waktu koleksi antara tahun 1909-2018",
+    "src": "/maps/jatinangor_images/image25.png"
+  },
+  {
+    "nama_lokasi": "Water Treatment Plant",
+    "latitude": -6.926966,
+    "longitude": 107.766914,
+    "deskripsi": "Sebuah unit pengolahan air yakni unit pre-treatment, unit clariflocculator dan unit filtrasi, unit post-treatment, reservoir, dan ruang pompa.",
+    "src": "/maps/jatinangor_images/image12.jpg"
+  },
+  {
+    "nama_lokasi": "GKU 1",
+    "latitude": -6.9289464,
+    "longitude": 107.7696505,
+    "deskripsi": "Sebuah gedung perkuliahan umum yang di lantai duanya terdapat Student Lounge\u00a0dimana biasa menjadi hunian atau tempat para mahasiswa untuk belajar dan berkumpul.",
+    "src": "/maps/jatinangor_images/image17.png"
+  },
+  {
+    "nama_lokasi": "Parkiran GKU 1",
+    "latitude": -6.9295575,
+    "longitude": 107.7697058,
+    "deskripsi": "Sebuah tempat yang digunakan untuk memarkirkan kendaraan dan pada parkiran GKU 1 ini terdapat food truck",
+    "src": "/maps/jatinangor_images/image11.png"
+  },
+  {
+    "nama_lokasi": "Danau SITU 1",
+    "latitude": -6.9286721,
+    "longitude": 107.0,
+    "deskripsi": "Sebuah danau yang biasa digunakan untuk tujuan akademik dan penyelamatan sumber daya air.",
+    "src": "/maps/jatinangor_images/image27.jpg"
+  },
+  {
+    "nama_lokasi": "Danau SITU 2",
+    "latitude": -6.9328817,
+    "longitude": 107.7690705,
+    "deskripsi": "Sebuah danau yang biasa digunakan untuk tujuan akademik dan penyelamatan sumber daya air. Dikelilingi track\u00a0lari yang biasa digunakan untuk berolahraga",
+    "src": "/maps/jatinangor_images/image10.png"
+  },
+  {
+    "nama_lokasi": "Plaza Utama",
+    "latitude": -6.9290362,
+    "longitude": 107.7693095,
+    "deskripsi": "Sebuah taman kecil dengan jalan setapak yang berada di antara GKU 1 dan GKU 2 digunakan sebagai tempat untuk bersantai.",
+    "src": "/maps/jatinangor_images/image16.jpg"
+  },
+  {
+    "nama_lokasi": "Gedung Rektorat dan Pusat Administrasi",
+    "latitude": -6.92809,
+    "longitude": 107.7704669,
+    "deskripsi": "Sebuah gedung yang menjadi pusat administrasi bagi mahasiswa ITB Jatinangor.",
+    "src": "/maps/jatinangor_images/image7.png"
+  },
+  {
+    "nama_lokasi": "Taman Loji",
+    "latitude": -6.925463,
+    "longitude": 107.7695841,
+    "deskripsi": "Sebuah taman yang memiliki sebuah menara di tengahnya yaitu menara Loji yang zaman dahulu berfungsi sebagai pos pantau untuk mengawasi para pekerja. Taman Loji bertujuan untuk menjadi ruang terbuka publik",
+    "src": "/maps/jatinangor_images/image26.jpg"
+  },
+  {
+    "nama_lokasi": "Laboratorium Terbuka SDA",
+    "latitude": -6.929413,
+    "longitude": 107.7678695,
+    "deskripsi": "Sebuah laboratorium terbuka yang digunakan untuk pembelajaran prodi Teknik dan Pengelolaan Sumber Daya Air",
+    "src": "/maps/jatinangor_images/image19.png"
+  },
+  {
+    "nama_lokasi": "Monumen peresmian ITB Jatinangor",
+    "latitude": -6.9318323,
+    "longitude": 107.768883,
+    "deskripsi": "Sebuah monumen peresmian berbentuk batu dengan kolam di bawahnya. Terletak di bundaran awal sebelah danau situ dua.",
+    "src": "/maps/jatinangor_images/image13.jpg"
+  },
+  {
+    "nama_lokasi": "Mushola Al Wasath",
+    "latitude": -6.928239,
+    "longitude": 107.768912,
+    "deskripsi": "Sebuah tempat ibadah bagi umat muslim yang berada di tengah ITB Kampus Jatinangor",
+    "src": "/maps/jatinangor_images/image24.jpg"
+  },
+  {
+    "nama_lokasi": "GOR Futsal/GSG II",
+    "latitude": -6.925876,
+    "longitude": 107.769053,
+    "deskripsi": "Sebuah gedung serba guna yang memiliki fungsi utama sebagai tempat pertandingan olahraga futsal, terdapat tribun dan lapangan",
+    "src": "/maps/jatinangor_images/image14.jpg"
+  },
+  {
+    "nama_lokasi": "GOR Tenis Meja/GSG III",
+    "latitude": -6.925271,
+    "longitude": 107.7688,
+    "deskripsi": "Sebuah gedung serba guna yang memiliki fungsi utama sebagai tempat pertandingan olahraga tenis meja",
+    "src": "/maps/jatinangor_images/image6.jpg"
+  },
+  {
+    "nama_lokasi": "Asrama",
+    "latitude": -6.926686,
+    "longitude": 107.768514,
+    "deskripsi": "Sebuah rumah susun yang menjadi tempat tinggal sebagian mahasiswa ITB Kampus Jatinangor; memiliki fasilitas umum yang lengkap seperti toilet, mushola, dan kantin",
+    "src": "/maps/jatinangor_images/image1.jpg"
+  },
+  {
+    "nama_lokasi": "Parkiran Asrama",
+    "latitude": -6.926423,
+    "longitude": 107.768151,
+    "deskripsi": "Tempat memarkirkan kendaraan yang berada di antara asrama dan lapangan bola; sering terdapat food truck\u00a0yang menunggu di tempat ini",
+    "src": "/maps/jatinangor_images/image8.jpg"
+  },
+  {
+    "nama_lokasi": "Labtek IB",
+    "latitude": -6.929176,
+    "longitude": 107.768605,
+    "deskripsi": "Laboratorium untuk keperluan pembelajaran Prodi Teknik Pengelolaan Sumber Daya Air dan Pengelolaan Infrastruktur Air Bersih dan Sanitasi; merupakan tempat beristirahat yang nyaman dan berfasilitas lengkap seperti sofa, toilet, dan stopkontak",
+    "src": "/maps/jatinangor_images/image21.jpg"
+  },
+  {
+    "nama_lokasi": "Gerbang Utama",
+    "latitude": -6.933607,
+    "longitude": 107.768338,
+    "deskripsi": "Gerbang utama untuk masuk ke dalam ITB Kampus Jatinangor; terdapat pos satpam dan toilet di sebelahnya. Jika tidak ada agenda lain, gerbang tersebut biasa dibuka pukul 05.00 WIB dan ditutup pukul 23.00 WIB",
+    "src": "/maps/jatinangor_images/image23.png"
+  }
+]
