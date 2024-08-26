@@ -1,0 +1,373 @@
+[
+  {
+    "id": 1,
+    "type": "HIMPUNAN",
+    "fakultas": "FMIPA",
+    "program_studi": "Matematika/Aktuaria",
+    "nama": "HIMATIKA ITB"
+  },
+  {
+    "id": 2,
+    "type": "HIMPUNAN",
+    "fakultas": "FMIPA",
+    "program_studi": "Fisika",
+    "nama": "HIMAFI ITB"
+  },
+  {
+    "id": 3,
+    "type": "HIMPUNAN",
+    "fakultas": "FMIPA",
+    "program_studi": "Astronomi",
+    "nama": "Himastron ITB"
+  },
+  {
+    "id": 4,
+    "type": "HIMPUNAN",
+    "fakultas": "FMIPA",
+    "program_studi": "Kimia",
+    "nama": "HMK 'AMISCA' ITB"
+  },
+  {
+    "id": 5,
+    "type": "HIMPUNAN",
+    "fakultas": "SITH - S",
+    "program_studi": "Biologi",
+    "nama": "HIMABIO \"Nymphaea\" ITB"
+  },
+  {
+    "id": 6,
+    "type": "HIMPUNAN",
+    "fakultas": "SITH - S",
+    "program_studi": "Mikrobiologi",
+    "nama": "HIMAMIKRO \"Archaea\" ITB"
+  },
+  {
+    "id": 7,
+    "type": "HIMPUNAN",
+    "fakultas": "SITH - R",
+    "program_studi": "Rekayasa Hayati",
+    "nama": "Himpunan Mahasiswa Rekayasa Hayati ITB"
+  },
+  {
+    "id": 8,
+    "type": "HIMPUNAN",
+    "fakultas": "SITH - R",
+    "program_studi": "Rekayasa Pertanian",
+    "nama": "HIMAREKTA \"Agrapana\" ITB"
+  },
+  {
+    "id": 9,
+    "type": "HIMPUNAN",
+    "fakultas": "SITH - R",
+    "program_studi": "Rekayasa Kehutanan",
+    "nama": "HMH 'Selva' ITB"
+  },
+  {
+    "id": 10,
+    "type": "HIMPUNAN",
+    "fakultas": "SITH - R",
+    "program_studi": "Teknologi Pasca Panen",
+    "nama": "HMPP 'Vadra' ITB"
+  },
+  {
+    "id": 11,
+    "type": "HIMPUNAN",
+    "fakultas": "SF",
+    "program_studi": "Sains dan Teknologi Farmasi",
+    "nama": "Himpunan Mahasiswa Farmasi 'Ars Praeparandi' ITB"
+  },
+  {
+    "id": 12,
+    "type": "HIMPUNAN",
+    "fakultas": "SF",
+    "program_studi": "Farmasi Klinik dan Komunitas",
+    "nama": "Himpunan Mahasiswa Farmasi 'Ars Praeparandi' ITB"
+  },
+  {
+    "id": 13,
+    "type": "HIMPUNAN",
+    "fakultas": "FITB",
+    "program_studi": "Teknik Geologi",
+    "nama": "HMTG \"GEA\" ITB"
+  },
+  {
+    "id": 14,
+    "type": "HIMPUNAN",
+    "fakultas": "FITB",
+    "program_studi": "Teknik Geodesi & Geomatika",
+    "nama": "IMG-ITB"
+  },
+  {
+    "id": 15,
+    "type": "HIMPUNAN",
+    "fakultas": "FITB",
+    "program_studi": "Meteorologi",
+    "nama": "HMME \"Atmosphaira\" ITB"
+  },
+  {
+    "id": 16,
+    "type": "HIMPUNAN",
+    "fakultas": "FITB",
+    "program_studi": "Oseanografi",
+    "nama": "HMO \"TRITON\" ITB"
+  },
+  {
+    "id": 17,
+    "type": "HIMPUNAN",
+    "fakultas": "FTTM",
+    "program_studi": "Teknik Geofisika",
+    "nama": "HIMA TG \"TERRA\" ITB"
+  },
+  {
+    "id": 18,
+    "type": "HIMPUNAN",
+    "fakultas": "FTTM",
+    "program_studi": "Teknik Pertambangan",
+    "nama": "HMT-ITB"
+  },
+  {
+    "id": 19,
+    "type": "HIMPUNAN",
+    "fakultas": "FTTM",
+    "program_studi": "Teknik Metalurgi",
+    "nama": "IMMG ITB"
+  },
+  {
+    "id": 20,
+    "type": "HIMPUNAN",
+    "fakultas": "FTTM",
+    "program_studi": "Teknik Perminyakan",
+    "nama": "HMTM \"PATRA\" ITB"
+  },
+  {
+    "id": 21,
+    "type": "HIMPUNAN",
+    "fakultas": "STEI",
+    "program_studi": "Teknik Elektro/Teknik Tenaga Listrik/Teknik Biomedis",
+    "nama": "HME ITB"
+  },
+  {
+    "id": 22,
+    "type": "HIMPUNAN",
+    "fakultas": "STEI",
+    "program_studi": "Teknik Telekomunikasi",
+    "nama": "IMT \"Signum\" ITB"
+  },
+  {
+    "id": 23,
+    "type": "HIMPUNAN",
+    "fakultas": "STEI",
+    "program_studi": "Teknik Informatika / Sistem dan Teknologi Informasi",
+    "nama": "HMIF ITB"
+  },
+  {
+    "id": 24,
+    "type": "HIMPUNAN",
+    "fakultas": "FTSL",
+    "program_studi": "Teknik Sipil",
+    "nama": "HMS ITB"
+  },
+  {
+    "id": 25,
+    "type": "HIMPUNAN",
+    "fakultas": "FTSL",
+    "program_studi": "Teknik Kelautan",
+    "nama": "KMKL-ITB"
+  },
+  {
+    "id": 26,
+    "type": "HIMPUNAN",
+    "fakultas": "FTSL",
+    "program_studi": "Teknik Lingkungan",
+    "nama": "HMTL ITB"
+  },
+  {
+    "id": 27,
+    "type": "HIMPUNAN",
+    "fakultas": "FTSL",
+    "program_studi": "Teknik dan Pengelolaan Sumber Daya Air",
+    "nama": "HIimasda-ITB"
+  },
+  {
+    "id": 28,
+    "type": "HIMPUNAN",
+    "fakultas": "FTSL",
+    "program_studi": "Rekayasa Infrastruktur Lingkungan",
+    "nama": "KMIL ITB"
+  },
+  {
+    "id": 29,
+    "type": "HIMPUNAN",
+    "fakultas": "FTI",
+    "program_studi": "Teknik Kimia",
+    "nama": "HIMATEK-ITB"
+  },
+  {
+    "id": 30,
+    "type": "HIMPUNAN",
+    "fakultas": "FTI",
+    "program_studi": "Teknik Fisika",
+    "nama": "HMFT-ITB"
+  },
+  {
+    "id": 31,
+    "type": "HIMPUNAN",
+    "fakultas": "FTI",
+    "program_studi": "Teknik Industri / Manajemen Rekayasa",
+    "nama": "Keluarga Mahasiswa Teknik Industri ITB"
+  },
+  {
+    "id": 32,
+    "type": "HIMPUNAN",
+    "fakultas": "FTI",
+    "program_studi": "Teknik Bioenergi dan Kemurgi",
+    "nama": "HMTB \"RINUVA\" ITB"
+  },
+  {
+    "id": 33,
+    "type": "HIMPUNAN",
+    "fakultas": "FTI",
+    "program_studi": "Teknik Pangan",
+    "nama": "Himpunan Mahasiswa Teknik Pangan (HMPG) ITB"
+  },
+  {
+    "id": 34,
+    "type": "HIMPUNAN",
+    "fakultas": "FSRD",
+    "program_studi": "Seni Rupa",
+    "nama": "VASA ITB"
+  },
+  {
+    "id": 35,
+    "type": "HIMPUNAN",
+    "fakultas": "FSRD",
+    "program_studi": "Kriya",
+    "nama": "TERIKAT ITB"
+  },
+  {
+    "id": 36,
+    "type": "HIMPUNAN",
+    "fakultas": "FSRD",
+    "program_studi": "Desain Interior",
+    "nama": "KMSR IMDI ITB"
+  },
+  {
+    "id": 37,
+    "type": "HIMPUNAN",
+    "fakultas": "FSRD",
+    "program_studi": "Desain Produk",
+    "nama": "HMDP INDDES ITB"
+  },
+  {
+    "id": 38,
+    "type": "HIMPUNAN",
+    "fakultas": "FSRD",
+    "program_studi": "Desain Komunikasi Visual",
+    "nama": "IPPDIG"
+  },
+  {
+    "id": 39,
+    "type": "HIMPUNAN",
+    "fakultas": "FTMD",
+    "program_studi": "Teknik Mesin",
+    "nama": "HMM ITB"
+  },
+  {
+    "id": 40,
+    "type": "HIMPUNAN",
+    "fakultas": "FTMD",
+    "program_studi": "Teknik Dirgantara",
+    "nama": "KMPN \"Dirgantara\" ITB"
+  },
+  {
+    "id": 41,
+    "type": "HIMPUNAN",
+    "fakultas": "FTMD",
+    "program_studi": "Teknik Material",
+    "nama": "MTM ITB"
+  },
+  {
+    "id": 42,
+    "type": "HIMPUNAN",
+    "fakultas": "SBM",
+    "program_studi": "Kewirausahaan",
+    "nama": "Ikatan Mahasiswa Kewirausahaan Artha ITB"
+  },
+  {
+    "id": 43,
+    "type": "HIMPUNAN",
+    "fakultas": "SBM",
+    "program_studi": "Manajemen",
+    "nama": "KMM ITB"
+  },
+  {
+    "id": 44,
+    "type": "HIMPUNAN",
+    "fakultas": "SAPPK",
+    "program_studi": "Arsitektur",
+    "nama": "IMA-G ITB"
+  },
+  {
+    "id": 45,
+    "type": "HIMPUNAN",
+    "fakultas": "SAPPK",
+    "program_studi": "Perencanaan Wilayah dan Kota",
+    "nama": "HMP PL ITB"
+  },
+  {
+    "id": 46,
+    "type": "HIMPUNAN",
+    "fakultas": "FTI-C",
+    "program_studi": "Teknik Industri - Kampus Cirebon",
+    "nama": "BSO Cirebon MTI ITB"
+  },
+  {
+    "id": 47,
+    "type": "HIMPUNAN",
+    "fakultas": "SAPPK-C",
+    "program_studi": "Perencanaan Wilayah dan Kota",
+    "nama": "HMP PL ITB Komisariat"
+  },
+  {
+    "id": 48,
+    "type": "HIMPUNAN",
+    "fakultas": "FSRD-C",
+    "program_studi": "Kriya",
+    "nama": "BSO Cirebon TERIKAT ITB"
+  },
+  {
+    "id": 49,
+    "type": "HIMPUNAN",
+    "fakultas": "FTTM-C",
+    "program_studi": "Teknik Pertambangan",
+    "nama": "Komisariat HMT-ITB"
+  },
+  {
+    "id": 50,
+    "type": "HIMPUNAN",
+    "fakultas": "FTTM-C",
+    "program_studi": "Teknik Perminyakan",
+    "nama": "Komisariat HMTM \"PATRA\" ITB"
+  },
+  {
+    "id": 51,
+    "type": "HIMPUNAN",
+    "fakultas": "FTTM-C",
+    "program_studi": "Teknik Geofisika",
+    "nama": "BSO \"TERRA\" ITB"
+  },
+  {
+    "id": 52,
+    "type": "HIMPUNAN",
+    "fakultas": "FSRD",
+    "program_studi": "FSRD",
+    "nama": "KMSR ITB"
+  },
+  {
+    "id": 53,
+    "type": "HIMPUNAN",
+    "fakultas": "FITB-C",
+    "program_studi": "Oseanografi",
+    "nama": "BSO \"TRITON\" ITB"
+  }
+]
