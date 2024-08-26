@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
 import { daftar_nama_hmps } from "../data/data_lembaga";
 import ListHimpunanBSO from "../components/ListHimpunanBSO";
+import SliderContainer from "../components/SliderContainer";
 
 function HmpsBso() {
   const [filteredData, setFilteredData] = useState(daftar_nama_hmps);
@@ -47,20 +48,31 @@ function HmpsBso() {
     }
   }
 
+  const tempData = [
+    {
+      name: "HMIF ITB",
+    },
+    { name: "IMT ITB" },
+    { name: "HIMATIKA ITB" },
+  ];
+
   return (
     <div className="z-[10] mx-5 flex flex-col items-center pt-24 md:pt-[110px] lg:pt-[120px]">
-      <SearchBar
-        onSearch={handleSearch}
-        fakultasList={fakultasList}
-        selectedFakultas={selectedFakultas}
-        setSelectedFakultas={setSelectedFakultas}
-      />
-      <div className="mt-10 w-full">
-        <ListHimpunanBSO
-          daftar_himpunan={filteredData}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
+      <SliderContainer data={tempData} />
+      <div className="mt-6 w-[85vw]">
+        <SearchBar
+          onSearch={handleSearch}
+          fakultasList={fakultasList}
+          selectedFakultas={selectedFakultas}
+          setSelectedFakultas={setSelectedFakultas}
         />
+        <div className="mt-10 w-full">
+          <ListHimpunanBSO
+            daftar_himpunan={filteredData}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
+        </div>
       </div>
     </div>
   );
