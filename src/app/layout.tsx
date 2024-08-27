@@ -1,7 +1,5 @@
 import "~/styles/globals.css";
 
-import { GeistSans } from "geist/font/sans";
-
 import { TRPCReactProvider } from "~/trpc/react";
 import Navbar from "~/components/Navbar";
 import Footer from "~/components/Footer";
@@ -21,7 +19,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${GeistSans.variable} ${mogula.variable} ${rem.variable}`}
+      className={`${rem.className} ${mogula.variable} ${rem.variable}`}
     >
       <body className="relative">
         <TRPCReactProvider>
