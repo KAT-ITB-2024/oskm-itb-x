@@ -1,85 +1,82 @@
 "use client";
-
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+
+import styles from "./../styles.module.css";
+
+interface CarouselItem {
+  src: string;
+  alt: string;
+}
 
 interface InfiniteCarouselProps {
-  logos: { src: string }[];
+  items: CarouselItem[];
+  speed: number;
   direction: "left" | "right";
-  size: "large" | "medium" | "small";
+  size: "xlarge" | "large" | "medium" | "small";
 }
 
 const sizeClasses = {
-  large: "w-32 h-16 md:w-60 md:h-32 xl:w-72 xl:h-36",
-  medium: "w-24 h-16 md:w-40 md:h-32 xl:w-44 xl:h-36",
-  small: "w-12 h-12 md:w-28 md:h-28 xl:w-32 xl:h-32",
+  xlarge: "w-40 h-32 md:w-64 md:h-36 xl:w-[19rem] xl:h-[10rem]",
+  large: "w-36 h-28 md:w-60 md:h-32 xl:w-72 xl:h-36",
+  medium: "w-28 h-24 md:w-40 md:h-32 xl:w-44 xl:h-36",
+  small: "w-20 h-20 md:w-28 md:h-28 xl:w-32 xl:h-32",
 };
 
-const InfiniteCarousel = ({
-  logos,
+const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
+  items,
+  speed,
   direction,
   size,
-}: InfiniteCarouselProps) => {
-  const scrollerRef = useRef<HTMLDivElement>(null);
+}) => {
+  const [loopItems, setLoopItems] = useState<CarouselItem[]>([]);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const scroller = scrollerRef.current;
+    // Duplikasi item untuk efek infinite
+    setLoopItems([...items, ...items]);
+  }, [items]);
 
-    function addAnimation() {
-      if (!scroller) return;
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
 
-      const innerScroller = scroller.querySelector(".scroll_inner");
+    const animateScroll = () => {
+      if (direction === "left") {
+        if (container.scrollLeft >= container.scrollWidth / 2) {
+          container.scrollLeft = 0;
+        } else {
+          container.scrollLeft += 1;
+        }
+      } else {
+        if (container.scrollLeft <= 0) {
+          container.scrollLeft = container.scrollWidth / 2;
+        } else {
+          container.scrollLeft -= 1;
+        }
+      }
+    };
 
-      if (!innerScroller) return;
+    const animation = setInterval(animateScroll, speed);
 
-      if (innerScroller.getAttribute("data-cloned") === "true") return;
-
-      const innerScrollerChildren = Array.from(innerScroller.children);
-
-      innerScrollerChildren.forEach((item) => {
-        const extendedLogo = item.cloneNode(true) as HTMLElement;
-
-        innerScroller.appendChild(extendedLogo);
-      });
-
-      innerScroller.setAttribute("data-cloned", "true");
-    }
-
-    addAnimation();
-  }, []);
+    return () => clearInterval(animation);
+  }, [direction, speed]);
 
   return (
-    <div ref={scrollerRef} className="w-10/12 scroller">
-      <div
-        className={`flex gap-2 py-2 scroll_inner md:gap-4 md:py-4 ${
-          direction === "left"
-            ? "animate-infinite_scroll_left"
-            : "animate-infinite_scroll_right"
-        }`}
-      >
-        {logos.map((logo, index) => {
-          return (
-            <div
-              key={index}
-              className={`relative flex items-center justify-center 
-  rounded-lg p-2 shadow-[0px_0px_16px_#FFFFFF] ${sizeClasses[size]}`}
-            >
-              {/* Transparent Background Layer */}
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-300 to-blue-500 opacity-60"></div>
-
-              {/* Logo Image */}
-              <div className="relative z-10 flex flex-col items-center justify-center">
-                <Image
-                  src={logo.src}
-                  alt={`logo ${index + 1}`}
-                  layout="responsive"
-                  width={100}
-                  height={100}
-                />
-              </div>
+    <div className="w-full overflow-hidden" ref={containerRef}>
+      <div className="inline-flex gap-1 md:gap-3 lg:gap-5">
+        {loopItems.map((item, index) => (
+          <div key={index} className={`flex-shrink-0 p-4 flex items-center justify-center ${styles.glassmorphism} ${sizeClasses[size]}`}>
+            <div className="relative w-full h-full">
+              <Image
+                src={item.src}
+                alt={item.alt}
+                fill
+                objectFit="contain"
+              />
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );

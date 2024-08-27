@@ -4,15 +4,9 @@ import Image from "next/image";
 import { IoMdDownload } from "react-icons/io";
 import InfiniteCarousel from "./component/InfiniteCarousel";
 import { Dialog, DialogContent, DialogTrigger } from "~/components/ui/dialog";
+import { largeMedpar, mediumMedpar, smallMedpar, xlargeMedpar } from "./constants";
 
 export default function LandingPage() {
-  const logos = [
-    { src: "/landing-page/gojek-logo.png" },
-    { src: "/landing-page/wardah-logo.png" },
-    { src: "/landing-page/tokped-logo.png" },
-    { src: "/landing-page/pertamina-logo.png" },
-  ];
-
   const daysDikpus = [
     {
       date: "6 Juli 2024",
@@ -539,10 +533,10 @@ export default function LandingPage() {
             Our Sponsors
           </h1>
           <div className="flex flex-col items-center justify-center">
-            <InfiniteCarousel logos={logos} direction="left" size="large" />
-            <InfiniteCarousel logos={logos} direction="right" size="medium" />
-            <InfiniteCarousel logos={logos} direction="left" size="large" />
-            <InfiniteCarousel logos={logos} direction="right" size="small" />
+            {/* <InfiniteCarousel items={logos} direction="right" speed={10} /> */}
+            {/* <InfiniteCarousel logos={logos} direction="right" size="large" />
+            <InfiniteCarousel logos={logos} direction="left" size="medium" />
+            <InfiniteCarousel logos={logos} direction="left" size="small" /> */}
           </div>
         </div>
         <div className="relative -top-[100px] md:-top-[120px] xl:-top-[150px]">
@@ -565,11 +559,11 @@ export default function LandingPage() {
           <h1 className="mb-6 text-center font-mogula text-3xl text-white text-shadow-pink md:text-4xl xl:text-5xl">
             Our Media Partners
           </h1>
-          <div className="flex flex-col items-center justify-center">
-            <InfiniteCarousel logos={logos} direction="left" size="large" />
-            <InfiniteCarousel logos={logos} direction="right" size="medium" />
-            <InfiniteCarousel logos={logos} direction="left" size="large" />
-            <InfiniteCarousel logos={logos} direction="right" size="small" />
+          <div className="flex flex-col items-center justify-center gap-5">
+            <InfiniteCarousel items={xlargeMedpar} direction="left" speed={20} size="xlarge"/>
+            <InfiniteCarousel items={largeMedpar} direction="right" speed={20} size="large"/>
+            <InfiniteCarousel items={mediumMedpar} direction="left" speed={10} size="medium"/>
+            <InfiniteCarousel items={smallMedpar} direction="right" speed={20} size="small"/>
           </div>
         </div>
         <div className="relative top-[-60px]">
