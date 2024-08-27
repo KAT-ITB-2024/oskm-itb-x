@@ -38,8 +38,8 @@ const BgImages2: React.FC = () => {
     bluejellyImage: {
       position: "absolute" as "absolute",
       top: "70%",
-      right: "25%",
-      width: "15%",
+      left: "25%",
+      width: "25%",
       zIndex: 0,
       animation: "swimVerticalSlow 8s infinite ease-in-out",
     },
