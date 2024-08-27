@@ -83,7 +83,7 @@ const Card: React.FC<CardProps> = ({
       <div style={{ flex: '1', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '5px 0' }}>
         <div style={{ fontSize: '12px', color: '#999', margin: '2px 0' }}>
           <span>
-            {views} views | {readTime} min read
+            {views} views | {readTime} secs read
           </span>
         </div>
         <h2
@@ -115,7 +115,7 @@ const Card: React.FC<CardProps> = ({
           }}
         >
           <span>{`${date} ${time} oleh `}</span>
-          <span style={{ color: '#007bff' }}>{author}</span>
+          <span style={{ color: '#999' }}>{author}</span>
         </div>
         <p
           style={{
