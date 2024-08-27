@@ -67,14 +67,76 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        infinite_scroll_left: {
+          "100%": { transform: "translateX(-50%)" },
+        },
+        infinite_scroll_right: {
+          "100%": { transform: "translateX(50%)" },
+        },
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        rotate: {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '50%': { transform: 'rotate(10deg)' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        infinite_scroll_left: "infinite_scroll_left 10s linear infinite",
+        infinite_scroll_right: "infinite_scroll_right 10s linear infinite",
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
+        float: 'float 3s ease-in-out infinite',
+        rotate: 'rotate 3s ease-in-out infinite',
+      },
+      fontFamily: {
+        rem: "var(--font-rem)",
+        mogula: "var(--font-mogula)",
+      },
+      textShadow: {
+        DEFAULT: "0 2px 4px #FF8CD9",
+        pink: "0 4px 10px #FF8CD9",
+        blue: "0 4px 10px #64B1F7",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({
+      addUtilities,
+    }: {
+      addUtilities: (utilities: any, variants?: any) => void;
+    }) {
+      addUtilities(
+        {
+          ".scroller": {
+            overflow: "hidden",
+          },
+          ".scroll_inner": {
+            width: "max-content",
+            "flex-wrap": "nowrap",
+          },
+        },
+        ["responsive", "hover"],
+      );
+    },
+    function ({ matchUtilities, theme }: { matchUtilities: any; theme: any }) {
+      matchUtilities(
+        {
+          "text-shadow": (value: any) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme("textShadow") },
+      );
+    },
+  ],
 } satisfies Config;
 
 export default config;
