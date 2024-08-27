@@ -76,17 +76,13 @@ export default function Page() {
   return (
     <div className="pagetsx-article-background">
       <BgImages2 />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <a href="/article">
-        <button className="prev-button"></button>
+      <a href="/article" style={{ marginTop: "100px", marginLeft: "10px" }}>
+        <button className="GoBackButton"></button>
       </a>
       <div style={{ marginLeft: "40px" }}>
         <h2>List of Articles</h2>
       </div>
+
 
       <SearchBar setFilteredArticles={setFilteredArticles} />
 

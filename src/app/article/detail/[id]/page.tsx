@@ -35,12 +35,16 @@ const Page: React.FC = () => {
   return (
     <>
       <div style={styles.pageContainer}>
+        {/* Overlay dengan warna dan opacity 40% */}
+        <div style={styles.overlay}></div>
+
         {/* Spacer above the entire page content */}
         <div style={styles.largeSpacer}></div>
 
-        <div>
+        {/* Tombol Go Back yang bisa diposisikan bebas */}
+        <div style={styles.goBackContainer}>
           <a href="/article/list">
-            <button className="prev-button" style={styles.prevButton}/>
+            <button className="GoBackButton" style={styles.goBackButton}/>
           </a>
         </div>
 
@@ -96,10 +100,37 @@ const styles = {
     padding: '20px',
     backgroundImage: `url('/article-icons/BiruBackground1.png')`,
     backgroundSize: 'cover',
+    backgroundPosition: 'center',
     fontFamily: 'REM, sans-serif',
-    display: 'flex', // Menggunakan flexbox
+    display: 'flex',
     flexDirection: 'column' as const,
-    alignItems: 'center', // Pastikan konten berada di tengah
+    alignItems: 'center', 
+    position: 'relative', // penting untuk overlay
+  },
+  overlay: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: '#000D76',
+    opacity: 0.4, // Opacity 40%
+    zIndex: 0, // pastikan overlay berada di bawah konten
+  },
+  goBackContainer: {
+    position: 'absolute',
+    top: '20px',  // Contoh: posisikan 20px dari atas
+    left: '20px', // Contoh: posisikan 20px dari kiri
+    zIndex: 3, // Pastikan berada di atas overlay
+  },
+  goBackButton: {
+    padding: '10px 20px',
+    fontSize: '1rem',
+    color: '#fff',
+    backgroundColor: '#007BFF',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
   },
   articleTitle: {
     fontFamily: 'Mogula, sans-serif',
@@ -108,28 +139,32 @@ const styles = {
     lineHeight: '76.8px',
     textAlign: 'center' as const,
     marginBottom: '10px',
-    color: '#ffffff', // Make all text white
+    color: '#ffffff', 
+    zIndex: 2, // Konten di atas overlay
   },
   articleDate: {
     fontSize: '1rem',
     textAlign: 'center' as const,
     marginBottom: '20px',
-    color: '#ffffff', // Make all text white
+    color: '#ffffff', 
+    zIndex: 2,
   },
   statsContainer: {
-    display: 'flex', // Gunakan flexbox
-    justifyContent: 'center', // Pastikan berada di tengah
+    display: 'flex', 
+    justifyContent: 'center',
     alignItems: 'center',
-    padding: '0px 16px', // Padding horizontal tetap
+    padding: '0px 16px', 
     gap: '8px',
-    borderRadius: '10cm', // Border-radius 10cm sesuai permintaan
-    height: '32px', // Fixed height
+    borderRadius: '10cm',
+    height: '32px',
     background: 'linear-gradient(166.31deg, rgba(255, 254, 254, 0.36) 9.26%, rgba(255, 202, 224, 0.48) 89.28%)',
     boxShadow: '0px 0px 10px 0px #FFFFFF',
-    margin: '20px 0', // Ruang di atas dan bawah
+    margin: '20px 0', 
+    color: '#ffffff',
+    zIndex: 2,
   },
   statsItem: {
-    display: 'inline-flex', // Menggunakan inline-flex agar teks dan gambar sejajar
+    display: 'inline-flex', 
     alignItems: 'center',
     fontSize: '1rem',
   },
@@ -141,6 +176,7 @@ const styles = {
   articleImageContainer: {
     textAlign: 'center' as const,
     margin: '20px 0',
+    zIndex: 2,
   },
   articleImage: {
     width: '100%',
@@ -156,20 +192,12 @@ const styles = {
     marginBottom: '20px',
     margin: '0 auto',
     color: '#ffffff', 
+    zIndex: 2,
   },
   articleDescription: {
     fontSize: '1rem',
     lineHeight: '1.5rem',
     textAlign: 'justify' as const,
-  },
-  centeredContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    marginBottom: '20px',
-  },
-  prevButton: {
-    width: '50px',
-    height: '50px',
   },
   spacer: {
     height: '50px',
@@ -191,7 +219,7 @@ const styles = {
       fontSize: '1.5rem',
     },
     articleDescriptionContainer: {
-      width: '90%', // Expand to 90% width on smaller screens
+      width: '90%', 
     },
     articleDescription: {
       fontSize: '0.9rem',

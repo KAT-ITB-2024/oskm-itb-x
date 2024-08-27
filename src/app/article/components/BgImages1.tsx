@@ -294,7 +294,7 @@ const BgImages1: React.FC = () => {
 
       <img
         className="right-corner-coral"
-        src="/article-icons/leftcornercoral.png"
+        src="/article-icons/rightcornercoral.png"
         alt="Right Corner Coral"
         style={styles.rightCornerCoral}
       />

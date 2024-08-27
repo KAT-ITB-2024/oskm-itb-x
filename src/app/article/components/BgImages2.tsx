@@ -4,16 +4,6 @@ import React, { useEffect } from "react";
 
 const BgImages2: React.FC = () => {
   useEffect(() => {
-    const handleScroll = () => {
-      const bubbles = document.querySelectorAll('.bubble-image, .BubbleonOrangeTentacle');
-      bubbles.forEach((bubble: HTMLElement) => {
-        const rect = bubble.getBoundingClientRect();
-        bubble.style.transform = `translateY(${window.scrollY * -0.5}px) translateX(${Math.sin(window.scrollY * 0.1) * 10}px)`;
-        if (rect.bottom < 0) {
-          bubble.style.display = 'none'; 
-        }
-      });
-    };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -60,20 +50,6 @@ const BgImages2: React.FC = () => {
       width: "25%",
       zIndex: 0,
       animation: "swimVertical 4s infinite ease-in-out",
-    },
-    leftCornerCoral: {
-      position: "absolute" as "absolute",
-      bottom: 0,
-      left: 0,
-      width: "20%",
-      zIndex: 1,
-    },
-    leftCornerCoral2: {
-      position: "absolute" as "absolute",
-      bottom: 0,
-      left: "2%",
-      width: "15%",
-      zIndex: 1,
     },
     bubbleImage: {
       width: "40px",
@@ -218,29 +194,6 @@ const BgImages2: React.FC = () => {
     <div style={styles.container}>
       <style>{styles.keyframes}</style>
       <img 
-        className="left-corner-coral" 
-        src="/article-icons/leftcornercoral.png" 
-        alt="Left Corner Coral"
-        style={styles.leftCornerCoral}
-      />
-      <img 
-        className="left-corner-coral-2" 
-        src="/article-icons/leftcornercoral2.png" 
-        alt="Left Corner Coral 2"
-        style={styles.leftCornerCoral2}
-      />
-
-      {[...Array(10)].map((_, i) => (
-        <img 
-          key={i}
-          className="bubble-image" 
-          src="/article-icons/bubble.png" 
-          alt="Bubble"
-          style={styles.bubbleImage}
-        />
-      ))}
-
-      <img 
         className="fishs-image" 
         src="/article-icons/fishs.png" 
         alt="Fish School"
@@ -254,7 +207,7 @@ const BgImages2: React.FC = () => {
       />
       <img 
         className="bluejelly-image" 
-        src="/article-icons/bluejelly.png" 
+        src="/article-icons/pinkjelly.png" 
         alt="Blue Jellyfish"
         style={styles.bluejellyImage}
       />
