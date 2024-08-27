@@ -1,0 +1,90 @@
+"use client";
+
+import React, { useCallback, useEffect, useState } from "react";
+import Image from "next/image";
+
+interface CountdownProps {
+  targetDate: string;
+}
+
+const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
+  const calculateTimeLeft = useCallback(() => {
+    const difference = +new Date(targetDate) - +new Date();
+    let timeLeft = {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+    };
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+
+    return timeLeft;
+  }, [targetDate]);
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [calculateTimeLeft]);
+
+  return (
+    <div className="mb-8 flex flex-col items-center font-mogula text-[#99E0FF] md:text-xl">
+      <div className="flex gap-x-2">
+        {/* Hanya tampilkan jika days > 0 */}
+        {timeLeft.days > 0 && (
+          <div className="flex flex-col items-center">
+            <TimeBubble value={timeLeft.days} delay={1000}/>
+            <p>Days</p>
+          </div>
+        )}
+        <div className="flex flex-col items-center">
+          <TimeBubble value={timeLeft.hours}  delay={700}/>
+          <p>Hours</p>
+        </div>
+        <div className="flex flex-col items-center">
+          <TimeBubble value={timeLeft.minutes} delay={300}/>
+          <p>Minutes</p>
+        </div>
+        <div className="flex flex-col items-center">
+          <TimeBubble value={timeLeft.seconds} delay={0}/>
+          <p>Seconds</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+interface TimeBubbleProps {
+  value: number;
+  delay?: number;
+}
+
+const TimeBubble: React.FC<TimeBubbleProps> = ({ value, delay }) => {
+  return (
+    <div className={`relative flex w-20 aspect-square flex-col items-center justify-center md:w-24 animate-float ${delay ? `delay-${delay}` : ""}`}>
+      <Image
+        src="/landing-page/Bubble.svg"
+        alt="Bubble"
+        width={200}
+        height={200}
+      />
+      <div className="absolute text-center">
+        <div className="text-4xl md:text-6xl">{value}</div>
+      </div>
+    </div>
+  );
+};
+
+export default Countdown;

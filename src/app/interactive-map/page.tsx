@@ -1,7 +1,5 @@
-export default function Page() {
-  return (
-    <div>
-      <p>Page</p>
-    </div>
-  );
+import ITBMapLibre from "./components/open-source-components/ITBMapLibre";
+
+export default async function Page() {
+  return <ITBMapLibre />;
 }
