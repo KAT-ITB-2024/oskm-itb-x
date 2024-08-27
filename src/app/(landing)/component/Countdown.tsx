@@ -45,20 +45,20 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
         {/* Hanya tampilkan jika days > 0 */}
         {timeLeft.days > 0 && (
           <div className="flex flex-col items-center">
-            <TimeBubble value={timeLeft.days} />
+            <TimeBubble value={timeLeft.days} delay={1000}/>
             <p>Days</p>
           </div>
         )}
         <div className="flex flex-col items-center">
-          <TimeBubble value={timeLeft.hours} />
+          <TimeBubble value={timeLeft.hours}  delay={700}/>
           <p>Hours</p>
         </div>
         <div className="flex flex-col items-center">
-          <TimeBubble value={timeLeft.minutes} />
+          <TimeBubble value={timeLeft.minutes} delay={300}/>
           <p>Minutes</p>
         </div>
         <div className="flex flex-col items-center">
-          <TimeBubble value={timeLeft.seconds} />
+          <TimeBubble value={timeLeft.seconds} delay={0}/>
           <p>Seconds</p>
         </div>
       </div>
@@ -68,11 +68,12 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
 
 interface TimeBubbleProps {
   value: number;
+  delay?: number;
 }
 
-const TimeBubble: React.FC<TimeBubbleProps> = ({ value }) => {
+const TimeBubble: React.FC<TimeBubbleProps> = ({ value, delay }) => {
   return (
-    <div className="relative flex h-20 w-20 flex-col items-center justify-center md:h-32 md:w-32 xl:h-36 xl:w-36">
+    <div className={`relative flex w-20 aspect-square flex-col items-center justify-center md:w-24 animate-float ${delay ? `delay-${delay}` : ""}`}>
       <Image
         src="/landing-page/Bubble.svg"
         alt="Bubble"
