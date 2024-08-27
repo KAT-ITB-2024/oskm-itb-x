@@ -30,42 +30,42 @@
   {
     "id": 5,
     "type": "HIMPUNAN",
-    "fakultas": "SITH - S",
+    "fakultas": "SITH-S",
     "program_studi": "Biologi",
     "nama": "HIMABIO \"Nymphaea\" ITB"
   },
   {
     "id": 6,
     "type": "HIMPUNAN",
-    "fakultas": "SITH - S",
+    "fakultas": "SITH-S",
     "program_studi": "Mikrobiologi",
     "nama": "HIMAMIKRO \"Archaea\" ITB"
   },
   {
     "id": 7,
     "type": "HIMPUNAN",
-    "fakultas": "SITH - R",
+    "fakultas": "SITH-R",
     "program_studi": "Rekayasa Hayati",
     "nama": "Himpunan Mahasiswa Rekayasa Hayati ITB"
   },
   {
     "id": 8,
     "type": "HIMPUNAN",
-    "fakultas": "SITH - R",
+    "fakultas": "SITH-R",
     "program_studi": "Rekayasa Pertanian",
     "nama": "HIMAREKTA \"Agrapana\" ITB"
   },
   {
     "id": 9,
     "type": "HIMPUNAN",
-    "fakultas": "SITH - R",
+    "fakultas": "SITH-R",
     "program_studi": "Rekayasa Kehutanan",
     "nama": "HMH 'Selva' ITB"
   },
   {
     "id": 10,
     "type": "HIMPUNAN",
-    "fakultas": "SITH - R",
+    "fakultas": "SITH-R",
     "program_studi": "Teknologi Pasca Panen",
     "nama": "HMPP 'Vadra' ITB"
   },

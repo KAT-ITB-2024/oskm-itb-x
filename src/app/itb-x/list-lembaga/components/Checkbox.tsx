@@ -15,7 +15,7 @@ function Checkbox(props: CheckboxProps) {
   };
 
   return (
-    <div className="flex items-center gap-x-3">
+    <div className="my-1 flex items-center gap-x-3">
       <label className="flex cursor-pointer items-center">
         <input
           type="checkbox"

@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
-import { daftar_nama_hmps } from "../data/data_lembaga";
+import { daftar_nama_hmps, HimpunanBSO } from "../data/data_lembaga";
 import ListHimpunanBSO from "../components/ListHimpunanBSO";
 import SliderContainer from "../components/SliderContainer";
 
@@ -10,29 +10,37 @@ function HmpsBso() {
   const [filteredData, setFilteredData] = useState(daftar_nama_hmps);
   const [selectedFakultas, setSelectedFakultas] = useState<string[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [searchQ, setSearchQ] = useState("");
 
-  useEffect(() => {
+  const handleSearch = useCallback(() => {
     if (selectedFakultas.length === 0) {
-      setFilteredData(daftar_nama_hmps);
-    } else {
       setFilteredData(
         daftar_nama_hmps.filter((himpunan) =>
-          selectedFakultas.includes(himpunan.fakultas),
+          searchQ
+            ? himpunan.nama.toLowerCase().includes(searchQ.toLowerCase())
+            : true,
         ),
       );
+    } else {
+      setFilteredData(
+        daftar_nama_hmps
+          .filter((himpunan) => selectedFakultas.includes(himpunan.fakultas))
+          .filter((himpunan) =>
+            searchQ
+              ? himpunan.nama.toLowerCase().includes(searchQ.toLowerCase())
+              : true,
+          ),
+      );
     }
-    setCurrentPage(1);
-  }, [selectedFakultas]);
 
-  const handleSearch = (query: string) => {
-    setFilteredData(
-      filteredData.filter((himpunan) =>
-        query
-          ? himpunan.nama.toLowerCase().includes(query.toLowerCase())
-          : true,
-      ),
-    );
-  };
+    if (currentPage > Math.ceil(filteredData.length / 6)) {
+      setCurrentPage(1);
+    }
+  }, [searchQ, selectedFakultas, filteredData, currentPage]);
+
+  useEffect(() => {
+    handleSearch();
+  }, [handleSearch, searchQ, selectedFakultas]);
 
   const fakultasList = [
     ...new Set(daftar_nama_hmps.map((himpunan) => himpunan.fakultas)),
@@ -51,9 +59,10 @@ function HmpsBso() {
   const tempData = [
     {
       name: "HMIF ITB",
+      fakultas: "STEI",
     },
-    { name: "IMT ITB" },
-    { name: "HIMATIKA ITB" },
+    { name: "IMT ITB", fakultas: "STEI" },
+    { name: "HIMATIKA ITB", fakultas: "FMIPA" },
   ];
 
   return (
@@ -65,6 +74,7 @@ function HmpsBso() {
           fakultasList={fakultasList}
           selectedFakultas={selectedFakultas}
           setSelectedFakultas={setSelectedFakultas}
+          onChange={setSearchQ}
         />
         <div className="mt-10 w-full">
           <ListHimpunanBSO

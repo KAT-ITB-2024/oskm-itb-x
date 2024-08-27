@@ -26,7 +26,7 @@ function Pagination(props: PaginationProps) {
     }
 
     // Add ellipsis before the last page if needed
-    if (currentPage < totalPages - pageRangeDisplayed) {
+    if (currentPage < totalPages - pageRangeDisplayed - 1) {
       pages.push("...");
     }
 
@@ -51,7 +51,7 @@ function Pagination(props: PaginationProps) {
   };
 
   return (
-    <div className="mx-8 flex gap-3">
+    <div className="mx-6 flex flex-wrap items-center justify-center gap-3">
       <PaginationButton
         type="prev"
         onClick={() => handleButtonChangePage("prev")}

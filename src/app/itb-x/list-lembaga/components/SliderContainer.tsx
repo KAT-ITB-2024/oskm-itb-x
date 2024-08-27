@@ -12,10 +12,12 @@ import {
 import SliderPagination from "./SliderPagination";
 import Autoplay from "embla-carousel-autoplay";
 import { type CarouselApi } from "~/components/ui/sliderCarousel";
+import SliderDecoration from "./SliderDecoration";
 
 interface SliderContainerProps {
   data: {
     name: string;
+    fakultas: string;
     photoPath?: string;
     link?: string;
   }[];
@@ -58,7 +60,7 @@ function SliderContainer(props: SliderContainerProps) {
         setApi={setApi}
         className="flex h-full gap-x-4 py-6"
       >
-        <div className="h-full w-[50px] rotate-180 rounded-[136px] bg-[url('/itb-x/bg-ellips.png')] bg-[left_5%_top_37%] shadow-[2px_2px_5px_0px_#FFBF51]"></div>
+        <SliderDecoration fakultasName={data[activeIndex]!.fakultas} />
         <CarouselContent className="h-full w-full">
           {data.map((item, index) => (
             <CarouselItem key={index}>

@@ -1,24 +1,32 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import Image from "next/image";
 import FakultasSelector from "./FakultasSelector";
 
 interface SearchBarProps {
-  onSearch: (query: string) => void;
+  onSearch: () => void;
   fakultasList: string[];
   selectedFakultas: string[];
   setSelectedFakultas: (fakultas: string[]) => void;
+  onChange: React.Dispatch<React.SetStateAction<string>>;
 }
 
 function SearchBar(props: SearchBarProps) {
-  const { onSearch, setSelectedFakultas } = props;
+  const { onSearch, setSelectedFakultas, onChange, selectedFakultas } = props;
   const [query, setQuery] = useState("");
   const [showFilter, setShowFilter] = useState(false);
 
-  const handleFilterClick = (fakultas: string[]) => {
-    setSelectedFakultas(fakultas);
-    setShowFilter(false);
+  const handleFilterClick = useCallback(
+    (fakultas: string[]) => {
+      setSelectedFakultas(fakultas);
+    },
+    [setSelectedFakultas],
+  );
+
+  const onTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(e.target.value);
+    onChange(e.target.value);
   };
 
   return (
@@ -31,7 +39,7 @@ function SearchBar(props: SearchBarProps) {
           type="text"
           placeholder="Cari Lembaga..."
           className="w-full bg-transparent px-6 py-3 pr-2 text-[16px] focus:outline-none"
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={onTextChange}
         />
         <Image
           src="/itb-x/search.svg"
@@ -39,12 +47,12 @@ function SearchBar(props: SearchBarProps) {
           width={24}
           height={24}
           className="mr-4"
-          onClick={() => onSearch(query)}
+          onClick={() => onSearch()}
         />
       </div>
       <div
         id="filter"
-        className="flex h-[48px] w-[48px] items-center justify-center rounded-[8px] bg-white"
+        className="flex h-[48px] w-[48px] items-center justify-center rounded-[8px] bg-white lg:min-w-[200px] lg:max-w-[300px] lg:justify-normal lg:ease-in-out lg:hover:bg-gray-100"
         onClick={() => setShowFilter(!showFilter)}
       >
         <Image
@@ -52,7 +60,24 @@ function SearchBar(props: SearchBarProps) {
           alt="filter"
           width={16}
           height={16}
+          className="cursor-pointer lg:hidden"
         />
+        <div className="hidden justify-between gap-x-6 lg:flex lg:w-full lg:cursor-pointer lg:px-4 lg:py-1">
+          <div className="flex items-center gap-x-3">
+            <p className="text-[#a5acb7] opacity-70">Filter</p>
+            {selectedFakultas.length > 0 && (
+              <p className="flex h-[20px] w-[20px] items-center justify-center rounded-full bg-[#a5acb7] text-[13px]">
+                {selectedFakultas.length}
+              </p>
+            )}
+          </div>
+          <Image
+            src="/itb-x/dropdown_arrow.svg"
+            alt="Dropdown arrow"
+            width={16}
+            height={16}
+          />
+        </div>
       </div>
       {showFilter && (
         <FakultasSelector

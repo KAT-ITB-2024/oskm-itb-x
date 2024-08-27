@@ -20,5 +20,7 @@ const filterSameName = (dftr_lembaga: HimpunanBSO[]) => {
   });
 };
 
-const daftar_nama_hmps = filterSameName(himpunan);
+const daftar_nama_hmps = filterSameName(himpunan).sort((a, b) => {
+  return a.fakultas < b.fakultas ? -1 : 1;
+});
 export { data_himpunan, daftar_nama_hmps, type HimpunanBSO };
