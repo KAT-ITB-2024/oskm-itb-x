@@ -45,21 +45,21 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
         {/* Hanya tampilkan jika days > 0 */}
         {timeLeft.days > 0 && (
           <div className="flex flex-col items-center">
-            <TimeBubble value={timeLeft.days} />
-            <p>Days</p>
+            <TimeBubble value={timeLeft.days} delay={1000} />
+            <p className="font-mogula">Days</p>
           </div>
         )}
         <div className="flex flex-col items-center">
-          <TimeBubble value={timeLeft.hours} />
-          <p>Hours</p>
+          <TimeBubble value={timeLeft.hours} delay={700} />
+          <p className="font-mogula">Hours</p>
         </div>
         <div className="flex flex-col items-center">
-          <TimeBubble value={timeLeft.minutes} />
-          <p>Minutes</p>
+          <TimeBubble value={timeLeft.minutes} delay={300} />
+          <p className="font-mogula">Minutes</p>
         </div>
         <div className="flex flex-col items-center">
-          <TimeBubble value={timeLeft.seconds} />
-          <p>Seconds</p>
+          <TimeBubble value={timeLeft.seconds} delay={0} />
+          <p className="font-mogula">Seconds</p>
         </div>
       </div>
     </div>
@@ -68,19 +68,23 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
 
 interface TimeBubbleProps {
   value: number;
+  delay?: number;
 }
 
-const TimeBubble: React.FC<TimeBubbleProps> = ({ value }) => {
+const TimeBubble: React.FC<TimeBubbleProps> = ({ value, delay }) => {
   return (
-    <div className="relative flex h-20 w-20 flex-col items-center justify-center md:h-32 md:w-32 xl:h-36 xl:w-36">
+    <div
+      className={`relative flex aspect-square w-20 animate-float flex-col items-center justify-center md:w-24 ${delay ? `delay-${delay}` : ""}`}
+    >
       <Image
         src="/landing-page/Bubble.svg"
         alt="Bubble"
         width={200}
         height={200}
+        draggable={false}
       />
       <div className="absolute text-center">
-        <div className="text-4xl md:text-6xl">{value}</div>
+        <div className="font-mogula text-4xl md:text-6xl">{value}</div>
       </div>
     </div>
   );

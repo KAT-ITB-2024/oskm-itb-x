@@ -77,6 +77,14 @@ const config = {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-100%)" },
         },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        rotate: {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '50%': { transform: 'rotate(10deg)' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -84,6 +92,8 @@ const config = {
         infinite_scroll_left: "infinite_scroll_left 10s linear infinite",
         infinite_scroll_right: "infinite_scroll_right 10s linear infinite",
         "infinite-scroll": "infinite-scroll 25s linear infinite",
+        float: 'float 3s ease-in-out infinite',
+        rotate: 'rotate 3s ease-in-out infinite',
       },
       fontFamily: {
         rem: "var(--font-rem)",

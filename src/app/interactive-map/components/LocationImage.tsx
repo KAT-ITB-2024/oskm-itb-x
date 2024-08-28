@@ -21,7 +21,8 @@ function LocationImage({ src }: LocationImageProps) {
         alt="Map Image"
         width={280}
         height={200}
-        className="absolute z-[10] h-full w-full "
+        className="absolute z-[10] h-full w-full"
+        draggable={false}
       />
       <svg viewBox="0 0 415 279">
         <image

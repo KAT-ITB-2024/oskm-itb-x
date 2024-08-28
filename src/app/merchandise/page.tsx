@@ -83,6 +83,7 @@ export default function Page() {
           width={0}
           style={{ width: "300px", height: "auto" }}
           className="absolute -left-32 top-64 rotate-12 sm:-left-28 sm:top-72 sm:rotate-45 sm:scale-[1.75]"
+          draggable={false}
         />
         <Image
           src="/components/ubur.svg"
@@ -91,6 +92,7 @@ export default function Page() {
           width={0}
           style={{ width: "200px", height: "auto" }}
           className="absolute -right-24 top-80 sm:-right-20 sm:top-64 sm:scale-[1.75]"
+          draggable={false}
         />
         <div className="relative my-20 flex w-full items-center justify-center">
           <Image
@@ -100,11 +102,12 @@ export default function Page() {
             width={0}
             style={{ width: "1000px", height: "auto" }}
             className="absolute"
+            draggable={false}
           />
-          <h1 className="w-full text-center text-4xl font-bold capitalize text-white [text-shadow:_0px_0px_60px_rgb(255_255_255_/_0%)] sm:text-6xl md:text-8xl">
+          <h1 className="w-full text-center font-mogula text-4xl font-bold capitalize text-white [text-shadow:_0px_0px_60px_rgb(255_255_255_/_0%)] sm:text-6xl md:text-8xl">
             Collect Your
             <br />
-            <span className="inline text-5xl sm:text-7xl md:text-9xl">
+            <span className="inline font-mogula text-5xl sm:text-7xl md:text-9xl">
               Merchandise
             </span>
           </h1>
@@ -113,26 +116,32 @@ export default function Page() {
           <ul className="flex flex-col gap-3 sm:flex-row sm:gap-10">
             <li>
               <a className="flex flex-col justify-center gap-2 text-center">
-                <h1 className="text-3xl text-[#FEFDA3] [text-shadow:_0px_0px_20px_rgb(255_255_255_/_100%)]">
+                <h1 className="font-mogula text-3xl text-[#FEFDA3] [text-shadow:_0px_0px_20px_rgb(255_255_255_/_100%)]">
                   Tokopedia
                 </h1>
-                <Button variant={"merchgreen"}>Ganesha Goods &gt;</Button>
+                <Button variant={"merchgreen"} className="font-remd">
+                  Ganesha Goods &gt;
+                </Button>
               </a>
             </li>
             <li>
               <a className="flex flex-col justify-center gap-2 text-center">
-                <h1 className="text-3xl text-[#FEFDA3] [text-shadow:_0px_0px_20px_rgb(255_255_255_/_100%)]">
+                <h1 className="font-mogula text-3xl text-[#FEFDA3] [text-shadow:_0px_0px_20px_rgb(255_255_255_/_100%)]">
                   Pre-Order
                 </h1>
-                <Button variant={"merchyellow"}>Order Now &gt;</Button>
+                <Button variant={"merchyellow"} className="font-remd">
+                  Order Now &gt;
+                </Button>
               </a>
             </li>
             <li>
               <a className="flex flex-col justify-center gap-2 text-center">
-                <h1 className="text-3xl text-[#FEFDA3] [text-shadow:_0px_0px_20px_rgb(255_255_255_/_100%)]">
+                <h1 className="font-mogula text-3xl text-[#FEFDA3] [text-shadow:_0px_0px_20px_rgb(255_255_255_/_100%)]">
                   Instagram
                 </h1>
-                <Button variant={"merchpink"}>@ganeshagoods &gt;</Button>
+                <Button variant={"merchpink"} className="font-remd">
+                  @ganeshagoods &gt;
+                </Button>
               </a>
             </li>
           </ul>
@@ -147,6 +156,7 @@ export default function Page() {
         height={0}
         width={0}
         style={{ width: "200px", height: "auto" }}
+        draggable={false}
       />
       <Image
         src="/components/corall.svg"
@@ -155,6 +165,7 @@ export default function Page() {
         height={0}
         width={0}
         style={{ width: "200px", height: "auto" }}
+        draggable={false}
       />
     </div>
   );

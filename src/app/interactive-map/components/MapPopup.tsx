@@ -34,6 +34,7 @@ const MapPopup = forwardRef<HTMLDivElement, MapPopupProps>(
                 width={16}
                 height={16}
                 alt="Close Button"
+                draggable={false}
               />
             </button>
             <div className="flex flex-col items-center justify-center">
