@@ -167,14 +167,14 @@ export default function LandingPage() {
                   </div>
                 </DialogTrigger>
                 <DialogContent>
-                  <div className="relative h-[300px] w-10/12 overflow-y-auto overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
+                  <div className="relative h-[300px] w-10/12 overflow-y-scroll scrollbar-thumb-[#0010A4] scrollbar-track-[#99E0FF] scrollbar-thin overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
                     <div className="my-2 text-center font-mogula text-2xl text-[#99E0FF] md:text-3xl xl:text-4xl">
                       Diklat Terpusat
                     </div>
 
-                    <div className="relative flex font-rem">
+                    <div className="relative flex items-center justify-center font-rem px-6 gap-6">
                       {/* Time Area */}
-                      <div className="flex w-1/2 flex-col items-end pr-6">
+                      <div className="flex w-fit flex-col">
                         {daysDikpus.map((day, index) => (
                           <div key={index}>
                             <div className="flex items-center">
@@ -207,7 +207,7 @@ export default function LandingPage() {
                       </div>
 
                       {/* Vertical Line with Circles */}
-                      <div className="absolute bottom-0 left-1/2 top-0 flex w-[2px] flex-col justify-between bg-[#000D76] lg:w-[3px]">
+                      <div className="flex w-[2px] flex-col bg-[#000D76] lg:w-[3px]">
                         {daysDikpus.map((day, index) => (
                           <div
                             key={index}
@@ -234,7 +234,7 @@ export default function LandingPage() {
                       </div>
 
                       {/* Activity Area */}
-                      <div className="w-1/2 pl-6">
+                      <div className="w-1/2">
                         {daysDikpus.map((day, index) => (
                           <div key={index}>
                             <div className="relative flex items-center">
@@ -246,7 +246,7 @@ export default function LandingPage() {
                                     alt="ombak"
                                     width={120}
                                     height={120}
-                                    className="absolute right-[-36px] top-[-18px] w-8/12 md:right-[-40px] md:top-[-30px] md:w-4/12 xl:top-[-44px]"
+                                    className="absolute right-[-36px] top-[-18px] w-8/12 md:right-[-36px] md:top-[-30px] md:w-4/12 xl:top-[-44px]"
                                     draggable={false}
                                   />
                                 </span>
@@ -291,14 +291,14 @@ export default function LandingPage() {
                   </div>
                 </DialogTrigger>
                 <DialogContent>
-                  <div className="relative h-[300px] w-10/12 overflow-y-auto overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
+                  <div className="relative h-[300px] w-10/12 overflow-y-scroll scrollbar-thumb-[#0010A4] scrollbar-track-[#99E0FF] scrollbar-thin overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
                     <div className="my-2 text-center font-mogula text-2xl text-[#99E0FF] md:text-3xl xl:text-4xl">
                       ITB Showcase
                     </div>
 
-                    <div className="relative flex font-rem">
+                    <div className="relative flex items-center justify-center font-rem px-6 gap-6">
                       {/* Time Area */}
-                      <div className="flex w-1/2 flex-col items-end pr-6">
+                      <div className="flex w-fit flex-col">
                         {daysITBShowcase.map((day, index) => (
                           <div key={index}>
                             <div className="flex items-center">
@@ -331,7 +331,7 @@ export default function LandingPage() {
                       </div>
 
                       {/* Vertical Line with Circles */}
-                      <div className="absolute bottom-0 left-1/2 top-0 flex w-[2px] flex-col justify-between bg-[#000D76] lg:w-[3px]">
+                      <div className="flex w-[2px] flex-col bg-[#000D76] lg:w-[3px]">
                         {daysITBShowcase.map((day, index) => (
                           <div
                             key={index}
@@ -358,7 +358,7 @@ export default function LandingPage() {
                       </div>
 
                       {/* Activity Area */}
-                      <div className="w-1/2 pl-6">
+                      <div className="w-1/2">
                         {daysITBShowcase.map((day, index) => (
                           <div key={index}>
                             <div className="relative flex items-center">
@@ -416,14 +416,14 @@ export default function LandingPage() {
                 </div>
               </DialogTrigger>
               <DialogContent>
-                <div className="relative h-[300px] w-10/12 overflow-y-auto overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
+                <div className="relative h-[300px] w-10/12 overflow-y-scroll scrollbar-thumb-[#0010A4] scrollbar-track-[#99E0FF] scrollbar-thin overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
                   <div className="my-2 text-center font-mogula text-2xl text-[#99E0FF] md:text-3xl xl:text-4xl">
                     OSKM
                   </div>
 
-                  <div className="relative flex font-rem">
+                  <div className="relative flex items-center justify-center font-rem px-6 gap-6">
                     {/* Time Area */}
-                    <div className="flex w-1/2 flex-col items-end pr-6">
+                    <div className="flex w-fit flex-col">
                       {daysOSKM.map((day, index) => (
                         <div key={index}>
                           <div className="flex items-center">
@@ -456,7 +456,7 @@ export default function LandingPage() {
                     </div>
 
                     {/* Vertical Line with Circles */}
-                    <div className="absolute bottom-0 left-1/2 top-0 flex w-[2px] flex-col justify-between bg-[#000D76] lg:w-[3px]">
+                    <div className="flex w-[2px] flex-col bg-[#000D76] lg:w-[3px]">
                       {daysOSKM.map((day, index) => (
                         <div
                           key={index}
@@ -494,7 +494,7 @@ export default function LandingPage() {
                     </div>
 
                     {/* Activity Area */}
-                    <div className="w-1/2 pl-6">
+                    <div className="w-1/2">
                       {daysOSKM.map((day, index) => (
                         <div key={index}>
                           <div className="relative flex items-center">
