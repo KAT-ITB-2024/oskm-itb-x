@@ -17,7 +17,7 @@ export default function VisiMisi() {
         </div>
         <div className="basis-2/5 sm:basis-1/3">
           <Image
-            src="/about-us/penyu.png"
+            src="/about-us/penyu.webp"
             alt="penyu"
             width={1086}
             height={960}
