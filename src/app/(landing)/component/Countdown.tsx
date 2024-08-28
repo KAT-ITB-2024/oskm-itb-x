@@ -77,7 +77,7 @@ const TimeBubble: React.FC<TimeBubbleProps> = ({ value, delay }) => {
       className={`relative flex aspect-square w-20 animate-float flex-col items-center justify-center md:w-24 ${delay ? `delay-${delay}` : ""}`}
     >
       <Image
-        src="/landing-page/Bubble.svg"
+        src="/landing-page/Bubble.png"
         alt="Bubble"
         width={200}
         height={200}

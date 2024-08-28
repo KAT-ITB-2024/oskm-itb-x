@@ -107,7 +107,7 @@ export default function LandingPage() {
         </div>
         <div className="relative bottom-[-160px]">
           <Image
-            src="/landing-page/penyu.png"
+            src="/landing-page/penyu.webp"
             alt="penyu"
             width={500}
             height={500}
@@ -150,7 +150,7 @@ export default function LandingPage() {
                 <DialogTrigger asChild>
                   <div className="flex cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12">
                     <Image
-                      src="/landing-page/icon-dikpus.svg"
+                      src="/landing-page/icon-dikpus.webp"
                       alt="1"
                       width={500}
                       height={500}
@@ -167,7 +167,7 @@ export default function LandingPage() {
                   </div>
                 </DialogTrigger>
                 <DialogContent>
-                  <div className="relative h-[300px] w-10/12 overflow-y-auto overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.png')] p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
+                  <div className="relative h-[300px] w-10/12 overflow-y-auto overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
                     <div className="my-2 text-center font-mogula text-2xl text-[#99E0FF] md:text-3xl xl:text-4xl">
                       Diklat Terpusat
                     </div>
@@ -180,7 +180,7 @@ export default function LandingPage() {
                             <div className="flex items-center">
                               <h2 className="relative flex h-[60px] items-center text-xs md:h-[72px] md:text-base xl:text-lg">
                                 <Image
-                                  src="/landing-page/timeline-detail/ombak_left.svg"
+                                  src="/landing-page/timeline-detail/ombak_left.webp"
                                   alt="ombak"
                                   width={120}
                                   height={120}
@@ -242,7 +242,7 @@ export default function LandingPage() {
                                 <span className="relative flex w-32 justify-start rounded-full bg-[#000D76] py-2 pl-4 font-mogula text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-72 xl:w-96">
                                   {day.dayTitle}
                                   <Image
-                                    src="/landing-page/timeline-detail/ombak_1.svg"
+                                    src="/landing-page/timeline-detail/ombak_1.webp"
                                     alt="ombak"
                                     width={120}
                                     height={120}
@@ -274,7 +274,7 @@ export default function LandingPage() {
                 <DialogTrigger asChild>
                   <div className="flex cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12">
                     <Image
-                      src="/landing-page/icon-showcase.svg"
+                      src="/landing-page/icon-showcase.webp"
                       alt="2"
                       width={500}
                       height={500}
@@ -291,7 +291,7 @@ export default function LandingPage() {
                   </div>
                 </DialogTrigger>
                 <DialogContent>
-                  <div className="relative h-[300px] w-10/12 overflow-y-auto overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.png')] p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
+                  <div className="relative h-[300px] w-10/12 overflow-y-auto overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
                     <div className="my-2 text-center font-mogula text-2xl text-[#99E0FF] md:text-3xl xl:text-4xl">
                       ITB Showcase
                     </div>
@@ -304,7 +304,7 @@ export default function LandingPage() {
                             <div className="flex items-center">
                               <h2 className="relative flex h-[60px] items-center text-xs md:h-[72px] md:text-base xl:text-lg">
                                 <Image
-                                  src="/landing-page/timeline-detail/ombak_left.svg"
+                                  src="/landing-page/timeline-detail/ombak_left.webp"
                                   alt="ombak"
                                   width={120}
                                   height={120}
@@ -366,7 +366,7 @@ export default function LandingPage() {
                                 <span className="relative flex w-32 justify-start rounded-full bg-[#000D76] py-2 pl-4 text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-72 xl:w-96">
                                   {day.dayTitle}
                                   <Image
-                                    src="/landing-page/timeline-detail/ombak_1.svg"
+                                    src="/landing-page/timeline-detail/ombak_1.webp"
                                     alt="ombak"
                                     width={120}
                                     height={120}
@@ -399,10 +399,10 @@ export default function LandingPage() {
               <DialogTrigger asChild>
                 <div className="flex w-5/12 cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12">
                   <Image
-                    src="/landing-page/icon-oskm.svg"
+                    src="/landing-page/icon-oskm.webp"
                     alt="3"
-                    width={500}
-                    height={500}
+                    width={400}
+                    height={400}
                     draggable={false}
                   />
                   <div className="text-center">
@@ -416,7 +416,7 @@ export default function LandingPage() {
                 </div>
               </DialogTrigger>
               <DialogContent>
-                <div className="relative h-[300px] w-10/12 overflow-y-auto overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.png')] p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
+                <div className="relative h-[300px] w-10/12 overflow-y-auto overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
                   <div className="my-2 text-center font-mogula text-2xl text-[#99E0FF] md:text-3xl xl:text-4xl">
                     OSKM
                   </div>
@@ -429,7 +429,7 @@ export default function LandingPage() {
                           <div className="flex items-center">
                             <h2 className="relative flex h-[60px] items-center text-xs md:h-[72px] md:text-base xl:text-lg">
                               <Image
-                                src="/landing-page/timeline-detail/ombak_left.svg"
+                                src="/landing-page/timeline-detail/ombak_left.webp"
                                 alt="ombak"
                                 width={120}
                                 height={120}
@@ -502,7 +502,7 @@ export default function LandingPage() {
                               <span className="relative flex w-32 justify-start rounded-full bg-[#000D76] py-2 pl-4 text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-72 xl:w-96">
                                 {day.dayTitle}
                                 <Image
-                                  src="/landing-page/timeline-detail/ombak_1.svg"
+                                  src="/landing-page/timeline-detail/ombak_1.webp"
                                   alt="ombak"
                                   width={120}
                                   height={120}
@@ -533,7 +533,7 @@ export default function LandingPage() {
         </div>
         <div className="relative -top-[120px] md:-top-[240px] xl:-top-[360px]">
           <Image
-            src="/landing-page/ikan-oren.svg"
+            src="/landing-page/ikan-oren.webp"
             alt="penyu"
             width={500}
             height={500}
@@ -541,7 +541,7 @@ export default function LandingPage() {
             draggable={false}
           />
           <Image
-            src="/landing-page/penyu-2.svg"
+            src="/landing-page/penyu-2.webp"
             alt="pindang"
             width={500}
             height={500}
@@ -562,7 +562,7 @@ export default function LandingPage() {
         </div>
         <div className="relative -top-[100px] md:-top-[120px] xl:-top-[150px]">
           <Image
-            src="/landing-page/ikan-pindang.svg"
+            src="/landing-page/ikan-pindang.webp"
             alt="ikan-pindang"
             width={500}
             height={500}
@@ -570,7 +570,7 @@ export default function LandingPage() {
             draggable={false}
           />
           <Image
-            src="/landing-page/ubur-2.svg"
+            src="/landing-page/ubur-2.webp"
             alt="ubur-ubur"
             width={500}
             height={500}
@@ -611,15 +611,15 @@ export default function LandingPage() {
         </div>
         <div className="relative top-[-60px]">
           <Image
-            src="/landing-page/ikan-naga.svg"
+            src="/landing-page/ikan-naga.webp"
             alt="ikan-naga"
             width={500}
             height={500}
-            className="absolute left-0 z-10 w-5/12 md:w-4/12 xl:w-3/12"
+            className="absolute left-0 z-10 w-5/12 md:w-4/12 xl:w-3/12 scale-x-[-1]"
             draggable={false}
           />
           <Image
-            src="/landing-page/ubur-pink.svg"
+            src="/landing-page/ubur-pink.webp"
             alt="ubur-pink"
             width={500}
             height={500}
@@ -653,7 +653,7 @@ export default function LandingPage() {
 
             {/* Coral Images */}
             <Image
-              src="/landing-page/coral_left.svg"
+              src="/landing-page/coral_left.webp"
               alt="tenant"
               width={500}
               height={500}
@@ -661,7 +661,7 @@ export default function LandingPage() {
               draggable={false}
             />
             <Image
-              src="/landing-page/coral_right.svg"
+              src="/landing-page/coral_right.webp"
               alt="tenant"
               width={500}
               height={500}

@@ -51,11 +51,11 @@ export default function MerchandiseList({
                 <div className="relative flex h-[400px] w-[450px] justify-center bg-[url('/components/bubble-2.svg')] bg-cover">
                   <div className="relative flex justify-center text-4xl sm:text-5xl">
                     <Image
-                      src="/components/kaos-putih.svg"
+                      src={item.image}
                       alt={item.name}
-                      height={0}
-                      width={0}
-                      style={{ width: "270px", height: "auto" }}
+                      height={400}
+                      width={400}
+                      className="w-auto h-auto"
                       draggable={false}
                     />
                     <h1 className="absolute right-0 top-10 font-mogula font-normal text-[#FFBF51] [text-shadow:_3px_3px_7px_rgb(255_191_81_/_50%)]">
@@ -79,10 +79,10 @@ export default function MerchandiseList({
         ) : (
           <div className="z-10 mx-12 mb-52 mt-16 flex flex-col items-center gap-4 sm:w-1/2">
             <Image
-              src="/components/gurita.svg"
+              src="/components/gurita.webp"
               alt="Item Not Found"
-              height={0}
-              width={0}
+              height={500}
+              width={500}
               style={{ width: "160px", height: "auto" }}
               className="sm:mb-14 sm:scale-[2]"
               draggable={false}
