@@ -1,21 +1,11 @@
 "use client";
 
 import React from 'react';
+import { Article } from '~/types/articles/articleType';
 
-interface CardProps {
-  id: number;
-  title: string;
-  createdAt: string;
-  author: string;
-  views: number;
-  likes: number;
-  readTime: number;
-  description: string;
-  image: string;
-}
-
-const Card: React.FC<CardProps> = ({
+const Card: React.FC<Article> = ({
   id,
+  slug,
   title,
   createdAt,
   author,
@@ -69,7 +59,7 @@ const Card: React.FC<CardProps> = ({
       }}
     >
       <img
-        src={image}
+        src={image.url}
         alt={title}
         style={{
           width: '200px',    // Set the width to 200px
@@ -83,7 +73,7 @@ const Card: React.FC<CardProps> = ({
       <div style={{ flex: '1', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '5px 0' }}>
         <div style={{ fontSize: '12px', color: '#999', margin: '2px 0' }}>
           <span>
-            {views} views | {readTime} secs read
+            {views} views | {(readTime / 60).toFixed(0)} mins read
           </span>
         </div>
         <h2
@@ -114,7 +104,7 @@ const Card: React.FC<CardProps> = ({
             margin: 0,
           }}
         >
-          <span>{`${date} ${time} oleh `}</span>
+          <span>{`${date} ${time} WIB oleh `}</span>
           <span style={{ color: '#999' }}>{author}</span>
         </div>
         <p
@@ -133,7 +123,7 @@ const Card: React.FC<CardProps> = ({
           {truncatedDescription}
         </p>
         <a
-          href={`/article/detail/${id}`}
+          href={`/article/detail/${slug}`}
           style={{
             display: 'block',
             fontSize: '12px',

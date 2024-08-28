@@ -2,7 +2,7 @@
 
 import React from "react";
 import Swiper from "src/app/article/components/SwiperCarousel";
-import MiniSwiper from "src/app/article/components/MiniArticleCarousel";
+import MiniArticleCarousel from "src/app/article/components/MiniArticleCarousel";
 {/* import BgAnimation1 from "src/app/article/components/BgAnimation1"; */}
 
 const Page: React.FC = () => {
@@ -20,7 +20,7 @@ const Page: React.FC = () => {
           <h2>Read More Articles</h2>
           <br/>
         </div>
-        <MiniSwiper />
+        <MiniArticleCarousel />
         {/* For the cards */}
         <div className="center-container">
           <a href="/article/list">

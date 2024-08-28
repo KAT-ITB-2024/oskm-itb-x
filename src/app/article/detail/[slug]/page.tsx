@@ -1,36 +1,24 @@
-import React from 'react';
-import MiniArticleCarousel from 'src/app/article/components/MiniArticleCarousel'; // Import the MiniArticleCarousel
+"use client"
 
-// Define the Article interface
-interface Article {
-  id: number;
-  title: string;
-  dateTime: Date;
-  author: string;
-  views: number;
-  likes: number;
-  readTime: number;
-  description: string;
-  image: string;
-}
-
-// Sample article data (for testing)
-const articleData: Article[] = [
-  {
-    id: 1,
-    title: 'Orasi Warna-warni 2023 di OSKM ITB, Gaungkan Semangat Berkontribusi',
-    dateTime: new Date('2023-07-29T00:00:00'),
-    author: 'Lidya Marthadila',
-    views: 1563,
-    likes: 5000,
-    readTime: 3,
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut turpis felis. Ut porttitor finibus magna, maximus auctor nisi tempus eget...',
-    image: '/article-icons/Search_Not_Found.png',
-  },
-];
+import { useParams } from 'next/navigation';
+import React, { useEffect, useState } from 'react';
+import MiniArticleCarousel from 'src/app/article/components/MiniArticleCarousel';
+import { getArticle } from '~/lib/contentful/api';
+import { Article } from '~/types/articles/articleType';
 
 const Page: React.FC = () => {
-  const selectedArticle = articleData[0]; // Contoh: Article Pertama
+  const { slug } = useParams();
+  const [article, setArticle] = useState<Article>();
+
+  useEffect(() => {
+    getArticle({slug: slug as string}).then((data) => {
+      setArticle(data);
+    })
+  }, []);
+
+  useEffect(() => {
+    console.log(article);
+  }, [article]);
 
   return (
     <>
@@ -48,35 +36,52 @@ const Page: React.FC = () => {
           </a>
         </div>
 
-        <div style={styles.articleTitle}>
-          <h1>{selectedArticle.title}</h1>
-        </div>
+        {
+          article && (
+            <>
+              <div style={styles.articleTitle}>
+                <h1>{article.title}</h1>
+              </div>
 
-        <div style={styles.articleDate}>
-          Dibuat <div style={styles.statsItem}>{selectedArticle.dateTime.toDateString()}</div>
-        </div>
+              <div style={styles.articleDate}>
+                Dibuat{' '}
+                <div style={styles.statsItem}>
+                  {`${new Date(article.createdAt).toLocaleDateString("id-ID", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })} ${new Date(article.createdAt).toLocaleTimeString("id-ID", {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    second: "2-digit",
+                  })}`} WIB
+                </div>
+              </div>
 
-        <div style={styles.statsContainer}>
-          <div style={styles.statsItem}>
-            <img src="/article-icons/author.png" alt="Author" style={styles.statsIcon} /> {selectedArticle.author}
-          </div>
-          <div style={styles.statsItem}>
-            <img src="/article-icons/views_eye.png" alt="Views" style={styles.statsIcon} /> {selectedArticle.views}
-          </div>
-          <div style={styles.statsItem}>
-            <img src="/article-icons/timer.png" alt="Read Time" style={styles.statsIcon} /> {selectedArticle.readTime} min read
-          </div>
-        </div>
+              <div style={styles.statsContainer}>
+                <div style={styles.statsItem}>
+                  <img src="/article-icons/author.png" alt="Author" style={styles.statsIcon} /> {article.author}
+                </div>
+                <div style={styles.statsItem}>
+                  <img src="/article-icons/views_eye.png" alt="Views" style={styles.statsIcon} /> {article.views}
+                </div>
+                <div style={styles.statsItem}>
+                  <img src="/article-icons/timer.png" alt="Read Time" style={styles.statsIcon} /> {(article.readTime / 60).toFixed(0)} min read
+                </div>
+              </div>
 
-        <div style={styles.articleImageContainer}>
-          <img src={selectedArticle.image} alt={selectedArticle.title} style={styles.articleImage} />
-        </div>
+              <div style={styles.articleImageContainer}>
+                <img src={article.image.url} alt={article.title} style={styles.articleImage} />
+              </div>
 
-        <div style={styles.articleDescriptionContainer}>
-          <div style={styles.articleDescription}>
-            <p>{selectedArticle.description}</p>
-          </div>
-        </div>
+              <div style={styles.articleDescriptionContainer}>
+                <div style={styles.articleDescription}>
+                  <p>{article.description}</p>
+                </div>
+              </div>
+            </>
+          )
+        }
 
         {/* Spacer before the button */}
         <div style={styles.spacer}/>
@@ -105,10 +110,10 @@ const styles = {
     display: 'flex',
     flexDirection: 'column' as const,
     alignItems: 'center', 
-    position: 'relative', // penting untuk overlay
+    position: 'relative' as const, // penting untuk overlay
   },
   overlay: {
-    position: 'absolute',
+    position: 'absolute' as const,
     top: 0,
     left: 0,
     right: 0,
@@ -118,7 +123,7 @@ const styles = {
     zIndex: 0, // pastikan overlay berada di bawah konten
   },
   goBackContainer: {
-    position: 'absolute',
+    position: 'absolute' as const,
     top: '20px',  // Contoh: posisikan 20px dari atas
     left: '20px', // Contoh: posisikan 20px dari kiri
     zIndex: 3, // Pastikan berada di atas overlay

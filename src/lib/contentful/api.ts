@@ -103,7 +103,10 @@ export async function getAllArticles({
   return articlesEntries;
 }
 
-export async function getArticle(slug: any, isDraftMode = false) {
+export async function getArticle({
+  slug,
+  isDraftMode = false,
+}: {slug: string, isDraftMode?: boolean}) {
   const article = await fetchGraphQL(
     `query {
       articlesCollection(where: {slug: "${slug}"}, preview: ${isDraftMode}) {
@@ -115,5 +118,6 @@ export async function getArticle(slug: any, isDraftMode = false) {
     `,
     isDraftMode,
   );
+  console.log(article);
   return extractArticleEntries(article)[0];
 }

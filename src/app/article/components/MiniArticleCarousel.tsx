@@ -5,6 +5,7 @@ import { useKeenSlider, KeenSliderInstance } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { getAllArticles } from "~/lib/contentful/api";
 import Card from "src/app/article/components/Card";
+import { Article } from "~/types/articles/articleType";
 
 const MiniArticleCarousel: React.FC = () => {
   const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
@@ -51,10 +52,6 @@ const MiniArticleCarousel: React.FC = () => {
         console.error(error);
       });
   }, []);
-
-  useEffect(() => {
-    sliderInstance.current = slider;
-  }, [slider]);
 
   const loadMoreArticles = () => {
     const nextBatch = currentBatch + 1;
@@ -108,13 +105,15 @@ const MiniArticleCarousel: React.FC = () => {
           >
             <Card
               id={card.id}
+              slug={card.slug}
               title={card.title}
               createdAt={card.createdAt}
               author={card.author}
               views={card.views}
               readTime={card.readTime}
               description={card.description}
-              image={card.image.url}
+              image={card.image}
+              likes={card.likes}
             />
           </div>
         ))}

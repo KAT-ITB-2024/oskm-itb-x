@@ -7,53 +7,20 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import BgImages1 from "./BgImages1"; // Import BgImages1
+import { Article } from "~/types/articles/articleType";
+import { getAllArticles } from "~/lib/contentful/api";
 
 const ClientOnlyCarousel: React.FC = () => {
-  const [isClient, setIsClient] = useState(false);
+
+  const [articles, setArticles] = useState<Article[]>([]);
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) return null;
-
-  const articles = [
-    {
-      id: 1,
-      title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      buttonlink: "#",
-      bgImage: "/path/to/image1.jpg",
-    },
-    {
-      id: 2,
-      title: "Article 2",
-      content: "Content of Article 2",
-      buttonlink: "#",
-      bgImage: "/path/to/image2.jpg",
-    },
-    {
-      id: 3,
-      title: "Article 3",
-      content: "Content of Article 3",
-      buttonlink: "#",
-      bgImage: "/path/to/image3.jpg",
-    },
-    {
-      id: 4,
-      title: "Article 4",
-      content: "Content of Article 4",
-      buttonlink: "#",
-      bgImage: "/path/to/image4.jpg",
-    },
-    {
-      id: 5,
-      title: "Article 5",
-      content: "Content of Article 5",
-      buttonlink: "#",
-      bgImage: "/path/to/image5.jpg",
-    },
-  ];
+    getAllArticles({ limit: 5, randomize: true }).then((articles) => {
+      setArticles(articles);
+    }).catch((error) => {
+      console.error(error);
+    })
+  }, [])
 
   return (
     <div className="main-article">
@@ -75,7 +42,7 @@ const ClientOnlyCarousel: React.FC = () => {
             <div
               className="item"
               style={{
-                backgroundImage: `url(${article.bgImage})`,
+                backgroundImage: `url(${article.image.url})`,
                 position: "relative", // Ensure relative positioning for child elements
               }}
             >
@@ -86,10 +53,10 @@ const ClientOnlyCarousel: React.FC = () => {
 
               <div className="text-content">
                 <h3>{article.title}</h3>
-                <p>{article.content}</p>
+                <p>{article.description}</p>
                 {index !== 1 && index !== 2 && (
                   <a
-                    href={article.buttonlink}
+                    href={`/article/detail/${article.slug}`}
                     className="carousel-button"
                   >
                     Read More
