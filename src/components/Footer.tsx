@@ -38,7 +38,7 @@ function Footer() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <ul className="hidden items-center gap-4 px-3 text-[#0010A4] lg:flex xl:gap-8">
+            <ul className="hidden items-center gap-4 px-3 text-[#0010A4] lg:flex xl:gap-8 font-rem">
               <li>
                 <Link href="about-us">About Us</Link>
               </li>
@@ -141,7 +141,7 @@ function Footer() {
             draggable={false}
           />
 
-          <div className="flex flex-col text-[#0010A4]">
+          <div className="flex flex-col text-[#0010A4] font-rem">
             <p className="text-xl">ITB Kampus Jatinangor</p>
             <p>Jl. Let. Jen. Purn. Dr. (HC) Mashudi No. 1</p>
             <p>Jatinangor, Kab. Sumedang, Jawa Barat</p>
@@ -171,7 +171,7 @@ function Footer() {
         />
 
         <div className="flex flex-col gap-2">
-          <ul className="grid grid-cols-2 items-center gap-x-8 gap-y-2 px-3 text-[#0010A4] sm:flex lg:hidden">
+          <ul className="grid grid-cols-2 items-center gap-x-8 gap-y-2 px-3 text-[#0010A4] sm:flex lg:hidden font-rem">
             <li>
               <Link href="about-us">About Us</Link>
             </li>

@@ -136,7 +136,7 @@ const BubbleHistory = ({
         </p>
         <Button
           variant={"pink"}
-          className="mt-2 h-5 rounded-sm px-1 font-rem text-[6px] font-normal lg:mt-3 lg:h-7 lg:text-[10px]"
+          className="mt-2 h-5 rounded-sm px-3 font-rem text-[6px] font-normal lg:mt-3 lg:h-7 lg:text-[10px]"
           onClick={onReadMoreClick}
         >
           Read More

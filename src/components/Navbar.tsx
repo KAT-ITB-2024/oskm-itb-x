@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 
 function Navbar() {
   const pathname = usePathname();
-  console.log(pathname);
+  
   return (
     <header className="absolute z-50 w-full p-4">
       <nav className="relative h-16 rounded-full lg:h-[76px]">
@@ -103,7 +103,7 @@ function Navbar() {
                 </li>
                 <li>
                   <Link href="">
-                    <Button variant="yellow">OceanLog</Button>
+                    <Button variant="yellow" className="font-rem">OceanLog</Button>
                   </Link>
                 </li>
               </ul>
@@ -161,7 +161,7 @@ function Navbar() {
             </li>
             <li>
               <Link href="">
-                <Button variant="yellow">OceanLog</Button>
+                <Button variant="yellow" className="font-rem">OceanLog</Button>
               </Link>
             </li>
           </ul>
