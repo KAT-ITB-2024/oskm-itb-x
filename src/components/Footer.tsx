@@ -13,6 +13,7 @@ function Footer() {
         width={1512}
         height={175}
         className="absolute hidden h-full w-full object-cover lg:block"
+        draggable={false}
       />
 
       <div className="relative hidden h-full w-full px-8 lg:flex">
@@ -24,6 +25,7 @@ function Footer() {
               width={360}
               height={360}
               className="size-24"
+              draggable={false}
             />
             <Image
               src="/logo/title.png"
@@ -31,6 +33,7 @@ function Footer() {
               width={360}
               height={360}
               className="w-32"
+              draggable={false}
             />
           </div>
 
@@ -135,6 +138,7 @@ function Footer() {
             width={360}
             height={360}
             className="mb-8 size-16"
+            draggable={false}
           />
 
           <div className="flex flex-col text-[#0010A4]">
@@ -153,6 +157,7 @@ function Footer() {
         width={393}
         height={375}
         className="absolute block h-full w-full object-cover lg:hidden"
+        draggable={false}
       />
 
       <div className="relative flex h-full w-full flex-col items-center justify-center gap-4 lg:hidden">
@@ -162,6 +167,7 @@ function Footer() {
           width={360}
           height={360}
           className="size-24"
+          draggable={false}
         />
 
         <div className="flex flex-col gap-2">
@@ -264,6 +270,7 @@ function Footer() {
             width={360}
             height={360}
             className="mb-8 size-16"
+            draggable={false}
           />
 
           <div className="flex flex-col text-[#0010A4]">

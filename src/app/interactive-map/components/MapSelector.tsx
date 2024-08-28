@@ -23,6 +23,7 @@ function MapSelector({
         width={233}
         height={61}
         className={`absolute left-0 top-[10%] h-auto w-full transition-opacity duration-500 ease-in-out ${isGanesha ? "opacity-100" : "hidden opacity-0"}`}
+        draggable={false}
       />
       <Image
         src="/maps/button-images/jatinangor.png"
@@ -30,6 +31,7 @@ function MapSelector({
         width={233}
         height={61}
         className={`absolute left-0 top-[10%] h-auto w-full transition-opacity duration-500 ease-in-out ${!isGanesha ? "opacity-100" : "hidden opacity-0"}`}
+        draggable={false}
       />
     </div>
   );

@@ -125,15 +125,18 @@ const BubbleHistory = ({
         width={826}
         height={826}
         className="absolute z-0"
+        draggable={false}
       />
       <div className="absolute left-1/2 top-1/2 z-10 w-32 -translate-x-1/2 -translate-y-1/2 md:w-36 lg:w-44">
-        <h1 className="text-xs [text-shadow:4px_4px_20px_#FF8CD9BF] md:text-base lg:text-xl">
+        <h1 className="font-mogula text-xs [text-shadow:4px_4px_20px_#FF8CD9BF] md:text-base lg:text-xl">
           {title}
         </h1>
-        <p className="mt-2 text-[8px] lg:mt-3 lg:text-xs">{preview ?? text}</p>
+        <p className="mt-2 font-rem text-[8px] lg:mt-3 lg:text-xs">
+          {preview ?? text}
+        </p>
         <Button
           variant={"pink"}
-          className="mt-2 h-5 rounded-sm px-1 text-[6px] font-normal lg:mt-3 lg:h-7 lg:text-[8px]"
+          className="mt-2 h-5 rounded-sm px-1 font-rem text-[6px] font-normal lg:mt-3 lg:h-7 lg:text-[10px]"
           onClick={onReadMoreClick}
         >
           Read More
@@ -156,16 +159,16 @@ const CardHistory = ({
     <div className="relative flex min-h-full flex-col justify-between p-4">
       <div className="absolute inset-0 z-0 rounded-lg bg-gradient-to-r from-[#FFFEFE33] to-[#FFFEFE99] py-2 opacity-50 shadow-[0px_0px_3.84px_0px_#FFFFFF]"></div>
       <div className="relative z-10 px-2 text-white">
-        <h1 className="text-center text-lg [text-shadow:4px_4px_20px_#FF8CD9BF] md:text-xl lg:text-3xl">
+        <h1 className="text-center font-mogula text-lg [text-shadow:4px_4px_20px_#FF8CD9BF] md:text-xl lg:text-3xl">
           {title}
         </h1>
-        <p className="mt-4 text-justify text-xs sm:text-sm md:text-base lg:text-lg">
+        <p className="mt-4 text-justify font-rem text-xs sm:text-sm md:text-base lg:text-lg">
           {text}
         </p>
         <div className="flex justify-center">
           <Button
             variant={"pink"}
-            className="mt-4 h-8 rounded-sm text-xs font-normal sm:text-sm md:text-base"
+            className="mt-4 h-8 rounded-sm font-rem text-xs font-normal sm:text-sm md:text-base"
             onClick={onBackClick}
           >
             Back
@@ -201,6 +204,7 @@ export default function HistoryCarousel() {
         width={185}
         height={250}
         className="absolute top-28 w-20 md:w-24 lg:w-32"
+        draggable={false}
       />
       <Image
         src="/about-us/ikan-pindang-2.png"
@@ -208,6 +212,7 @@ export default function HistoryCarousel() {
         width={131}
         height={195}
         className="absolute bottom-0 right-0 w-20 md:w-24 lg:w-32"
+        draggable={false}
       />
       <Image
         src="/about-us/coral.png"
@@ -215,6 +220,7 @@ export default function HistoryCarousel() {
         width={1512}
         height={676}
         className="absolute -bottom-10"
+        draggable={false}
       />
       <div className="mt-32 px-5">
         <h1 className="text-center text-3xl text-white [text-shadow:4px_4px_10px_#0CEBCCBF] lg:text-5xl">
@@ -270,6 +276,7 @@ export default function HistoryCarousel() {
                   width={85}
                   height={85}
                   className="size-8 rotate-180 md:size-10 lg:size-12"
+                  draggable={false}
                 />
               </button>
             </div>
@@ -314,6 +321,7 @@ export default function HistoryCarousel() {
                   width={85}
                   height={85}
                   className="size-8 md:size-10 lg:size-12"
+                  draggable={false}
                 />
               </button>
             </div>

@@ -4,7 +4,12 @@ import Image from "next/image";
 import { IoMdDownload } from "react-icons/io";
 import InfiniteCarousel from "./component/InfiniteCarousel";
 import { Dialog, DialogContent, DialogTrigger } from "~/components/ui/dialog";
-import { largeMedpar, mediumMedpar, smallMedpar, xlargeMedpar } from "./constants";
+import {
+  largeMedpar,
+  mediumMedpar,
+  smallMedpar,
+  xlargeMedpar,
+} from "./constants";
 
 export default function LandingPage() {
   const daysDikpus = [
@@ -81,7 +86,7 @@ export default function LandingPage() {
 
   return (
     <div className="bg-[url('/landing-page/bg-landing.webp')] bg-cover bg-center">
-      <div className="py-20 container">
+      <div className="container py-20">
         <div className="flex flex-col items-center">
           <Image
             src="/logo/logo-oskm.png"
@@ -89,6 +94,7 @@ export default function LandingPage() {
             width={500}
             height={500}
             className="w-8/12 md:w-6/12 lg:w-5/12 xl:w-[20%]"
+            draggable={false}
           />
           <Image
             src="/landing-page/oskm-word.svg"
@@ -96,6 +102,7 @@ export default function LandingPage() {
             alt="title"
             width={300}
             height={300}
+            draggable={false}
           />
         </div>
         <div className="relative bottom-[-160px]">
@@ -105,6 +112,7 @@ export default function LandingPage() {
             width={500}
             height={500}
             className="absolute left-0 z-0 w-5/12 md:w-4/12 lg:w-3/12"
+            draggable={false}
           />
           <Image
             src="/landing-page/pindang.png"
@@ -112,6 +120,7 @@ export default function LandingPage() {
             width={500}
             height={500}
             className="absolute right-0 z-0 w-5/12 md:w-4/12 lg:w-3/12"
+            draggable={false}
           />
         </div>
 
@@ -145,6 +154,7 @@ export default function LandingPage() {
                       alt="1"
                       width={500}
                       height={500}
+                      draggable={false}
                     />
                     <div className="text-center">
                       <p className="text-lg font-bold md:text-xl lg:text-2xl">
@@ -175,8 +185,9 @@ export default function LandingPage() {
                                   width={120}
                                   height={120}
                                   className="absolute left-[-20px] top-[-12px] w-8/12 md:left-[-40px] md:top-[-36px]"
+                                  draggable={false}
                                 />
-                                <span className="flex w-32 justify-end rounded-full bg-[#000D76] py-2 pr-2 text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-48">
+                                <span className="flex w-32 justify-end rounded-full bg-[#000D76] py-2 pr-4 font-mogula text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-48">
                                   {day.date}
                                 </span>
                               </h2>
@@ -228,7 +239,7 @@ export default function LandingPage() {
                           <div key={index}>
                             <div className="relative flex items-center">
                               <h2 className="flex h-[60px] items-center text-xs text-blue-800 md:h-[72px] md:text-base xl:text-lg">
-                                <span className="relative flex w-32 justify-start rounded-full bg-[#000D76] py-2 pl-4 text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-72 xl:w-96">
+                                <span className="relative flex w-32 justify-start rounded-full bg-[#000D76] py-2 pl-4 font-mogula text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-72 xl:w-96">
                                   {day.dayTitle}
                                   <Image
                                     src="/landing-page/timeline-detail/ombak_1.svg"
@@ -236,6 +247,7 @@ export default function LandingPage() {
                                     width={120}
                                     height={120}
                                     className="absolute right-[-36px] top-[-18px] w-8/12 md:right-[-40px] md:top-[-30px] md:w-4/12 xl:top-[-44px]"
+                                    draggable={false}
                                   />
                                 </span>
                               </h2>
@@ -244,7 +256,7 @@ export default function LandingPage() {
                               {day.activities.map((activity, idx) => (
                                 <div
                                   key={idx}
-                                  className="flex h-[40px] items-center text-xs text-[#0010A4] md:h-[48px] md:text-sm xl:text-base"
+                                  className="flex h-[40px] items-center font-rem text-xs text-[#0010A4] md:h-[48px] md:text-sm xl:text-base"
                                 >
                                   <span>{activity.description}</span>
                                 </div>
@@ -266,6 +278,7 @@ export default function LandingPage() {
                       alt="2"
                       width={500}
                       height={500}
+                      draggable={false}
                     />
                     <div className="text-center">
                       <p className="text-lg font-bold md:text-xl lg:text-2xl">
@@ -296,8 +309,9 @@ export default function LandingPage() {
                                   width={120}
                                   height={120}
                                   className="absolute left-[-20px] top-[-12px] w-8/12 md:left-[-40px] md:top-[-36px]"
+                                  draggable={false}
                                 />
-                                <span className="flex w-32 justify-end rounded-full bg-[#000D76] py-2 pr-2 text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-48">
+                                <span className="flex w-32 justify-end rounded-full bg-[#000D76] py-2 pr-4 font-mogula text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-48">
                                   {day.date}
                                 </span>
                               </h2>
@@ -357,6 +371,7 @@ export default function LandingPage() {
                                     width={120}
                                     height={120}
                                     className="absolute right-[-36px] top-[-18px] w-8/12 md:right-[-40px] md:top-[-30px] md:w-4/12 xl:top-[-44px]"
+                                    draggable={false}
                                   />
                                 </span>
                               </h2>
@@ -388,6 +403,7 @@ export default function LandingPage() {
                     alt="3"
                     width={500}
                     height={500}
+                    draggable={false}
                   />
                   <div className="text-center">
                     <p className="text-lg font-bold md:text-xl lg:text-2xl">
@@ -418,8 +434,9 @@ export default function LandingPage() {
                                 width={120}
                                 height={120}
                                 className="absolute left-[-20px] top-[-12px] w-8/12 md:left-[-40px] md:top-[-36px]"
+                                draggable={false}
                               />
-                              <span className="flex w-32 justify-end rounded-full bg-[#000D76] py-2 pr-2 text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-48">
+                              <span className="flex w-32 justify-end rounded-full bg-[#000D76] py-2 pr-4 font-mogula text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-48">
                                 {day.date}
                               </span>
                             </h2>
@@ -455,6 +472,7 @@ export default function LandingPage() {
                                   width={100}
                                   height={100}
                                   className="absolute"
+                                  draggable={false}
                                 />
                               ) : (
                                 <div className="h-2/5 w-2/5 rounded-full bg-[#000D76] md:h-1/2 md:w-1/2"></div>
@@ -489,6 +507,7 @@ export default function LandingPage() {
                                   width={120}
                                   height={120}
                                   className="absolute right-[-36px] top-[-18px] w-8/12 md:right-[-40px] md:top-[-30px] md:w-4/12 xl:top-[-44px]"
+                                  draggable={false}
                                 />
                               </span>
                             </h2>
@@ -519,6 +538,7 @@ export default function LandingPage() {
             width={500}
             height={500}
             className="absolute left-0 z-0 w-5/12 md:w-4/12 lg:w-3/12"
+            draggable={false}
           />
           <Image
             src="/landing-page/penyu-2.svg"
@@ -526,6 +546,7 @@ export default function LandingPage() {
             width={500}
             height={500}
             className="absolute right-0 z-0 w-5/12 md:w-4/12 lg:w-3/12"
+            draggable={false}
           />
         </div>
         <div className="relative z-10 mb-32">
@@ -546,6 +567,7 @@ export default function LandingPage() {
             width={500}
             height={500}
             className="absolute left-0 z-0 w-5/12 md:w-4/12 lg:w-3/12"
+            draggable={false}
           />
           <Image
             src="/landing-page/ubur-2.svg"
@@ -553,6 +575,7 @@ export default function LandingPage() {
             width={500}
             height={500}
             className="absolute -top-[20px] right-0 z-0 w-4/12 md:w-3/12 lg:-top-[40px] xl:-top-[60px] xl:w-2/12"
+            draggable={false}
           />
         </div>
         <div className="relative z-10 mb-32">
@@ -560,10 +583,30 @@ export default function LandingPage() {
             Our Media Partners
           </h1>
           <div className="flex flex-col items-center justify-center gap-5">
-            <InfiniteCarousel items={xlargeMedpar} direction="left" speed={20} size="xlarge"/>
-            <InfiniteCarousel items={largeMedpar} direction="right" speed={20} size="large"/>
-            <InfiniteCarousel items={mediumMedpar} direction="left" speed={10} size="medium"/>
-            <InfiniteCarousel items={smallMedpar} direction="right" speed={20} size="small"/>
+            <InfiniteCarousel
+              items={xlargeMedpar}
+              direction="left"
+              speed={20}
+              size="xlarge"
+            />
+            <InfiniteCarousel
+              items={largeMedpar}
+              direction="right"
+              speed={20}
+              size="large"
+            />
+            <InfiniteCarousel
+              items={mediumMedpar}
+              direction="left"
+              speed={10}
+              size="medium"
+            />
+            <InfiniteCarousel
+              items={smallMedpar}
+              direction="right"
+              speed={20}
+              size="small"
+            />
           </div>
         </div>
         <div className="relative top-[-60px]">
@@ -573,6 +616,7 @@ export default function LandingPage() {
             width={500}
             height={500}
             className="absolute left-0 z-10 w-5/12 md:w-4/12 xl:w-3/12"
+            draggable={false}
           />
           <Image
             src="/landing-page/ubur-pink.svg"
@@ -580,6 +624,7 @@ export default function LandingPage() {
             width={500}
             height={500}
             className="absolute right-0 z-10 w-5/12 md:w-4/12 xl:w-3/12"
+            draggable={false}
           />
         </div>
         <div className="relative z-0 flex flex-col items-center">
@@ -613,6 +658,7 @@ export default function LandingPage() {
               width={500}
               height={500}
               className="absolute bottom-[-32px] left-[-50px] w-4/12 md:w-3/12"
+              draggable={false}
             />
             <Image
               src="/landing-page/coral_right.svg"
@@ -620,6 +666,7 @@ export default function LandingPage() {
               width={500}
               height={500}
               className="absolute bottom-[-20px] right-[-50px] w-4/12 md:w-3/12"
+              draggable={false}
             />
           </div>
         </div>

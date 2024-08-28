@@ -58,6 +58,7 @@ const CarouselKegiatan: React.FC<CarouselKegiatanProps> = ({
             width={1080}
             height={1080}
             className="w-full object-cover md:px-40 lg:px-60 xl:px-80"
+            draggable={false}
           />
         </div>
       ) : (
@@ -76,6 +77,7 @@ const CarouselKegiatan: React.FC<CarouselKegiatanProps> = ({
                       width={300}
                       height={300}
                       className="h-full w-full object-cover"
+                      draggable={false}
                     />
                   </div>
                 </CarouselItem>
@@ -111,6 +113,7 @@ const CarouselKegiatan: React.FC<CarouselKegiatanProps> = ({
           width={40}
           height={40}
           className="cursor-pointer"
+          draggable={false}
         />
       </button>
     </div>
