@@ -55,7 +55,7 @@ function Navbar() {
                     href="about-us"
                     className={
                       pathname === "/about-us"
-                        ? "underline underline-offset-4"
+                        ? "underline underline-offset-4 decoration-2 font-bold"
                         : ""
                     }
                   >
@@ -67,7 +67,7 @@ function Navbar() {
                     href="merchandise"
                     className={
                       pathname === "/merchandise"
-                        ? "underline underline-offset-4"
+                        ? "underline underline-offset-4 decoration-2 font-bold"
                         : ""
                     }
                   >
@@ -79,7 +79,7 @@ function Navbar() {
                     href="interactive-map"
                     className={
                       pathname === "/interactive-map"
-                        ? "underline underline-offset-4"
+                        ? "underline underline-offset-4 decoration-2 font-bold"
                         : ""
                     }
                   >
@@ -91,7 +91,7 @@ function Navbar() {
                     href="article"
                     className={
                       pathname === "/article"
-                        ? "underline underline-offset-4"
+                        ? "underline underline-offset-4 decoration-2 font-bold"
                         : ""
                     }
                   >
@@ -116,7 +116,7 @@ function Navbar() {
               <Link
                 href="about-us"
                 className={
-                  pathname === "/about-us" ? "underline underline-offset-4" : ""
+                  pathname === "/about-us" ? "underline underline-offset-4 decoration-2 font-bold" : ""
                 }
               >
                 About Us
@@ -127,7 +127,7 @@ function Navbar() {
                 href="merchandise"
                 className={
                   pathname === "/merchandise"
-                    ? "underline underline-offset-4"
+                    ? "underline underline-offset-4 decoration-2 font-bold"
                     : ""
                 }
               >
@@ -139,7 +139,7 @@ function Navbar() {
                 href="interactive-map"
                 className={
                   pathname === "/interactive-map"
-                    ? "underline underline-offset-4"
+                    ? "underline underline-offset-4 decoration-2 font-bold"
                     : ""
                 }
               >
@@ -150,7 +150,7 @@ function Navbar() {
               <Link
                 href="article"
                 className={
-                  pathname === "/article" ? "underline underline-offset-4" : ""
+                  pathname === "/article" ? "underline underline-offset-4 decoration-2 font-bold" : ""
                 }
               >
                 Blog

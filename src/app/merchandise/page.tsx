@@ -9,67 +9,77 @@ export default function Page() {
     {
       name: "Kaos",
       price: "89k/pcs",
-      image: "/components/kaos-putih.svg",
+      image: "/components/kaos.webp",
     },
     {
       name: "Enamel",
       price: "16k/pcs",
-      image: "/components/kaos-putih.svg",
+      image: "/components/enamel.webp",
     },
     {
       name: "Sticker ITB",
       price: "15k/pcs",
-      image: "/components/kaos-putih.svg",
+      image: "/components/sticker.webp",
     },
     {
       name: "Kipas",
       price: "15k/pcs",
-      image: "/components/kaos-putih.svg",
+      image: "/components/kipas.webp",
     },
     {
       name: "Sticker Fakultas",
       price: "5k/pcs",
-      image: "/components/kaos-putih.svg",
+      image: "/components/sticker-fakultas.webp",
     },
     {
       name: "Sticker Sheets",
       price: "10k/pcs",
-      image: "/components/kaos-putih.svg",
+      image: "/components/sticker-sheets.webp",
     },
     {
       name: "Baseball Cap",
       price: "50k/pcs",
-      image: "/components/kaos-putih.svg",
+      image: "/components/baseball-cap.webp",
     },
     {
       name: "Notebook",
       price: "35k/pcs",
-      image: "/components/kaos-putih.svg",
+      image: "/components/notebook.webp",
     },
     {
       name: "Bookmark",
       price: "10k/pcs",
-      image: "/components/kaos-putih.svg",
+      image: "/components/bookmark.webp",
     },
     {
       name: "Lanyard",
       price: "25k/pcs",
-      image: "/components/kaos-putih.svg",
+      image: "/components/lanyard.webp",
     },
     {
       name: "Lighter",
       price: "25k/pcs",
-      image: "/components/kaos-putih.svg",
+      image: "/components/lighter.webp",
     },
     {
       name: "Keychain NIM",
       price: "15k/pcs",
-      image: "/components/kaos-putih.svg",
+      image: "/components/keychain-nim.webp",
+    },
+    {
+      name: "Keychain Karakter",
+      price: "15k/pcs",
+      image: "/components/keychain-karakter.webp",
     },
     {
       name: "Totebag",
       price: "49k/pcs",
-      image: "/components/kaos-putih.svg",
+      image: "/components/totebag.webp",
+    },
+    {
+      name: "Keychain ITB",
+      price: "15k/pcs",
+      image: "/components/keychain-itb.webp",
     },
   ];
 
@@ -77,19 +87,19 @@ export default function Page() {
     <div className="relative flex flex-col items-center overflow-hidden bg-[url('/background/merchandise-background.svg')] bg-cover bg-no-repeat">
       <div className="relative flex min-h-screen w-full flex-col justify-center overflow-hidden py-32 sm:py-40 ">
         <Image
-          src="/components/naga.svg"
+          src="/components/naga.webp"
           alt="Naga Laut"
-          height={0}
-          width={0}
+          height={500}
+          width={500}
           style={{ width: "300px", height: "auto" }}
-          className="absolute -left-32 top-64 rotate-12 sm:-left-28 sm:top-72 sm:rotate-45 sm:scale-[1.75]"
+          className="absolute -left-32 top-64 rotate-12 sm:-left-28 sm:top-72 sm:rotate-0 sm:scale-[1.75]"
           draggable={false}
         />
         <Image
-          src="/components/ubur.svg"
+          src="/components/ubur.webp"
           alt="Ubur-ubur"
-          height={0}
-          width={0}
+          height={500}
+          width={500}
           style={{ width: "200px", height: "auto" }}
           className="absolute -right-24 top-80 sm:-right-20 sm:top-64 sm:scale-[1.75]"
           draggable={false}
@@ -150,20 +160,20 @@ export default function Page() {
         <MerchandiseList merchandises={merchandises} />
       </div>
       <Image
-        src="/components/corall.svg"
-        className="absolute -left-10 bottom-10 translate-y-24 rotate-0 scale-100 sm:bottom-32 sm:left-24 sm:scale-[2]"
+        src="/components/corall.webp"
+        className="absolute -left-2 bottom-10 translate-y-24 rotate-0 scale-100 sm:bottom-32 sm:scale-[2]"
         alt="Corall"
-        height={0}
-        width={0}
+        height={500}
+        width={500}
         style={{ width: "200px", height: "auto" }}
         draggable={false}
       />
       <Image
-        src="/components/corall.svg"
-        className="absolute -right-10 bottom-10 translate-y-24 -scale-x-100 sm:bottom-32 sm:right-24 sm:-scale-x-[2] sm:scale-y-[2]"
+        src="/components/corall.webp"
+        className="absolute -right-2 bottom-10 translate-y-24 -scale-x-100 sm:bottom-32 sm:-scale-x-[2] sm:scale-y-[2]"
         alt="Corall"
-        height={0}
-        width={0}
+        height={500}
+        width={500}
         style={{ width: "200px", height: "auto" }}
         draggable={false}
       />

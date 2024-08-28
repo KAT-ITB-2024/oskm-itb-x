@@ -8,10 +8,10 @@ function Footer() {
     <footer className="relative z-[300] h-[400px] lg:h-[175px]">
       {/* Desktop */}
       <Image
-        src="/components/footer-desktop.png"
+        src="/components/footer-desktop.webp"
         alt="Footer"
-        width={1512}
-        height={175}
+        width={3000}
+        height={3000}
         className="absolute hidden h-full w-full object-cover lg:block"
         draggable={false}
       />
@@ -133,7 +133,7 @@ function Footer() {
 
         <div className="flex min-w-fit items-center">
           <Image
-            src="/logo/ganesha.png"
+            src="/logo/ganesha.webp"
             alt="Logo"
             width={360}
             height={360}
@@ -265,7 +265,7 @@ function Footer() {
 
         <div className="flex min-w-fit items-center">
           <Image
-            src="/logo/ganesha.png"
+            src="/logo/ganesha.webp"
             alt="Logo"
             width={360}
             height={360}

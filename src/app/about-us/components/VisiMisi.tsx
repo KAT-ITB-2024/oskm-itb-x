@@ -30,7 +30,7 @@ export default function VisiMisi() {
       <div className="ml-6 mr-6 mt-24 flex items-center md:mr-20 xl:mr-44">
         <div className="flex basis-1/3 justify-end">
           <Image
-            src="/about-us/ubur-ubur.png"
+            src="/about-us/ubur-ubur.webp"
             alt="ubur-ubur"
             width={946}
             height={1028}
