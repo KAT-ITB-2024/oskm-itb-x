@@ -14,7 +14,7 @@ export default function Page() {
   const [filteredArticles, setFilteredArticles] = useState<Article[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [articlesPerPage, setArticlesPerPage] = useState(
-    typeof window !== "undefined" && window.innerWidth <= 768 ? 4 : 16
+    typeof window !== "undefined" && window.innerWidth <= 768 ? 4 : 16,
   );
 
   useEffect(() => {
@@ -29,9 +29,7 @@ export default function Page() {
 
   useEffect(() => {
     const handleResize = () => {
-      setArticlesPerPage(
-        window.innerWidth <= 768 ? 4 : 16
-      );
+      setArticlesPerPage(window.innerWidth <= 768 ? 4 : 16);
     };
 
     window.addEventListener("resize", handleResize);
@@ -40,16 +38,21 @@ export default function Page() {
 
   const indexOfLastCard = currentPage * articlesPerPage;
   const indexOfFirstCard = indexOfLastCard - articlesPerPage;
-  const currentCards = filteredArticles.slice(indexOfFirstCard, indexOfLastCard);
+  const currentCards = filteredArticles?.slice(
+    indexOfFirstCard,
+    indexOfLastCard,
+  );
 
-  const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
+  console.log(filteredArticles);
+
+  const totalPages = Math.ceil(filteredArticles?.length / articlesPerPage);
 
   const handleClick = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
 
   const renderPagination = () => (
-    <div className="flex items-center justify-center gap-3 mt-8 z-10">
+    <div className="z-10 mt-8 flex items-center justify-center gap-3">
       <Button
         onClick={() => handleClick(currentPage - 1)}
         disabled={currentPage === 1}
@@ -80,18 +83,20 @@ export default function Page() {
   );
 
   return (
-    <div className="bg-[url('/article-icons/blog-background.webp')] bg-cover px-10 py-28 flex flex-col gap-2">
-      <Link href="/article" className="flex items-center gap-2 text-3xl font-bold text-white">
+    <div className="flex flex-col gap-2 bg-[url('/article-icons/blog-background.webp')] bg-cover px-10 py-28">
+      <Link
+        href="/article"
+        className="mb-4 flex items-center gap-2 text-3xl font-bold text-white"
+      >
         <FaArrowLeft className="" />
         <h1>List of Articles</h1>
       </Link>
 
-
       <SearchBar setFilteredArticles={setFilteredArticles} />
 
       <div className="z-10">
-        {currentCards.length > 0 ? (
-          <div className="grid md:grid-cols-4 gap-8 w-full">
+        {currentCards?.length > 0 ? (
+          <div className="grid w-full gap-8 md:grid-cols-4">
             {currentCards.map((card) => (
               <Card
                 key={card.id}
@@ -109,14 +114,14 @@ export default function Page() {
             ))}
           </div>
         ) : (
-          <div className="w-full flex items-center justify-center">
-            <div className="md:w-1/2 w-full flex flex-col items-center h-screen justify-center gap-4">
+          <div className="flex w-full items-center justify-center">
+            <div className="flex h-screen w-full flex-col items-center justify-center gap-4 md:w-1/2">
               <Image
                 src="/components/gurita.webp"
                 alt="Item Not Found"
                 height={500}
                 width={500}
-                className="w-40 h-auto scale-[2] mb-8 md:mb-12"
+                className="mb-8 h-auto w-40 scale-[2] md:mb-12"
                 draggable={false}
               />
               <h1 className="text-center font-mogula text-3xl text-white [text-shadow:_4px_4px_20px_rgb(100_177_247_/_75%)] sm:text-5xl">
@@ -124,14 +129,13 @@ export default function Page() {
               </h1>
               <p className="text-wrap text-center font-rem text-white [text-shadow:_4px_4px_20px_rgb(100_177_247_/_75%)]">
                 Oh tidak... Tampaknya kamu mencari sesuatu yang tersembunyi di
-                kedalaman. Cobalah kata kunci lain atau kembali ke permukaan untuk
-                melanjutkan pencarianmu!
+                kedalaman. Cobalah kata kunci lain atau kembali ke permukaan
+                untuk melanjutkan pencarianmu!
               </p>
             </div>
           </div>
         )}
       </div>
-
 
       {totalPages > 1 && renderPagination()}
 

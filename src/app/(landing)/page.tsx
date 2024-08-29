@@ -167,12 +167,12 @@ export default function LandingPage() {
                   </div>
                 </DialogTrigger>
                 <DialogContent>
-                  <div className="relative h-[300px] w-10/12 overflow-y-scroll scrollbar-thumb-[#0010A4] scrollbar-track-[#99E0FF] scrollbar-thin overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
+                  <div className="relative h-[300px] w-full overflow-x-hidden overflow-y-scroll rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg scrollbar-thin scrollbar-track-[#99E0FF] scrollbar-thumb-[#0010A4] lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
                     <div className="my-2 text-center font-mogula text-2xl text-[#99E0FF] md:text-3xl xl:text-4xl">
                       Diklat Terpusat
                     </div>
 
-                    <div className="relative flex items-center justify-center font-rem px-6 gap-6">
+                    <div className="relative flex items-center justify-center gap-6 px-6 font-rem">
                       {/* Time Area */}
                       <div className="flex w-fit flex-col">
                         {daysDikpus.map((day, index) => (
@@ -291,12 +291,12 @@ export default function LandingPage() {
                   </div>
                 </DialogTrigger>
                 <DialogContent>
-                  <div className="relative h-[300px] w-10/12 overflow-y-scroll scrollbar-thumb-[#0010A4] scrollbar-track-[#99E0FF] scrollbar-thin overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
+                  <div className="relative h-[300px] w-full overflow-x-hidden overflow-y-scroll rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg scrollbar-thin scrollbar-track-[#99E0FF] scrollbar-thumb-[#0010A4] lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
                     <div className="my-2 text-center font-mogula text-2xl text-[#99E0FF] md:text-3xl xl:text-4xl">
                       ITB Showcase
                     </div>
 
-                    <div className="relative flex items-center justify-center font-rem px-6 gap-6">
+                    <div className="relative flex items-center justify-center gap-6 px-6 font-rem">
                       {/* Time Area */}
                       <div className="flex w-fit flex-col">
                         {daysITBShowcase.map((day, index) => (
@@ -416,12 +416,12 @@ export default function LandingPage() {
                 </div>
               </DialogTrigger>
               <DialogContent>
-                <div className="relative h-[300px] w-10/12 overflow-y-scroll scrollbar-thumb-[#0010A4] scrollbar-track-[#99E0FF] scrollbar-thin overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
+                <div className="relative h-[300px] w-full overflow-x-hidden overflow-y-scroll rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg scrollbar-thin scrollbar-track-[#99E0FF] scrollbar-thumb-[#0010A4] lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
                   <div className="my-2 text-center font-mogula text-2xl text-[#99E0FF] md:text-3xl xl:text-4xl">
                     OSKM
                   </div>
 
-                  <div className="relative flex items-center justify-center font-rem px-6 gap-6">
+                  <div className="relative flex items-center justify-center gap-6 px-6 font-rem">
                     {/* Time Area */}
                     <div className="flex w-fit flex-col">
                       {daysOSKM.map((day, index) => (
@@ -615,7 +615,7 @@ export default function LandingPage() {
             alt="ikan-naga"
             width={500}
             height={500}
-            className="absolute left-0 z-10 w-5/12 md:w-4/12 xl:w-3/12 scale-x-[-1]"
+            className="absolute left-0 z-10 w-5/12 scale-x-[-1] md:w-4/12 xl:w-3/12"
             draggable={false}
           />
           <Image
