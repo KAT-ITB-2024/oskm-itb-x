@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+import { type Article } from "~/types/articles/articleType";
+
 const ARTICLE_GRAPHQL_FIELDS = `
   id
   title
@@ -33,7 +37,7 @@ async function fetchGraphQL(query: string, preview = false) {
 }
 
 function extractArticleEntries(fetchResponse: {
-  data: { articlesCollection: { items: any } };
+  data: { articlesCollection: { items: Article[] } };
 }) {
   return fetchResponse?.data?.articlesCollection?.items;
 }
