@@ -79,7 +79,7 @@ export default function Page() {
       <a href="/article" style={{ marginTop: "100px", marginLeft: "10px" }}>
         <button className="GoBackButton"></button>
       </a>
-      <div style={{ marginLeft: "40px" }}>
+      <div style={{ marginLeft: "60px" }}>
         <h2>List of Articles</h2>
       </div>
 

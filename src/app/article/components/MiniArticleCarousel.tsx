@@ -1,46 +1,19 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
-import { useKeenSlider, KeenSliderInstance } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
+import React, { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation, Autoplay } from "swiper/modules";
 import { getAllArticles } from "~/lib/contentful/api";
 import Card from "src/app/article/components/Card";
 import { Article } from "~/types/articles/articleType";
 
 const MiniArticleCarousel: React.FC = () => {
-  const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
-    loop: true,
-    mode: "free-snap",
-    slides: {
-      perView: 4,
-      spacing: 0,
-    },
-    breakpoints: {
-      "(max-width: 1024px)": {
-        slides: { perView: 3, spacing: 0 },
-      },
-      "(max-width: 768px)": {
-        slides: { perView: 2, spacing: 0 },
-      },
-      "(max-width: 640px)": {
-        slides: { perView: 1, spacing: 0 },
-      },
-    },
-    slideChanged(slider) {
-      const currentSlide = slider.track.details.rel;
-      const totalSlides = slider.track.details.slides.length;
-
-      if (currentSlide + 4 >= totalSlides) {
-        loadMoreArticles();
-      }
-    },
-  });
-
   const [articles, setArticles] = useState<Article[]>([]);
   const [visibleArticles, setVisibleArticles] = useState<Article[]>([]);
-  const sliderInstance = useRef<KeenSliderInstance | null>(null);
+  const articlesPerBatch = 7;
   const [currentBatch, setCurrentBatch] = useState(0);
-  const articlesPerBatch = 10;
 
   useEffect(() => {
     getAllArticles({ randomize: true })
@@ -78,28 +51,77 @@ const MiniArticleCarousel: React.FC = () => {
         overflow: "hidden",
       }}
     >
+      {/* Custom Navigation Buttons */}
       <button
         className="prev-button"
-        onClick={() => sliderInstance.current?.prev()}
-      >
-        {/* Pakai bg image nya */}
-      </button>
+        style={{
+          position: "absolute",
+          top: "50%",
+          transform: "translateY(-50%)",
+          zIndex: 10,
+          backgroundColor: "transparent",
+          border: "none",
+          cursor: "pointer",
+        }}
+      />
+      <button
+        className="next-button"
+        style={{
+          position: "absolute",
+          top: "50%",
+          transform: "translateY(-50%)",
+          zIndex: 10,
+          backgroundColor: "transparent",
+          border: "none",
+          cursor: "pointer",
+        }}
+      />
 
-      <div
-        className="mini-card-carousel keen-slider"
-        ref={sliderRef}
+      {/* Swiper */}
+      <Swiper
+        modules={[Navigation, Autoplay]}
+        spaceBetween={0}
+        slidesPerView={4}
+        navigation={{ prevEl: ".prev-button", nextEl: ".next-button" }}
+        autoplay={{ delay: 6000, disableOnInteraction: false }}
+        breakpoints={{
+          1200: { // For large screens
+            slidesPerView: 4,
+          },
+          992: { // For medium screens
+            slidesPerView: 3,
+          },
+          768: { // For tablets
+            slidesPerView: 2,
+          },
+          576: { // For small tablets and large phones
+            slidesPerView: 1,
+          },
+          524: { // For very small screens
+            slidesPerView: 1,
+          },
+          0: { // For very small screens
+            slidesPerView: 1,
+          },
+        }}
+        onSlideChange={() => {
+          if (visibleArticles.length - 4 <= articles.length) {
+            loadMoreArticles();
+          }
+        }}
         style={{
           height: "100%",
-          transition: "transform 0.5s ease-in-out",
-          overflow: "hidden",
+          width: "calc(100% - 80px)", // Adjust width to account for button margins
+          margin: "0 auto", // Center the Swiper container
         }}
       >
         {visibleArticles.map((card) => (
-          <div
+          <SwiperSlide
             key={card.id}
             className="keen-slider__slide"
             style={{
-              padding: "30px 30px",
+              padding: "40px 0px",
+              margin: "0px",
               boxSizing: "border-box",
             }}
           >
@@ -115,16 +137,9 @@ const MiniArticleCarousel: React.FC = () => {
               image={card.image}
               likes={card.likes}
             />
-          </div>
+          </SwiperSlide>
         ))}
-      </div>
-
-      <button
-        className="next-button"
-        onClick={() => sliderInstance.current?.next()}
-      >
-        {/* Menggunakan bg image */}
-      </button>
+      </Swiper>
     </div>
   );
 };

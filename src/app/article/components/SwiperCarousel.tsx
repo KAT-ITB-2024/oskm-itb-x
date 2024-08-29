@@ -19,12 +19,18 @@ const ClientOnlyCarousel: React.FC = () => {
       setArticles(articles);
     }).catch((error) => {
       console.error(error);
-    })
-  }, [])
+    });
+  }, []);
+
+  // Function to truncate description to 250 characters (Can be adjusted bellow) 
+  const truncateDescription = (description: string, maxLength: number) => {
+    if (description.length <= maxLength) return description;
+    return `${description.substring(0, maxLength)}...`;
+  };
 
   return (
     <div className="main-article">
-      {/* Insert BgImages1 component (contains moving images) */}
+      {/* BgImages1 component (contains moving images) */}
       <BgImages1 />
 
       <Swiper
@@ -37,7 +43,7 @@ const ClientOnlyCarousel: React.FC = () => {
         autoplay={{ delay: 4000 }}
         loop
       >
-        {articles.map((article, index) => (
+        {articles.map((article) => (
           <SwiperSlide key={article.id}>
             <div
               className="item"
@@ -53,18 +59,14 @@ const ClientOnlyCarousel: React.FC = () => {
 
               <div className="text-content">
                 <h3>{article.title}</h3>
-                <p>{article.description}</p>
-                {index !== 1 && index !== 2 && (
-                  <a
-                    href={`/article/detail/${article.slug}`}
-                    className="carousel-button"
-                  >
-                    Read More
-                  </a>
-                )}
+                <p>{truncateDescription(article.description, 250)}</p>
+                <a
+                  href={`/article/detail/${article.slug}`}
+                  className="carousel-button"
+                >
+                  Read More
+                </a>
               </div>
-
-              
             </div>
           </SwiperSlide>
         ))}
