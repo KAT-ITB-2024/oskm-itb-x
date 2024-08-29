@@ -4,7 +4,12 @@ import Image from "next/image";
 import { IoMdDownload } from "react-icons/io";
 import InfiniteCarousel from "./component/InfiniteCarousel";
 import { Dialog, DialogContent, DialogTrigger } from "~/components/ui/dialog";
-import { largeMedpar, mediumMedpar, smallMedpar, xlargeMedpar } from "./constants";
+import {
+  largeMedpar,
+  mediumMedpar,
+  smallMedpar,
+  xlargeMedpar,
+} from "./constants";
 
 export default function LandingPage() {
   const daysDikpus = [
@@ -81,7 +86,7 @@ export default function LandingPage() {
 
   return (
     <div className="bg-[url('/landing-page/bg-landing.webp')] bg-cover bg-center">
-      <div className="py-20 container">
+      <div className="container py-20">
         <div className="flex flex-col items-center">
           <Image
             src="/logo/logo-oskm.png"
@@ -89,6 +94,7 @@ export default function LandingPage() {
             width={500}
             height={500}
             className="w-8/12 md:w-6/12 lg:w-5/12 xl:w-[20%]"
+            draggable={false}
           />
           <Image
             src="/landing-page/oskm-word.svg"
@@ -96,15 +102,17 @@ export default function LandingPage() {
             alt="title"
             width={300}
             height={300}
+            draggable={false}
           />
         </div>
         <div className="relative bottom-[-160px]">
           <Image
-            src="/landing-page/penyu.png"
+            src="/landing-page/penyu.webp"
             alt="penyu"
             width={500}
             height={500}
             className="absolute left-0 z-0 w-5/12 md:w-4/12 lg:w-3/12"
+            draggable={false}
           />
           <Image
             src="/landing-page/pindang.png"
@@ -112,6 +120,7 @@ export default function LandingPage() {
             width={500}
             height={500}
             className="absolute right-0 z-0 w-5/12 md:w-4/12 lg:w-3/12"
+            draggable={false}
           />
         </div>
 
@@ -141,10 +150,11 @@ export default function LandingPage() {
                 <DialogTrigger asChild>
                   <div className="flex cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12">
                     <Image
-                      src="/landing-page/icon-dikpus.svg"
+                      src="/landing-page/icon-dikpus.webp"
                       alt="1"
                       width={500}
                       height={500}
+                      draggable={false}
                     />
                     <div className="text-center">
                       <p className="text-lg font-bold md:text-xl lg:text-2xl">
@@ -157,26 +167,27 @@ export default function LandingPage() {
                   </div>
                 </DialogTrigger>
                 <DialogContent>
-                  <div className="relative h-[300px] w-10/12 overflow-y-auto overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.png')] p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
+                  <div className="relative h-[300px] w-10/12 overflow-y-scroll scrollbar-thumb-[#0010A4] scrollbar-track-[#99E0FF] scrollbar-thin overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
                     <div className="my-2 text-center font-mogula text-2xl text-[#99E0FF] md:text-3xl xl:text-4xl">
                       Diklat Terpusat
                     </div>
 
-                    <div className="relative flex font-rem">
+                    <div className="relative flex items-center justify-center font-rem px-6 gap-6">
                       {/* Time Area */}
-                      <div className="flex w-1/2 flex-col items-end pr-6">
+                      <div className="flex w-fit flex-col">
                         {daysDikpus.map((day, index) => (
                           <div key={index}>
                             <div className="flex items-center">
                               <h2 className="relative flex h-[60px] items-center text-xs md:h-[72px] md:text-base xl:text-lg">
                                 <Image
-                                  src="/landing-page/timeline-detail/ombak_left.svg"
+                                  src="/landing-page/timeline-detail/ombak_left.webp"
                                   alt="ombak"
                                   width={120}
                                   height={120}
                                   className="absolute left-[-20px] top-[-12px] w-8/12 md:left-[-40px] md:top-[-36px]"
+                                  draggable={false}
                                 />
-                                <span className="flex w-32 justify-end rounded-full bg-[#000D76] py-2 pr-2 text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-48">
+                                <span className="flex w-32 justify-end rounded-full bg-[#000D76] py-2 pr-4 font-mogula text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-48">
                                   {day.date}
                                 </span>
                               </h2>
@@ -196,7 +207,7 @@ export default function LandingPage() {
                       </div>
 
                       {/* Vertical Line with Circles */}
-                      <div className="absolute bottom-0 left-1/2 top-0 flex w-[2px] flex-col justify-between bg-[#000D76] lg:w-[3px]">
+                      <div className="flex w-[2px] flex-col bg-[#000D76] lg:w-[3px]">
                         {daysDikpus.map((day, index) => (
                           <div
                             key={index}
@@ -223,19 +234,20 @@ export default function LandingPage() {
                       </div>
 
                       {/* Activity Area */}
-                      <div className="w-1/2 pl-6">
+                      <div className="w-1/2">
                         {daysDikpus.map((day, index) => (
                           <div key={index}>
                             <div className="relative flex items-center">
                               <h2 className="flex h-[60px] items-center text-xs text-blue-800 md:h-[72px] md:text-base xl:text-lg">
-                                <span className="relative flex w-32 justify-start rounded-full bg-[#000D76] py-2 pl-4 text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-72 xl:w-96">
+                                <span className="relative flex w-32 justify-start rounded-full bg-[#000D76] py-2 pl-4 font-mogula text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-72 xl:w-96">
                                   {day.dayTitle}
                                   <Image
-                                    src="/landing-page/timeline-detail/ombak_1.svg"
+                                    src="/landing-page/timeline-detail/ombak_1.webp"
                                     alt="ombak"
                                     width={120}
                                     height={120}
-                                    className="absolute right-[-36px] top-[-18px] w-8/12 md:right-[-40px] md:top-[-30px] md:w-4/12 xl:top-[-44px]"
+                                    className="absolute right-[-36px] top-[-18px] w-8/12 md:right-[-36px] md:top-[-30px] md:w-4/12 xl:top-[-44px]"
+                                    draggable={false}
                                   />
                                 </span>
                               </h2>
@@ -244,7 +256,7 @@ export default function LandingPage() {
                               {day.activities.map((activity, idx) => (
                                 <div
                                   key={idx}
-                                  className="flex h-[40px] items-center text-xs text-[#0010A4] md:h-[48px] md:text-sm xl:text-base"
+                                  className="flex h-[40px] items-center font-rem text-xs text-[#0010A4] md:h-[48px] md:text-sm xl:text-base"
                                 >
                                   <span>{activity.description}</span>
                                 </div>
@@ -262,10 +274,11 @@ export default function LandingPage() {
                 <DialogTrigger asChild>
                   <div className="flex cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12">
                     <Image
-                      src="/landing-page/icon-showcase.svg"
+                      src="/landing-page/icon-showcase.webp"
                       alt="2"
                       width={500}
                       height={500}
+                      draggable={false}
                     />
                     <div className="text-center">
                       <p className="text-lg font-bold md:text-xl lg:text-2xl">
@@ -278,26 +291,27 @@ export default function LandingPage() {
                   </div>
                 </DialogTrigger>
                 <DialogContent>
-                  <div className="relative h-[300px] w-10/12 overflow-y-auto overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.png')] p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
+                  <div className="relative h-[300px] w-10/12 overflow-y-scroll scrollbar-thumb-[#0010A4] scrollbar-track-[#99E0FF] scrollbar-thin overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
                     <div className="my-2 text-center font-mogula text-2xl text-[#99E0FF] md:text-3xl xl:text-4xl">
                       ITB Showcase
                     </div>
 
-                    <div className="relative flex font-rem">
+                    <div className="relative flex items-center justify-center font-rem px-6 gap-6">
                       {/* Time Area */}
-                      <div className="flex w-1/2 flex-col items-end pr-6">
+                      <div className="flex w-fit flex-col">
                         {daysITBShowcase.map((day, index) => (
                           <div key={index}>
                             <div className="flex items-center">
                               <h2 className="relative flex h-[60px] items-center text-xs md:h-[72px] md:text-base xl:text-lg">
                                 <Image
-                                  src="/landing-page/timeline-detail/ombak_left.svg"
+                                  src="/landing-page/timeline-detail/ombak_left.webp"
                                   alt="ombak"
                                   width={120}
                                   height={120}
                                   className="absolute left-[-20px] top-[-12px] w-8/12 md:left-[-40px] md:top-[-36px]"
+                                  draggable={false}
                                 />
-                                <span className="flex w-32 justify-end rounded-full bg-[#000D76] py-2 pr-2 text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-48">
+                                <span className="flex w-32 justify-end rounded-full bg-[#000D76] py-2 pr-4 font-mogula text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-48">
                                   {day.date}
                                 </span>
                               </h2>
@@ -317,7 +331,7 @@ export default function LandingPage() {
                       </div>
 
                       {/* Vertical Line with Circles */}
-                      <div className="absolute bottom-0 left-1/2 top-0 flex w-[2px] flex-col justify-between bg-[#000D76] lg:w-[3px]">
+                      <div className="flex w-[2px] flex-col bg-[#000D76] lg:w-[3px]">
                         {daysITBShowcase.map((day, index) => (
                           <div
                             key={index}
@@ -344,7 +358,7 @@ export default function LandingPage() {
                       </div>
 
                       {/* Activity Area */}
-                      <div className="w-1/2 pl-6">
+                      <div className="w-1/2">
                         {daysITBShowcase.map((day, index) => (
                           <div key={index}>
                             <div className="relative flex items-center">
@@ -352,11 +366,12 @@ export default function LandingPage() {
                                 <span className="relative flex w-32 justify-start rounded-full bg-[#000D76] py-2 pl-4 text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-72 xl:w-96">
                                   {day.dayTitle}
                                   <Image
-                                    src="/landing-page/timeline-detail/ombak_1.svg"
+                                    src="/landing-page/timeline-detail/ombak_1.webp"
                                     alt="ombak"
                                     width={120}
                                     height={120}
                                     className="absolute right-[-36px] top-[-18px] w-8/12 md:right-[-40px] md:top-[-30px] md:w-4/12 xl:top-[-44px]"
+                                    draggable={false}
                                   />
                                 </span>
                               </h2>
@@ -384,10 +399,11 @@ export default function LandingPage() {
               <DialogTrigger asChild>
                 <div className="flex w-5/12 cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12">
                   <Image
-                    src="/landing-page/icon-oskm.svg"
+                    src="/landing-page/icon-oskm.webp"
                     alt="3"
-                    width={500}
-                    height={500}
+                    width={400}
+                    height={400}
+                    draggable={false}
                   />
                   <div className="text-center">
                     <p className="text-lg font-bold md:text-xl lg:text-2xl">
@@ -400,26 +416,27 @@ export default function LandingPage() {
                 </div>
               </DialogTrigger>
               <DialogContent>
-                <div className="relative h-[300px] w-10/12 overflow-y-auto overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.png')] p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
+                <div className="relative h-[300px] w-10/12 overflow-y-scroll scrollbar-thumb-[#0010A4] scrollbar-track-[#99E0FF] scrollbar-thin overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
                   <div className="my-2 text-center font-mogula text-2xl text-[#99E0FF] md:text-3xl xl:text-4xl">
                     OSKM
                   </div>
 
-                  <div className="relative flex font-rem">
+                  <div className="relative flex items-center justify-center font-rem px-6 gap-6">
                     {/* Time Area */}
-                    <div className="flex w-1/2 flex-col items-end pr-6">
+                    <div className="flex w-fit flex-col">
                       {daysOSKM.map((day, index) => (
                         <div key={index}>
                           <div className="flex items-center">
                             <h2 className="relative flex h-[60px] items-center text-xs md:h-[72px] md:text-base xl:text-lg">
                               <Image
-                                src="/landing-page/timeline-detail/ombak_left.svg"
+                                src="/landing-page/timeline-detail/ombak_left.webp"
                                 alt="ombak"
                                 width={120}
                                 height={120}
                                 className="absolute left-[-20px] top-[-12px] w-8/12 md:left-[-40px] md:top-[-36px]"
+                                draggable={false}
                               />
-                              <span className="flex w-32 justify-end rounded-full bg-[#000D76] py-2 pr-2 text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-48">
+                              <span className="flex w-32 justify-end rounded-full bg-[#000D76] py-2 pr-4 font-mogula text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-48">
                                 {day.date}
                               </span>
                             </h2>
@@ -439,7 +456,7 @@ export default function LandingPage() {
                     </div>
 
                     {/* Vertical Line with Circles */}
-                    <div className="absolute bottom-0 left-1/2 top-0 flex w-[2px] flex-col justify-between bg-[#000D76] lg:w-[3px]">
+                    <div className="flex w-[2px] flex-col bg-[#000D76] lg:w-[3px]">
                       {daysOSKM.map((day, index) => (
                         <div
                           key={index}
@@ -455,6 +472,7 @@ export default function LandingPage() {
                                   width={100}
                                   height={100}
                                   className="absolute"
+                                  draggable={false}
                                 />
                               ) : (
                                 <div className="h-2/5 w-2/5 rounded-full bg-[#000D76] md:h-1/2 md:w-1/2"></div>
@@ -476,7 +494,7 @@ export default function LandingPage() {
                     </div>
 
                     {/* Activity Area */}
-                    <div className="w-1/2 pl-6">
+                    <div className="w-1/2">
                       {daysOSKM.map((day, index) => (
                         <div key={index}>
                           <div className="relative flex items-center">
@@ -484,11 +502,12 @@ export default function LandingPage() {
                               <span className="relative flex w-32 justify-start rounded-full bg-[#000D76] py-2 pl-4 text-[#99E0FF] shadow-[0px_0px_16px_#64B1F7] md:w-72 xl:w-96">
                                 {day.dayTitle}
                                 <Image
-                                  src="/landing-page/timeline-detail/ombak_1.svg"
+                                  src="/landing-page/timeline-detail/ombak_1.webp"
                                   alt="ombak"
                                   width={120}
                                   height={120}
                                   className="absolute right-[-36px] top-[-18px] w-8/12 md:right-[-40px] md:top-[-30px] md:w-4/12 xl:top-[-44px]"
+                                  draggable={false}
                                 />
                               </span>
                             </h2>
@@ -514,18 +533,20 @@ export default function LandingPage() {
         </div>
         <div className="relative -top-[120px] md:-top-[240px] xl:-top-[360px]">
           <Image
-            src="/landing-page/ikan-oren.svg"
+            src="/landing-page/ikan-oren.webp"
             alt="penyu"
             width={500}
             height={500}
             className="absolute left-0 z-0 w-5/12 md:w-4/12 lg:w-3/12"
+            draggable={false}
           />
           <Image
-            src="/landing-page/penyu-2.svg"
+            src="/landing-page/penyu-2.webp"
             alt="pindang"
             width={500}
             height={500}
             className="absolute right-0 z-0 w-5/12 md:w-4/12 lg:w-3/12"
+            draggable={false}
           />
         </div>
         <div className="relative z-10 mb-32">
@@ -541,18 +562,20 @@ export default function LandingPage() {
         </div>
         <div className="relative -top-[100px] md:-top-[120px] xl:-top-[150px]">
           <Image
-            src="/landing-page/ikan-pindang.svg"
+            src="/landing-page/ikan-pindang.webp"
             alt="ikan-pindang"
             width={500}
             height={500}
             className="absolute left-0 z-0 w-5/12 md:w-4/12 lg:w-3/12"
+            draggable={false}
           />
           <Image
-            src="/landing-page/ubur-2.svg"
+            src="/landing-page/ubur-2.webp"
             alt="ubur-ubur"
             width={500}
             height={500}
             className="absolute -top-[20px] right-0 z-0 w-4/12 md:w-3/12 lg:-top-[40px] xl:-top-[60px] xl:w-2/12"
+            draggable={false}
           />
         </div>
         <div className="relative z-10 mb-32">
@@ -560,26 +583,48 @@ export default function LandingPage() {
             Our Media Partners
           </h1>
           <div className="flex flex-col items-center justify-center gap-5">
-            <InfiniteCarousel items={xlargeMedpar} direction="left" speed={20} size="xlarge"/>
-            <InfiniteCarousel items={largeMedpar} direction="right" speed={20} size="large"/>
-            <InfiniteCarousel items={mediumMedpar} direction="left" speed={10} size="medium"/>
-            <InfiniteCarousel items={smallMedpar} direction="right" speed={20} size="small"/>
+            <InfiniteCarousel
+              items={xlargeMedpar}
+              direction="left"
+              speed={20}
+              size="xlarge"
+            />
+            <InfiniteCarousel
+              items={largeMedpar}
+              direction="right"
+              speed={20}
+              size="large"
+            />
+            <InfiniteCarousel
+              items={mediumMedpar}
+              direction="left"
+              speed={10}
+              size="medium"
+            />
+            <InfiniteCarousel
+              items={smallMedpar}
+              direction="right"
+              speed={20}
+              size="small"
+            />
           </div>
         </div>
         <div className="relative top-[-60px]">
           <Image
-            src="/landing-page/ikan-naga.svg"
+            src="/landing-page/ikan-naga.webp"
             alt="ikan-naga"
             width={500}
             height={500}
-            className="absolute left-0 z-10 w-5/12 md:w-4/12 xl:w-3/12"
+            className="absolute left-0 z-10 w-5/12 md:w-4/12 xl:w-3/12 scale-x-[-1]"
+            draggable={false}
           />
           <Image
-            src="/landing-page/ubur-pink.svg"
+            src="/landing-page/ubur-pink.webp"
             alt="ubur-pink"
             width={500}
             height={500}
             className="absolute right-0 z-10 w-5/12 md:w-4/12 xl:w-3/12"
+            draggable={false}
           />
         </div>
         <div className="relative z-0 flex flex-col items-center">
@@ -608,18 +653,20 @@ export default function LandingPage() {
 
             {/* Coral Images */}
             <Image
-              src="/landing-page/coral_left.svg"
+              src="/landing-page/coral_left.webp"
               alt="tenant"
               width={500}
               height={500}
               className="absolute bottom-[-32px] left-[-50px] w-4/12 md:w-3/12"
+              draggable={false}
             />
             <Image
-              src="/landing-page/coral_right.svg"
+              src="/landing-page/coral_right.webp"
               alt="tenant"
               width={500}
               height={500}
               className="absolute bottom-[-20px] right-[-50px] w-4/12 md:w-3/12"
+              draggable={false}
             />
           </div>
         </div>

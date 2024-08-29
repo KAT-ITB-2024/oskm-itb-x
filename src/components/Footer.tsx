@@ -8,11 +8,12 @@ function Footer() {
     <footer className="relative z-[300] h-[400px] lg:h-[175px]">
       {/* Desktop */}
       <Image
-        src="/components/footer-desktop.png"
+        src="/components/footer-desktop.webp"
         alt="Footer"
-        width={1512}
-        height={175}
+        width={3000}
+        height={3000}
         className="absolute hidden h-full w-full object-cover lg:block"
+        draggable={false}
       />
 
       <div className="relative hidden h-full w-full px-8 lg:flex">
@@ -24,6 +25,7 @@ function Footer() {
               width={360}
               height={360}
               className="size-24"
+              draggable={false}
             />
             <Image
               src="/logo/title.png"
@@ -31,11 +33,12 @@ function Footer() {
               width={360}
               height={360}
               className="w-32"
+              draggable={false}
             />
           </div>
 
           <div className="flex flex-col gap-2">
-            <ul className="hidden items-center gap-4 px-3 text-[#0010A4] lg:flex xl:gap-8">
+            <ul className="hidden items-center gap-4 px-3 text-[#0010A4] lg:flex xl:gap-8 font-rem">
               <li>
                 <Link href="about-us">About Us</Link>
               </li>
@@ -130,14 +133,15 @@ function Footer() {
 
         <div className="flex min-w-fit items-center">
           <Image
-            src="/logo/ganesha.png"
+            src="/logo/ganesha.webp"
             alt="Logo"
             width={360}
             height={360}
             className="mb-8 size-16"
+            draggable={false}
           />
 
-          <div className="flex flex-col text-[#0010A4]">
+          <div className="flex flex-col text-[#0010A4] font-rem">
             <p className="text-xl">ITB Kampus Jatinangor</p>
             <p>Jl. Let. Jen. Purn. Dr. (HC) Mashudi No. 1</p>
             <p>Jatinangor, Kab. Sumedang, Jawa Barat</p>
@@ -153,6 +157,7 @@ function Footer() {
         width={393}
         height={375}
         className="absolute block h-full w-full object-cover lg:hidden"
+        draggable={false}
       />
 
       <div className="relative flex h-full w-full flex-col items-center justify-center gap-4 lg:hidden">
@@ -162,10 +167,11 @@ function Footer() {
           width={360}
           height={360}
           className="size-24"
+          draggable={false}
         />
 
         <div className="flex flex-col gap-2">
-          <ul className="grid grid-cols-2 items-center gap-x-8 gap-y-2 px-3 text-[#0010A4] sm:flex lg:hidden">
+          <ul className="grid grid-cols-2 items-center gap-x-8 gap-y-2 px-3 text-[#0010A4] sm:flex lg:hidden font-rem">
             <li>
               <Link href="about-us">About Us</Link>
             </li>
@@ -259,11 +265,12 @@ function Footer() {
 
         <div className="flex min-w-fit items-center">
           <Image
-            src="/logo/ganesha.png"
+            src="/logo/ganesha.webp"
             alt="Logo"
             width={360}
             height={360}
             className="mb-8 size-16"
+            draggable={false}
           />
 
           <div className="flex flex-col text-[#0010A4]">

@@ -66,13 +66,17 @@ const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
     <div className="w-full overflow-hidden" ref={containerRef}>
       <div className="inline-flex gap-1 md:gap-3 lg:gap-5">
         {loopItems.map((item, index) => (
-          <div key={index} className={`flex-shrink-0 p-4 flex items-center justify-center ${styles.glassmorphism} ${sizeClasses[size]}`}>
-            <div className="relative w-full h-full">
+          <div
+            key={index}
+            className={`flex flex-shrink-0 items-center justify-center p-4 ${styles.glassmorphism} ${sizeClasses[size]}`}
+          >
+            <div className="relative h-full w-full">
               <Image
                 src={item.src}
                 alt={item.alt}
                 fill
                 objectFit="contain"
+                draggable={false}
               />
             </div>
           </div>

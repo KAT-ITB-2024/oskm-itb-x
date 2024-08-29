@@ -539,7 +539,7 @@
     "@paralleldrive/cuid2" "^2.2.2"
     bcrypt "^5.1.1"
     csv-parser "^3.0.0"
-    database-oskm "file:C:/Users/62822/AppData/Local/Yarn/Cache/v6/npm-@katitb2024-database-1.0.0-866e11497cc02bc34e637ad4bca991461a6c85b8/node_modules/@katitb2024/database"
+    database-oskm "file:../../../Library/Caches/Yarn/v6/npm-@katitb2024-database-1.0.0-866e11497cc02bc34e637ad4bca991461a6c85b8/node_modules/@katitb2024/database"
     drizzle-dbml-generator "^0.8.0"
     drizzle-orm "^0.31.2"
     postgres "^3.4.4"
@@ -814,6 +814,11 @@
     "@radix-ui/react-compose-refs" "1.1.0"
     "@radix-ui/react-primitive" "2.0.0"
     "@radix-ui/react-use-callback-ref" "1.1.0"
+
+"@radix-ui/react-icons@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-icons/-/react-icons-1.3.0.tgz#c61af8f323d87682c5ca76b856d60c2312dbcb69"
+  integrity sha512-jQxj/0LKgp+j9BiTXz3O3sgs26RNet2iLWmsPyRz2SIcR4q/4SbazXfnYwbAr+vLYKSfc7qxzyGQA1HLlYiuNw==
 
 "@radix-ui/react-id@1.1.0":
   version "1.1.0"
@@ -2038,19 +2043,51 @@ data-view-byte-offset@^1.0.0:
     es-errors "^1.3.0"
     is-data-view "^1.0.1"
 
-"database-oskm@file:C:/Users/62822/AppData/Local/Yarn/Cache/v6/npm-@katitb2024-database-1.0.0-866e11497cc02bc34e637ad4bca991461a6c85b8/node_modules/@katitb2024/database":
-  version "1.0.0"
+"database-oskm@file:":
+  version "0.1.0"
   dependencies:
-    "@paralleldrive/cuid2" "^2.2.2"
+    "@auth/drizzle-adapter" "^1.1.0"
+    "@elastic/elasticsearch" "^8.14.0"
+    "@katitb2024/database" "git+https://github.com/KAT-ITB-2024/database-oskm.git#master"
+    "@maptiler/sdk" "^2.2.2"
+    "@radix-ui/react-dialog" "^1.1.1"
+    "@radix-ui/react-icons" "^1.3.0"
+    "@radix-ui/react-separator" "^1.1.0"
+    "@radix-ui/react-slot" "^1.1.0"
+    "@t3-oss/env-nextjs" "^0.10.1"
+    "@tanstack/react-query" "^5.39.0"
+    "@trpc/client" next
+    "@trpc/react-query" next
+    "@trpc/server" next
+    autoprefixer "^10.4.20"
     bcrypt "^5.1.1"
-    csv-parser "^3.0.0"
-    database-oskm "file:C:/Users/62822/AppData/Local/Yarn/Cache/v6/npm-@katitb2024-database-1.0.0-866e11497cc02bc34e637ad4bca991461a6c85b8/node_modules/@katitb2024/database"
-    drizzle-dbml-generator "^0.8.0"
+    class-variance-authority "^0.7.0"
+    clsx "^2.1.1"
     drizzle-orm "^0.31.2"
+    embla-carousel-react "^8.1.8"
+    geist "^1.3.0"
+    jquery "^3.7.1"
+    keen-slider "^6.8.6"
+    lucide-react "^0.424.0"
+    maplibre-gl "^4.5.2"
+    next "^14.2.1"
+    next-auth "^4.24.7"
+    owl.carousel "^2.3.4"
+    pmtiles "^3.0.7"
     postgres "^3.4.4"
-    tsup "^8.1.0"
-    tsx "^4.15.7"
-    typescript "^5.5.2"
+    react "^18.3.0"
+    react-dom "^18.3.0"
+    react-icons "^5.2.1"
+    react-owl-carousel "^2.3.3"
+    server-only "^0.0.1"
+    superjson "^2.2.1"
+    swiper "^11.1.9"
+    tailwind "^4.0.0"
+    tailwind-merge "^2.4.0"
+    tailwind-scrollbar "^3.1.0"
+    tailwindcss-animate "^1.0.7"
+    uuid "^10.0.0"
+    zod "^3.23.3"
 
 datasette@1.0.1:
   version "1.0.1"
@@ -5556,6 +5593,11 @@ tailwind-merge@^2.4.0:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-2.5.2.tgz#000f05a703058f9f9f3829c644235f81d4c08a1f"
   integrity sha512-kjEBm+pvD+6eAwzJL2Bi+02/9LFLal1Gs61+QB7HvTfQQ0aXwC5LGT8PEt1gS0CWKktKe6ysPTAy3cBC5MeiIg==
+
+tailwind-scrollbar@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/tailwind-scrollbar/-/tailwind-scrollbar-3.1.0.tgz#ff7596407b6da5209261d8ff03860ab9206a59e3"
+  integrity sha512-pmrtDIZeHyu2idTejfV59SbaJyvp1VRjYxAjZBH0jnyrPRo6HL1kD5Glz8VPagasqr6oAx6M05+Tuw429Z8jxg==
 
 tailwind@^4.0.0:
   version "4.0.0"

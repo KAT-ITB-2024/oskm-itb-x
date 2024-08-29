@@ -66,7 +66,7 @@ function MapViewLibre(props: MapViewProps) {
 
     // Add markers
     markersData.forEach((markerData) => {
-      const markerElement = createCustomMarker("/components/map-marker.png");
+      const markerElement = createCustomMarker("/components/map-marker.webp");
       const marker = new maplibregl.Marker({ element: markerElement });
       marker
         .setLngLat([markerData.longitude, markerData.latitude])

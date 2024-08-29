@@ -20,8 +20,8 @@ const MapPopup = forwardRef<HTMLDivElement, MapPopupProps>(
         <div className="fixed inset-0 z-[200] bg-black opacity-50"></div>
         <div
           ref={ref}
-          className="absolute left-1/2 top-[55%] z-[250] mt-4 h-auto max-h-[70vh] min-h-[450px] w-[75vw] max-w-[450px] -translate-x-1/2 -translate-y-1/2 transform lg:left-auto lg:right-0 lg:top-[50%] lg:mr-8 lg:mt-8 lg:h-auto lg:max-h-[600px] lg:translate-x-0"
-          id="popup-container"
+          className="absolute left-1/2 top-[55%] z-[250] mt-4 h-auto max-h-[70vh] min-h-[450px] w-[75vw] max-w-[450px] -translate-x-1/2 -translate-y-1/2 transform lg:left-auto lg:right-0 lg:top-[50%] lg:mr-8 lg:mt-8 lg:h-auto lg:max-h-[600px] lg:translate-x-0 bg-[url('/components/map-popup-bckg.webp')] bg-cover bg-center bg-no-repeat"
+          // id="popup-container"
         >
           <div className="relative z-10 flex flex-col justify-center px-4 py-2">
             <button
@@ -34,16 +34,17 @@ const MapPopup = forwardRef<HTMLDivElement, MapPopupProps>(
                 width={16}
                 height={16}
                 alt="Close Button"
+                draggable={false}
               />
             </button>
             <div className="flex flex-col items-center justify-center">
-              <p className="mb-3 text-center text-[25px] text-white md:text-[27px] lg:text-[30px]">
+              <p className="mb-3 text-center text-[25px] text-white md:text-[27px] lg:text-[30px] font-mogula">
                 {locationData.name ?? "Lorem ipsum"}
               </p>
               <LocationImage
                 src={locationData.image ?? "/maps/dummy_map.png"}
               />
-              <p className="scrollbox mb-4 mt-2 flex h-[130px] flex-col items-center gap-6 overflow-y-scroll px-4 pb-4 text-justify text-[16px] leading-6 text-white md:my-5 md:h-[250px] md:text-[18px] md:leading-7 lg:h-[250px] lg:overflow-y-auto lg:text-[20px] lg:leading-8">
+              <p className="scrollbox mb-4 mt-2 flex h-[130px] flex-col items-center gap-6 overflow-y-scroll px-4 pb-4 text-justify text-[16px] leading-6 text-white md:my-5 md:h-[250px] md:text-[18px] md:leading-7 lg:h-[250px] lg:overflow-y-auto lg:text-[20px] lg:leading-8 font-rem">
                 {description}
               </p>
             </div>

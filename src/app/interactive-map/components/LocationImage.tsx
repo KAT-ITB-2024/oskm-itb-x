@@ -17,11 +17,12 @@ function LocationImage({ src }: LocationImageProps) {
         </defs>
       </svg>
       <Image
-        src="/components/map-popup-frame.png"
+        src="/components/map-popup-frame.webp"
         alt="Map Image"
         width={280}
-        height={200}
-        className="absolute z-[10] h-full w-full "
+        height={300}
+        className="absolute z-[10] h-[210px] w-full"
+        draggable={false}
       />
       <svg viewBox="0 0 415 279">
         <image
@@ -30,7 +31,7 @@ function LocationImage({ src }: LocationImageProps) {
           height="100%"
           clip-path="url(#framePath)"
           href={src}
-          className="absolute z-[5] translate-x-[33px] translate-y-[10px] scale-x-[80%] scale-y-[90%] transform"
+          className="absolute z-[5] translate-x-[33px] translate-y-[10px] scale-x-[80%] scale-y-[90%] transform object-cover"
         />
       </svg>
     </div>
