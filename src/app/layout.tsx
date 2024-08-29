@@ -4,6 +4,7 @@ import { TRPCReactProvider } from "~/trpc/react";
 import Navbar from "~/components/Navbar";
 import Footer from "~/components/Footer";
 import { mogula, rem } from "./fonts";
+import ComingSoon from "~/components/ComingSoon";
 
 export const metadata = {
   title: "Create T3 App",
@@ -11,11 +12,7 @@ export const metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout() {
   return (
     <html
       lang="en"
@@ -23,9 +20,7 @@ export default function RootLayout({
     >
       <body className="relative">
         <TRPCReactProvider>
-          <Navbar />
-          {children}
-          <Footer />
+          <ComingSoon />
         </TRPCReactProvider>
       </body>
     </html>
