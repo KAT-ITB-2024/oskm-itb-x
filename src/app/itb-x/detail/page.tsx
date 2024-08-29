@@ -73,6 +73,7 @@ export default function DetailPage() {
               width={600}
               height={600}
               className="absolute -bottom-20 -left-20 md:-bottom-40 md:-left-40"
+              draggable={false}
             />
             {/* ombak-right positioned absolutely */}
             <Image
@@ -81,6 +82,7 @@ export default function DetailPage() {
               width={600}
               height={600}
               className="absolute -right-20 -top-20 md:-right-40 md:-top-40"
+              draggable={false}
             />
             <p className="relative z-10 h-[600px] overflow-y-scroll rounded-[40px] bg-[url('/itb-x/bg-desc.jpg')] bg-cover bg-center px-6 py-8 text-justify font-rem text-[#0010A4] lg:rounded-[80px] lg:px-8 lg:py-10">
               Himpunan Mahasiswa Informatika atau HMIF ITB merupakan sebuah
@@ -123,6 +125,7 @@ export default function DetailPage() {
               width={600}
               height={600}
               className="absolute -bottom-20 -left-20 md:-bottom-40 md:-left-40"
+              draggable={false}
             />
             {/* ombak-right positioned absolutely */}
             <Image
@@ -131,6 +134,7 @@ export default function DetailPage() {
               width={600}
               height={600}
               className="absolute -right-20 -top-20 md:-right-40 md:-top-40"
+              draggable={false}
             />
             <p className="relative z-10 h-[600px] overflow-y-scroll rounded-[40px] bg-[url('/itb-x/bg-desc.jpg')] bg-cover bg-center px-6 py-8 text-justify font-rem text-[#0010A4] lg:rounded-[80px] lg:px-8 lg:py-10">
               Himpunan Mahasiswa Informatika atau HMIF ITB merupakan sebuah
@@ -170,6 +174,7 @@ export default function DetailPage() {
             width={200}
             height={200}
             className="w-4/5 lg:w-full"
+            draggable={false}
           />
           <Image
             src="/itb-x/medsos-icon.svg"
@@ -177,6 +182,7 @@ export default function DetailPage() {
             width={200}
             height={200}
             className="w-4/5 lg:w-full"
+            draggable={false}
           />
           <Image
             src="/itb-x/medsos-icon.svg"
@@ -184,6 +190,7 @@ export default function DetailPage() {
             width={200}
             height={200}
             className="w-4/5 lg:w-full"
+            draggable={false}
           />
         </div>
         {/* lembaga carousel */}

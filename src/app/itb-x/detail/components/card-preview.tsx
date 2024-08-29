@@ -44,6 +44,7 @@ const CardPreview: React.FC<CardPreviewProps> = ({
             layout="fill"
             objectFit="cover"
             className="rounded-[60px] md:rounded-[100px] xl:rounded-[160px]"
+            draggable={false}
           />
         )}
         {/* Flip Icon */}
@@ -61,6 +62,7 @@ const CardPreview: React.FC<CardPreviewProps> = ({
             width={60}
             height={60}
             className="w-4/5 cursor-pointer xl:w-full"
+            draggable={false}
           />
         </button>
       </div>
@@ -72,6 +74,7 @@ const CardPreview: React.FC<CardPreviewProps> = ({
         width={600}
         height={600}
         className="absolute bottom-0 left-0 z-0"
+        draggable={false}
       />
     </div>
   );

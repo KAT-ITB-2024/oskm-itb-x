@@ -18,18 +18,20 @@ function MapSelector({
       onClick={toggleButton}
     >
       <Image
-        src="/maps/button-images/ganesha.png"
+        src="/maps/button-images/ganesha.webp"
         alt="Ganesha"
-        width={233}
-        height={61}
+        width={300}
+        height={300}
         className={`absolute left-0 top-[10%] h-auto w-full transition-opacity duration-500 ease-in-out ${isGanesha ? "opacity-100" : "hidden opacity-0"}`}
+        draggable={false}
       />
       <Image
-        src="/maps/button-images/jatinangor.png"
+        src="/maps/button-images/jatinangor.webp"
         alt="Jatinangor"
-        width={233}
-        height={61}
+        width={300}
+        height={300}
         className={`absolute left-0 top-[10%] h-auto w-full transition-opacity duration-500 ease-in-out ${!isGanesha ? "opacity-100" : "hidden opacity-0"}`}
+        draggable={false}
       />
     </div>
   );
