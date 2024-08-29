@@ -98,6 +98,10 @@ const history: Era[] = [
     title: "Tahun 2022",
     text: 'Pada tahun ini, OSKM ITB diselenggarakan dengan dengan membawakan visi "Sarana Inisiasi Perubahan Progresif sebagai langkah awal membangun bangsa".',
   },
+  {
+    title: "Tahun 2023",
+    text: 'Pada tahun ini, OSKM ITB diselenggarakan dengan dengan membawakan visi "sebagai vivarium pencetak katalisator penuh warna dalam mewujudkan masyarakat madani".',
+  }
 ];
 
 const BubbleHistory = ({
@@ -131,12 +135,12 @@ const BubbleHistory = ({
         <h1 className="font-mogula text-xs [text-shadow:4px_4px_20px_#FF8CD9BF] md:text-base lg:text-xl">
           {title}
         </h1>
-        <p className="mt-2 font-rem text-[8px] lg:mt-3 lg:text-xs">
+        <p className="mt-2 font-rem text-[8px] lg:mt-3 lg:text-xs line-clamp-3">
           {preview ?? text}
         </p>
         <Button
           variant={"pink"}
-          className="mt-2 h-5 rounded-sm px-3 font-rem text-[6px] font-normal lg:mt-3 lg:h-7 lg:text-[10px]"
+          className="mt-2 h-5 rounded-sm px-3 font-rem text-[6px] font-normal lg:mt-3 lg:h-7 lg:text-[10px] font-semibold"
           onClick={onReadMoreClick}
         >
           Read More
@@ -223,7 +227,7 @@ export default function HistoryCarousel() {
         draggable={false}
       />
       <div className="mt-32 px-5">
-        <h1 className="text-center text-3xl text-white [text-shadow:4px_4px_10px_#0CEBCCBF] lg:text-5xl">
+        <h1 className="font-mogula text-center text-3xl text-white [text-shadow:4px_4px_10px_#0CEBCCBF] lg:text-5xl">
           Sejarah OSKM
         </h1>
       </div>
