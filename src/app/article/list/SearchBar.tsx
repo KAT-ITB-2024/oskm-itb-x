@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import { getAllArticles } from "~/lib/contentful/api";
-import { Article } from "~/types/articles/articleType";
+import { type Article } from "~/types/articles/articleType";
 import _ from "lodash";
-import { FilterOption } from "~/types/articles/filterOption";
+import { type FilterOption } from "~/types/articles/filterOption";
+import { IoSearch } from "react-icons/io5";
 
 const SearchBar = ({
   setFilteredArticles,
@@ -17,7 +18,7 @@ const SearchBar = ({
   const debouncedSearch = useCallback(
     _.debounce(async (query: string, currentFilter: FilterOption) => {
       getAllArticles({ search: query, filter: currentFilter })
-        .then((articles) => {
+        .then((articles: Article[]) => {
           setFilteredArticles(articles);
         })
         .catch((error) => {
@@ -29,55 +30,48 @@ const SearchBar = ({
 
   const handleSearch = (search: string) => {
     setSearchQuery(search);
-    debouncedSearch(search, filter);
+    void debouncedSearch(search, filter);
   };
 
   const handleFilter = (filterType: FilterOption) => {
     setFilter(filterType);
-    debouncedSearch(searchQuery, filterType);
+    void debouncedSearch(searchQuery, filterType);
   };
 
   return (
-    <div className="search-bar-container">
-      <div className="search-container">
-        <div className="search-input-container">
+    <div className="">
+      <div className="flex w-full items-center justify-center gap-3">
+        <div className="w-3/4 rounded-lg flex md:flex-row flex-row-reverse gap-2 bg-white items-center px-2">
+          <IoSearch className="text-gray-400"/>
           <input
             type="text"
             placeholder="Cari artikel berdasarkan judul atau penulis disini..."
             value={searchQuery}
             onChange={(e) => handleSearch(e.target.value)}
+            className="w-full py-1.5 rounded-lg font-rem text-sm focus:border-none focus:outline-none"
           />
         </div>
 
-        <div className="sort-select-container">
-          <div className="sort-select-wrapper">
-            <select
-              id="filterSelect"
-              value={filter}
-              onChange={(e) => {
-                const selectedFilter = e.target.value as FilterOption;
-                if (selectedFilter) {
-                  handleFilter(selectedFilter);
-                }
-              }}
-            >
-              <option value="" disabled hidden>
-                Urutkan Berdasarkan
-              </option>
-              <option value="Terbaru">Terbaru</option>
-              <option value="Rekomendasi">Rekomendasi</option>
-              <option value="A-Z">A-Z</option>
-              <option value="Z-A">Z-A</option>
-            </select>
-            <div className="sort-icon-wrapper">
-              <img
-                src="/article-icons/filter_alt.png"
-                alt="Filter"
-                width={24}
-                height={24}
-              />
-            </div>
-          </div>
+        <div className="w-1/4">
+          <select
+            id="filterSelect"
+            value={filter}
+            onChange={(e) => {
+              const selectedFilter = e.target.value as FilterOption;
+              if (selectedFilter) {
+                handleFilter(selectedFilter);
+              }
+            }}
+            className="w-full py-1.5 rounded-lg px-2 text-sm appearance-none"
+          >
+            <option value="Urutkan Berdasarkan" disabled selected>
+              Urutkan Berdasarkan
+            </option>
+            <option value="Terbaru">Terbaru</option>
+            <option value="Rekomendasi">Rekomendasi</option>
+            <option value="A-Z">A-Z</option>
+            <option value="Z-A">Z-A</option>
+          </select>
         </div>
       </div>
     </div>

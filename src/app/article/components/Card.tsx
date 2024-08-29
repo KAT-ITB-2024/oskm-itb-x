@@ -1,54 +1,20 @@
 "use client";
 
+import Image from 'next/image';
 import React from 'react';
-import { Article } from '~/types/articles/articleType';
+import { type Article } from '~/types/articles/articleType';
+import { MdOutlineTimer } from "react-icons/md";
 
 const Card: React.FC<Article> = ({
-  id,
   slug,
   title,
-  createdAt,
   author,
-  views,
   readTime,
   description,
   image,
 }) => {
-
-  const date = new Date(createdAt).toLocaleDateString("id-ID", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-
-  const time = new Date(createdAt).toLocaleTimeString("id-ID", {
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-  });
-
-  const truncatedDescription =
-    description.length > 100 ? `${description.slice(0, 100)}...` : description;
-
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        width: '240px',
-        height: '400px',
-        padding: '20px 15px',
-        borderRadius: '20px',
-        backgroundColor: 'white',
-        boxShadow: '0 4px 8px #64B1F7BF',
-        overflow: 'hidden',
-        textAlign: 'center',
-        position: 'relative',
-        transition: 'transform 0.3s ease, boxShadow 0.3s ease',
-        margin: '0 auto',
-        transform: 'scale(1)',
-      }}
+    <div className="flex flex-col justify-between w-full h-[400px] p-[20px_15px] rounded-[20px] mt-6 bg-white shadow-lg overflow-hidden text-center relative transition-transform duration-300 transform scale-100"
       onMouseEnter={(e) => {
         (e.currentTarget as HTMLDivElement).style.transform = 'scale(1.1)';
         (e.currentTarget as HTMLDivElement).style.boxShadow = '0 0 15px #64B1F7BF';
@@ -58,88 +24,37 @@ const Card: React.FC<Article> = ({
         (e.currentTarget as HTMLDivElement).style.boxShadow = '0 4px 8px #64B1F7BF';
       }}
     >
-      <img
+      <Image
         src={image.url}
         alt={title}
-        style={{
-          width: '200px',    // Set the width to 200px
-          height: '300px',   // Set the height to 300px
-          objectFit: 'cover', // Ensure the image covers the area without distortion
-          borderRadius: '20px',
-          boxShadow: '0 6px 6px rgba(0, 0, 0, 0.2)',
-          margin: '0 auto',  // Center the image horizontally within the card
-        }}
+        width={5000}
+        height={5000}
+        className="h-[300px] object-cover rounded-[20px] shadow-md mx-auto"
       />
-      <div style={{ flex: '1', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '5px 0' }}>
-        <div style={{ fontSize: '12px', color: '#999', margin: '2px 0' }}>
-          <span>
-            {views} views | {(readTime / 60).toFixed(0)} mins read
-          </span>
-        </div>
-        <h2
-          style={{
-            fontFamily: 'mogula',
-            fontSize: '17.75px',
-            fontWeight: 400,
-            lineHeight: '21.31px',
-            textAlign: 'justify',
-            textShadow: '3.55px 5.33px 44.39px 0px #64B1F7',
-            color: '#0010A4',
-            width: '100%',
-            height: 'auto',
-            margin: 0,
-          }}
-        >
+      <div className="flex-1 flex flex-col justify-between py-[5px] px-1 mt-2">
+        <h2 className="font-mogula text-[17.75px] font-normal leading-[21.31px] line-clamp-1 text-left text-[#0010A4] w-full h-auto m-0" style={{ textShadow: '3.55px 5.33px 44.39px 0px #64B1F7' }}>
           {title}
         </h2>
-        <div
-          style={{
-            fontFamily: 'REM',
-            fontSize: '10.65px',
-            fontWeight: 400,
-            lineHeight: '15.98px',
-            textAlign: 'left',
-            width: '100%',
-            color: '#9EA2AD',
-            margin: 0,
-          }}
-        >
-          <span>{`${date} ${time} WIB oleh `}</span>
-          <span style={{ color: '#999' }}>{author}</span>
+        <div className="font-REM text-[10.65px] font-normal leading-[15.98px] text-left text-[#9EA2AD] w-full m-0">
+          <span className="text-[#999] line-clamp-1">Oleh {author}</span>
         </div>
-        <p
-          style={{
-            fontFamily: 'REM',
-            fontSize: '12.43px',
-            fontWeight: 400,
-            lineHeight: '18.64px',
-            textAlign: 'justify',
-            color: '#3678FF',
-            margin: '16px 0',
-            width: '100%',
-            height: 'auto',
-          }}
-        >
-          {truncatedDescription}
+        <p className="font-REM text-[12.43px] font-normal leading-[18.64px] text-justify text-[#3678FF] my-2 w-full h-auto line-clamp-3">
+          {description}
         </p>
-        <a
-          href={`/article/detail/${slug}`}
-          style={{
-            display: 'block',
-            fontSize: '12px',
-            fontWeight: 400,
-            lineHeight: '16px',
-            textAlign: 'right',
-            color: '#FB43BD',
-            marginTop: '5px',
-            position: 'absolute',
-            bottom: '8px',
-            right: '8px',
-          }}
-        >
-          {"Read More >>>"}
-        </a>
+        <div className="text-[12px] font-normal leading-[16px] text-right text-[#FB43BD] mt-[5px] flex justify-between">
+          <div className="flex gap-1 items-center font-semibold">
+            <MdOutlineTimer />
+            <p>{(readTime / 60).toFixed(0)} mins read</p>
+          </div>
+          <a
+            href={`/article/detail/${slug}`}
+            className=""
+          >
+            {"Read More >>>"}
+          </a>
+        </div>
       </div>
+
     </div>
   );
 };

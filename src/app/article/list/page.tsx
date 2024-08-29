@@ -4,8 +4,11 @@ import { useEffect, useState } from "react";
 import SearchBar from "src/app/article/list/SearchBar";
 import Card from "../components/Card";
 import { getAllArticles } from "~/lib/contentful/api";
-import { Article } from "~/types/articles/articleType";
-// import BgImages2 from "../components/BgImages2";
+import { type Article } from "~/types/articles/articleType";
+import Image from "next/image";
+import { FaArrowLeft } from "react-icons/fa6";
+import Link from "next/link";
+import { Button } from "~/components/ui/button";
 
 export default function Page() {
   const [filteredArticles, setFilteredArticles] = useState<Article[]>([]);
@@ -16,7 +19,7 @@ export default function Page() {
 
   useEffect(() => {
     getAllArticles({})
-      .then((articles) => {
+      .then((articles: Article[]) => {
         setFilteredArticles(articles);
       })
       .catch((error) => {
@@ -46,158 +49,108 @@ export default function Page() {
   };
 
   const renderPagination = () => (
-    <div className="pagination">
-      <button
+    <div className="flex items-center justify-center gap-3 mt-8 z-10">
+      <Button
         onClick={() => handleClick(currentPage - 1)}
         disabled={currentPage === 1}
-        className={`pagination-button ${currentPage === 1 ? "disabled" : ""}`}
+        variant="pink"
+        className={`${currentPage === 1 ? "disabled" : ""}`}
       >
         {"<"}
-      </button>
+      </Button>
       {Array.from({ length: totalPages }, (_, index) => (
-        <button
+        <Button
           key={index + 1}
           onClick={() => handleClick(index + 1)}
-          className={`pagination-button ${index + 1 === currentPage ? "active" : ""}`}
+          variant="pink"
+          className={`${index + 1 === currentPage ? "border border-white" : ""}`}
         >
           {index + 1}
-        </button>
+        </Button>
       ))}
-      <button
+      <Button
         onClick={() => handleClick(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className={`pagination-button ${currentPage === totalPages ? "disabled" : ""}`}
+        variant="pink"
+        className={`${currentPage === totalPages ? "disabled" : ""}`}
       >
         {">"}
-      </button>
+      </Button>
     </div>
   );
 
   return (
-    <div className="pagetsx-article-background">
-      {/* <BgImages2 /> */}
-      <a href="/article" style={{ marginTop: "100px", marginLeft: "10px" }}>
-        <button className="GoBackButton"></button>
-      </a>
-      <div style={{ marginLeft: "60px" }}>
-        <h2>List of Articles</h2>
-      </div>
+    <div className="bg-[url('/article-icons/blog-background.webp')] bg-cover px-10 py-28 flex flex-col gap-2">
+      <Link href="/article" className="flex items-center gap-2 text-3xl font-bold text-white">
+        <FaArrowLeft className="" />
+        <h1>List of Articles</h1>
+      </Link>
 
 
       <SearchBar setFilteredArticles={setFilteredArticles} />
 
-      <div className="card-container">
+      <div className="z-10">
         {currentCards.length > 0 ? (
-          currentCards.map((card) => (
-            <Card
-              key={card.id}
-              id={card.id}
-              slug={card.slug}
-              title={card.title}
-              createdAt={card.createdAt}
-              author={card.author}
-              views={card.views}
-              likes={card.likes}
-              readTime={card.readTime}
-              description={card.description}
-              image={card.image}
-            />
-          ))
+          <div className="grid md:grid-cols-4 gap-8 w-full">
+            {currentCards.map((card) => (
+              <Card
+                key={card.id}
+                id={card.id}
+                slug={card.slug}
+                title={card.title}
+                createdAt={card.createdAt}
+                author={card.author}
+                views={card.views}
+                likes={card.likes}
+                readTime={card.readTime}
+                description={card.description}
+                image={card.image}
+              />
+            ))}
+          </div>
         ) : (
-          <div className="no-articles-found">
-            <img
-              src="/article-icons/Search_Not_Found.png"
-              alt="No articles found"
-            />
+          <div className="w-full flex items-center justify-center">
+            <div className="md:w-1/2 w-full flex flex-col items-center h-screen justify-center gap-4">
+              <Image
+                src="/components/gurita.webp"
+                alt="Item Not Found"
+                height={500}
+                width={500}
+                className="w-40 h-auto scale-[2] mb-8 md:mb-12"
+                draggable={false}
+              />
+              <h1 className="text-center font-mogula text-3xl text-white [text-shadow:_4px_4px_20px_rgb(100_177_247_/_75%)] sm:text-5xl">
+                Pencarian Tidak Ditemukan...
+              </h1>
+              <p className="text-wrap text-center font-rem text-white [text-shadow:_4px_4px_20px_rgb(100_177_247_/_75%)]">
+                Oh tidak... Tampaknya kamu mencari sesuatu yang tersembunyi di
+                kedalaman. Cobalah kata kunci lain atau kembali ke permukaan untuk
+                melanjutkan pencarianmu!
+              </p>
+            </div>
           </div>
         )}
       </div>
 
+
       {totalPages > 1 && renderPagination()}
 
-      <div className="pagetsx-downregion">
-        <img
-          className="bottom-left-image"
-          src="/article-icons/coral-oren.png"
-          alt="Coral Oren"
-        />
-        <img
-          className="bottom-right-image"
-          src="/article-icons/Coral.png"
-          alt="Coral"
-        />
-        <img
-          className="downleft-coral-pensu"
-          src="/article-icons/Coral-Pensu.png"
-          alt="Coral Pensu"
-        />
-      </div>
-
-      <style jsx>{`
-        .card-container {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-          gap: 16px;
-          max-width: 100%;
-          margin: 0 auto;
-        }
-
-        .card {
-          background: #fff;
-          border: 1px solid #ddd;
-          border-radius: 8px;
-          padding: 16px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          box-sizing: border-box;
-        }
-
-        @media (max-width: 768px) {
-          .card-container {
-            grid-template-columns: repeat(1, 1fr);
-          }
-        }
-
-        @media (min-width: 769px) {
-          .card-container {
-            grid-template-columns: repeat(4, 1fr);
-          }
-        }
-
-        .pagination {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-top: 30px;
-          gap: 12px;
-          padding-right: 20px;
-        }
-
-        .pagination-button {
-          cursor: pointer;
-          background-color: #EE1192;
-          border-radius: 4px 0 0 0;
-          width: 24px;
-          height: 24px;
-          padding: 0 8.5px;
-          color: #000;
-        }
-
-        .pagination-button.active {
-          background-color: #3678FF;
-          color: #fff;
-        }
-
-        .pagination-button.disabled {
-          cursor: not-allowed;
-          opacity: 0.5;
-        }
-
-        .pagination-box {
-          display: flex;
-          justify-content: center;
-          margin-top: 20px;
-        }
-      `}</style>
+      <Image
+        src="/article-icons/coral-left.webp"
+        alt="Coral Left"
+        height={500}
+        width={500}
+        className="absolute bottom-0 left-0"
+        draggable={false}
+      />
+      <Image
+        src="/article-icons/coral-right.webp"
+        alt="Coral Right"
+        height={500}
+        width={500}
+        className="absolute bottom-0 right-0"
+        draggable={false}
+      />
     </div>
   );
 }
