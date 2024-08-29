@@ -1,6 +1,12 @@
 import Image from "next/image";
 import { Button } from "~/components/ui/button";
 
+export const metadata = {
+  title: "ITB - X",
+  description: "ITB - X",
+  icons: [{ rel: "icon", url: "/logo/logo.png" }],
+};
+
 export default function Page() {
   return (
     <main className="min-h-screen bg-[url('/itb-x/bg-itbx.png')] bg-cover bg-center py-20">

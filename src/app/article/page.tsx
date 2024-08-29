@@ -1,9 +1,13 @@
-"use client";
-
 import React from "react";
 import Swiper from "src/app/article/components/SwiperCarousel";
 import MiniArticleCarousel from "src/app/article/components/MiniArticleCarousel";
 import Image from "next/image";
+
+export const metadata = {
+  title: "Article",
+  description: "Article OSKM ITB 2024",
+  icons: [{ rel: "icon", url: "/logo/logo.png" }],
+};
 
 const Page: React.FC = () => {
   return (

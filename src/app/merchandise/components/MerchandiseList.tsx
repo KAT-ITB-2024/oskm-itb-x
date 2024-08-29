@@ -48,14 +48,14 @@ export default function MerchandiseList({
                 key={"merch" + index}
                 className="flex flex-col justify-center"
               >
-                <div className="relative flex h-[400px] w-[450px] justify-center bg-[url('/components/bubble-2.svg')] bg-cover">
+                <div className="relative flex h-[400px] w-[350px] justify-center bg-[url('/components/bubble-2.svg')] bg-cover lg:w-[450px]">
                   <div className="relative flex justify-center text-4xl sm:text-5xl">
                     <Image
                       src={item.image}
                       alt={item.name}
                       height={400}
                       width={400}
-                      className="w-auto h-auto"
+                      className="h-auto w-auto"
                       draggable={false}
                     />
                     <h1 className="absolute right-0 top-10 font-mogula font-normal text-[#FFBF51] [text-shadow:_3px_3px_7px_rgb(255_191_81_/_50%)]">

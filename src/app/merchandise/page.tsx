@@ -4,6 +4,12 @@ import React from "react";
 import MerchandiseSlider from "./components/MerchandiseSlider";
 import MerchandiseList from "./components/MerchandiseList";
 
+export const metadata = {
+  title: "Merhcandise",
+  description: "Merchantdise OSKM ITB 2024",
+  icons: [{ rel: "icon", url: "/logo/logo.png" }],
+};
+
 export default function Page() {
   const merchandises = [
     {
