@@ -67,3 +67,536 @@
     @apply bg-background text-foreground;
   }
 }
+/* ARTICLE-PAGE -- William Anthony 13223048 */
+/* Existing Styles */
+/* Ensure the parent container of the carousel */
+
+.pagetsx-article-background {
+  background-color: #000D76; /* Apply background color */
+  background-image: url("/article-icons/BiruBackground1.png"); /* Set background image */
+  background-size: cover; /* Ensure background image covers entire div */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent background from repeating */
+  position: relative; /* Position relative for placing additional elements */
+  min-height: 500px; /* Example height, adjust as needed */
+  display: flex; /* Ensure flexbox layout for vertical stacking */
+  flex-direction: column; /* Stack children vertically */
+}
+
+.pagetsx-downregion {
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: space-between; /* Align images to opposite sides */
+  align-items: flex-end; /* Align images to the bottom */
+}
+
+/* Bottom left and right images with the same size */
+.bottom-left-image,
+.bottom-right-image {
+  height: auto;
+  width: auto;
+  max-width: 50%; /* Max width 50% for both images */
+  max-height: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.bottom-left-image {
+  left: 0;
+}
+
+.bottom-right-image {
+  right: 0;
+}
+
+/* Coral Pensu image, slightly smaller */
+.downleft-coral-pensu {
+  height: auto;
+  width: auto;
+  max-width: 20%; /* Smaller than the other images */
+  max-height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 5%; /* Position slightly to the left of the right image */
+  margin-right: 0px; /* No gap */
+}
+
+/* Responsiveness for mobile devices */
+@media (max-width: 768px) {
+  .pagetsx-downregion {
+    height: 200px; /* Adjust the region height for mobile */
+  }
+
+  .bottom-left-image,
+  .bottom-right-image {
+    max-width: 50%; /* Both images should take up to 50% width */
+    max-height: 80%; /* Keep height proportionate */
+  }
+
+  .downleft-coral-pensu {
+    max-width: 30%; /* Smaller than the other images on mobile */
+    max-height: 80%;
+    right: 10%; /* Slightly reposition on mobile */
+  }
+}
+
+/* Responsiveness for larger screens */
+@media (min-width: 1024px) {
+  .pagetsx-downregion {
+    height: 500px; /* Larger region for desktops */
+  }
+
+  .bottom-left-image,
+  .bottom-right-image {
+    max-width: 50%; /* Consistent max width for larger screens */
+    max-height: 90%; /* Adjust for larger screens */
+  }
+
+  .downleft-coral-pensu {
+    max-width: 20%; /* Slightly smaller than the others */
+    max-height: 90%;
+    right: 5%; /* Maintain right positioning */
+  }
+}
+
+
+
+.pagetsx-article-background-detailed {
+  background-color: #000D7680; /* Apply semi-transparent background color */
+  background-image: url("/article-icons/BiruBackground1.png"); /* Set the background image */
+  background-size: cover; /* Ensure the background image covers the entire div */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  padding: 20px; /* Add padding to ensure content does not touch the edges */
+}
+
+/* Button pagetsx in Article Styling, exact replica of Figma's Button */
+.article-pagetsx-button {
+  width: 203px; /* Fixed width */
+  height: 46px; /* Fixed height */
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  padding: 8px 20px; /* Padding: top/bottom 8px, left/right 20px */
+  border-radius: 4px 0 0 0; /* Rounded corners for top-left only */
+  background: #EE1192; /* Background color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 4px 4px 20px 0px #64B1F7BF; /* Box shadow */
+  font-size: 14px; /* Font size */
+  font-weight: 600; /* Font weight */
+}
+
+.article-pagetsx-button:hover {
+  background: #d1097b; /* Darker background on hover */
+}
+
+/* Container to center the button */
+.center-container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically (optional) */
+  height: 40vh; /* Full viewport height (optional, for vertical centering) */
+}
+
+
+
+.main-article {
+  width: 100%;
+  height: 900px; 
+  margin: 0;
+  padding: 0;
+  position: relative; /* Allows for absolute positioning of child elements */
+}
+
+/* Style for the Swiper container */
+.swiper-container {
+  width: 100%;
+  height: 100%; /* Ensures the Swiper takes up the full height of its parent */
+}
+
+/* Style for each Swiper slide item */
+.main-article .item {
+  background: #183f4e;
+  position: absolute; /* Ensure it is positioned absolutely within the Swiper container */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Cover full width of the container */
+  height: 100%; /* Cover full height of the container */
+  background-size: cover; /* Cover the entire area of the item */
+  background-position: center; /* Center the background image */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure content doesn't overflow the bounds */
+}
+
+.main-article .item h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+}
+
+.main-article .item p {
+  margin: 4px 0 0;
+  font-size: 1em;
+}
+
+/* Swiper pagination styles */
+.swiper-pagination-fraction, 
+.swiper-pagination-custom, 
+.swiper-horizontal > .swiper-pagination-bullets, 
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 360px !important; /* Set pagination to be 100px from the bottom */
+  top: auto;
+  left: 0;
+  width: 100%;
+}
+
+/* Styles for pagination bullets */
+.swiper-pagination-bullet {
+  opacity: 0.5; /* Semi-transparent for non-active bullets */
+  transition: opacity 0.3s, background-color 0.3s, box-shadow 0.3s; /* Smooth transition for opacity, color, and shadow changes */
+  border-radius: 50%; /* Ensure bullets are circular */
+  width: 8px; /* Adjust size as needed */
+  height: 8px; /* Adjust size as needed */
+  margin: 0 4px; 
+  z-index: 9999; /* Biar didepan T_T Gimana ya */
+}
+
+/* Styles for the active pagination bullet */
+.swiper-pagination-bullet-active {
+  opacity: 1; /* Fully opaque for the active bullet */
+  background-color: #ffffff !important; /* Harus important, ada yang mengantikan warna bullet ini jadi biru tiba-tiba */
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.7); /* Glowing effect for the active bullet */
+}
+
+/* Optional: Hover effect for pagination bullets */
+.swiper-pagination-bullet:hover {
+  opacity: 0.7; /* Slightly less transparent on hover */
+}
+
+/* Customize the navigation buttons */
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 50px; /* Increased the size */
+  color: transparent; /* Transparent color for the navigation arrows */
+}
+
+/* Optional Gradient Overlays for the carousel item */
+.item .overlay-left {
+  position: absolute;
+  width: 299px;
+  height: 100%;
+  left: 0;
+  background: linear-gradient(to right, black, transparent);
+  opacity: 0.4;
+}
+
+.item .overlay-right {
+  position: absolute;
+  width: 299px;
+  height: 100%;
+  right: 0;
+  background: linear-gradient(to left, black, transparent);
+  opacity: 0.4;
+}
+
+/* Style for the text content inside each slide */
+.text-content {
+  background-color: rgba(0, 0, 0, 0.40);
+  padding: 5px;
+  border-radius: 10px;
+  text-align: left;
+  max-width: 470px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 470px;
+  position: relative;
+  top: -130px;
+}
+
+/* Style for the Read More button */
+.carousel-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2D3648;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  width: 150px;
+  text-align: center;
+  line-height: normal;
+}
+
+/* Carousel Container Styling */
+.mini-card-carousel {
+  display: flex; /* Ensure carousel items are displayed in a row */
+  overflow: hidden; 
+  padding: 0px; 
+  width: 1370px; /* Fixed width */
+  height: 440px; /* Fixed height */
+  position: relative; /* Relative position for absolute elements */
+}
+
+/* Wrapper Card Styling */
+.mini-card-carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* Button Styling */
+.prev-button, .next-button {
+  width: 40px !important;  /* Increased width */
+  height: 40px !important; /* Increased height */
+  background-size: contain; /* Ensure the background image fits */
+  background-repeat: no-repeat; /* Prevent repetition of background image */
+  border: none;
+  cursor: pointer;
+  background-color: transparent; /* Remove any default button background */
+}
+
+.prev-button {
+  left: 0px;
+  background-image: url('/article-icons/navigate_previous.png'); /* Path to the previous button image */
+}
+
+.next-button {
+  right: 0px;
+  background-image: url('/article-icons/navigate_next.png'); /* Path to the next button image */
+}
+
+.prev-button:hover, .next-button:hover {
+  opacity: 0.8; /* Slightly fade the button on hover */
+}
+
+
+/*Styling untuk Article List*/
+.search-bar-container {
+  justify-content: center;
+  padding: 10px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-input-container {
+  width: 100%;
+  height: 48px;
+  padding: 12px 24px;
+  gap: 16px;
+  border-radius: 8px;
+  position: relative;
+  flex: 1;
+  background-color: #F3F4F6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-input-container input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: transparent;
+  font-size: 16px;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sort-select-container {
+  padding-left: 8px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 8px;
+}
+
+.sort-select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  overflow: hidden;
+}
+
+.sort-select-wrapper select {
+  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  background-color: #F3F4F6;
+  color: #000;
+  font-size: 16px;
+  width: 100%;
+  padding-left: 40px;
+  box-sizing: border-box;
+  appearance: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sort-icon-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.no-articles-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.no-articles-found img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.mini-card-container {
+  overflow: hidden;
+  padding: 10px;
+  position: relative;
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 768px) {
+  .mini-card-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 12px;
+  padding-right: 20px;
+}
+
+.pagination-button {
+  cursor: pointer;
+  background-color: #EE1192;
+  border-radius: 4px 0px 0px 0px;
+  width: 24px;
+  height: 24px;
+  padding: 0px 8.5px;
+  color: #000;
+}
+
+.pagination-button.active {
+  background-color: #3678FF;
+  color: #fff;
+}
+
+.pagination-button.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/*ANIMATIONS OF BACKGROUND (Gerakin Imagenya)*/
+/* General Styling for Animated Objects */
+/* General Styling for Animated Objects */
+.horizontal-animated-object {
+  position: absolute;
+  z-index: 10;
+  animation: swim-horizontal 5s infinite ease-in-out;
+}
+
+.vertical-animated-object {
+  position: absolute;
+  z-index: 10;
+  animation: swim-vertical 4s infinite ease-in-out;
+}
+
+.animated-container {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  max-width: 100%;
+  margin: 0 auto;
+  top: 10px;
+  z-index: -1; /* Places the container behind other elements */
+}
+
+/* Seaweed Image (Static) */
+.seaweed-image {
+  width: 100px; /* Adjust size as needed */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2; /* Lower z-index to stay behind other images */
+}
+
+/* Bubble Image */
+.bubble-image {
+  width: 40px; /* Minimum width */
+  max-width: 80px; /* Maximum width */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  animation: float-bubble 8s linear infinite, bubble-horizontal 3s ease-in-out infinite;
+}
+
+
+/*DETAILED ARTICLE-PAGE SECTION !!! */
+
+.GoBackButton {
+  position: relative;
+  padding-left: 40px; /* Memberi ruang untuk gambar di sebelah kiri */
+  padding-right: 20px; /* Opsional: tambahkan padding di sebelah kanan untuk estetika */
+  background-color: transparent; /* Menghapus background default */
+  border: none; /* Menghapus border default */
+  font-family: Arial, sans-serif; /* Font yang digunakan */
+  cursor: pointer; /* Mengubah cursor menjadi pointer saat di-hover */
+  display: inline-flex; /* Menggunakan inline-flex untuk fleksibilitas */
+  align-items: center; /* Vertically align text dengan gambar */
+}
+
+.GoBackButton::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Posisikan gambar di tengah vertikal */
+  width: 60px;
+  height: 60px;
+  background-image: url('/article-icons/arrow_back.png'); /* Path to the previous button image */
+  background-size: cover; /* Sesuaikan ukuran gambar */
+  background-repeat: no-repeat; /* Gambar tidak diulang */
+}
