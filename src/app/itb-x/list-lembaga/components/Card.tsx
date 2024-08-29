@@ -47,9 +47,6 @@ function Card(props: CardProps) {
         <p id="nama_lembaga" className={className}>
           {nama}
         </p>
-        {/* <p className="text-center text-[1.25rem] leading-[1.5rem] text-[#FFFEFE]">
-          Ikatan Mahasiswa Telekomunikasi
-        </p> */}
         <div className="mt-1">
           <EllipsLembaga />
         </div>

@@ -66,7 +66,7 @@ function HmpsBso() {
   ];
 
   return (
-    <div className="z-[10] mx-5 flex flex-col items-center pt-24 md:pt-[110px] lg:pt-[120px]">
+    <div className="z-[10] mx-5 flex flex-col items-center">
       <SliderContainer data={tempData} />
       <div className="mt-6 w-[85vw]">
         <SearchBar
