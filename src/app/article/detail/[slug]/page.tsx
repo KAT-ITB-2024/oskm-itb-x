@@ -17,7 +17,7 @@ const Page: React.FC = () => {
   useEffect(() => {
     getArticle({ slug: slug as string })
       .then((data) => {
-        setArticle(data as Article);
+        setArticle(data);
       })
       .catch(() => {
         setArticle(undefined);

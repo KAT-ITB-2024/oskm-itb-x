@@ -539,7 +539,6 @@
     "@paralleldrive/cuid2" "^2.2.2"
     bcrypt "^5.1.1"
     csv-parser "^3.0.0"
-    database-oskm "file:C:/Users/Asus/AppData/Local/Yarn/Cache/v6/npm-@katitb2024-database-1.0.0-866e11497cc02bc34e637ad4bca991461a6c85b8/node_modules/@katitb2024/database"
     drizzle-dbml-generator "^0.8.0"
     drizzle-orm "^0.31.2"
     postgres "^3.4.4"

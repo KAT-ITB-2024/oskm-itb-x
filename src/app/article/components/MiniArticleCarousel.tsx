@@ -7,7 +7,9 @@ import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
 import { getAllArticles } from "~/lib/contentful/api";
 import Card from "src/app/article/components/Card";
-import { Article } from "~/types/articles/articleType";
+import { type Article } from "~/types/articles/articleType";
+import { Button } from "~/components/ui/button";
+import Link from "next/link";
 
 const MiniArticleCarousel: React.FC = () => {
   const [articles, setArticles] = useState<Article[]>([]);
@@ -17,7 +19,7 @@ const MiniArticleCarousel: React.FC = () => {
 
   useEffect(() => {
     getAllArticles({ randomize: true })
-      .then((fetchedArticles) => {
+      .then((fetchedArticles: Article[]) => {
         setArticles(fetchedArticles);
         setVisibleArticles(fetchedArticles.slice(0, articlesPerBatch));
       })
@@ -40,67 +42,28 @@ const MiniArticleCarousel: React.FC = () => {
   };
 
   return (
-    <div
-      className="mini-card-carousel-wrapper"
-      style={{
-        position: "relative",
-        width: "100%",
-        height: "600px",
-        padding: "0 20px",
-        boxSizing: "border-box",
-        overflow: "hidden",
-      }}
-    >
-      {/* Custom Navigation Buttons */}
-      <button
-        className="prev-button"
-        style={{
-          position: "absolute",
-          top: "50%",
-          transform: "translateY(-50%)",
-          zIndex: 10,
-          backgroundColor: "transparent",
-          border: "none",
-          cursor: "pointer",
-        }}
-      />
-      <button
-        className="next-button"
-        style={{
-          position: "absolute",
-          top: "50%",
-          transform: "translateY(-50%)",
-          zIndex: 10,
-          backgroundColor: "transparent",
-          border: "none",
-          cursor: "pointer",
-        }}
-      />
+    <div className="bg-[url('/article-icons/blog-background.webp')] bg-cover bg-center h-auto md:h-screen relative py-10 px-10 md:px-20">
+      <h2 className="font-mogula md:text-[48px] text-4xl drop-shadow-lg text-white text-center md:text-left">Read More Articles</h2>
+      <button className="prev-button absolute top-1/2 -translate-y-1/2 z-10 bg-transparent border-none cursor-pointer" />
+      <button className="next-button absolute top-1/2 -translate-y-1/2 z-10 bg-transparent border-none cursor-pointer" />
 
-      {/* Swiper */}
       <Swiper
         modules={[Navigation, Autoplay]}
-        spaceBetween={0}
+        spaceBetween={20}
         slidesPerView={4}
         navigation={{ prevEl: ".prev-button", nextEl: ".next-button" }}
         autoplay={{ delay: 6000, disableOnInteraction: false }}
         breakpoints={{
-          1200: { // For large screens
+          1200: {
             slidesPerView: 4,
           },
-          992: { // For medium screens
+          992: {
             slidesPerView: 3,
           },
-          768: { // For tablets
+          768: {
             slidesPerView: 2,
           },
-          576: { // For small tablets and large phones
-            slidesPerView: 1,
-          },
-          524: { // For very small screens
-            slidesPerView: 1,
-          },
-          0: { // For very small screens
+          0: {
             slidesPerView: 1,
           },
         }}
@@ -109,23 +72,15 @@ const MiniArticleCarousel: React.FC = () => {
             loadMoreArticles();
           }
         }}
-        style={{
-          height: "100%",
-          width: "calc(100% - 80px)", // Adjust width to account for button margins
-          margin: "0 auto", // Center the Swiper container
-        }}
+        className="w-full mx-10 h-[480px] overflow-clip"
       >
         {visibleArticles.map((card) => (
           <SwiperSlide
             key={card.id}
-            className="keen-slider__slide"
-            style={{
-              padding: "40px 0px",
-              margin: "0px",
-              boxSizing: "border-box",
-            }}
+            className="px-4"
           >
             <Card
+              key={card.id}
               id={card.id}
               slug={card.slug}
               title={card.title}
@@ -140,6 +95,10 @@ const MiniArticleCarousel: React.FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      <div className="flex w-full items-center justify-center z-10">
+        <Button variant="pink" className="z-10"><Link href="/article/list">More Articles {'>'}</Link></Button>
+      </div>
     </div>
   );
 };

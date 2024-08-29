@@ -1,9 +1,9 @@
-name: Deploy Staging OSKM ITB X
+name: Deploy Production OSKM ITB X
 
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["staging"]
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   # workflow_dispatch:
@@ -11,8 +11,8 @@ on:
 jobs:
   # Build job
   build-and-deploy:
-    runs-on: [self-hosted, oskm-itb-x]
-    environment: staging
+    runs-on: [self-hosted, production]
+    environment: production
     env:
       DATABASE_URL: ${{ secrets.DATABASE_URL }}
       NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
@@ -105,9 +105,9 @@ jobs:
   #     DATABASE_URL: ${{ secrets.DATABASE_URL }}
   #     NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
   #     NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
-  #     MAILER_FROM: ${{ secrets.MAILER_FROM }}
-  #     MAILER_CLIENT_ID: ${{ secrets.MAILER_CLIENT_ID }}
-  #     MAILER_CLIENT_SECRET: ${{ secrets.MAILER_CLIENT_SECRET }}
+  #     NEXT_PUBLIC_CONTENTFUL_SPACE_ID: ${{ secrets.NEXT_PUBLIC_CONTENTFUL_SPACE_ID }}
+  #     NEXT_PUBLIC_CONTENTFUL_DELIVERY_ACCESS_TOKEN: ${{ secrets.NEXT_PUBLIC_CONTENTFUL_DELIVERY_ACCESS_TOKEN }}
+  #     NEXT_PUBLIC_CONTENTFUL_PREVIEW_ACCESS_TOKEN: ${{ secrets.NEXT_PUBLIC_CONTENTFUL_PREVIEW_ACCESS_TOKEN }}
   #     MAILER_REFRESH_TOKEN: ${{ secrets.MAILER_REFRESH_TOKEN }}
   #   steps:
       
