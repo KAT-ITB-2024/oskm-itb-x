@@ -14,7 +14,7 @@ function Navbar() {
     <header className="absolute z-50 w-full p-4">
       <nav className="relative h-16 rounded-full lg:h-[76px]">
         <Image
-          src="/components/navbar.png"
+          src="/components/navbar.webp"
           alt="Navbar"
           width={1385}
           height={76}
