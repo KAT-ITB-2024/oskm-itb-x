@@ -17,14 +17,14 @@ function PaginationButton(props: PaginationButtonProps) {
     >
       {type === "prev" ? (
         <Image
-          src="left-arrow-pagination.svg"
+          src="/itb-x/left-arrow-pagination.svg"
           alt="prev"
           width={10}
           height={10}
         />
       ) : type === "next" ? (
         <Image
-          src="right-arrow-pagination.svg"
+          src="/itb-x/right-arrow-pagination.svg"
           alt="next"
           width={10}
           height={10}

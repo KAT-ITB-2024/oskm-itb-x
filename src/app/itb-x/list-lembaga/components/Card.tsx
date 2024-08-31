@@ -5,13 +5,14 @@ import Image from "next/image";
 interface CardProps {
   nama: string;
   logo_path?: string;
+  type?: string;
 }
 
 function Card(props: CardProps) {
   const [className, setClassName] = React.useState<string>(
     "mb-8 mt-6 h-[40px] w-[90%] font-mogula text-[20px] text-center leading-[2.4rem] text-[#05A798]",
   );
-  const { nama, logo_path } = props;
+  const { nama, logo_path, type } = props;
   const name_length = nama.length;
 
   useEffect(() => {
@@ -41,25 +42,48 @@ function Card(props: CardProps) {
     return () => window.removeEventListener("resize", handleResize);
   }, [name_length]);
 
-  return (
-    <div className="relative my-1 h-[400px] w-[270px] justify-self-center overflow-hidden rounded-[3.25rem] bg-[radial-gradient(109.4%_109.4%_at_50%_50%,_rgba(162,_248,_243,_0.75)_0%,_rgba(245,_245,_245,_0.75)_100%)] px-4 backdrop-blur-md lg:h-[460px] lg:min-w-[340px] lg:max-w-[350px]">
-      <div className="flex flex-col items-center gap-4 py-4">
-        <p id="nama_lembaga" className={className}>
-          {nama}
-        </p>
-        <div className="mt-1">
-          <EllipsLembaga />
+  if (!type) {
+    return (
+      <div className="relative my-1 h-[370px] w-[270px] justify-self-center overflow-hidden rounded-[3.25rem] bg-[radial-gradient(109.4%_109.4%_at_50%_50%,_rgba(162,_248,_243,_0.75)_0%,_rgba(245,_245,_245,_0.75)_100%)] px-4 backdrop-blur-md lg:h-[420px] lg:min-w-[300px] lg:max-w-[300px]">
+        <div className="flex flex-col items-center gap-2 py-4">
+          <p id="nama_lembaga" className={className}>
+            {nama}
+          </p>
+          <div className="mt-1 lg:mt-8">
+            <EllipsLembaga />
+          </div>
+          <Image
+            src="/itb-x/ombak-right.png"
+            alt="Ombak"
+            width={500}
+            height={368}
+            className="absolute bottom-0 left-0 z-[1] -translate-x-[40px] translate-y-[82px] rotate-[165deg] scale-[1.8] object-fill lg:-translate-x-[40px] lg:translate-y-[110px] lg:scale-[1.4] lg:scale-x-[1.7]"
+          />
         </div>
-        <Image
-          src="/itb-x/ombak-right.png"
-          alt="Ombak"
-          width={500}
-          height={368}
-          className="absolute bottom-0 left-0 z-[1] -translate-x-[40px] translate-y-[80px] rotate-[165deg] scale-[1.9] object-fill lg:-translate-x-[40px] lg:translate-y-[136px]"
-        />
       </div>
-    </div>
-  );
+    );
+  } else {
+    // UKM Card
+    return (
+      <div className="relative my-1 h-[370px] w-[270px] justify-self-center overflow-hidden rounded-[3.25rem] bg-[radial-gradient(109.4%_109.4%_at_50%_50%,_rgba(162,_248,_243,_0.75)_0%,_rgba(245,_245,_245,_0.75)_100%)] px-4 backdrop-blur-md lg:h-[420px] lg:min-w-[300px] lg:max-w-[300px]">
+        <div className="flex flex-col items-center gap-2 py-4">
+          <p id="nama_lembaga" className={className}>
+            {nama}
+          </p>
+          <div className="mt-1 lg:mt-8">
+            <EllipsLembaga />
+          </div>
+          <Image
+            src="/itb-x/ombak-right.png"
+            alt="Ombak"
+            width={500}
+            height={368}
+            className="absolute bottom-0 left-0 z-[1] -translate-x-[40px] translate-y-[82px] rotate-[165deg] scale-[1.8] object-fill lg:-translate-x-[40px] lg:translate-y-[110px] lg:scale-[1.4] lg:scale-x-[1.7]"
+          />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Card;

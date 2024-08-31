@@ -1,6 +1,6 @@
 import React from "react";
-import UKMVideo from "../components/UKMVideo";
-import UKMIconCard from "../components/UKMIconCard";
+import UKMVideo from "./UKMVideo";
+import UKMIconCard from "./UKMIconCard";
 
 function UkmPage() {
   return (

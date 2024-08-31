@@ -57,7 +57,7 @@ function UKMIconCard(props: UKMIconCard) {
             {category_name}
           </p>
           <Link
-            href={`/itb-x/list-lembaga/ukm/${category_name.toLowerCase()}`}
+            href={`/itb-x/list-lembaga/ukm/${category_name}`}
             className="flex items-center justify-center rounded-[4px] bg-[#EE1192] px-3 py-2 font-rem"
           >
             <p className="font-rem text-[10px] font-normal text-white md:text-[12px] lg:text-[16px]">

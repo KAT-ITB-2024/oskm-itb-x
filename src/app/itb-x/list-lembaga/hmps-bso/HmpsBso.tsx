@@ -63,6 +63,8 @@ function HmpsBso() {
     },
     { name: "IMT ITB", fakultas: "STEI" },
     { name: "HIMATIKA ITB", fakultas: "FMIPA" },
+    { name: 'HMTG "GEA" ITB', fakultas: "FITB" },
+    { name: "HMS ITB", fakultas: "FTSL" },
   ];
 
   return (
