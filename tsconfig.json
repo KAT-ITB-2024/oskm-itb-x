@@ -38,6 +38,6 @@
     "**/*.js",
     ".next/types/**/*.ts",
     "next.config.mjs"
-  ],
+, "window.jQuery"  ],
   "exclude": ["node_modules"]
 }

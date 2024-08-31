@@ -1,6 +1,12 @@
 import Image from "next/image";
 import { Button } from "~/components/ui/button";
 
+export const metadata = {
+  title: "ITB - X",
+  description: "ITB - X",
+  icons: [{ rel: "icon", url: "/logo/logo.png" }],
+};
+
 export default function Page() {
   return (
     <main className="min-h-screen bg-[url('/itb-x/bg-itbx.png')] bg-cover bg-center py-20">
@@ -12,6 +18,7 @@ export default function Page() {
             alt="itb-showcase"
             width={200}
             height={200}
+            draggable={false}
           />
           <h1 className="font-mogula text-3xl lg:text-4xl">ITB SHOWCASE</h1>
           <p className="text-center font-rem lg:text-lg">
@@ -35,6 +42,7 @@ export default function Page() {
             alt="ukm"
             width={200}
             height={200}
+            draggable={false}
           />
           <h1 className="font-mogula text-3xl lg:text-4xl">
             Unit Kegiatan Mahasiswa (UKM)
@@ -63,6 +71,7 @@ export default function Page() {
             alt="bso"
             width={200}
             height={200}
+            draggable={false}
           />
           <h1 className="font-mogula text-3xl lg:text-4xl">
             Badan Semi Otonom (BSO)
@@ -91,6 +100,7 @@ export default function Page() {
             alt="hmj"
             width={200}
             height={200}
+            draggable={false}
           />
           <h1 className="font-mogula text-3xl lg:text-4xl">
             Himpunan Mahasiswa Jurusan (HMJ)
