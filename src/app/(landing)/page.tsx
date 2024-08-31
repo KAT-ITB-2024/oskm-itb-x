@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "~/components/ui/button";
 import Countdown from "./component/Countdown";
 import Image from "next/image";
@@ -10,6 +12,8 @@ import {
   smallMedpar,
   xlargeMedpar,
 } from "./constants";
+
+import FadeInImage from "~/components/FadeInImage";
 
 export default function LandingPage() {
   const daysDikpus = [
@@ -106,21 +110,17 @@ export default function LandingPage() {
           />
         </div>
         <div className="relative bottom-[-160px]">
-          <Image
+          <FadeInImage
+            className="absolute -left-20 md:left-0 top-[4rem] md:top-0 z-0 aspect-square w-[60%] md:w-4/12 lg:w-3/12"
             src="/landing-page/penyu.webp"
             alt="penyu"
-            width={500}
-            height={500}
-            className="absolute left-0 z-0 w-5/12 md:w-4/12 lg:w-3/12"
-            draggable={false}
+            direction="left"
           />
-          <Image
+          <FadeInImage
+            className="absolute -right-10 md:right-0 top-[4rem] md:top-0 z-0 aspect-square w-5/12 md:w-4/12 lg:w-3/12"
             src="/landing-page/pindang.png"
             alt="pindang"
-            width={500}
-            height={500}
-            className="absolute right-0 z-0 w-5/12 md:w-4/12 lg:w-3/12"
-            draggable={false}
+            direction="right"
           />
         </div>
 
@@ -145,7 +145,7 @@ export default function LandingPage() {
             Timeline ITB KAT 2024
           </h1>
           <div className="flex flex-col items-center font-mogula text-[#C5FFF3] text-shadow-blue">
-            <div className="flex justify-center gap-x-20 lg:gap-x-64 xl:gap-x-72">
+            <div className="flex flex-col md:flex-row justify-center gap-x-20 lg:gap-x-64 xl:gap-x-72">
               <Dialog>
                 <DialogTrigger asChild>
                   <div className="flex cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12">
@@ -167,12 +167,12 @@ export default function LandingPage() {
                   </div>
                 </DialogTrigger>
                 <DialogContent>
-                  <div className="relative h-[300px] w-10/12 overflow-y-scroll scrollbar-thumb-[#0010A4] scrollbar-track-[#99E0FF] scrollbar-thin overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
+                  <div className="relative h-[300px] w-full overflow-x-hidden overflow-y-scroll rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg scrollbar-thin scrollbar-track-[#99E0FF] scrollbar-thumb-[#0010A4] lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
                     <div className="my-2 text-center font-mogula text-2xl text-[#99E0FF] md:text-3xl xl:text-4xl">
                       Diklat Terpusat
                     </div>
 
-                    <div className="relative flex items-center justify-center font-rem px-6 gap-6">
+                    <div className="relative flex items-center justify-center gap-6 px-6 font-rem">
                       {/* Time Area */}
                       <div className="flex w-fit flex-col">
                         {daysDikpus.map((day, index) => (
@@ -291,12 +291,12 @@ export default function LandingPage() {
                   </div>
                 </DialogTrigger>
                 <DialogContent>
-                  <div className="relative h-[300px] w-10/12 overflow-y-scroll scrollbar-thumb-[#0010A4] scrollbar-track-[#99E0FF] scrollbar-thin overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
+                  <div className="relative h-[300px] w-full overflow-x-hidden overflow-y-scroll rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg scrollbar-thin scrollbar-track-[#99E0FF] scrollbar-thumb-[#0010A4] lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
                     <div className="my-2 text-center font-mogula text-2xl text-[#99E0FF] md:text-3xl xl:text-4xl">
                       ITB Showcase
                     </div>
 
-                    <div className="relative flex items-center justify-center font-rem px-6 gap-6">
+                    <div className="relative flex items-center justify-center gap-6 px-6 font-rem">
                       {/* Time Area */}
                       <div className="flex w-fit flex-col">
                         {daysITBShowcase.map((day, index) => (
@@ -397,7 +397,7 @@ export default function LandingPage() {
             {/* OSKM Dialog */}
             <Dialog>
               <DialogTrigger asChild>
-                <div className="flex w-5/12 cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12">
+                <div className="flex w-full cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12">
                   <Image
                     src="/landing-page/icon-oskm.webp"
                     alt="3"
@@ -416,12 +416,12 @@ export default function LandingPage() {
                 </div>
               </DialogTrigger>
               <DialogContent>
-                <div className="relative h-[300px] w-10/12 overflow-y-scroll scrollbar-thumb-[#0010A4] scrollbar-track-[#99E0FF] scrollbar-thin overflow-x-hidden rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
+                <div className="relative h-[300px] w-full overflow-x-hidden overflow-y-scroll rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg scrollbar-thin scrollbar-track-[#99E0FF] scrollbar-thumb-[#0010A4] lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
                   <div className="my-2 text-center font-mogula text-2xl text-[#99E0FF] md:text-3xl xl:text-4xl">
                     OSKM
                   </div>
 
-                  <div className="relative flex items-center justify-center font-rem px-6 gap-6">
+                  <div className="relative flex items-center justify-center gap-6 px-6 font-rem">
                     {/* Time Area */}
                     <div className="flex w-fit flex-col">
                       {daysOSKM.map((day, index) => (
@@ -532,21 +532,17 @@ export default function LandingPage() {
           </div>
         </div>
         <div className="relative -top-[120px] md:-top-[240px] xl:-top-[360px]">
-          <Image
+          <FadeInImage
+            className="absolute left-0 z-0 aspect-square w-5/12 md:w-4/12 lg:w-3/12"
             src="/landing-page/ikan-oren.webp"
-            alt="penyu"
-            width={500}
-            height={500}
-            className="absolute left-0 z-0 w-5/12 md:w-4/12 lg:w-3/12"
-            draggable={false}
+            alt="ikan-oren"
+            direction="left"
           />
-          <Image
+          <FadeInImage
+            className="absolute right-0 z-0 w-5/12 md:w-4/12 lg:w-3/12 aspect-square"
             src="/landing-page/penyu-2.webp"
-            alt="pindang"
-            width={500}
-            height={500}
-            className="absolute right-0 z-0 w-5/12 md:w-4/12 lg:w-3/12"
-            draggable={false}
+            alt="penyu"
+            direction="right"
           />
         </div>
         <div className="relative z-10 mb-32">
@@ -561,21 +557,18 @@ export default function LandingPage() {
           </div>
         </div>
         <div className="relative -top-[100px] md:-top-[120px] xl:-top-[150px]">
-          <Image
+
+          <FadeInImage
             src="/landing-page/ikan-pindang.webp"
             alt="ikan-pindang"
-            width={500}
-            height={500}
-            className="absolute left-0 z-0 w-5/12 md:w-4/12 lg:w-3/12"
-            draggable={false}
+            className="absolute left-0 z-0 w-5/12 md:w-4/12 lg:w-3/12 aspect-square"
+            direction="left"
           />
-          <Image
+          <FadeInImage
             src="/landing-page/ubur-2.webp"
             alt="ubur-ubur"
-            width={500}
-            height={500}
-            className="absolute -top-[20px] right-0 z-0 w-4/12 md:w-3/12 lg:-top-[40px] xl:-top-[60px] xl:w-2/12"
-            draggable={false}
+            className="absolute -top-[20px] right-0 z-0 w-4/12 md:w-3/12 lg:-top-[40px] xl:-top-[60px] xl:w-2/12 aspect-square"
+            direction="right"
           />
         </div>
         <div className="relative z-10 mb-32">
@@ -586,52 +579,43 @@ export default function LandingPage() {
             <InfiniteCarousel
               items={xlargeMedpar}
               direction="left"
-              speed={20}
               size="xlarge"
             />
             <InfiniteCarousel
               items={largeMedpar}
               direction="right"
-              speed={20}
               size="large"
             />
             <InfiniteCarousel
               items={mediumMedpar}
               direction="left"
-              speed={10}
               size="medium"
             />
             <InfiniteCarousel
               items={smallMedpar}
               direction="right"
-              speed={20}
               size="small"
             />
           </div>
         </div>
         <div className="relative top-[-60px]">
-          <Image
+          <FadeInImage
             src="/landing-page/ikan-naga.webp"
             alt="ikan-naga"
-            width={500}
-            height={500}
-            className="absolute left-0 z-10 w-5/12 md:w-4/12 xl:w-3/12 scale-x-[-1]"
-            draggable={false}
+            className="absolute -left-7 md:left-0 z-10 w-5/12 scale-x-[-1] md:w-4/12 xl:w-3/12 aspect-square"
+            direction="left"
           />
-          <Image
+          <FadeInImage
             src="/landing-page/ubur-pink.webp"
             alt="ubur-pink"
-            width={500}
-            height={500}
-            className="absolute right-0 z-10 w-5/12 md:w-4/12 xl:w-3/12"
-            draggable={false}
+            className="absolute -right-4 md:right-0 z-10 w-5/12 md:w-4/12 xl:w-3/12 aspect-square"
           />
         </div>
         <div className="relative z-0 flex flex-col items-center">
           <h1 className="mb-6 text-center font-mogula text-3xl text-white text-shadow-pink md:text-4xl xl:text-5xl">
             Our Tenants
           </h1>
-          <div className="relative flex w-9/12 flex-col items-center justify-center rounded-lg border-[0.1px] bg-gradient-to-r py-6 shadow-[0px_0px_20px_#FFFFFF] md:w-6/12 lg:py-10 xl:w-4/12">
+          <div className="relative flex w-full flex-col items-center justify-center rounded-lg border-[0.1px] bg-gradient-to-r py-6 shadow-[0px_0px_20px_#FFFFFF] md:w-6/12 lg:py-10 xl:w-4/12">
             {/* Transparent Background Layer */}
             <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-300 to-blue-500 opacity-80"></div>
 

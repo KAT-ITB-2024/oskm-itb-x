@@ -9,6 +9,12 @@ import {
 } from "~/components/ui/carousel";
 import CardPreview from "./components/card-preview";
 
+export const metadata = {
+  title: "ITB - X",
+  description: "ITB - X",
+  icons: [{ rel: "icon", url: "/logo/logo.png" }],
+};
+
 export default function DetailPage() {
   const images = [
     "/itb-x/detail/hmif-1.png",

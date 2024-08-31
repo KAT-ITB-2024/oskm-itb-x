@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 import styles from "./../styles.module.css";
@@ -11,7 +11,6 @@ interface CarouselItem {
 
 interface InfiniteCarouselProps {
   items: CarouselItem[];
-  speed: number;
   direction: "left" | "right";
   size: "xlarge" | "large" | "medium" | "small";
 }
@@ -23,44 +22,46 @@ const sizeClasses = {
   small: "w-20 h-20 md:w-28 md:h-28 xl:w-32 xl:h-32",
 };
 
-const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
+const InfiniteCarousel: React.FC<InfiniteCarouselProps> = React.memo(({
   items,
-  speed,
   direction,
   size,
 }) => {
-  const [loopItems, setLoopItems] = useState<CarouselItem[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [loopItems, setLoopItems] = useState<CarouselItem[]>([]);
 
   useEffect(() => {
-    // Duplikasi item untuk efek infinite
     setLoopItems([...items, ...items]);
   }, [items]);
 
-  useEffect(() => {
+  const animateScroll = useCallback(() => {
     const container = containerRef.current;
     if (!container) return;
 
-    const animateScroll = () => {
-      if (direction === "left") {
-        if (container.scrollLeft >= container.scrollWidth / 2) {
-          container.scrollLeft = 0;
-        } else {
-          container.scrollLeft += 1;
-        }
-      } else {
-        if (container.scrollLeft <= 0) {
-          container.scrollLeft = container.scrollWidth / 2;
-        } else {
-          container.scrollLeft -= 1;
-        }
+    const scrollAmount = 1;
+    const maxScroll = container.scrollWidth / 2;
+
+    if (direction === "left") {
+      container.scrollLeft += scrollAmount;
+      if (container.scrollLeft >= maxScroll) {
+        container.scrollLeft = 0;
       }
-    };
+    } else {
+      container.scrollLeft -= scrollAmount;
+      if (container.scrollLeft <= 0) {
+        container.scrollLeft = maxScroll;
+      }
+    }
+  }, [direction]);
 
-    const animation = setInterval(animateScroll, speed);
+  useEffect(() => {
+    const animationId = requestAnimationFrame(function animate() {
+      animateScroll();
+      requestAnimationFrame(animate);
+    });
 
-    return () => clearInterval(animation);
-  }, [direction, speed]);
+    return () => cancelAnimationFrame(animationId);
+  }, [animateScroll]);
 
   return (
     <div className="w-full overflow-hidden" ref={containerRef}>
@@ -75,7 +76,8 @@ const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
                 src={item.src}
                 alt={item.alt}
                 fill
-                objectFit="contain"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                style={{ objectFit: "contain" }}
                 draggable={false}
               />
             </div>
@@ -84,6 +86,8 @@ const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
       </div>
     </div>
   );
-};
+});
+
+InfiniteCarousel.displayName = 'InfiniteCarousel';
 
 export default InfiniteCarousel;

@@ -40,19 +40,19 @@ const SearchBar = ({
 
   return (
     <div className="">
-      <div className="flex w-full items-center justify-center gap-3">
-        <div className="w-3/4 rounded-lg flex md:flex-row flex-row-reverse gap-2 bg-white items-center px-2">
-          <IoSearch className="text-gray-400"/>
+      <div className="flex w-full flex-col items-center justify-center gap-3 lg:flex-row">
+        <div className="flex w-full flex-row-reverse items-center gap-2 rounded-lg bg-white px-2 md:flex-row lg:w-3/4">
+          <IoSearch className="text-gray-400" />
           <input
             type="text"
             placeholder="Cari artikel berdasarkan judul atau penulis disini..."
             value={searchQuery}
             onChange={(e) => handleSearch(e.target.value)}
-            className="w-full py-1.5 rounded-lg font-rem text-sm focus:border-none focus:outline-none"
+            className="w-full rounded-lg py-2 font-rem text-sm focus:border-none focus:outline-none"
           />
         </div>
 
-        <div className="w-1/4">
+        <div className="w-full rounded-lg bg-white px-2 py-1.5 lg:w-1/4">
           <select
             id="filterSelect"
             value={filter}
@@ -62,7 +62,7 @@ const SearchBar = ({
                 handleFilter(selectedFilter);
               }
             }}
-            className="w-full py-1.5 rounded-lg px-2 text-sm appearance-none"
+            className="w-full text-sm focus:border-none focus:outline-none"
           >
             <option value="Urutkan Berdasarkan" disabled selected>
               Urutkan Berdasarkan

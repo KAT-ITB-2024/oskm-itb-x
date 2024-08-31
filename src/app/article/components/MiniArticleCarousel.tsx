@@ -32,7 +32,7 @@ const MiniArticleCarousel: React.FC = () => {
     const nextBatch = currentBatch + 1;
     const nextArticles = articles.slice(
       nextBatch * articlesPerBatch,
-      (nextBatch + 1) * articlesPerBatch
+      (nextBatch + 1) * articlesPerBatch,
     );
 
     if (nextArticles.length > 0) {
@@ -42,10 +42,12 @@ const MiniArticleCarousel: React.FC = () => {
   };
 
   return (
-    <div className="bg-[url('/article-icons/blog-background.webp')] bg-cover bg-center h-auto md:h-screen relative py-10 px-10 md:px-20">
-      <h2 className="font-mogula md:text-[48px] text-4xl drop-shadow-lg text-white text-center md:text-left">Read More Articles</h2>
-      <button className="prev-button absolute top-1/2 -translate-y-1/2 z-10 bg-transparent border-none cursor-pointer" />
-      <button className="next-button absolute top-1/2 -translate-y-1/2 z-10 bg-transparent border-none cursor-pointer" />
+    <div className="relative h-auto bg-[url('/article-icons/blog-background.webp')] bg-cover bg-center px-10 py-10 md:h-screen md:px-20">
+      <h2 className="text-center font-mogula text-4xl text-white drop-shadow-lg md:text-left md:text-[48px]">
+        Read More Articles
+      </h2>
+      <button className="prev-button absolute top-1/2 z-10 -translate-y-1/2 cursor-pointer border-none bg-transparent" />
+      <button className="next-button absolute top-1/2 z-10 -translate-y-1/2 cursor-pointer border-none bg-transparent" />
 
       <Swiper
         modules={[Navigation, Autoplay]}
@@ -72,13 +74,10 @@ const MiniArticleCarousel: React.FC = () => {
             loadMoreArticles();
           }
         }}
-        className="w-full mx-10 h-[480px] overflow-clip"
+        className="mx-10 h-[480px] overflow-clip"
       >
         {visibleArticles.map((card) => (
-          <SwiperSlide
-            key={card.id}
-            className="px-4"
-          >
+          <SwiperSlide key={card.id} className="flex w-fit px-4">
             <Card
               key={card.id}
               id={card.id}
@@ -96,8 +95,10 @@ const MiniArticleCarousel: React.FC = () => {
         ))}
       </Swiper>
 
-      <div className="flex w-full items-center justify-center z-10">
-        <Button variant="pink" className="z-10"><Link href="/article/list">More Articles {'>'}</Link></Button>
+      <div className="z-10 flex w-full items-center justify-center">
+        <Button variant="pink" className="z-10">
+          <Link href="/article/list">More Articles {">"}</Link>
+        </Button>
       </div>
     </div>
   );
