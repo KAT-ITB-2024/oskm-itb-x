@@ -49,7 +49,7 @@ function SliderContainer(props: SliderContainerProps) {
   }, [api, updateIndex]);
 
   return (
-    <div className="relative h-[560px] w-[80vw] rounded-[36px] bg-[radial-gradient(109.4%_109.4%_at_50%_50%,_rgba(170,233,218,0.75)_0%,_rgba(211,246,244,0.75)_99.99%,_rgba(245,245,245,0.75)_100%)] px-6 py-1">
+    <div className="relative h-[370px] w-[80vw] rounded-[36px] bg-[radial-gradient(109.4%_109.4%_at_50%_50%,_rgba(170,233,218,0.75)_0%,_rgba(211,246,244,0.75)_99.99%,_rgba(245,245,245,0.75)_100%)] px-6 py-1 sm:h-[560px]">
       <Carousel
         opts={{ loop: true }}
         plugins={[
@@ -76,7 +76,7 @@ function SliderContainer(props: SliderContainerProps) {
         <CarouselPrevious className="flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full bg-[#f9feab] shadow-[2px_3px_20px_0px_#FFBF51] hover:bg-[#eff590]" />
         <CarouselNext className="flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full bg-[#f9feab] shadow-[2px_3px_20px_0px_#FFBF51] hover:bg-[#eff590]" />
       </Carousel>
-      <div className="absolute bottom-14 left-1/2">
+      <div className="absolute bottom-14 left-[37%] sm:left-1/2">
         <SliderPagination count={data.length} activeIndex={activeIndex} />
       </div>
     </div>

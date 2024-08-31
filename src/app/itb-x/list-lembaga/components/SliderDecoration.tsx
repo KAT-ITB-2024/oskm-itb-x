@@ -21,7 +21,7 @@ function SliderDecoration(props: SliderDecorationProps) {
   };
 
   return (
-    <div className="relative h-full w-[50px] rotate-180 overflow-hidden rounded-[136px] bg-[url('/itb-x/bg-ellips.png')] bg-[left_5%_top_37%] shadow-[2px_2px_5px_0px_#FFBF51] md:w-[85px] lg:w-[130px]">
+    <div className="relative hidden h-full w-[50px] rotate-180 overflow-hidden rounded-[136px] bg-[url('/itb-x/bg-ellips.png')] bg-[left_5%_top_37%] shadow-[2px_2px_5px_0px_#FFBF51] sm:block md:w-[85px] lg:w-[130px]">
       {/** Top decoration */}
       <Image
         src={getDecorationSrc(fakultasName)}
