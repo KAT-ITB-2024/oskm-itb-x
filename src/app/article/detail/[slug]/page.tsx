@@ -26,7 +26,7 @@ const Page: React.FC = () => {
 
   return (
     <>
-      <div className="w-full bg-[url('/article-icons/BgDetail.png')] py-40">
+      <div className="w-full bg-[url('/article-icons/BgDetail.png')] pt-40">
         {article && (
           <div className="flex flex-col items-center px-[5%]">
             <h1 className="mb-6 text-center font-mogula text-2xl text-white md:text-5xl">
@@ -61,7 +61,7 @@ const Page: React.FC = () => {
               </div>
             </div>
 
-            <div className="relative my-10 aspect-video w-1/2 max-w-2xl overflow-hidden rounded-xl">
+            <div className="relative my-10 aspect-video w-[90%] max-w-2xl overflow-hidden rounded-xl md:w-1/2">
               <Image
                 src={article.image.url}
                 alt={article.title}
@@ -71,7 +71,7 @@ const Page: React.FC = () => {
               />
             </div>
 
-            <div className="my-10 w-full max-w-[70rem] px-10 text-[#ff3e3e]">
+            <div className="mb-10 w-full max-w-[70rem] px-10 text-[#ff3e3e]">
               <p className="text-white">{article.description}</p>
             </div>
           </div>
@@ -82,9 +82,6 @@ const Page: React.FC = () => {
 
         {/* MiniArticleCarousel Component */}
         <MiniArticleCarousel />
-
-        {/* Spacer below the button */}
-        <div style={styles.spacer} />
       </div>
     </>
   );

@@ -15,7 +15,7 @@ const Card: React.FC<Article> = ({
 }) => {
   return (
     <div
-      className="relative mt-6 flex h-[400px] w-full scale-100 transform flex-col justify-between overflow-hidden rounded-[20px] bg-white p-[20px_15px] text-center shadow-lg transition-transform duration-300"
+      className="relative mx-auto mt-6 flex h-[400px] w-[275px] scale-100 transform flex-col justify-between self-center overflow-hidden rounded-[20px] bg-white p-[20px_15px] text-center shadow-lg transition-transform duration-300 sm:w-[300px]"
       onMouseEnter={(e) => {
         (e.currentTarget as HTMLDivElement).style.transform = "scale(1.1)";
         (e.currentTarget as HTMLDivElement).style.boxShadow =
@@ -30,9 +30,9 @@ const Card: React.FC<Article> = ({
       <Image
         src={image.url}
         alt={title}
-        width={5000}
-        height={5000}
-        className="mx-auto h-[300px] rounded-[20px] object-cover shadow-md"
+        width={4040}
+        height={300}
+        className="h-[300px] rounded-[20px] object-cover shadow-md"
       />
       <div className="mt-2 flex flex-1 flex-col justify-between px-1 py-[5px]">
         <h2
