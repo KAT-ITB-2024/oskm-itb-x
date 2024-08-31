@@ -2,7 +2,7 @@
 
 import React, { useCallback, useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
-import { daftar_nama_hmps, HimpunanBSO } from "../data/data_lembaga";
+import { daftar_nama_hmps } from "../data/data_lembaga";
 import ListHimpunanBSO from "../components/ListHimpunanBSO";
 import SliderContainer from "../components/SliderContainer";
 
@@ -12,35 +12,29 @@ function HmpsBso() {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQ, setSearchQ] = useState("");
 
-  const handleSearch = useCallback(() => {
-    if (selectedFakultas.length === 0) {
-      setFilteredData(
-        daftar_nama_hmps.filter((himpunan) =>
-          searchQ
-            ? himpunan.nama.toLowerCase().includes(searchQ.toLowerCase())
-            : true,
-        ),
-      );
-    } else {
-      setFilteredData(
-        daftar_nama_hmps
-          .filter((himpunan) => selectedFakultas.includes(himpunan.fakultas))
-          .filter((himpunan) =>
-            searchQ
-              ? himpunan.nama.toLowerCase().includes(searchQ.toLowerCase())
-              : true,
-          ),
-      );
-    }
+  const filterData = (searchQ: string, selectedFakultas: string[]) => {
+    return daftar_nama_hmps.filter((himpunan) => {
+      const matchesFakultas =
+        selectedFakultas.length === 0 ||
+        selectedFakultas.includes(himpunan.fakultas);
+      const matchesSearch = searchQ
+        ? himpunan.nama.toLowerCase().includes(searchQ.toLowerCase())
+        : true;
+      return matchesFakultas && matchesSearch;
+    });
+  };
 
-    if (currentPage > Math.ceil(filteredData.length / 6)) {
-      setCurrentPage(1);
-    }
-  }, [searchQ, selectedFakultas, filteredData, currentPage]);
+  const filterDataWithoutParams = () => {
+    return filterData(searchQ, selectedFakultas);
+  };
 
   useEffect(() => {
-    handleSearch();
-  }, [handleSearch, searchQ, selectedFakultas]);
+    const data = filterData(searchQ, selectedFakultas);
+    setFilteredData(data);
+    if (currentPage > Math.ceil(data.length / 6)) {
+      setCurrentPage(1);
+    }
+  }, [searchQ, selectedFakultas, currentPage]);
 
   const fakultasList = [
     ...new Set(daftar_nama_hmps.map((himpunan) => himpunan.fakultas)),
@@ -72,7 +66,7 @@ function HmpsBso() {
       <SliderContainer data={tempData} />
       <div className="mt-6 w-[85vw]">
         <SearchBar
-          onSearch={handleSearch}
+          onSearch={filterDataWithoutParams}
           fakultasList={fakultasList}
           selectedFakultas={selectedFakultas}
           setSelectedFakultas={setSelectedFakultas}

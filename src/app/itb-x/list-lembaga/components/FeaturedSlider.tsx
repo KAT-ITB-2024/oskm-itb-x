@@ -18,7 +18,7 @@ function FeaturedSlider(props: SliderProps) {
           <p className="pt-6 font-mogula text-[24px] leading-[32px] text-white">
             {name}
           </p>
-          <SliderButton disabled={link ? false : true} />
+          <SliderButton />
         </div>
       </div>
     </div>

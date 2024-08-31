@@ -16,6 +16,7 @@ function Page({ params }: { params: { rumpun: string } }) {
   for (let i = 0; i < 15; i++) {
     const newData = {
       nama_lembaga: `Unit ${i}`,
+      logoSrc: "/itb-x/logo-itbx.png",
     };
     tempData.push(newData);
   }

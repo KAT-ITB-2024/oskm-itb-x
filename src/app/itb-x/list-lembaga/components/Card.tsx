@@ -50,7 +50,7 @@ function Card(props: CardProps) {
             {nama}
           </p>
           <div className="mt-1 lg:mt-8">
-            <EllipsLembaga />
+            <EllipsLembaga imgSrc={logo_path ? logo_path : undefined} />
           </div>
           <Image
             src="/itb-x/ombak-right.png"

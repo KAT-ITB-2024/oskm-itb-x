@@ -6,6 +6,7 @@ type HimpunanBSO = {
   fakultas: string;
   program_studi: string;
   nama: string;
+  logoPath?: string;
 };
 const data_himpunan = himpunan;
 const filterSameName = (dftr_lembaga: HimpunanBSO[]) => {

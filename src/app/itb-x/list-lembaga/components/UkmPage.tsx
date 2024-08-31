@@ -17,7 +17,7 @@ function UkmPage() {
         <UKMIconCard category_name="Pendidikan" />
         <UKMIconCard category_name="Kajian" />
         <UKMIconCard category_name="Media" />
-        <UKMIconCard category_name="Olahraga & Kesehatan" />
+        <UKMIconCard category_name="OlahragaKesehatan" />
         <UKMIconCard category_name="Seni Budaya" />
       </div>
     </div>

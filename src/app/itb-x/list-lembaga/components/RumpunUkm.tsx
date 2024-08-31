@@ -25,7 +25,7 @@ function RumpunUkm(props: RumpunUkmProps) {
       "Pendidikan",
       "Kajian",
       "Media",
-      "Olahraga & Kesehatan",
+      "OlahragaKesehatan",
       "Seni Budaya",
     ].includes(nama_rumpun)
   ) {
@@ -62,7 +62,9 @@ function RumpunUkm(props: RumpunUkmProps) {
   return (
     <div className="flex flex-col items-center">
       <p className="my-4 text-center text-[32px] leading-[28px] text-[#0010A4] md:my-6 lg:my-8 lg:text-[60px]">
-        {nama_rumpun}
+        {nama_rumpun === "OlahragaKesehatan"
+          ? "Olahraga & Kesehatan"
+          : nama_rumpun}
       </p>
       <div className="mt-5 grid w-[90%] grid-cols-1 gap-y-10 md:mt-8 md:grid-cols-2 lg:mt-10 lg:w-[95%] lg:grid-cols-3">
         {currentItems.map((data_ukm, index) => (

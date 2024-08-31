@@ -53,7 +53,11 @@ function ListHimpunanBSO({
             className={`grid w-full grid-cols-1 grid-rows-2 ${currentItems.length > 3 ? "lg:grid-rows-2" : "lg:grid-rows-1"} justify-center gap-6 md:grid-cols-2 md:gap-x-[50px] lg:grid-cols-3 lg:justify-between lg:gap-x-2 lg:gap-y-16`}
           >
             {currentItems.map((himpunan, index) => (
-              <Card key={index} nama={himpunan.nama} />
+              <Card
+                key={index}
+                nama={himpunan.nama}
+                logo_path={himpunan.logoPath ? himpunan.logoPath : undefined}
+              />
             ))}
           </div>
           <div className="my-10">

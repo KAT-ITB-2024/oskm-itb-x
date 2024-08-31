@@ -28,7 +28,7 @@ function SliderDecoration(props: SliderDecorationProps) {
         alt={fakultasName}
         width={256}
         height={256}
-        className={`absolute bottom-0 -translate-y-5 rotate-[175deg] scale-[3] md:translate-y-1 md:scale-[2] lg:translate-y-1 lg:scale-[1.6]`}
+        className={`absolute bottom-0 -translate-y-5 rotate-[180deg] scale-[3] md:translate-y-1 md:scale-[2] lg:translate-y-1 lg:scale-[1.6]`}
       />
       {/** Bottom decoration */}
       <Image
@@ -36,7 +36,7 @@ function SliderDecoration(props: SliderDecorationProps) {
         alt={fakultasName}
         width={256}
         height={256}
-        className={`absolute top-0 translate-y-5 rotate-[5deg] scale-[3] md:-translate-y-1 md:scale-[2] lg:-translate-y-1 lg:scale-[1.6]`}
+        className={`absolute top-0 translate-y-5 scale-[3] md:-translate-y-1 md:scale-[2] lg:-translate-y-1 lg:scale-[1.6]`}
       />
     </div>
   );

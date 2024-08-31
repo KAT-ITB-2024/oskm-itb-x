@@ -1,6 +1,6 @@
 import React from "react";
 
-function SliderButton({ disabled }: { disabled: boolean }) {
+function SliderButton() {
   return (
     <button
       disabled
