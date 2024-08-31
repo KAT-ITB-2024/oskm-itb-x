@@ -11,14 +11,14 @@ function UkmPage() {
       <UKMVideo isExternalSource={true} videoSrc="" />
       <div
         id="Ukm_Selections"
-        className="grid w-[85vw] grid-cols-3 justify-items-center gap-x-6"
+        className="grid w-[85vw] grid-cols-2 justify-items-center gap-x-6 lg:grid-cols-3"
       >
         <UKMIconCard category_name="Agama" />
         <UKMIconCard category_name="Pendidikan" />
         <UKMIconCard category_name="Kajian" />
         <UKMIconCard category_name="Media" />
         <UKMIconCard category_name="OlahragaKesehatan" />
-        <UKMIconCard category_name="Seni Budaya" />
+        <UKMIconCard category_name="SeniBudaya" />
       </div>
     </div>
   );

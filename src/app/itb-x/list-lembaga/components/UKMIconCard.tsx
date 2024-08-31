@@ -9,7 +9,7 @@ interface UKMIconCard {
     | "Kajian"
     | "Media"
     | "OlahragaKesehatan"
-    | "Seni Budaya";
+    | "SeniBudaya";
 }
 
 function UKMIconCard(props: UKMIconCard) {
@@ -27,7 +27,7 @@ function UKMIconCard(props: UKMIconCard) {
         return "/itb-x/icon-ukm/icon_ukm_media.png";
       case "OlahragaKesehatan":
         return "/itb-x/icon-ukm/icon_ukm_olahraga-kesehatan.png";
-      case "Seni Budaya":
+      case "SeniBudaya":
         return "/itb-x/icon-ukm/icon_ukm_senibudaya.png";
     }
   }
@@ -56,7 +56,9 @@ function UKMIconCard(props: UKMIconCard) {
           >
             {category_name === "OlahragaKesehatan"
               ? "Olahraga & Kesehatan"
-              : category_name}
+              : category_name === "SeniBudaya"
+                ? "Seni Budaya"
+                : category_name}
           </p>
           <Link
             href={`/itb-x/list-lembaga/ukm/${category_name}`}

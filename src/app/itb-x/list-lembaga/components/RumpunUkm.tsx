@@ -26,7 +26,7 @@ function RumpunUkm(props: RumpunUkmProps) {
       "Kajian",
       "Media",
       "OlahragaKesehatan",
-      "Seni Budaya",
+      "SeniBudaya",
     ].includes(nama_rumpun)
   ) {
     router.push("/itb-x/list-lembaga/ukm");
@@ -64,7 +64,9 @@ function RumpunUkm(props: RumpunUkmProps) {
       <p className="my-4 text-center text-[32px] leading-[28px] text-[#0010A4] md:my-6 lg:my-8 lg:text-[60px]">
         {nama_rumpun === "OlahragaKesehatan"
           ? "Olahraga & Kesehatan"
-          : nama_rumpun}
+          : nama_rumpun === "SeniBudaya"
+            ? "Seni Budaya"
+            : nama_rumpun}
       </p>
       <div className="mt-5 grid w-[90%] grid-cols-1 gap-y-10 md:mt-8 md:grid-cols-2 lg:mt-10 lg:w-[95%] lg:grid-cols-3">
         {currentItems.map((data_ukm, index) => (
