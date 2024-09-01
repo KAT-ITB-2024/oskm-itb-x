@@ -5,8 +5,8 @@ import MerchandiseSlider from "./components/MerchandiseSlider";
 import MerchandiseList from "./components/MerchandiseList";
 
 export const metadata = {
-  title: "Merhcandise",
-  description: "Merchantdise OSKM ITB 2024",
+  title: "Merchandise",
+  description: "Merchandise OSKM ITB 2024",
   icons: [{ rel: "icon", url: "/logo/logo.png" }],
 };
 
@@ -133,7 +133,7 @@ export default function Page() {
             <li>
               <a
                 className="flex flex-col justify-center gap-2 text-center"
-                href="bit.ly/POMerchOSKM24"
+                href="https://bit.ly/POMerchOSKM24"
                 target="_blank"
               >
                 <h1 className="font-mogula text-3xl text-[#FEFDA3] [text-shadow:_0px_0px_20px_rgb(255_255_255_/_100%)]">

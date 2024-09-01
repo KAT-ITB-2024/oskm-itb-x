@@ -52,23 +52,9 @@ export const largeMedpar = [
   { src: "/medpar/large/kbr_media.png", alt: "kbr_media" },
   { src: "/medpar/large/tempo_aja.png", alt: "tempo_aja" },
   { src: "/medpar/large/tribun_jabar.jpg", alt: "tribun_jabar" },
-  {
-    src: "/medpar/large/info_webinar.jpg",
-    alt: "info_webinar",
-  },
-  { src: "/medpar/large/kbr_media.png", alt: "kbr_media" },
-  { src: "/medpar/large/tempo_aja.png", alt: "tempo_aja" },
-  { src: "/medpar/large/tribun_jabar.jpg", alt: "tribun_jabar" },
 ];
 
 export const xlargeMedpar = [
-  {
-    src: "/medpar/xlarge/8eh.png",
-    alt: "8eh",
-  },
-  { src: "/medpar/xlarge/indozone.png", alt: "indozone" },
-  { src: "/medpar/xlarge/fair.png", alt: "fair" },
-  { src: "/medpar/xlarge/ogi.png", alt: "ogi" },
   {
     src: "/medpar/xlarge/8eh.png",
     alt: "8eh",

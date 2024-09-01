@@ -152,7 +152,7 @@ function Footer() {
 
       {/* Mobile */}
       <Image
-        src="/components/footer-mobile.png"
+        src="/components/footer-mobile.webp"
         alt="Footer"
         width={393}
         height={375}
