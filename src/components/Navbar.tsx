@@ -24,21 +24,13 @@ function Navbar() {
 
         <div className="relative flex h-full items-center justify-between px-6 lg:px-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center pt-1">
             <Image
-              src="/logo/logo.png"
+              src="/logo/logo.webp"
               alt="Logo"
               width={360}
               height={360}
-              className="size-16"
-              draggable={false}
-            />
-            <Image
-              src="/logo/title.png"
-              alt="Title"
-              width={360}
-              height={360}
-              className="w-28"
+              className="w-48 lg:w-52"
               draggable={false}
             />
           </Link>
