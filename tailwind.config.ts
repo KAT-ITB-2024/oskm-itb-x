@@ -73,17 +73,21 @@ const config = {
         infinite_scroll_right: {
           "100%": { transform: "translateX(50%)" },
         },
-        "infinite-scroll": {
+        "slide-left": {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-100%)" },
         },
+        "slide-right": {
+          from: { transform: "translateX(-100%)" },
+          to: { transform: "translateX(0)" },
+        },
         float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
         },
         rotate: {
-          '0%, 100%': { transform: 'rotate(0deg)' },
-          '50%': { transform: 'rotate(10deg)' },
+          "0%, 100%": { transform: "rotate(0deg)" },
+          "50%": { transform: "rotate(10deg)" },
         },
       },
       animation: {
@@ -91,9 +95,10 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         infinite_scroll_left: "infinite_scroll_left 10s linear infinite",
         infinite_scroll_right: "infinite_scroll_right 10s linear infinite",
-        "infinite-scroll": "infinite-scroll 25s linear infinite",
-        float: 'float 3s ease-in-out infinite',
-        rotate: 'rotate 3s ease-in-out infinite',
+        "slide-left": "slide-left 10s linear infinite",
+        "slide-right": "slide-right 10s linear infinite",
+        float: "float 3s ease-in-out infinite",
+        rotate: "rotate 3s ease-in-out infinite",
       },
       fontFamily: {
         rem: "var(--font-rem)",
@@ -107,7 +112,7 @@ const config = {
     },
   },
   plugins: [
-    require('tailwind-scrollbar'),
+    require("tailwind-scrollbar"),
     require("tailwindcss-animate"),
     function ({
       addUtilities,

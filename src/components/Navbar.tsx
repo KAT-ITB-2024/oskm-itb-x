@@ -102,7 +102,7 @@ function Navbar() {
                   <Link href="">ITB-X</Link>
                 </li>
                 <li>
-                  <Link href="">
+                  <Link href={"https://app.oskmitb.com/"}>
                     <Button variant="yellow" className="font-rem">OceanLog</Button>
                   </Link>
                 </li>
@@ -160,7 +160,7 @@ function Navbar() {
               <Link href="">ITB-X</Link>
             </li>
             <li>
-              <Link href="">
+              <Link href="https://app.oskmitb.com/">
                 <Button variant="yellow" className="font-rem">OceanLog</Button>
               </Link>
             </li>
