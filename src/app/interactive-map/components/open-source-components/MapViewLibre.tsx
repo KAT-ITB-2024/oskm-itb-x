@@ -94,16 +94,16 @@ function MapViewLibre(props: MapViewProps) {
   ]);
 
   return (
-    <div className="relative h-[85vh] w-[100%] lg:h-[90vh]">
+    <div className="relative w-full h-full">
       <div ref={mapContainer} className="absolute h-[100%] w-[100%]" />
-      <div className="absolute top-[10%] ml-4 lg:top-[15%]">
+      <div className="absolute left-1/2 top-2 -translate-x-1/2 md:left-6 md:top-6 md:translate-x-0">
         <MapSelector
           toggleLocationChoice={toggleLocationChoice}
           locationChoice={locationChoice}
         />
       </div>
       {isPopupVisible && (
-        <div className="pointer-events-none fixed inset-0 z-40 bg-black opacity-50" />
+        <div className="pointer-events-none absolute inset-0 z-40 bg-black opacity-50" />
       )}
       {isPopupVisible && currLocData && (
         <>

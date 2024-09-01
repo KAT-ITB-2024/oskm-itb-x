@@ -14,6 +14,8 @@ import {
 } from "./constants";
 
 import FadeInImage from "~/components/FadeInImage";
+import Link from "next/link";
+import SponsorList from "./component/SponsorList";
 
 export default function LandingPage() {
   const daysDikpus = [
@@ -89,7 +91,7 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="bg-[url('/landing-page/bg-landing.webp')] bg-cover bg-center">
+    <div className="bg-[url('/landing-page/bg-landing.webp')] bg-cover bg-center overflow-hidden">
       <div className="container py-20">
         <div className="flex flex-col items-center">
           <Image
@@ -111,13 +113,13 @@ export default function LandingPage() {
         </div>
         <div className="relative bottom-[-160px]">
           <FadeInImage
-            className="absolute -left-20 md:left-0 top-[4rem] md:top-0 z-0 aspect-square w-[60%] md:w-4/12 lg:w-3/12"
+            className="absolute -left-20 top-[4rem] z-0 aspect-square w-[60%] md:left-0 md:top-0 md:w-4/12 lg:w-3/12"
             src="/landing-page/penyu.webp"
             alt="penyu"
             direction="left"
           />
           <FadeInImage
-            className="absolute -right-10 md:right-0 top-[4rem] md:top-0 z-0 aspect-square w-5/12 md:w-4/12 lg:w-3/12"
+            className="absolute -right-10 top-[4rem] z-0 aspect-square w-5/12 md:right-0 md:top-0 md:w-4/12 lg:w-3/12"
             src="/landing-page/pindang.png"
             alt="pindang"
             direction="right"
@@ -126,17 +128,18 @@ export default function LandingPage() {
 
         <div className="relative z-10 mx-10 -mt-5 mb-32 md:-mt-10">
           <Countdown targetDate="2024-08-20T09:00:00" />
-          <div className="flex flex-col justify-center gap-y-4 font-rem md:flex-row md:gap-x-4">
-            <Button
-              variant={"secondary"}
-              className="relative z-10 p-4 md:text-xl"
-            >
-              <IoMdDownload className="mr-2 h-4 w-4" />
-              Download Guidebook
-            </Button>
-            <Button variant={"pink"} className="relative z-10 p-4 md:text-xl">
-              Explore Ocean Now!
-            </Button>
+          <div className="flex flex-col justify-center items-center gap-y-4 font-rem md:flex-row md:gap-x-4">
+            <Link href={"https://drive.google.com/drive/u/0/home"}>
+              <Button variant={"secondary"} className="relative z-10 md:text-[1rem]">
+                <IoMdDownload className="mr-2 h-4 w-4" />
+                The Book
+              </Button>
+            </Link>
+            <Link href={"https://app.oskmitb.com/"}>
+              <Button variant={"pink"} className="relative z-10 md:text-[1rem]">
+                Explore Ocean Now!
+              </Button>
+            </Link>
           </div>
         </div>
 
@@ -145,7 +148,7 @@ export default function LandingPage() {
             Timeline ITB KAT 2024
           </h1>
           <div className="flex flex-col items-center font-mogula text-[#C5FFF3] text-shadow-blue">
-            <div className="flex flex-col md:flex-row justify-center gap-x-20 lg:gap-x-64 xl:gap-x-72">
+            <div className="flex flex-col justify-center gap-x-20 md:flex-row lg:gap-x-64 xl:gap-x-72">
               <Dialog>
                 <DialogTrigger asChild>
                   <div className="flex cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12">
@@ -539,7 +542,7 @@ export default function LandingPage() {
             direction="left"
           />
           <FadeInImage
-            className="absolute right-0 z-0 w-5/12 md:w-4/12 lg:w-3/12 aspect-square"
+            className="absolute right-0 z-0 aspect-square w-5/12 md:w-4/12 lg:w-3/12"
             src="/landing-page/penyu-2.webp"
             alt="penyu"
             direction="right"
@@ -550,6 +553,7 @@ export default function LandingPage() {
             Our Sponsors
           </h1>
           <div className="flex flex-col items-center justify-center">
+            <SponsorList />
             {/* <InfiniteCarousel items={logos} direction="right" speed={10} /> */}
             {/* <InfiniteCarousel logos={logos} direction="right" size="large" />
             <InfiniteCarousel logos={logos} direction="left" size="medium" />
@@ -557,21 +561,20 @@ export default function LandingPage() {
           </div>
         </div>
         <div className="relative -top-[100px] md:-top-[120px] xl:-top-[150px]">
-
           <FadeInImage
             src="/landing-page/ikan-pindang.webp"
             alt="ikan-pindang"
-            className="absolute left-0 z-0 w-5/12 md:w-4/12 lg:w-3/12 aspect-square"
+            className="absolute left-0 z-0 aspect-square w-5/12 md:w-4/12 lg:w-3/12"
             direction="left"
           />
           <FadeInImage
             src="/landing-page/ubur-2.webp"
             alt="ubur-ubur"
-            className="absolute -top-[20px] right-0 z-0 w-4/12 md:w-3/12 lg:-top-[40px] xl:-top-[60px] xl:w-2/12 aspect-square"
+            className="absolute -top-[20px] right-0 z-0 aspect-square w-4/12 md:w-3/12 lg:-top-[40px] xl:-top-[60px] xl:w-2/12"
             direction="right"
           />
         </div>
-        <div className="relative z-10 mb-32">
+        <div className="mb-32">
           <h1 className="mb-6 text-center font-mogula text-3xl text-white text-shadow-pink md:text-4xl xl:text-5xl">
             Our Media Partners
           </h1>
@@ -598,17 +601,17 @@ export default function LandingPage() {
             />
           </div>
         </div>
-        <div className="relative top-[-60px]">
+        <div className="relative top-[-60px] z-0">
           <FadeInImage
             src="/landing-page/ikan-naga.webp"
             alt="ikan-naga"
-            className="absolute -left-7 md:left-0 z-10 w-5/12 scale-x-[-1] md:w-4/12 xl:w-3/12 aspect-square"
+            className="absolute -left-7 z-10 aspect-square w-5/12 scale-x-[-1] md:left-0 md:w-4/12 xl:w-3/12"
             direction="left"
           />
           <FadeInImage
             src="/landing-page/ubur-pink.webp"
             alt="ubur-pink"
-            className="absolute -right-4 md:right-0 z-10 w-5/12 md:w-4/12 xl:w-3/12 aspect-square"
+            className="absolute -right-4 z-10 aspect-square w-5/12 md:right-0 md:w-4/12 xl:w-3/12"
           />
         </div>
         <div className="relative z-0 flex flex-col items-center">

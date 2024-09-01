@@ -77,3 +77,39 @@ export const xlargeMedpar = [
   { src: "/medpar/xlarge/fair.png", alt: "fair" },
   { src: "/medpar/xlarge/ogi.png", alt: "ogi" },
 ];
+
+export const xlargeSponsor = [
+  { src: "/sponsor/wardah.png", alt: "wardah", size: "xlarge" },
+  {
+    src: "/sponsor/paragon.png",
+    alt: "paragon",
+    size: "xlarge",
+    hasVideo: true,
+  },
+];
+
+export const largeSponsor = [
+  { src: "/sponsor/emina.png", alt: "emina", size: "large", hasVideo: true },
+  { src: "/sponsor/kahf.png", alt: "kahf", size: "large", hasVideo: true },
+  { src: "/sponsor/gojek.png", alt: "gojek", size: "large", hasVideo: true },
+];
+
+export const mediumSponsor = [
+  { src: "/sponsor/bjb.png", alt: "bjb", size: "medium" },
+  { src: "/sponsor/promag.png", alt: "promag", size: "medium" },
+  { src: "/sponsor/gery.png", alt: "gery", size: "medium", hasVideo: true },
+  { src: "/sponsor/himalaya.jpg", alt: "himalaya", size: "medium" },
+  { src: "/sponsor/lm.png", alt: "lm", size: "medium", hasVideo: true },
+  { src: "/sponsor/rohde.jpg", alt: "rohde", size: "medium" },
+];
+
+export const smallSponsor = [
+  { src: "/sponsor/ayamayaman.png", alt: "ayamayaman", size: "small" },
+  { src: "/sponsor/bsi.jpg", alt: "bsi", size: "small" },
+  { src: "/sponsor/flo.jpg", alt: "flo", size: "small" },
+  { src: "/sponsor/fruittea.png", alt: "fruittea", size: "small" },
+  { src: "/sponsor/hydrococo.png", alt: "hydrococo", size: "small" },
+  { src: "/sponsor/toteless.png", alt: "toteless", size: "small" },
+  { src: "/sponsor/wings.png", alt: "wings", size: "small" },
+  { src: "/sponsor/melati.png", alt: "melati", size: "small" },
+];
