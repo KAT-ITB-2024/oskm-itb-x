@@ -15,6 +15,7 @@ import {
 
 import FadeInImage from "~/components/FadeInImage";
 import Link from "next/link";
+import SponsorList from "./component/SponsorList";
 
 export default function LandingPage() {
   const daysDikpus = [
@@ -90,7 +91,7 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="bg-[url('/landing-page/bg-landing.webp')] bg-cover bg-center">
+    <div className="bg-[url('/landing-page/bg-landing.webp')] bg-cover bg-center overflow-hidden">
       <div className="container py-20">
         <div className="flex flex-col items-center">
           <Image
@@ -552,6 +553,7 @@ export default function LandingPage() {
             Our Sponsors
           </h1>
           <div className="flex flex-col items-center justify-center">
+            <SponsorList />
             {/* <InfiniteCarousel items={logos} direction="right" speed={10} /> */}
             {/* <InfiniteCarousel logos={logos} direction="right" size="large" />
             <InfiniteCarousel logos={logos} direction="left" size="medium" />
@@ -572,7 +574,7 @@ export default function LandingPage() {
             direction="right"
           />
         </div>
-        <div className="relative z-10 mb-32">
+        <div className="mb-32">
           <h1 className="mb-6 text-center font-mogula text-3xl text-white text-shadow-pink md:text-4xl xl:text-5xl">
             Our Media Partners
           </h1>
@@ -599,7 +601,7 @@ export default function LandingPage() {
             />
           </div>
         </div>
-        <div className="relative top-[-60px]">
+        <div className="relative top-[-60px] z-0">
           <FadeInImage
             src="/landing-page/ikan-naga.webp"
             alt="ikan-naga"
