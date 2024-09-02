@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${rem.className} ${mogula.variable} ${rem.variable}`}
+      className={`${rem.className} ${mogula.variable} ${rem.variable} scrollbar-thin scrollbar-track-[#99E0FF] scrollbar-thumb-[#0010A4] scrollbar-thumb-rounded-full`}
     >
       <body className="relative">
         <TRPCReactProvider>
