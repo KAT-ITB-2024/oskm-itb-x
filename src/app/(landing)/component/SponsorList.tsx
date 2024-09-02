@@ -18,7 +18,6 @@ const videoMap = {
 type SponsorVideo = keyof typeof videoMap;
 
 const SponsorList = () => {
-  const [isModalOpen, setIsModalOpen] = useState(true);
   const [openedSponsor, setOpenedSponsor] = useState<SponsorVideo>("hidden");
 
   return (

@@ -9,10 +9,10 @@ interface SponsorCardProps {
 }
 
 const sizeClasses = {
-  xlarge: "w-40 md:w-64 xl:w-[25rem] aspect-[2/1]",
-  large: "w-36  md:w-60 xl:w-[20rem] aspect-[2/1]",
-  medium: "w-28  md:w-40 xl:w-[15rem] aspect-[4/3]",
-  small: "w-20  md:w-28 xl:w-[10rem] aspect-[1/1]",
+  xlarge: "w-[14rem] md:w-[17rem] xl:w-[25rem] aspect-[2/1]",
+  large: "w-[12rem]  md:w-[15rem] xl:w-[20rem] aspect-[2/1]",
+  medium: "w-[8rem]  md:w-[12rem] xl:w-[15rem] aspect-[4/3]",
+  small: "w-[6rem]  md:w-[10rem] xl:w-[10rem] aspect-[1/1]",
 };
 
 const SponsorCard = ({ src, alt, size, onOpen }: SponsorCardProps) => {

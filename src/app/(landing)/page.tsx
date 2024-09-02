@@ -1,7 +1,4 @@
-"use client";
-
 import { Button } from "~/components/ui/button";
-import Countdown from "./component/Countdown";
 import Image from "next/image";
 import { IoMdDownload } from "react-icons/io";
 import InfiniteCarousel from "./component/InfiniteCarousel";
@@ -16,6 +13,11 @@ import {
 import FadeInImage from "~/components/FadeInImage";
 import Link from "next/link";
 import SponsorList from "./component/SponsorList";
+import dynamic from "next/dynamic";
+
+const Countdown = dynamic(() => import("./component/Countdown"), {
+  ssr: false,
+})
 
 export default function LandingPage() {
   const daysDikpus = [
@@ -128,7 +130,7 @@ export default function LandingPage() {
           </div>
 
           <div className="relative z-10 mx-10 -mt-5 mb-32 md:-mt-10">
-            <Countdown targetDate="2024-08-20T09:00:00" />
+            <Countdown targetDate="2024-09-04T09:00:00" />
             <div className="flex flex-col items-center justify-center gap-y-4 font-rem md:flex-row md:gap-x-4">
               <Link href={"https://drive.google.com/drive/u/0/home"}>
                 <Button
@@ -565,10 +567,6 @@ export default function LandingPage() {
             </h1>
             <div className="flex flex-col items-center justify-center">
               <SponsorList />
-              {/* <InfiniteCarousel items={logos} direction="right" speed={10} /> */}
-              {/* <InfiniteCarousel logos={logos} direction="right" size="large" />
-            <InfiniteCarousel logos={logos} direction="left" size="medium" />
-            <InfiniteCarousel logos={logos} direction="left" size="small" /> */}
             </div>
           </div>
           <div className="relative -top-[100px] md:-top-[120px] xl:-top-[150px]">
@@ -590,7 +588,7 @@ export default function LandingPage() {
           <h1 className="mb-6 text-center font-mogula text-3xl text-white text-shadow-pink md:text-4xl xl:text-5xl">
             Our Media Partners
           </h1>
-          <div className="flex flex-col items-center justify-center gap-5">
+          <div className="flex flex-col items-center justify-center gap-1 md:gap-3 lg:gap-5">
             <InfiniteCarousel
               items={xlargeMedpar}
               direction="left"
