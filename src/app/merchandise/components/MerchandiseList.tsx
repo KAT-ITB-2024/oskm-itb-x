@@ -58,18 +58,13 @@ export default function MerchandiseList({
                       className="h-auto w-auto"
                       draggable={false}
                     />
-                    <h1 className="absolute right-0 top-10 font-mogula font-normal text-[#FFBF51] [text-shadow:_3px_3px_7px_rgb(255_191_81_/_50%)]">
+                    <h1 className="absolute right-[10%] md:right-0 top-10 font-mogula font-normal text-[#FFBF51] [text-shadow:_3px_3px_7px_rgb(255_191_81_/_50%)]">
                       {item.name}
                     </h1>
                     <div className="absolute bottom-5 flex flex-col justify-center gap-4">
                       <h1 className="font-mogula text-[#FB43BD] [text-shadow:_3px_3px_14px_rgb(32_41_56_/_100%)]">
                         {item.price}
                       </h1>
-                      <div className="flex justify-center">
-                        <Button variant={"yellow"} className="font-rem">
-                          Buy Now!
-                        </Button>
-                      </div>
                     </div>
                   </div>
                 </div>

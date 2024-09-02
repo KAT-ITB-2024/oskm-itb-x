@@ -12,7 +12,11 @@ export const metadata = {
   icons: [{ rel: "icon", url: "/logo/logo.png" }],
 };
 
-export default function RootLayout() {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html
       lang="en"
@@ -20,7 +24,9 @@ export default function RootLayout() {
     >
       <body className="relative">
         <TRPCReactProvider>
-          <ComingSoon />
+        <Navbar />
+          {children}
+          <Footer />
         </TRPCReactProvider>
       </body>
     </html>

@@ -27,14 +27,6 @@ function Footer() {
               className="size-24"
               draggable={false}
             />
-            <Image
-              src="/logo/title.png"
-              alt="Title"
-              width={360}
-              height={360}
-              className="w-32"
-              draggable={false}
-            />
           </div>
 
           <div className="flex flex-col gap-2">
@@ -51,9 +43,9 @@ function Footer() {
               <li>
                 <Link href="article">Blog</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="">ITB-X</Link>
-              </li>
+              </li> */}
             </ul>
 
             <Separator className="bg-[#0010A4]" />
@@ -152,7 +144,7 @@ function Footer() {
 
       {/* Mobile */}
       <Image
-        src="/components/footer-mobile.png"
+        src="/components/footer-mobile.webp"
         alt="Footer"
         width={393}
         height={375}

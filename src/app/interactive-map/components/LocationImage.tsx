@@ -8,7 +8,7 @@ interface LocationImageProps {
 
 function LocationImage({ src }: LocationImageProps) {
   return (
-    <div className="relative h-[200px] w-[280px] scale-[90%] md:scale-100">
+    <div className="relative aspect-[14/5] w-[90%] scale-[90%] md:scale-100">
       <svg viewBox="0 0 415 279" className="absolute">
         <defs>
           <clipPath id="framePath">
@@ -21,7 +21,7 @@ function LocationImage({ src }: LocationImageProps) {
         alt="Map Image"
         width={280}
         height={300}
-        className="absolute z-[10] h-[210px] w-full"
+        className="absolute z-[10] h-[21/20] w-full"
         draggable={false}
       />
       <svg viewBox="0 0 415 279">
@@ -31,7 +31,7 @@ function LocationImage({ src }: LocationImageProps) {
           height="100%"
           clip-path="url(#framePath)"
           href={src}
-          className="absolute z-[5] translate-x-[33px] translate-y-[10px] scale-x-[80%] scale-y-[90%] transform object-cover"
+          className="absolute z-[5] translate-x-[9%] scale-x-[80%] scale-y-[90%] transform object-cover"
         />
       </svg>
     </div>

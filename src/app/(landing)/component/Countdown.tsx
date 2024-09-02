@@ -84,7 +84,7 @@ const TimeBubble: React.FC<TimeBubbleProps> = ({ value, delay }) => {
         draggable={false}
       />
       <div className="absolute text-center">
-        <div className="font-mogula text-4xl md:text-6xl">{value}</div>
+        <div className="font-mogula text-3xl md:text-[2.4rem]">{value}</div>
       </div>
     </div>
   );

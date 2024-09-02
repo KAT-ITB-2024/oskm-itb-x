@@ -5,8 +5,8 @@ import MerchandiseSlider from "./components/MerchandiseSlider";
 import MerchandiseList from "./components/MerchandiseList";
 
 export const metadata = {
-  title: "Merhcandise",
-  description: "Merchantdise OSKM ITB 2024",
+  title: "Merchandise",
+  description: "Merchandise OSKM ITB 2024",
   icons: [{ rel: "icon", url: "/logo/logo.png" }],
 };
 
@@ -131,17 +131,11 @@ export default function Page() {
         <div className="z-10 my-10 flex items-center justify-center sm:mb-0 sm:mt-8">
           <ul className="flex flex-col gap-3 sm:flex-row sm:gap-10">
             <li>
-              <a className="flex flex-col justify-center gap-2 text-center">
-                <h1 className="font-mogula text-3xl text-[#FEFDA3] [text-shadow:_0px_0px_20px_rgb(255_255_255_/_100%)]">
-                  Tokopedia
-                </h1>
-                <Button variant={"merchgreen"} className="font-remd">
-                  Ganesha Goods &gt;
-                </Button>
-              </a>
-            </li>
-            <li>
-              <a className="flex flex-col justify-center gap-2 text-center">
+              <a
+                className="flex flex-col justify-center gap-2 text-center"
+                href="https://bit.ly/POMerchOSKM24"
+                target="_blank"
+              >
                 <h1 className="font-mogula text-3xl text-[#FEFDA3] [text-shadow:_0px_0px_20px_rgb(255_255_255_/_100%)]">
                   Pre-Order
                 </h1>
@@ -151,7 +145,11 @@ export default function Page() {
               </a>
             </li>
             <li>
-              <a className="flex flex-col justify-center gap-2 text-center">
+              <a
+                className="flex flex-col justify-center gap-2 text-center"
+                href="https://www.instagram.com/ganeshagoods/?hl=en"
+                target="_blank"
+              >
                 <h1 className="font-mogula text-3xl text-[#FEFDA3] [text-shadow:_0px_0px_20px_rgb(255_255_255_/_100%)]">
                   Instagram
                 </h1>
