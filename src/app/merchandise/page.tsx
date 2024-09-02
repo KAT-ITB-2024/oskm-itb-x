@@ -90,7 +90,7 @@ export default function Page() {
   ];
 
   return (
-    <div className="relative flex flex-col items-center overflow-hidden bg-[url('/background/merchandise-background.svg')] bg-cover bg-no-repeat">
+    <div className="relative flex flex-col items-center overflow-hidden bg-[url('/background/merchandise-background.webp')] bg-cover bg-no-repeat">
       <div className="relative flex min-h-screen w-full flex-col justify-center overflow-hidden py-32 sm:py-40 ">
         <Image
           src="/components/naga.webp"
