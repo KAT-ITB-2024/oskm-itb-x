@@ -51,7 +51,7 @@ export const largeMedpar = [
   },
   { src: "/medpar/large/kbr_media.png", alt: "kbr_media" },
   { src: "/medpar/large/tempo_aja.png", alt: "tempo_aja" },
-  { src: "/medpar/large/tribun_jabar.jpg", alt: "tribun_jabar" },
+  { src: "/medpar/large/tribun.jpg", alt: "tribun" },
 ];
 
 export const xlargeMedpar = [
