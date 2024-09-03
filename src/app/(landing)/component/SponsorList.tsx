@@ -45,7 +45,7 @@ const SponsorList = () => {
             />
           ))}
         </div>
-        <div className="flex w-full max-w-4xl flex-wrap items-center justify-center gap-3">
+        <div className="flex w-full max-w-6xl flex-wrap items-center justify-center gap-3">
           {mediumSponsor.map((sponsor, index) => (
             <SponsorCard
               key={index}

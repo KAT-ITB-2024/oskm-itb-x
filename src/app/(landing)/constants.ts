@@ -91,6 +91,7 @@ export const mediumSponsor = [
   { src: "/sponsor/himalaya.jpg", alt: "himalaya", size: "medium" },
   { src: "/sponsor/lm.png", alt: "lm", size: "medium", hasVideo: true },
   { src: "/sponsor/rohde.jpg", alt: "rohde", size: "medium" },
+  { src: "/sponsor/ganesha.png", alt: "ganesha", size: "medium" },
 ];
 
 export const smallSponsor = [
