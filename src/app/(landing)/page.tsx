@@ -295,9 +295,7 @@ export default function LandingPage() {
                         draggable={false}
                       />
                       <div className="text-center">
-                        <p className="text-2xl font-bold lg:text-3xl">
-                          OSKM
-                        </p>
+                        <p className="text-2xl font-bold lg:text-3xl">OSKM</p>
                         <p className="font-rem text-sm lg:text-lg">
                           7-9 Agustus 2024
                         </p>
@@ -644,9 +642,11 @@ export default function LandingPage() {
                   </p>
                   <p className="text-center">+62-815-922-3926</p>
                 </div>
-                <Button variant="pink" className="px-6 font-rem xl:text-lg">
-                  Register Now!
-                </Button>
+                <Link href={"https://wa.me/+628159223926"} target="_blank">
+                  <Button variant="pink" className="px-6 font-rem xl:text-lg">
+                    Register Now!
+                  </Button>
+                </Link>
               </div>
 
               {/* Coral Images */}
