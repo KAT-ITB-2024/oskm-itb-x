@@ -148,9 +148,9 @@ function Navbar() {
                 Blog
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="">ITB-X</Link>
-            </li>
+            </li> */}
             <li>
               <Link href="https://app.oskmitb.com/">
                 <Button variant="yellow" className="font-rem">OceanLog</Button>
