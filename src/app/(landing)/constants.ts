@@ -102,4 +102,5 @@ export const smallSponsor = [
   { src: "/sponsor/toteless.png", alt: "toteless", size: "small" },
   { src: "/sponsor/wings.png", alt: "wings", size: "small" },
   { src: "/sponsor/melati.png", alt: "melati", size: "small" },
+  { src: "/sponsor/juwara.png", alt: "juwara", size: "small" },
 ];
