@@ -65,19 +65,23 @@ export const xlargeMedpar = [
 ];
 
 export const xlargeSponsor = [
-  { src: "/sponsor/wardah.png", alt: "wardah", size: "xlarge" },
   {
     src: "/sponsor/paragon.png",
     alt: "paragon",
     size: "xlarge",
     hasVideo: true,
   },
+  {
+    src: "/sponsor/grab.png",
+    alt: "grab",
+    size: "xlarge",
+  },
 ];
 
 export const largeSponsor = [
+  { src: "/sponsor/wardah.png", alt: "wardah", size: "xlarge" },
   { src: "/sponsor/emina.png", alt: "emina", size: "large", hasVideo: true },
   { src: "/sponsor/kahf.png", alt: "kahf", size: "large", hasVideo: true },
-  { src: "/sponsor/gojek.png", alt: "gojek", size: "large", hasVideo: true },
 ];
 
 export const mediumSponsor = [
