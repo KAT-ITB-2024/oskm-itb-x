@@ -17,7 +17,7 @@ import dynamic from "next/dynamic";
 
 const Countdown = dynamic(() => import("./component/Countdown"), {
   ssr: false,
-})
+});
 
 export default function LandingPage() {
   const daysDikpus = [
@@ -169,7 +169,7 @@ export default function LandingPage() {
                         draggable={false}
                       />
                       <div className="text-center">
-                        <p className="text-lg font-bold md:text-xl lg:text-2xl">
+                        <p className="text-2xl font-bold lg:text-3xl">
                           Diklat Terpusat
                         </p>
                         <p className="font-rem text-sm lg:text-lg">
@@ -286,20 +286,20 @@ export default function LandingPage() {
                 {/* ITB Showcase Dialog */}
                 <Dialog>
                   <DialogTrigger asChild>
-                    <div className="flex cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12">
+                    <div className="flex w-full cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12">
                       <Image
-                        src="/landing-page/icon-showcase.webp"
-                        alt="2"
-                        width={500}
-                        height={500}
+                        src="/landing-page/icon-oskm.webp"
+                        alt="3"
+                        width={400}
+                        height={400}
                         draggable={false}
                       />
                       <div className="text-center">
-                        <p className="text-lg font-bold md:text-xl lg:text-2xl">
-                          ITB Showcase
+                        <p className="text-2xl font-bold lg:text-3xl">
+                          OSKM
                         </p>
                         <p className="font-rem text-sm lg:text-lg">
-                          20 Agustus 2024
+                          7-9 Agustus 2024
                         </p>
                       </div>
                     </div>
@@ -307,13 +307,13 @@ export default function LandingPage() {
                   <DialogContent>
                     <div className="relative h-[300px] w-full overflow-x-hidden overflow-y-scroll rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg scrollbar-thin scrollbar-track-[#99E0FF] scrollbar-thumb-[#0010A4] lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
                       <div className="my-2 text-center font-mogula text-2xl text-[#99E0FF] md:text-3xl xl:text-4xl">
-                        ITB Showcase
+                        OSKM
                       </div>
 
                       <div className="relative flex items-center justify-center gap-6 px-6 font-rem">
                         {/* Time Area */}
                         <div className="flex w-fit flex-col">
-                          {daysITBShowcase.map((day, index) => (
+                          {daysOSKM.map((day, index) => (
                             <div key={index}>
                               <div className="flex items-center">
                                 <h2 className="relative flex h-[60px] items-center text-xs md:h-[72px] md:text-base xl:text-lg">
@@ -348,7 +348,7 @@ export default function LandingPage() {
 
                         {/* Vertical Line with Circles */}
                         <div className="flex w-[2px] flex-col bg-[#000D76] lg:w-[3px]">
-                          {daysITBShowcase.map((day, index) => (
+                          {daysOSKM.map((day, index) => (
                             <div
                               key={index}
                               className="relative flex flex-col items-center"
@@ -356,7 +356,18 @@ export default function LandingPage() {
                               {/* Large circle */}
                               <div className="flex h-[60px] items-center md:h-[72px]">
                                 <div className="relative flex h-16 w-16 flex-col items-center justify-center">
-                                  <div className="h-2/5 w-2/5 rounded-full bg-[#000D76] md:h-1/2 md:w-1/2"></div>
+                                  {index === 0 ? (
+                                    <Image
+                                      src="/landing-page/timeline-detail/ubur.svg"
+                                      alt="ubur"
+                                      width={100}
+                                      height={100}
+                                      className="absolute"
+                                      draggable={false}
+                                    />
+                                  ) : (
+                                    <div className="h-2/5 w-2/5 rounded-full bg-[#000D76] md:h-1/2 md:w-1/2"></div>
+                                  )}
                                 </div>
                               </div>
                               <div className="space-y-2">
@@ -375,7 +386,7 @@ export default function LandingPage() {
 
                         {/* Activity Area */}
                         <div className="w-1/2">
-                          {daysITBShowcase.map((day, index) => (
+                          {daysOSKM.map((day, index) => (
                             <div key={index}>
                               <div className="relative flex items-center">
                                 <h2 className="flex h-[60px] items-center text-xs text-blue-800 md:h-[72px] md:text-base xl:text-lg">
@@ -413,20 +424,20 @@ export default function LandingPage() {
               {/* OSKM Dialog */}
               <Dialog>
                 <DialogTrigger asChild>
-                  <div className="flex w-full cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12">
+                  <div className="flex cursor-pointer flex-col items-center md:w-4/12 lg:w-3/12">
                     <Image
-                      src="/landing-page/icon-oskm.webp"
-                      alt="3"
-                      width={400}
-                      height={400}
+                      src="/landing-page/icon-showcase.webp"
+                      alt="2"
+                      width={500}
+                      height={500}
                       draggable={false}
                     />
                     <div className="text-center">
-                      <p className="text-lg font-bold md:text-xl lg:text-2xl">
-                        OSKM
+                      <p className="text-2xl font-bold lg:text-3xl">
+                        ITB Showcase
                       </p>
                       <p className="font-rem text-sm lg:text-lg">
-                        7-9 Agustus 2024
+                        20 Agustus 2024
                       </p>
                     </div>
                   </div>
@@ -434,13 +445,13 @@ export default function LandingPage() {
                 <DialogContent>
                   <div className="relative h-[300px] w-full overflow-x-hidden overflow-y-scroll rounded-2xl bg-[url('/landing-page/timeline-detail/bg-dialog.webp')] bg-cover p-6 shadow-lg scrollbar-thin scrollbar-track-[#99E0FF] scrollbar-thumb-[#0010A4] lg:h-[360px] lg:w-8/12 xl:h-[420px] xl:w-6/12">
                     <div className="my-2 text-center font-mogula text-2xl text-[#99E0FF] md:text-3xl xl:text-4xl">
-                      OSKM
+                      ITB Showcase
                     </div>
 
                     <div className="relative flex items-center justify-center gap-6 px-6 font-rem">
                       {/* Time Area */}
                       <div className="flex w-fit flex-col">
-                        {daysOSKM.map((day, index) => (
+                        {daysITBShowcase.map((day, index) => (
                           <div key={index}>
                             <div className="flex items-center">
                               <h2 className="relative flex h-[60px] items-center text-xs md:h-[72px] md:text-base xl:text-lg">
@@ -473,7 +484,7 @@ export default function LandingPage() {
 
                       {/* Vertical Line with Circles */}
                       <div className="flex w-[2px] flex-col bg-[#000D76] lg:w-[3px]">
-                        {daysOSKM.map((day, index) => (
+                        {daysITBShowcase.map((day, index) => (
                           <div
                             key={index}
                             className="relative flex flex-col items-center"
@@ -481,18 +492,7 @@ export default function LandingPage() {
                             {/* Large circle */}
                             <div className="flex h-[60px] items-center md:h-[72px]">
                               <div className="relative flex h-16 w-16 flex-col items-center justify-center">
-                                {index === 0 ? (
-                                  <Image
-                                    src="/landing-page/timeline-detail/ubur.svg"
-                                    alt="ubur"
-                                    width={100}
-                                    height={100}
-                                    className="absolute"
-                                    draggable={false}
-                                  />
-                                ) : (
-                                  <div className="h-2/5 w-2/5 rounded-full bg-[#000D76] md:h-1/2 md:w-1/2"></div>
-                                )}
+                                <div className="h-2/5 w-2/5 rounded-full bg-[#000D76] md:h-1/2 md:w-1/2"></div>
                               </div>
                             </div>
                             <div className="space-y-2">
@@ -511,7 +511,7 @@ export default function LandingPage() {
 
                       {/* Activity Area */}
                       <div className="w-1/2">
-                        {daysOSKM.map((day, index) => (
+                        {daysITBShowcase.map((day, index) => (
                           <div key={index}>
                             <div className="relative flex items-center">
                               <h2 className="flex h-[60px] items-center text-xs text-blue-800 md:h-[72px] md:text-base xl:text-lg">
@@ -584,7 +584,7 @@ export default function LandingPage() {
             />
           </div>
         </div>
-        <div className="w-full mb-32 max-w-[100rem] mx-auto">
+        <div className="mx-auto mb-32 w-full max-w-[100rem]">
           <h1 className="mb-6 text-center font-mogula text-3xl text-white text-shadow-pink md:text-4xl xl:text-5xl">
             Our Media Partners
           </h1>
