@@ -27,7 +27,11 @@ const SponsorCard = ({ src, alt, size, onOpen }: SponsorCardProps) => {
           alt={alt}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          style={{ objectFit: "contain" }}
+          style={{
+            objectFit: "contain",
+            WebkitFilter: "drop-shadow(0px 0px 3px #FFFFFF)",
+            filter: "drop-shadow(0px 0px 3px #FFFFFF)",
+          }}
           draggable={false}
         />
       </div>

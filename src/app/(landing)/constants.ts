@@ -65,19 +65,23 @@ export const xlargeMedpar = [
 ];
 
 export const xlargeSponsor = [
-  { src: "/sponsor/wardah.png", alt: "wardah", size: "xlarge" },
   {
     src: "/sponsor/paragon.png",
     alt: "paragon",
     size: "xlarge",
     hasVideo: true,
   },
+  {
+    src: "/sponsor/grab.png",
+    alt: "grab",
+    size: "xlarge",
+  },
 ];
 
 export const largeSponsor = [
+  { src: "/sponsor/wardah.png", alt: "wardah", size: "xlarge" },
   { src: "/sponsor/emina.png", alt: "emina", size: "large", hasVideo: true },
   { src: "/sponsor/kahf.png", alt: "kahf", size: "large", hasVideo: true },
-  { src: "/sponsor/gojek.png", alt: "gojek", size: "large", hasVideo: true },
 ];
 
 export const mediumSponsor = [
@@ -87,6 +91,7 @@ export const mediumSponsor = [
   { src: "/sponsor/himalaya.jpg", alt: "himalaya", size: "medium" },
   { src: "/sponsor/lm.png", alt: "lm", size: "medium", hasVideo: true },
   { src: "/sponsor/rohde.jpg", alt: "rohde", size: "medium" },
+  { src: "/sponsor/ganesha.png", alt: "ganesha", size: "medium" },
 ];
 
 export const smallSponsor = [
@@ -98,4 +103,5 @@ export const smallSponsor = [
   { src: "/sponsor/toteless.png", alt: "toteless", size: "small" },
   { src: "/sponsor/wings.png", alt: "wings", size: "small" },
   { src: "/sponsor/melati.png", alt: "melati", size: "small" },
+  { src: "/sponsor/juwara.png", alt: "juwara", size: "small" },
 ];
