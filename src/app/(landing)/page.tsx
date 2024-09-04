@@ -2,7 +2,7 @@ import { Button } from "~/components/ui/button";
 import Image from "next/image";
 import { IoMdDownload } from "react-icons/io";
 import InfiniteCarousel from "./component/InfiniteCarousel";
-import { Dialog, DialogContent, DialogTrigger } from "~/components/ui/dialog";
+import { Dialog, DialogTrigger } from "~/components/ui/dialog";
 import {
   largeMedpar,
   mediumMedpar,
@@ -193,7 +193,7 @@ export default function LandingPage() {
                       <div className="text-center">
                         <p className="text-2xl font-bold lg:text-3xl">OSKM</p>
                         <p className="font-rem text-sm lg:text-lg">
-                          7-9 Agustus 2024
+                          4-7 September 2024
                         </p>
                       </div>
                     </div>
@@ -216,7 +216,7 @@ export default function LandingPage() {
                         ITB Showcase
                       </p>
                       <p className="font-rem text-sm lg:text-lg">
-                        20 Agustus 2024
+                        14 September 2024
                       </p>
                     </div>
                   </div>
