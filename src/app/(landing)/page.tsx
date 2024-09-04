@@ -213,7 +213,7 @@ export default function LandingPage() {
                     />
                     <div className="text-center">
                       <p className="text-2xl font-bold lg:text-3xl">
-                        ITB Showcase
+                        ITB-X
                       </p>
                       <p className="font-rem text-sm lg:text-lg">
                         14 September 2024
