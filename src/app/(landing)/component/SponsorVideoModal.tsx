@@ -20,15 +20,15 @@ const SponsorVideoModal = ({
         </div>
         <Image
           src={"/landing-page/coral_left.webp"}
-          width={75}
-          height={75}
+          width={1000}
+          height={1000}
           alt="coral"
           className="absolute bottom-0 left-0 -translate-x-1/3 translate-y-[20%] md:w-[12rem]"
         />
         <Image
           src={"/landing-page/coral_right.webp"}
-          width={75}
-          height={75}
+          width={500}
+          height={500}
           alt="coral"
           className="absolute bottom-0 right-0 translate-x-1/3 translate-y-[10%] md:w-[12rem]"
         />
