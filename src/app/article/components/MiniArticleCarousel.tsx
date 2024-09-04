@@ -90,6 +90,7 @@ const MiniArticleCarousel: React.FC = () => {
               description={card.description}
               image={card.image}
               likes={card.likes}
+              content={card.content}
             />
           </SwiperSlide>
         ))}
