@@ -1,11 +1,28 @@
+"use client";
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export default function VisiMisi() {
+  const visiRef = useRef(null);
+  const misiRef = useRef(null);
+  
+  // Hook to check if the element is in view
+  const visiInView = useInView(visiRef, { once: true });
+  const misiInView = useInView(misiRef, { once: true });
+
   return (
     <div className="relative">
       <div className="absolute inset-x-0 top-0 z-10 h-20 bg-gradient-to-b from-[#3d72e4] to-transparent md:h-40"></div>
+      
       {/* Visi */}
-      <div className="ml-6 mt-10 flex items-center md:ml-20 lg:mt-20 xl:ml-44">
+      <motion.div
+        ref={visiRef}
+        className="ml-6 mt-10 flex items-center md:ml-20 lg:mt-20 xl:ml-44"
+        initial={{ opacity: 0, x: -50 }}
+        animate={visiInView ? { opacity: 1, x: 0 } : {}}
+        transition={{ duration: 1.5 }}
+      >
         <div className="basis-3/5 text-white sm:basis-2/3">
           <h1 className="font-mogula text-3xl [text-shadow:4px_4px_10px_#0CEBCCBF] lg:text-5xl">
             Visi
@@ -25,9 +42,16 @@ export default function VisiMisi() {
             draggable={false}
           />
         </div>
-      </div>
+      </motion.div>
+      
       {/* Misi */}
-      <div className="ml-6 mr-6 mt-24 flex items-center md:mr-20 xl:mr-44">
+      <motion.div
+        ref={misiRef}
+        className="ml-6 mr-6 mt-24 flex items-center md:mr-20 xl:mr-44"
+        initial={{ opacity: 0, x: 50 }}
+        animate={misiInView ? { opacity: 1, x: 0 } : {}}
+        transition={{ duration: 1.5 }}
+      >
         <div className="flex basis-1/3 justify-end">
           <Image
             src="/about-us/ubur-ubur.webp"
@@ -58,7 +82,7 @@ export default function VisiMisi() {
             </li>
           </ul>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

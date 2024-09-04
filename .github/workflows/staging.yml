@@ -11,7 +11,7 @@ on:
 jobs:
   # Build job
   build-and-deploy:
-    runs-on: [self-hosted, oskm-itb-x]
+    runs-on: [self-hosted, staging]
     environment: staging
     env:
       DATABASE_URL: ${{ secrets.DATABASE_URL }}

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { Button } from "~/components/ui/button";
 
@@ -10,7 +11,9 @@ function Page() {
         <div className="flex flex-wrap gap-4">
           <Button variant={"pink"}>Open</Button>
           <Button variant={"pinkoutline"}>Download Guidebook</Button>
-          <Button variant={"yellow"}>OceanLog</Button>
+          <Link href={"https://app.oskmitb.com/"}>
+            <Button variant={"yellow"}>OceanLog</Button>
+          </Link>
           <Button variant={"merchgreen"}>Ganesha Goods &gt;</Button>
           <Button variant={"merchyellow"}>Order Now &gt;</Button>
           <Button variant={"merchpink"}>@ganeshagoods &gt;</Button>

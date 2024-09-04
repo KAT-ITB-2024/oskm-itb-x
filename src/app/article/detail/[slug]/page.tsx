@@ -9,6 +9,7 @@ import { type Article } from "~/types/articles/articleType";
 import { FaCalendar } from "react-icons/fa6";
 import { IoMdPerson } from "react-icons/io";
 import { IoTimeOutline } from "react-icons/io5";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 const Page: React.FC = () => {
   const { slug } = useParams();
@@ -34,7 +35,7 @@ const Page: React.FC = () => {
             </h1>
 
             <div
-              className="flex w-full max-w-lg items-center justify-between gap-6 rounded-full px-6 py-2 text-white"
+              className="flex w-full max-w-2xl items-center justify-between gap-6 rounded-full px-6 py-2 text-white"
               style={styles.statsContainer}
             >
               <div className="flex flex-col items-center gap-2 md:flex-row">
@@ -70,9 +71,11 @@ const Page: React.FC = () => {
                 objectFit="cover"
               />
             </div>
-
-            <div className="mb-10 w-full max-w-[70rem] px-10 text-[#ff3e3e]">
-              <p className="text-white">{article.description}</p>
+                    
+            <div className="mb-10 w-full max-w-[70rem] px-[5%] bg-white py-10 rounded-xl">
+              <div className="prose text-base md:text-lg">
+              {documentToReactComponents(article.content?.json)}
+              </div>
             </div>
           </div>
         )}

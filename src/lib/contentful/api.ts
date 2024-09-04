@@ -8,6 +8,9 @@ const ARTICLE_GRAPHQL_FIELDS = `
   slug
   author
   description
+  content {
+    json
+  }
   views
   likes
   readTime
@@ -122,6 +125,5 @@ export async function getArticle({
     `,
     isDraftMode,
   );
-  console.log(article);
   return extractArticleEntries(article)[0];
 }

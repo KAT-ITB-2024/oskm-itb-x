@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function About() {
   useEffect(() => {
     const mountain = document.getElementById("mountain");
     const initialTop = mountain?.offsetTop;
-    console.log(initialTop);
+    // console.log(initialTop);
     const handleScroll = () => {
       const value = window.scrollY;
       if (mountain && initialTop) {
@@ -42,9 +43,12 @@ export default function About() {
           draggable={false}
         />
       </div>
-      <div
+      <motion.div
         id="mountain"
         className="absolute left-1/2 top-[15%] lg:top-[25%] z-0 w-full -translate-x-1/2 px-5 lg:px-0"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
       >
         <h1 className="text-center font-mogula text-3xl text-white [text-shadow:4px_4px_10px_#0CEBCCBF] lg:text-5xl">
           About Us
@@ -60,7 +64,7 @@ export default function About() {
           untuk pengembangan diri serta inkubasi talenta bangsa sebagai
           calon-calon pemimpin
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 }
