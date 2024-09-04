@@ -43,8 +43,6 @@ export default function Page() {
     indexOfLastCard,
   );
 
-  console.log(filteredArticles);
-
   const totalPages = Math.ceil(filteredArticles?.length / articlesPerPage);
 
   const handleClick = (pageNumber: number) => {
@@ -110,6 +108,7 @@ export default function Page() {
                 readTime={card.readTime}
                 description={card.description}
                 image={card.image}
+                content={card.content}
               />
             ))}
           </div>
