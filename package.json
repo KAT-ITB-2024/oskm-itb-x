@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^1.1.0",
+    "@contentful/rich-text-react-renderer": "^15.22.10",
     "@elastic/elasticsearch": "^8.14.0",
     "@katitb2024/database": "git+https://github.com/KAT-ITB-2024/database-oskm.git#master",
     "@maptiler/sdk": "^2.2.2",
@@ -63,6 +64,7 @@
   },
   "devDependencies": {
     "@metamorph/trpc-panel": "^1.0.5",
+    "@tailwindcss/typography": "^0.5.15",
     "@types/bcrypt": "^5.0.2",
     "@types/eslint": "^8.56.2",
     "@types/lodash": "^4.17.7",

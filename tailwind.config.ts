@@ -114,6 +114,7 @@ const config = {
   plugins: [
     require("tailwind-scrollbar"),
     require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
     function ({
       addUtilities,
     }: {
