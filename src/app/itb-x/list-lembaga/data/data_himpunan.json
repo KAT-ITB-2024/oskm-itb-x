@@ -1,0 +1,426 @@
+[
+  {
+    "id": 1,
+    "type": "HIMPUNAN",
+    "fakultas": "FMIPA",
+    "program_studi": "Matematika/Aktuaria",
+    "nama": "HIMATIKA ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 2,
+    "type": "HIMPUNAN",
+    "fakultas": "FMIPA",
+    "program_studi": "Fisika",
+    "nama": "HIMAFI ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 3,
+    "type": "HIMPUNAN",
+    "fakultas": "FMIPA",
+    "program_studi": "Astronomi",
+    "nama": "Himastron ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 4,
+    "type": "HIMPUNAN",
+    "fakultas": "FMIPA",
+    "program_studi": "Kimia",
+    "nama": "HMK 'AMISCA' ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 5,
+    "type": "HIMPUNAN",
+    "fakultas": "SITH-S",
+    "program_studi": "Biologi",
+    "nama": "HIMABIO \"Nymphaea\" ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 6,
+    "type": "HIMPUNAN",
+    "fakultas": "SITH-S",
+    "program_studi": "Mikrobiologi",
+    "nama": "HIMAMIKRO \"Archaea\" ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 7,
+    "type": "HIMPUNAN",
+    "fakultas": "SITH-R",
+    "program_studi": "Rekayasa Hayati",
+    "nama": "Himpunan Mahasiswa Rekayasa Hayati ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 8,
+    "type": "HIMPUNAN",
+    "fakultas": "SITH-R",
+    "program_studi": "Rekayasa Pertanian",
+    "nama": "HIMAREKTA \"Agrapana\" ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 9,
+    "type": "HIMPUNAN",
+    "fakultas": "SITH-R",
+    "program_studi": "Rekayasa Kehutanan",
+    "nama": "HMH 'Selva' ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 10,
+    "type": "HIMPUNAN",
+    "fakultas": "SITH-R",
+    "program_studi": "Teknologi Pasca Panen",
+    "nama": "HMPP 'Vadra' ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 11,
+    "type": "HIMPUNAN",
+    "fakultas": "SF",
+    "program_studi": "Sains dan Teknologi Farmasi",
+    "nama": "Himpunan Mahasiswa Farmasi 'Ars Praeparandi' ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 12,
+    "type": "HIMPUNAN",
+    "fakultas": "SF",
+    "program_studi": "Farmasi Klinik dan Komunitas",
+    "nama": "Himpunan Mahasiswa Farmasi 'Ars Praeparandi' ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 13,
+    "type": "HIMPUNAN",
+    "fakultas": "FITB",
+    "program_studi": "Teknik Geologi",
+    "nama": "HMTG \"GEA\" ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 14,
+    "type": "HIMPUNAN",
+    "fakultas": "FITB",
+    "program_studi": "Teknik Geodesi & Geomatika",
+    "nama": "IMG-ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 15,
+    "type": "HIMPUNAN",
+    "fakultas": "FITB",
+    "program_studi": "Meteorologi",
+    "nama": "HMME \"Atmosphaira\" ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 16,
+    "type": "HIMPUNAN",
+    "fakultas": "FITB",
+    "program_studi": "Oseanografi",
+    "nama": "HMO \"TRITON\" ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 17,
+    "type": "HIMPUNAN",
+    "fakultas": "FTTM",
+    "program_studi": "Teknik Geofisika",
+    "nama": "HIMA TG \"TERRA\" ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 18,
+    "type": "HIMPUNAN",
+    "fakultas": "FTTM",
+    "program_studi": "Teknik Pertambangan",
+    "nama": "HMT-ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 19,
+    "type": "HIMPUNAN",
+    "fakultas": "FTTM",
+    "program_studi": "Teknik Metalurgi",
+    "nama": "IMMG ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 20,
+    "type": "HIMPUNAN",
+    "fakultas": "FTTM",
+    "program_studi": "Teknik Perminyakan",
+    "nama": "HMTM \"PATRA\" ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 21,
+    "type": "HIMPUNAN",
+    "fakultas": "STEI",
+    "program_studi": "Teknik Elektro/Teknik Tenaga Listrik/Teknik Biomedis",
+    "nama": "HME ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 22,
+    "type": "HIMPUNAN",
+    "fakultas": "STEI",
+    "program_studi": "Teknik Telekomunikasi",
+    "nama": "IMT \"Signum\" ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 23,
+    "type": "HIMPUNAN",
+    "fakultas": "STEI",
+    "program_studi": "Teknik Informatika / Sistem dan Teknologi Informasi",
+    "nama": "HMIF ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 24,
+    "type": "HIMPUNAN",
+    "fakultas": "FTSL",
+    "program_studi": "Teknik Sipil",
+    "nama": "HMS ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 25,
+    "type": "HIMPUNAN",
+    "fakultas": "FTSL",
+    "program_studi": "Teknik Kelautan",
+    "nama": "KMKL-ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 26,
+    "type": "HIMPUNAN",
+    "fakultas": "FTSL",
+    "program_studi": "Teknik Lingkungan",
+    "nama": "HMTL ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 27,
+    "type": "HIMPUNAN",
+    "fakultas": "FTSL",
+    "program_studi": "Teknik dan Pengelolaan Sumber Daya Air",
+    "nama": "HIimasda-ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 28,
+    "type": "HIMPUNAN",
+    "fakultas": "FTSL",
+    "program_studi": "Rekayasa Infrastruktur Lingkungan",
+    "nama": "KMIL ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 29,
+    "type": "HIMPUNAN",
+    "fakultas": "FTI",
+    "program_studi": "Teknik Kimia",
+    "nama": "HIMATEK-ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 30,
+    "type": "HIMPUNAN",
+    "fakultas": "FTI",
+    "program_studi": "Teknik Fisika",
+    "nama": "HMFT-ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 31,
+    "type": "HIMPUNAN",
+    "fakultas": "FTI",
+    "program_studi": "Teknik Industri / Manajemen Rekayasa",
+    "nama": "Keluarga Mahasiswa Teknik Industri ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 32,
+    "type": "HIMPUNAN",
+    "fakultas": "FTI",
+    "program_studi": "Teknik Bioenergi dan Kemurgi",
+    "nama": "HMTB \"RINUVA\" ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 33,
+    "type": "HIMPUNAN",
+    "fakultas": "FTI",
+    "program_studi": "Teknik Pangan",
+    "nama": "Himpunan Mahasiswa Teknik Pangan (HMPG) ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 34,
+    "type": "HIMPUNAN",
+    "fakultas": "FSRD",
+    "program_studi": "Seni Rupa",
+    "nama": "VASA ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 35,
+    "type": "HIMPUNAN",
+    "fakultas": "FSRD",
+    "program_studi": "Kriya",
+    "nama": "TERIKAT ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 36,
+    "type": "HIMPUNAN",
+    "fakultas": "FSRD",
+    "program_studi": "Desain Interior",
+    "nama": "KMSR IMDI ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 37,
+    "type": "HIMPUNAN",
+    "fakultas": "FSRD",
+    "program_studi": "Desain Produk",
+    "nama": "HMDP INDDES ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 38,
+    "type": "HIMPUNAN",
+    "fakultas": "FSRD",
+    "program_studi": "Desain Komunikasi Visual",
+    "nama": "IPPDIG",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 39,
+    "type": "HIMPUNAN",
+    "fakultas": "FTMD",
+    "program_studi": "Teknik Mesin",
+    "nama": "HMM ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 40,
+    "type": "HIMPUNAN",
+    "fakultas": "FTMD",
+    "program_studi": "Teknik Dirgantara",
+    "nama": "KMPN \"Dirgantara\" ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 41,
+    "type": "HIMPUNAN",
+    "fakultas": "FTMD",
+    "program_studi": "Teknik Material",
+    "nama": "MTM ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 42,
+    "type": "HIMPUNAN",
+    "fakultas": "SBM",
+    "program_studi": "Kewirausahaan",
+    "nama": "Ikatan Mahasiswa Kewirausahaan Artha ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 43,
+    "type": "HIMPUNAN",
+    "fakultas": "SBM",
+    "program_studi": "Manajemen",
+    "nama": "KMM ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 44,
+    "type": "HIMPUNAN",
+    "fakultas": "SAPPK",
+    "program_studi": "Arsitektur",
+    "nama": "IMA-G ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 45,
+    "type": "HIMPUNAN",
+    "fakultas": "SAPPK",
+    "program_studi": "Perencanaan Wilayah dan Kota",
+    "nama": "HMP PL ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 46,
+    "type": "HIMPUNAN",
+    "fakultas": "FTI-C",
+    "program_studi": "Teknik Industri - Kampus Cirebon",
+    "nama": "BSO Cirebon MTI ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 47,
+    "type": "HIMPUNAN",
+    "fakultas": "SAPPK-C",
+    "program_studi": "Perencanaan Wilayah dan Kota",
+    "nama": "HMP PL ITB Komisariat",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 48,
+    "type": "HIMPUNAN",
+    "fakultas": "FSRD-C",
+    "program_studi": "Kriya",
+    "nama": "BSO Cirebon TERIKAT ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 49,
+    "type": "HIMPUNAN",
+    "fakultas": "FTTM-C",
+    "program_studi": "Teknik Pertambangan",
+    "nama": "Komisariat HMT-ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 50,
+    "type": "HIMPUNAN",
+    "fakultas": "FTTM-C",
+    "program_studi": "Teknik Perminyakan",
+    "nama": "Komisariat HMTM \"PATRA\" ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 51,
+    "type": "HIMPUNAN",
+    "fakultas": "FTTM-C",
+    "program_studi": "Teknik Geofisika",
+    "nama": "BSO \"TERRA\" ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 52,
+    "type": "HIMPUNAN",
+    "fakultas": "FSRD",
+    "program_studi": "FSRD",
+    "nama": "KMSR ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  },
+  {
+    "id": 53,
+    "type": "HIMPUNAN",
+    "fakultas": "FITB-C",
+    "program_studi": "Oseanografi",
+    "nama": "BSO \"TRITON\" ITB",
+    "logoPath": "/itb-x/logo-itbx.png"
+  }
+]
