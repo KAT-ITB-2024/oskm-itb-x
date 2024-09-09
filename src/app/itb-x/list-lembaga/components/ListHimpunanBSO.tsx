@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import type { HimpunanBSO } from "../data/data_lembaga";
+import type { HimpunanBSO } from "../../data/data_lembaga";
 import Card from "./Card";
 import Pagination from "./Pagination";
 import Image from "next/image";
@@ -50,13 +50,17 @@ function ListHimpunanBSO({
       {currentItems.length > 0 && (
         <>
           <div
-            className={`grid w-full grid-cols-1 grid-rows-2 ${currentItems.length > 3 ? "lg:grid-rows-2" : "lg:grid-rows-1"} justify-center gap-6 md:grid-cols-2 md:gap-x-[50px] lg:grid-cols-3 lg:justify-between lg:gap-x-2 lg:gap-y-16`}
+            className={`grid w-full grid-cols-1 grid-rows-2 ${currentItems.length > 3 ? "lg:grid-rows-2" : "lg:grid-rows-1"} items-center justify-center gap-6 md:grid-cols-2 md:gap-x-[50px] lg:grid-cols-3 lg:justify-between lg:gap-x-2 lg:gap-y-16`}
           >
             {currentItems.map((himpunan, index) => (
               <Card
                 key={index}
-                nama={himpunan.nama}
-                logo_path={himpunan.logoPath ? himpunan.logoPath : undefined}
+                nama={himpunan.nama_lembaga}
+                logo_path={
+                  himpunan.foto_kegiatan[0]
+                    ? himpunan.foto_kegiatan[0]
+                    : undefined
+                }
               />
             ))}
           </div>

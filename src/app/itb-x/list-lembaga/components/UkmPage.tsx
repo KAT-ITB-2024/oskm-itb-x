@@ -8,7 +8,7 @@ function UkmPage() {
       <p className="text-center text-[24px] leading-[28px] text-[#0010A4] md:text-[36px]  md:leading-[52px] lg:text-[56px]">
         Rumpun Unit Kegiatan Mahasiswa (UKM)
       </p>
-      <UKMVideo isExternalSource={true} videoSrc="" />
+      <UKMVideo isExternalSource={true} videoSrc="https://drive.google.com/file/d/1EOBAE-3ptlhKRGl5yuiX-vozCNX2C4tZ/preview" />
       <div
         id="Ukm_Selections"
         className="grid w-[85vw] grid-cols-2 justify-items-center gap-x-6 lg:grid-cols-3"
@@ -17,8 +17,8 @@ function UkmPage() {
         <UKMIconCard category_name="Pendidikan" />
         <UKMIconCard category_name="Kajian" />
         <UKMIconCard category_name="Media" />
-        <UKMIconCard category_name="OlahragaKesehatan" />
-        <UKMIconCard category_name="SeniBudaya" />
+        <UKMIconCard category_name="Olahraga Kesehatan" />
+        <UKMIconCard category_name="Seni Budaya" />
       </div>
     </div>
   );

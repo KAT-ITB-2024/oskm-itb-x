@@ -4,13 +4,11 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Card from "./Card";
 import Pagination from "./Pagination";
+import { type UKM } from "../../data/data_lembaga";
 
 interface RumpunUkmProps {
   nama_rumpun: string;
-  data: {
-    nama_lembaga: string;
-    logoSrc?: string;
-  }[];
+  data: UKM[];
 }
 
 function RumpunUkm(props: RumpunUkmProps) {
@@ -21,12 +19,12 @@ function RumpunUkm(props: RumpunUkmProps) {
   const router = useRouter();
   if (
     ![
-      "Agama",
-      "Pendidikan",
-      "Kajian",
-      "Media",
-      "OlahragaKesehatan",
-      "SeniBudaya",
+      "agama",
+      "pendidikan",
+      "kajian",
+      "media",
+      "olahraga-kesehatan",
+      "seni-budaya",
     ].includes(nama_rumpun)
   ) {
     router.push("/itb-x/list-lembaga/ukm");
@@ -59,21 +57,41 @@ function RumpunUkm(props: RumpunUkmProps) {
     setCurrentPage(page);
   };
 
+  let title = "";
+  switch (nama_rumpun) {
+    case "agama":
+      title = "Agama";
+      break;
+    case "pendidikan":
+      title = "Pendidikan";
+      break;
+    case "kajian":
+      title = "Kajian";
+      break;
+    case "media":
+      title = "Media";
+      break;
+    case "olahraga-kesehatan":
+      title = "Olahraga & Kesehatan";
+      break;
+    case "seni-budaya":
+      title = "Seni Budaya";
+      break;
+  }
+
   return (
     <div className="flex flex-col items-center">
       <p className="my-4 text-center text-[32px] leading-[28px] text-[#0010A4] md:my-6 lg:my-8 lg:text-[60px]">
-        {nama_rumpun === "OlahragaKesehatan"
-          ? "Olahraga & Kesehatan"
-          : nama_rumpun === "SeniBudaya"
-            ? "Seni Budaya"
-            : nama_rumpun}
+        {title}
       </p>
       <div className="mt-5 grid w-[90%] grid-cols-1 gap-y-10 md:mt-8 md:grid-cols-2 lg:mt-10 lg:w-[95%] lg:grid-cols-3">
         {currentItems.map((data_ukm, index) => (
           <Card
             key={index}
             nama={data_ukm.nama_lembaga}
-            logo_path={data_ukm.logoSrc ? data_ukm.logoSrc : undefined}
+            logo_path={
+              data_ukm.logo_lembaga ? data_ukm.logo_lembaga : undefined
+            }
           />
         ))}
       </div>

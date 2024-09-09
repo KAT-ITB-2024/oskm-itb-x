@@ -1,31 +1,17 @@
 "use client";
 
-import React, { useCallback, useState } from "react";
+import React from "react";
 import Image from "next/image";
-import FakultasSelector from "./FakultasSelector";
 
 interface SearchBarProps {
   onSearch: () => void;
-  fakultasList: string[];
-  selectedFakultas: string[];
-  setSelectedFakultas: (fakultas: string[]) => void;
   onChange: React.Dispatch<React.SetStateAction<string>>;
 }
 
 function SearchBar(props: SearchBarProps) {
-  const { onSearch, setSelectedFakultas, onChange, selectedFakultas } = props;
-  const [query, setQuery] = useState("");
-  const [showFilter, setShowFilter] = useState(false);
-
-  const handleFilterClick = useCallback(
-    (fakultas: string[]) => {
-      setSelectedFakultas(fakultas);
-    },
-    [setSelectedFakultas],
-  );
+  const { onSearch, onChange } = props;
 
   const onTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setQuery(e.target.value);
     onChange(e.target.value);
   };
 
@@ -50,42 +36,6 @@ function SearchBar(props: SearchBarProps) {
           onClick={() => onSearch()}
         />
       </div>
-      <div
-        id="filter"
-        className="flex h-[48px] w-[48px] items-center justify-center rounded-[8px] bg-white lg:min-w-[200px] lg:max-w-[300px] lg:justify-normal lg:ease-in-out lg:hover:bg-gray-100"
-        onClick={() => setShowFilter(!showFilter)}
-      >
-        <Image
-          src="/itb-x/filter-button.svg"
-          alt="filter"
-          width={16}
-          height={16}
-          className="cursor-pointer lg:hidden"
-        />
-        <div className="hidden justify-between gap-x-6 lg:flex lg:w-full lg:cursor-pointer lg:px-4 lg:py-1">
-          <div className="flex items-center gap-x-3">
-            <p className="text-[#a5acb7] opacity-70">Filter</p>
-            {selectedFakultas.length > 0 && (
-              <p className="flex h-[20px] w-[20px] items-center justify-center rounded-full bg-[#a5acb7] text-[13px]">
-                {selectedFakultas.length}
-              </p>
-            )}
-          </div>
-          <Image
-            src="/itb-x/dropdown_arrow.svg"
-            alt="Dropdown arrow"
-            width={16}
-            height={16}
-          />
-        </div>
-      </div>
-      {showFilter && (
-        <FakultasSelector
-          fakultasList={props.fakultasList}
-          selectedFakultas={props.selectedFakultas}
-          handleFilterClick={handleFilterClick}
-        />
-      )}
     </div>
   );
 }

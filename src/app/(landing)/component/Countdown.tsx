@@ -5,9 +5,10 @@ import Image from "next/image";
 
 interface CountdownProps {
   targetDate: string;
+  isItbX?: boolean;
 }
 
-const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
+const Countdown: React.FC<CountdownProps> = ({ targetDate, isItbX = false }) => {
   const calculateTimeLeft = useCallback(() => {
     const difference = +new Date(targetDate) - +new Date();
     let timeLeft = {
@@ -40,7 +41,7 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
   }, [calculateTimeLeft]);
 
   return (
-    <div className="mb-8 flex flex-col items-center font-mogula text-[#99E0FF] md:text-xl">
+    <div className={`mb-8 flex flex-col items-center font-mogula ${isItbX ? "text-blue-800" : "text-[#99E0FF]"} md:text-xl`}>
       <div className="flex gap-x-2">
         {/* Hanya tampilkan jika days > 0 */}
         {timeLeft.days > 0 && (
