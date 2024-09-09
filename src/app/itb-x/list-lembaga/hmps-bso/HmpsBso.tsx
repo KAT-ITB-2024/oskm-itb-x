@@ -1,77 +1,58 @@
 "use client";
 
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
-import { daftar_nama_hmps } from "../data/data_lembaga";
+// import { hmps } from "../data/data_lembaga";
+import { hmps } from "../../data/data_lembaga";
 import ListHimpunanBSO from "../components/ListHimpunanBSO";
 import SliderContainer from "../components/SliderContainer";
+import { slugify } from "~/lib/slugify";
 
 function HmpsBso() {
-  const [filteredData, setFilteredData] = useState(daftar_nama_hmps);
-  const [selectedFakultas, setSelectedFakultas] = useState<string[]>([]);
+  const [filteredData, setFilteredData] = useState(hmps);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQ, setSearchQ] = useState("");
 
-  const filterData = (searchQ: string, selectedFakultas: string[]) => {
-    return daftar_nama_hmps.filter((himpunan) => {
-      const matchesFakultas =
-        selectedFakultas.length === 0 ||
-        selectedFakultas.includes(himpunan.fakultas);
+  const filterData = (searchQ: string) => {
+    return hmps.filter((himpunan) => {
       const matchesSearch = searchQ
-        ? himpunan.nama.toLowerCase().includes(searchQ.toLowerCase())
+        ? himpunan.nama_lembaga.toLowerCase().includes(searchQ.toLowerCase())
         : true;
-      return matchesFakultas && matchesSearch;
+      return matchesSearch;
     });
   };
 
   const filterDataWithoutParams = () => {
-    return filterData(searchQ, selectedFakultas);
+    return filterData(searchQ);
   };
 
   useEffect(() => {
-    const data = filterData(searchQ, selectedFakultas);
+    const data = filterData(searchQ);
     setFilteredData(data);
     if (currentPage > Math.ceil(data.length / 6)) {
       setCurrentPage(1);
     }
-  }, [searchQ, selectedFakultas, currentPage]);
+  }, [searchQ, currentPage]);
 
-  const fakultasList = [
-    ...new Set(daftar_nama_hmps.map((himpunan) => himpunan.fakultas)),
-  ];
-  const fakultasMapStrNum = new Map<string, number>();
-  const fakultasMapNumStr = new Map<number, string>();
-  let count = 1;
-  for (const himpunan of fakultasList) {
-    if (!fakultasMapStrNum.has(himpunan)) {
-      fakultasMapStrNum.set(himpunan, count);
-      fakultasMapNumStr.set(count, himpunan);
-      count++;
-    }
-  }
+  const hmpsDataWithoutKM = hmps.slice(0, hmps.length - 1);
 
-  const tempData = [
-    {
-      name: "HMIF ITB",
-      fakultas: "STEI",
-    },
-    { name: "IMT ITB", fakultas: "STEI" },
-    { name: "HIMATIKA ITB", fakultas: "FMIPA" },
-    { name: 'HMTG "GEA" ITB', fakultas: "FITB" },
-    { name: "HMS ITB", fakultas: "FTSL" },
-  ];
+  const tempData = hmpsDataWithoutKM
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 5)
+    .map((himpunan) => {
+      return {
+        name: himpunan.nama_lembaga,
+        fakultas: himpunan.fakultas,
+        photoPath: himpunan.foto_kegiatan[0],
+        link: `/itb-x/detail/${slugify(himpunan.nama_lembaga)}`,
+      };
+    });
 
   return (
     <div className="z-[10] mx-5 flex flex-col items-center">
       <SliderContainer data={tempData} />
       <div className="mt-6 w-[85vw]">
-        <SearchBar
-          onSearch={filterDataWithoutParams}
-          fakultasList={fakultasList}
-          selectedFakultas={selectedFakultas}
-          setSelectedFakultas={setSelectedFakultas}
-          onChange={setSearchQ}
-        />
+        <SearchBar onSearch={filterDataWithoutParams} onChange={setSearchQ} />
         <div className="mt-10 w-full">
           <ListHimpunanBSO
             daftar_himpunan={filteredData}

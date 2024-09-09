@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "~/components/ui/button";
 
 export const metadata = {
@@ -60,7 +61,7 @@ export default function Page() {
             elementum sed ante.
           </p>
           <Button variant={"pink"} className="font-rem lg:text-lg">
-            Explore Now!
+            <Link href="/itb-x/list-lembaga/ukm">Explore Now!</Link>
           </Button>
         </div>
 
@@ -89,7 +90,8 @@ export default function Page() {
             elementum sed ante.
           </p>
           <Button variant={"pink"} className="font-rem lg:text-lg">
-            Explore Now!
+            {/* Explore Now! */}
+            <Link href="/itb-x/list-lembaga/hmps-bso">Explore Now!</Link>
           </Button>
         </div>
 
@@ -118,7 +120,7 @@ export default function Page() {
             elementum sed ante.
           </p>
           <Button variant={"pink"} className="font-rem lg:text-lg">
-            Explore Now!
+            <Link href="/itb-x/list-lembaga/hmps-bso">Explore Now!</Link>
           </Button>
         </div>
       </div>
