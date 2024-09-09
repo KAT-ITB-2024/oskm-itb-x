@@ -50,6 +50,8 @@ export default function DetailPage({ params }: { params: { slug: string } }) {
       };
     });
 
+  const isShowVisi = pageData?.visi !== undefined && pageData?.visi !== "-";
+
   return (
     <main className="min-h-screen bg-[url('/itb-x/bg-detail.png')] bg-cover bg-center py-20">
       <div className="mx-10 mt-20 flex flex-col items-center justify-center gap-y-20 lg:mx-16 xl:mx-24">
@@ -63,8 +65,8 @@ export default function DetailPage({ params }: { params: { slug: string } }) {
           <p>{pageData?.hari_jadi}</p>
         </div>
         {/* about us */}
-        <div>
-          <div className="mb-6 flex flex-row items-center justify-between">
+        <div className="w-full">
+          <div className="mb-6 flex w-full flex-row items-center justify-between">
             <div className="h-8 w-24 rounded-2xl bg-[url('/itb-x/bg-line.png')] bg-cover bg-center md:w-4/12 lg:w-5/12"></div>
             <h1 className="text-center font-mogula text-3xl text-white lg:text-4xl xl:text-5xl">
               About Us
@@ -96,49 +98,55 @@ export default function DetailPage({ params }: { params: { slug: string } }) {
           </div>
         </div>
         {/* visi */}
-        <div>
-          <div className="mb-6 flex flex-row items-center justify-between">
-            <div className="h-8 w-24 rounded-2xl bg-[url('/itb-x/bg-line.png')] bg-cover bg-center md:w-4/12 lg:w-5/12"></div>
-            <h1 className="font-mogula text-3xl text-white lg:text-4xl xl:text-5xl">
-              Visi
-            </h1>
-            <div className="h-8 w-24 rounded-2xl bg-[url('/itb-x/bg-line.png')] bg-cover bg-center md:w-4/12 lg:w-5/12"></div>
+        {isShowVisi && (
+          <div className="w-full">
+            <div className="mb-6 flex w-full flex-row items-center justify-between">
+              <div className="h-8 w-24 rounded-2xl bg-[url('/itb-x/bg-line.png')] bg-cover bg-center md:w-4/12 lg:w-5/12"></div>
+              <h1 className="font-mogula text-3xl text-white lg:text-4xl xl:text-5xl">
+                Visi
+              </h1>
+              <div className="h-8 w-24 rounded-2xl bg-[url('/itb-x/bg-line.png')] bg-cover bg-center md:w-4/12 lg:w-5/12"></div>
+            </div>
+            <div className="relative overflow-hidden rounded-[40px] bg-[#A2F8F3] p-6 lg:p-8">
+              {/* ombak-left positioned absolutely */}
+              <Image
+                src="/itb-x/ombak-left.png"
+                alt="ombak-left"
+                width={600}
+                height={600}
+                className="absolute -bottom-20 -left-20 md:-bottom-40 md:-left-40"
+                draggable={false}
+              />
+              {/* ombak-right positioned absolutely */}
+              <Image
+                src="/itb-x/ombak-right.png"
+                alt="ombak-right"
+                width={600}
+                height={600}
+                className="absolute -right-20 -top-20 md:-right-40 md:-top-40"
+                draggable={false}
+              />
+              <p className="relative z-10 max-h-[600px] overflow-y-scroll rounded-[40px] bg-[url('/itb-x/bg-desc.jpg')] bg-cover bg-center px-6 py-8 text-justify font-rem text-[#0010A4] lg:rounded-[80px] lg:px-8 lg:py-10">
+                {pageData?.visi}
+              </p>
+            </div>
           </div>
-          <div className="relative overflow-hidden rounded-[40px] bg-[#A2F8F3] p-6 lg:p-8">
-            {/* ombak-left positioned absolutely */}
-            <Image
-              src="/itb-x/ombak-left.png"
-              alt="ombak-left"
-              width={600}
-              height={600}
-              className="absolute -bottom-20 -left-20 md:-bottom-40 md:-left-40"
-              draggable={false}
-            />
-            {/* ombak-right positioned absolutely */}
-            <Image
-              src="/itb-x/ombak-right.png"
-              alt="ombak-right"
-              width={600}
-              height={600}
-              className="absolute -right-20 -top-20 md:-right-40 md:-top-40"
-              draggable={false}
-            />
-            <p className="relative z-10 max-h-[600px] overflow-y-scroll rounded-[40px] bg-[url('/itb-x/bg-desc.jpg')] bg-cover bg-center px-6 py-8 text-justify font-rem text-[#0010A4] lg:rounded-[80px] lg:px-8 lg:py-10">
-              {pageData?.visi}
-            </p>
-          </div>
-        </div>
+        )}
         {/* alamat */}
         <div className="flex max-w-96 flex-col items-center justify-center text-center font-rem text-lg font-bold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)] lg:text-xl xl:text-2xl">
           <p className="pb-4">Alamat Sekretariat</p>
-          <p>{pageData?.alamat_sekretariat}</p>
+          <div className="rounded-xl bg-sky-400 px-10 py-3">
+            <p>{pageData?.alamat_sekretariat}</p>
+          </div>
         </div>
         {/* medsos */}
         <div className="flex flex-col items-center justify-between font-rem text-lg font-bold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)] lg:text-xl">
           <p className="pb-4 xl:text-2xl">Sosial Media</p>
-          {pageData?.media_sosial
-            .split("\n")
-            .map((medsos, index) => <p key={index}>{medsos}</p>)}
+          <div className="rounded-xl bg-sky-400 px-10 py-3">
+            {pageData?.media_sosial
+              .split("\n")
+              .map((medsos, index) => <p key={index}>{medsos}</p>)}
+          </div>
         </div>
         {/* lembaga carousel */}
         <div className="flex w-full items-center justify-center">

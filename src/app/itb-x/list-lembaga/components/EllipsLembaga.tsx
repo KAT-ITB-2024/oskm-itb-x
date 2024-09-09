@@ -9,7 +9,7 @@ function EllipsLembaga({ imgSrc }: { imgSrc?: string }) {
           <Image
             src={imgSrc}
             alt="Lembaga"
-            className="absolute -z-10 h-full w-full object-cover"
+            className="absolute -z-10 h-full w-full object-cover bg-white"
             width={400}
             height={400}
           />

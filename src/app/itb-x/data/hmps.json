@@ -273,7 +273,7 @@
       "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_KMSR_ITB_1S0MCKhOJoKexpsj-mb2bVCEBUNsS7cQc.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=fzP482uvFHCANSSOYzXnt7Sa0ao%3D&Expires=1726414136",
       "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_KMSR_ITB_1JahOskiQBzqSzhSgD1c-w4icYUfVcg3O.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=wbpQ9RAWviSx7FVG%2BEdlzC1blW0%3D&Expires=1726414140"
     ],
-    "logo_lembaga": "",
+    "logo_lembaga": "https://oskm-production-bucket.sgp1.cdn.digitaloceanspaces.com/lembaga/manual/KMSRxx_400x400.jpg",
     "fakultas": "FSRD"
   },
   {

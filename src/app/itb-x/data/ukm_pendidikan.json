@@ -88,7 +88,7 @@
       "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/ukm_pendidikan/foto_kegiatan_Pelita_Muda_1iiEZrj-JOq7LckfnznFKL6lTGA78jNrW.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=%2FD9lXfzG%2FJGyP17vnXHVZfK0Re8%3D&Expires=1726413684",
       "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/ukm_pendidikan/foto_kegiatan_Pelita_Muda_1mbgFfnuHEaUZFzttm7Me5MUcvezUTGWf.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=nfaWMh6pXJoN0c6kwEiuXq%2Fctmo%3D&Expires=1726413688"
     ],
-    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/ukm_pendidikan/logo_lembaga_Pelita_Muda.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=TEwsAzFGwJ5jDRSU2BCZz9eYVKQ%3D&Expires=1726413691"
+    "logo_lembaga": "https://oskm-production-bucket.sgp1.cdn.digitaloceanspaces.com/lembaga/manual/logo%20-%20Pelita%20Muda%20ITB.png"
   },
   {
     "nama_lembaga": "GMUNC",
@@ -101,7 +101,7 @@
       "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/ukm_pendidikan/foto_kegiatan_GMUNC_1nwT___NBWAf1REVHaK6TbTSQwpnacx3L.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=WZrACz49E7xdSwmugfx3toJ%2FWVg%3D&Expires=1726413696",
       "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/ukm_pendidikan/foto_kegiatan_GMUNC_13TcQHGFPsSmLlmTZkOBzzd92RP-PoSAD.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=xjs60qJRaytfeuBeuv%2F%2BpH%2FGZaM%3D&Expires=1726413700"
     ],
-    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/ukm_pendidikan/logo_lembaga_GMUNC.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=BnAgIQGo8GcWoZFCFkxtSt0zVxM%3D&Expires=1726413703"
+    "logo_lembaga": "https://oskm-production-bucket.sgp1.cdn.digitaloceanspaces.com/lembaga/manual/logo%20transparent%20gmunc-2%20-%20Ganesha%20MUN%20Club%20ITB.png"
   },
   {
     "nama_lembaga": "GAMIK",

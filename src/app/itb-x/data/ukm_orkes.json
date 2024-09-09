@@ -50,7 +50,7 @@
       "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/ukm_orkes/foto_kegiatan_UBT_ITB_1F1uXBHKsSOgpl2sErSvszI5pLPGyFsC4.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=9Ajx4GiHH8aT8jKmZMJe419hzFE%3D&Expires=1726413311",
       "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/ukm_orkes/foto_kegiatan_UBT_ITB_1rrxRTJN1xgAIeVtM8lydk-iF6zOPf56T.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=A01myN1XveL49PdD4UvDoscw2QA%3D&Expires=1726413314"
     ],
-    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/ukm_orkes/logo_lembaga_UBT_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=TQECgCyPPcbVsxBbiKhnhQhhCWQ%3D&Expires=1726413317"
+    "logo_lembaga": "https://oskm-production-bucket.sgp1.cdn.digitaloceanspaces.com/lembaga/manual/IMG_0794%20-%20026_Salma%20Puteri%20Indriani.png"
   },
   {
     "nama_lembaga": "Unit Kendo ITB",
