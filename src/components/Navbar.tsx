@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 
 function Navbar() {
   const pathname = usePathname();
-  
+
   return (
     <header className="absolute z-50 w-full p-4">
       <nav className="relative h-16 rounded-full lg:h-[76px]">
@@ -47,7 +47,7 @@ function Navbar() {
                     href="about-us"
                     className={
                       pathname === "/about-us"
-                        ? "underline underline-offset-4 decoration-2 font-bold"
+                        ? "font-bold underline decoration-2 underline-offset-4"
                         : ""
                     }
                   >
@@ -59,7 +59,7 @@ function Navbar() {
                     href="merchandise"
                     className={
                       pathname === "/merchandise"
-                        ? "underline underline-offset-4 decoration-2 font-bold"
+                        ? "font-bold underline decoration-2 underline-offset-4"
                         : ""
                     }
                   >
@@ -71,7 +71,7 @@ function Navbar() {
                     href="interactive-map"
                     className={
                       pathname === "/interactive-map"
-                        ? "underline underline-offset-4 decoration-2 font-bold"
+                        ? "font-bold underline decoration-2 underline-offset-4"
                         : ""
                     }
                   >
@@ -83,7 +83,7 @@ function Navbar() {
                     href="article"
                     className={
                       pathname === "/article"
-                        ? "underline underline-offset-4 decoration-2 font-bold"
+                        ? "font-bold underline decoration-2 underline-offset-4"
                         : ""
                     }
                   >
@@ -91,11 +91,22 @@ function Navbar() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="">ITB-X</Link>
+                  <Link
+                    href="itb-x"
+                    className={
+                      pathname === "/itb-x"
+                        ? "font-bold underline decoration-2 underline-offset-4"
+                        : ""
+                    }
+                  >
+                    ITB-X
+                  </Link>
                 </li>
                 <li>
                   <Link href={"https://app.oskmitb.com/"}>
-                    <Button variant="yellow" className="font-rem">OceanLog</Button>
+                    <Button variant="yellow" className="font-rem">
+                      OceanLog
+                    </Button>
                   </Link>
                 </li>
               </ul>
@@ -108,7 +119,9 @@ function Navbar() {
               <Link
                 href="about-us"
                 className={
-                  pathname === "/about-us" ? "underline underline-offset-4 decoration-2 font-bold" : ""
+                  pathname === "/about-us"
+                    ? "font-bold underline decoration-2 underline-offset-4"
+                    : ""
                 }
               >
                 About Us
@@ -119,7 +132,7 @@ function Navbar() {
                 href="merchandise"
                 className={
                   pathname === "/merchandise"
-                    ? "underline underline-offset-4 decoration-2 font-bold"
+                    ? "font-bold underline decoration-2 underline-offset-4"
                     : ""
                 }
               >
@@ -131,7 +144,7 @@ function Navbar() {
                 href="interactive-map"
                 className={
                   pathname === "/interactive-map"
-                    ? "underline underline-offset-4 decoration-2 font-bold"
+                    ? "font-bold underline decoration-2 underline-offset-4"
                     : ""
                 }
               >
@@ -142,18 +155,31 @@ function Navbar() {
               <Link
                 href="article"
                 className={
-                  pathname === "/article" ? "underline underline-offset-4 decoration-2 font-bold" : ""
+                  pathname === "/article"
+                    ? "font-bold underline decoration-2 underline-offset-4"
+                    : ""
                 }
               >
                 Blog
               </Link>
             </li>
-            {/* <li>
-              <Link href="">ITB-X</Link>
-            </li> */}
+            <li>
+              <Link
+                href="itb-x"
+                className={
+                  pathname === "/itb-x"
+                    ? "font-bold underline decoration-2 underline-offset-4"
+                    : ""
+                }
+              >
+                ITB-X
+              </Link>
+            </li>
             <li>
               <Link href="https://app.oskmitb.com/">
-                <Button variant="yellow" className="font-rem">OceanLog</Button>
+                <Button variant="yellow" className="font-rem">
+                  OceanLog
+                </Button>
               </Link>
             </li>
           </ul>

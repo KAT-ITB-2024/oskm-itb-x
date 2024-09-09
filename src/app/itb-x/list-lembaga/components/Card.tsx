@@ -1,6 +1,10 @@
+"use client";
+
 import React, { useEffect } from "react";
 import EllipsLembaga from "./EllipsLembaga";
 import Image from "next/image";
+import Link from "next/link";
+import { slugify } from "~/lib/slugify";
 
 interface CardProps {
   nama: string;
@@ -44,7 +48,10 @@ function Card(props: CardProps) {
 
   if (!type) {
     return (
-      <div className="relative my-1 h-[370px] w-[270px] justify-self-center overflow-hidden rounded-[3.25rem] bg-[radial-gradient(109.4%_109.4%_at_50%_50%,_rgba(162,_248,_243,_0.75)_0%,_rgba(245,_245,_245,_0.75)_100%)] px-4 backdrop-blur-md lg:h-[420px] lg:min-w-[300px] lg:max-w-[300px]">
+      <Link
+        href={`/itb-x/detail/${slugify(nama)}`}
+        className="relative my-1 h-[370px] w-[270px] justify-self-center overflow-hidden rounded-[3.25rem] bg-[radial-gradient(109.4%_109.4%_at_50%_50%,_rgba(162,_248,_243,_0.75)_0%,_rgba(245,_245,_245,_0.75)_100%)] px-4 backdrop-blur-md lg:h-[420px] lg:min-w-[300px] lg:max-w-[300px]"
+      >
         <div className="flex flex-col items-center gap-2 py-4">
           <p id="nama_lembaga" className={className}>
             {nama}
@@ -60,7 +67,7 @@ function Card(props: CardProps) {
             className="absolute bottom-0 left-0 z-[1] -translate-x-[40px] translate-y-[82px] rotate-[165deg] scale-[1.8] object-fill lg:-translate-x-[40px] lg:translate-y-[110px] lg:scale-[1.4] lg:scale-x-[1.7]"
           />
         </div>
-      </div>
+      </Link>
     );
   } else {
     // UKM Card

@@ -1,5 +1,6 @@
 import React from "react";
 import SliderButton from "./SliderButton";
+import Image from "next/image";
 
 interface SliderProps {
   name: string;
@@ -12,13 +13,20 @@ function FeaturedSlider(props: SliderProps) {
   return (
     <div className="flex h-full w-full items-center justify-center gap-x-4">
       <div
-        className={`flex h-full w-full flex-col justify-between rounded-[16px] px-6 ${photoPath ? "" : "bg-black"}`}
+        className={`relative flex h-full w-full flex-col justify-between rounded-[16px] ${photoPath ? "" : "bg-black"}`}
       >
-        <div className={`h-full`}>
-          <p className="pt-6 font-mogula text-[24px] leading-[32px] text-white">
+        <Image
+          src={photoPath!}
+          alt={name}
+          width={700}
+          height={700}
+          className="absolute -z-10 h-full w-full object-cover"
+        />
+        <div className={`h-full max-w-96 pl-4`}>
+          <p className="w-fit pt-6 font-mogula text-lg text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] sm:text-5xl">
             {name}
           </p>
-          <SliderButton />
+          <SliderButton link={link!} />
         </div>
       </div>
     </div>
