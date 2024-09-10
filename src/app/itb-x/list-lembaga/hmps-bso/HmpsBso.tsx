@@ -5,8 +5,12 @@ import SearchBar from "../components/SearchBar";
 // import { hmps } from "../data/data_lembaga";
 import { hmps } from "../../data/data_lembaga";
 import ListHimpunanBSO from "../components/ListHimpunanBSO";
-import SliderContainer from "../components/SliderContainer";
 import { slugify } from "~/lib/slugify";
+import dynamic from "next/dynamic";
+
+const SliderContainer = dynamic(() => import("../components/SliderContainer"), {
+  ssr: false,
+});
 
 function HmpsBso() {
   const [filteredData, setFilteredData] = useState(hmps);
