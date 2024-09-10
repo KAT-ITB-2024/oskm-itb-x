@@ -15,7 +15,7 @@ const Countdown = dynamic(() => import("../(landing)/component/Countdown"), {
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-[url('/itb-x/bg-itbx.png')] bg-cover bg-center pt-20 pb-40">
+    <main className="min-h-screen bg-[url('/itb-x/bg-itbx.png')] bg-cover bg-center pb-40 pt-20">
       <div className="mx-8 mt-20 flex flex-col items-center justify-center gap-y-32  text-blue-800 lg:mx-16 xl:mx-24">
         {/* ITB Showcase */}
         <div className="flex flex-col items-center">
@@ -29,10 +29,10 @@ export default function Page() {
           <h1 className="font-mogula text-4xl lg:text-7xl">ITB Expo</h1>
           <Countdown targetDate="2024-09-14T09:00:00" isItbX />
           <div className="w-full max-w-4xl">
-            <p className="text-center font-rem text-blue-900 lg:text-lg font-medium">
-              ITB-x atau ITB Expo merupakan acara penutup dari
-              rangkaian kegiatan Kaderisasi Awal Terpusat (KAT) ITB 2024 yang
-              akan dilaksanakan pada tanggal 14 September 2024 secara luring
+            <p className="text-center font-rem font-medium text-blue-900 lg:text-lg">
+              ITB-x atau ITB Expo merupakan acara penutup dari rangkaian
+              kegiatan Kaderisasi Awal Terpusat (KAT) ITB 2024 yang akan
+              dilaksanakan pada tanggal 14 September 2024 secara luring
               (offline) di ITB Kampus Jatinangor. ITB-x bertujuan untuk
               memfasilitasi mahasiswa baru dalam melakukan eksplorasi
               lembaga-lembaga, yaitu Unit Kegiatan Mahasiswa (UKM), Himpunan
@@ -40,7 +40,10 @@ export default function Page() {
               elemen lainnya di dalam Keluarga Mahasiswa (KM) ITB. Dalam
               mencapai tujuan tersebut, terdapat beberapa mata acara yang akan
               diadakan pada kegiatan ini, yaitu Pameran Lembaga, Parade, ITB’s
-              Got Talent 2024, dan Closing Concert.
+              Got Talent 2024, dan Closing Concert. Pada rangkaian KAT
+              sebelumnya, ITB-x disebut dengan OHU, namun tahun ini ITB-x hadir
+              dengan lebih inklusif dengan menghadirkan paguyuban, HMJ, dan
+              lembaga kemahasiswaan lain di ITB.
             </p>
           </div>
         </div>
@@ -54,7 +57,7 @@ export default function Page() {
             height={400}
             draggable={false}
           />
-          <h1 className="font-mogula text-3xl lg:text-4xl">
+          <h1 className="font-mogula text-3xl lg:text-4xl text-center">
             Unit Kegiatan Mahasiswa (UKM)
           </h1>
           <div className="w-full max-w-4xl">
@@ -82,7 +85,7 @@ export default function Page() {
             height={400}
             draggable={false}
           />
-          <h1 className="font-mogula text-3xl lg:text-4xl">
+          <h1 className="font-mogula text-3xl lg:text-4xl text-center">
             Himpunan Mahasiswa Program Studi (HMPS)
           </h1>
           <div className="w-full max-w-4xl">

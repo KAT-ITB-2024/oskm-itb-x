@@ -99,7 +99,7 @@ function Navbar() {
                         : ""
                     }
                   >
-                    ITB-X
+                    ITB-x
                   </Link>
                 </li>
                 <li>
@@ -172,7 +172,7 @@ function Navbar() {
                     : ""
                 }
               >
-                ITB-X
+                ITB-x
               </Link>
             </li>
             <li>
