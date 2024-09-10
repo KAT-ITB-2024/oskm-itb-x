@@ -8,7 +8,7 @@ export default function About() {
   useEffect(() => {
     const mountain = document.getElementById("mountain");
     const initialTop = mountain?.offsetTop;
-    console.log(initialTop);
+    // console.log(initialTop);
     const handleScroll = () => {
       const value = window.scrollY;
       if (mountain && initialTop) {

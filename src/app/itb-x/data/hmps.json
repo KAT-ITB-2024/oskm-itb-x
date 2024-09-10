@@ -1,0 +1,659 @@
+[
+  {
+    "nama_lembaga": "KMM ITB",
+    "deskripsi": "Keluarga Mahasiswa Manajemen Institut Teknologi Bandung (KMM ITB) adalah wadah bagi setiap mahasiswa program studi manajemen untuk dapat berinteraksi secara sosial maupun profesional dalam mengembangkan keahlian, minat, dan bakat sebagai bagian dari dukungan atas proses pembelajaran di lingkungan Program Studi Manajemen - Sekolah Bisnis dan Manajemen Institut Teknologi Bandung khususnya, dan di lingkungan InstitutTeknologi Bandung pada umumnya.",
+    "hari_jadi": "20 Juni 2006",
+    "visi": "KMM ITB memiliki 5 nilai yang harus dipegang oleh seluruh anggotanya yaitu IPK3 (Integritas, Profesionalisme, Kekeluargaan, Kepemimpinan, Keterbukaan).\n\nKMM ITB bertujuan untuk:\n\na. Mendukung cita-cita Sekolah Bisnis dan Manajemen Institut Teknologi Bandung dalam\nmendidik dan mengembangkan generasi baru pemimpin yang inovatif dan berjiwa\nkewirausahaan;\nb. Menanamkan rasa kepedulian, memupuk rasa persaudaraan serta kekeluargaan terhadap\nmasyarakat dan civitas akademika; dan\nc. Memfasilitasi dan menjadi wadah aspirasi bagi mahasiswa Sekolah Bisnis dan\nManajemen Program Studi Sarjana Manajemen untuk menyatukan minat, bakat, dan\nkreativitas yang berbasis keprofesian.",
+    "alamat_sekretariat": "Jalan D, Gedung Labtek XIX Freeport, ITB Ganesha",
+    "media_sosial": "IG: @kmmitb\nX: @kmmitb\nTikTok: @kmmitb\nYoutube: KMM ITB",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_KMM_ITB_1GDz7zouoW2-UpiY2vZjDE7XDn3DTmT8E.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=dhkbXq0x90IV5zon3llvrhB5BSo%3D&Expires=1726413846",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_KMM_ITB_1EGLjLTPdF2fxfz4Wz-mnNOT66LQH-amM.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=GEfst8poEer72sx6HUaa7YLI4bA%3D&Expires=1726413850"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_KMM_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=da4gRw7Vik1xi1OmfGSnBi%2BvNP4%3D&Expires=1726413853",
+    "fakultas": "SBM"
+  },
+  {
+    "nama_lembaga": "HMP Pangripta Loka ITB",
+    "deskripsi": "Himpunan Mahasiswa Perencanaan Wilayah dan Kota Pangripta Loka ITB merupakan organisasi mahasiswa yang menaungi mahasiswa Program Studi Perencanaan Wilayah dan Kota ITB. HMP Pangripta Loka mengusahakan tercapainya tujuan pendidikan Perencanaan Wilayah dan Kota dengan memberi dorongan bagi anggotanya untuk menjadi sarjana yang cakap, bertanggung jawab serta menjadi unsur penggerak dan pengabdi dalam kehidupan bangsa yang sesuai dengan keahliannya.",
+    "hari_jadi": "21 September 1959",
+    "visi": "HMP yang Nyaman Sebagai Katalisator Perkembangan Warga \nUntuk Mencapai Kebermanfaatan",
+    "alamat_sekretariat": "Lt.1 Labtek IXA ITB Kampus Ganesha, Jl. Ganesha No.10, Lb. Siliwangi, Kecamatan Coblong, Kota Bandung, Jawa Barat 40132",
+    "media_sosial": "IG: @hmp_itb\nX: HMP_ITB\nYoutube: HMP Pangripta Loka ITB",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMP_Pangripta_Loka_ITB_1ruoa2KWGkUxCpaXcSOzz51ddVIjIGD7F.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=neA1iVEZt5IthF9AAEqq%2BsISKiA%3D&Expires=1726413862",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMP_Pangripta_Loka_ITB_1qdy3WT11jX4XxBGui4DixmDtw5xHBN-0.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=dHKTXZNF71unIoqRrS0Whj%2FLNzU%3D&Expires=1726413871"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HMP_Pangripta_Loka_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=jzADonOnNT2QUI4En6bz0yDlZgU%3D&Expires=1726413875",
+    "fakultas": "SAPPK"
+  },
+  {
+    "nama_lembaga": "BSO TERIKAT",
+    "deskripsi": "Himpunan mahasiswa kriya tekstil dan keramik \u201cterikat\u201d Fakultas Seni Rupa dan Desain Institut Teknologi Bandung. Berasal dari kata Tembikar dan Ikat.",
+    "hari_jadi": "22 Mei 2016",
+    "visi": "Menjadikan terikat sebagai wadah kepala-kepala kreatif yang berprestasi dengan dasar kekeluargaan.",
+    "alamat_sekretariat": "Gedung B lantai 2 Kampus Cirebon",
+    "media_sosial": "@BSOCIREBON_TERIKAT",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_BSO_TERIKAT_1QPW9lAEfbkRreh6LWXjpfeV1rcqlILGs.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=QQYJqBeJP5Pl8Y4xzm6vFrxqHQg%3D&Expires=1726413879",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_BSO_TERIKAT_1IlD2_kG5w3312mIe4juPjQQyXygykzOf.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=FO%2B3vPjoWKQQLHPS4WI8rop4WQY%3D&Expires=1726413883"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_BSO_TERIKAT.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=cOhe%2BroxNechrWycyOHxR0RsNCc%3D&Expires=1726413887",
+    "fakultas": "FSRD"
+  },
+  {
+    "nama_lembaga": "HMO \"TRITON\" ITB Ganesha",
+    "deskripsi": "Himpunan mahasiswa oseanografi \u201cTRITON\u201d ITB Ganesha adalah himpunan mahasiswa jurusan yang menaungi mahasiswa program studi oseanografi Institut Teknologi Bandung kampus Ganesha.\n\nHMO \u201cTRITON\u201d ITB Ganesha menyediakan wadah bagi mahasiswa program studi oseanografi kampus Ganesha untuk menggali potensi, mempelajari pengetahuan, dan meningkatkan serta mengembangkan keterampilan di bidang oseanografi.",
+    "hari_jadi": "19 September 2008",
+    "visi": "\u201c HMO \"TRITON\" ITB Ganesha menciptakan arus dinamis untuk mendukung hubungan harmonis melalui usaha masif dan berorientasi kebermanfaatan untuk anggotanya. \u201d",
+    "alamat_sekretariat": "Gedung LABTEK XI Kampus ITB Ganesha",
+    "media_sosial": "IG : hmotritonitb\nYouTube : HMOTRITONITB\nMedium : hmotritonitb ",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMO_%22TRITON%22_ITB_Ganesha_1n809EvKP71Qs6aKswb6O706_7UHh6_qi.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=lb4n%2BWY8Z23qBpyL2eEXg%2BToU7w%3D&Expires=1726413891",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMO_%22TRITON%22_ITB_Ganesha_10xgb2sT6119wrJutTSa_GnVui4e7G4ur.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=G%2FK3w53nhTnEQFscWd59S9HKbwQ%3D&Expires=1726413895"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HMO_%22TRITON%22_ITB_Ganesha.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=QFkRSLcbU4h8M8TYCJ7DjV%2FLDyQ%3D&Expires=1726413898",
+    "fakultas": "FITB"
+  },
+  {
+    "nama_lembaga": "KOMISARIAT HMO \"TRITON\" ITB",
+    "deskripsi": "Komisariat HMO \"TRITON\" ITB merupakan sebutan bagi HMO \"TRITON\" ITB yang berada di multikampus ITB Kampus Cirebon. Sebagai wadah kegiatan untuk menggali potensi, mempelajari ilmu, dan mengembangkan keahlian di bidang oseanografi bagi mahasiswa Program Studi Strata Satu Oseanografi Institut Teknologi Bandung Multikampus Cirebon, organisasi ini menyesuaikan kebutuhan kemahasiswaan yang adaptif dengan memberikan penyesuaian aspek kemandirian untuk kesejahteraan mahasiswa di Multikampus ITB Cirebon.",
+    "hari_jadi": "19 September 2008",
+    "visi": "\u201cInisiator menuju transformasi yang adaptif dan berkelanjutan\u201d",
+    "alamat_sekretariat": "Gedung A Lt. 3 ITB Kampus Cirebon Arjawinangun",
+    "media_sosial": "IG: komisariat.hmotritonitb\ntiktok: komisariat.triton",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_KOMISARIAT_HMO_%22TRITON%22_ITB_1GD_Q4r3wA7Uu3onPGeLNJcxK7-pk_RwB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=EyJWEYkknUT0u1Rq0S3sBVfJV2E%3D&Expires=1726413902",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_KOMISARIAT_HMO_%22TRITON%22_ITB_1dZMgDlh-2Y44ZCc7XI4vkAmh2yHWZtll.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=pEzRTzjwSthJUjnhsnfJ9j9NFYc%3D&Expires=1726413907"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_KOMISARIAT_HMO_%22TRITON%22_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=7xXIl6Umdl9Xl8OHGymMuRqxAAw%3D&Expires=1726413911",
+    "fakultas": "FITB"
+  },
+  {
+    "nama_lembaga": "BSO Cirebon MTI",
+    "deskripsi": "Himpunan Badan Semi Otonom Cirebon Mahasiswa Teknik Industri adalah bagian dari Himpunan Mahasiswa Teknik Industri yang memiliki struktur dan wewenang khusus untuk menaungi mahasiswa teknik industri yang berada di Institut Teknologi Bandung Kampus Cirebon. Diresmikan pada tahun 2019, himpunan ini adalah upaya angkatan terdahulu untuk memastikan pemenuhan hak mahasiswa teknik industri ITB Kampus Cirebon.",
+    "hari_jadi": "13 Mei 2019",
+    "visi": "A transparant and caring semi-profesional organisation",
+    "alamat_sekretariat": "Lantai 1 Gedung B ITB Cirebon",
+    "media_sosial": "IG: bsomti.itb\nTiktok: bsomti.itb",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_BSO_Cirebon_MTI_1IK3cA9ytIdlKnpEQu0evafUp3BHkRY69.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=W6HnhZpoAs33LB2FjTX684MRMmI%3D&Expires=1726413916",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_BSO_Cirebon_MTI_1FOVWEc1tg_sdgeaGKYrMEvFB8CFgQ3BO.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=HnSLus%2BZnoU9XkmnKVBXvkaBn4k%3D&Expires=1726413921"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_BSO_Cirebon_MTI.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=D64YOxQQKyLjpFeKUB8YnJR4UpI%3D&Expires=1726413925",
+    "fakultas": "FTI"
+  },
+  {
+    "nama_lembaga": "IPPDIG",
+    "deskripsi": "IPPDIG (ikatan pemuda-pemudi desain grafis) adalah himpunan mahasiswa DKV ITB yang mengedepankan pertumbuhan dalam segi ilmu keprofesian melalui kegiatan bermain dan berkemahasiswaan",
+    "hari_jadi": "23 September 1982",
+    "visi": "IPPDIG sebagai kelompok bermain/wadah organisasi yang menunjang proses belajar, dan pengembangan profesi.",
+    "alamat_sekretariat": "CADL lt. 6 ITB Ganesha",
+    "media_sosial": "IG: ippdig",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_IPPDIG_1GlJJP3C6QSQXBGJgyM2aMrqo-G932h1Z.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=IH%2FXcb%2FcCjleGEmFl6zEOT%2BsuI4%3D&Expires=1726413929",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_IPPDIG_1sHUCwtfpMjktx5sXXUOGCrMvI8Rniqdh.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=A%2BVCWeOFC%2BCAihGLz4%2FPK0m1IeE%3D&Expires=1726413932"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_IPPDIG.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=9tF36bxZzJmBomIjGIT3jIlAq4Y%3D&Expires=1726413936",
+    "fakultas": "FSRD"
+  },
+  {
+    "nama_lembaga": "HMH 'Selva' ITB",
+    "deskripsi": "Himpunan Mahasiswa Rekayasa Kehutanan 'Selva' ITB adalah sebuah himpunan yang menaungi mahasiswa yang berada dalam program studi Rekayasa Kehutanan ITB dimana kami mengabdikan diri untuk menguntai cita bangsa berbasis pembangunan, yang diwujudkan dalam konsep keilmuan rekayasa dan kehutanan, untuk menyongsong pengembangan bangsa akan konsep kepedulian terhadap lingkungan.\n\nTinggi Rendah Jadi Satu!",
+    "hari_jadi": "9 Desember 2014",
+    "visi": "HMH \u2018Selva\u2019 ITB sebagai wadah pengembangan anggota dalam melakukan pergerakan aktif dan dinamis yang berdampak kepada lingkungan sekitar dengan menjunjung tinggi nilai korsa rimbawan",
+    "alamat_sekretariat": "Sebelah Museum Zoologi & Herbarium Bandungense ITB Jatinangor",
+    "media_sosial": "IG: selva_itb\nTikTok: @selvaitb\nEmail: selva_itb@km.itb.ac.id",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMH_%27Selva%27_ITB_1XMeSfHZRRx820Ho6-4HxlD04usP7UqCF.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=oBUI4H%2BP12nlkgCSnDgtnkdTmGk%3D&Expires=1726413941",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMH_%27Selva%27_ITB_15-fNAp_ZMVutaYKIfD2VeW-wMPnbdmeM.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=gkfpT9nCIHSRENiY1OnAqygckQQ%3D&Expires=1726413949"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HMH_%27Selva%27_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=CqjgA1PTmfigUOC4qts3LSZFmu0%3D&Expires=1726413953",
+    "fakultas": "SITH-R"
+  },
+  {
+    "nama_lembaga": "IMA-G",
+    "deskripsi": "IMA-G (Ikatan Mahasiswa Arsitektur Gunadharma) merupakan himpunan mahasiswa arsitektur ITB yang bergerak atas dasar Tri Dharma Perguruan Tinggi dan berasaskan kekeluargaan. Ikatan ini memiliki beberapa tujuan bersama, salah satunya memasyarakatkan arsitektur. IMA-G sudah berumur 73 tahun (2024) dengan mengedepankan semangat kekeluargaan sekaligus pendalaman fokus terhadap keilmuan arsitektur. Sekarang, IMA-G sedang memaksimalkan aplikasi keilmuan terhadap keprofesian lulusan arsitektur yang bisa berdampak bagi Indonesia.",
+    "hari_jadi": "15 November 1951",
+    "visi": "Tujuan IMA Gunadharma terdiri atas:  \n- Mempererat hubungan kekeluargaan dan persahabatan antar anggota.\n- Membela dan membantu kepentingan anggota guna kelancaran pendidikannya. \n- Memperdalam dan memperluas pengetahuan anggota dalam kebudayaan dan ilmu pengetahuan, khususnya arsitektur. \n- Membentuk anggotanya menjadi sarjana Indonesia. \n- Memasyarakatkan arsitektur. \n- Mendermakan pengetahuan kepada nusa dan bangsa.\n",
+    "alamat_sekretariat": "Labtek IX-B, Jalan Ganesha 10, Bandung",
+    "media_sosial": "IG: @galerigunadharma, @arsitenar, @birogunadharma\nTiktok: @galerigunadharma",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_IMA-G_1TpZKqHkVayKiTHhXZRHxPvAgc87c9n_K.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=k1TB5pZwU%2FNOs0kxI6a0WLiaWP0%3D&Expires=1726413957",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_IMA-G_1Fnyp2F8-ntfpO_GTO0tpD1Cj8kcSjpFW.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=sb9IgNYu1%2BtQhnELJ%2BEhof%2FMbxs%3D&Expires=1726413961"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_IMA-G.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=Tur9fLvl1IXCn5kvFeSo2XJF%2FHc%3D&Expires=1726413964",
+    "fakultas": "SAPPK"
+  },
+  {
+    "nama_lembaga": "HMRH ITB",
+    "deskripsi": "Himpunan Mahasiswa Rekayasa Hayati ITB (HMRH ITB) adalah himpunan bersifat kekeluargaan dan keprofesian yang menaungi mahasiswa rekayasa hayati. HMRH ITB memiliki nilai kekeluargaan, solidaritas, integritas, dan berpikir cerdas yang mendorong anggotanya untuk menjadi masyarakat madani yang kompeten pada bidang keilmuan rekayasa hayati, serta mampu menghadapi tantangan keprofesian di masa yang akan datang.",
+    "hari_jadi": "27 Maret 2013",
+    "visi": "Sinergisme HMRH ITB sebagai ruang yang mempersiapkan anggotanya menjadi civitas madani untuk menjawab tantangan keberlanjutan bioindustri Indonesia",
+    "alamat_sekretariat": "Lantai Dasar Labtek IA ITB Kampus Jatinangor",
+    "media_sosial": "IG: hmrh_itb",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMRH_ITB_1sNU-x9fVkPOkgFb8US1YWEcPX0sU0xun.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=2vvUB%2BMqGZDQkfM1x4Hw40FnQcM%3D&Expires=1726413970"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HMRH_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=%2Fb44soNsBen7pxmAxUUypD35Wio%3D&Expires=1726413974",
+    "fakultas": "SITH-R"
+  },
+  {
+    "nama_lembaga": "MTI ITB",
+    "deskripsi": "MTI ITB (Mahasiswa Teknik Industri ITB) adalah himpunan yang menaungi dua jurusan yaitu Teknik Industri dan Manajemen Rekayasa. Berdiri pada tanggal 24 Februari 1971 dan memiliki slogan \"Avanti!\" yang berarti maju. MTI ITB menjunjung tinggi nilai cakap, bermoral, dan berpengabdian untuk menciptakan lulusan sarjana TI/MR yang siap dalam menghadapi kebutuhan dan perubahan industri.",
+    "hari_jadi": "24 Februari 1971",
+    "visi": "MTI as a Warm Community Striving for Collective Growth Towards Making Impact.",
+    "alamat_sekretariat": "Labtek III Matthias Aroef Ganesha",
+    "media_sosial": "IG : mti_itb\ntiktok : mtiitb\n",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_MTI_ITB_12Urg2O4OvOHpSaRkmzFQjLFzil_1p9LA.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=8XZMQJzuhlvtAMXaZvLl2bcyIWk%3D&Expires=1726413979",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_MTI_ITB_1QJmHnrCqPvpxJH1SuTBVJIQbbOOpxibN.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=Z2NNwaTtVG%2F8ETXNz98ywJBoXng%3D&Expires=1726413987"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_MTI_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=tBcDBRdbN1HXAljAvWj6P5K2nEM%3D&Expires=1726413991",
+    "fakultas": "FTI"
+  },
+  {
+    "nama_lembaga": "MTM ITB",
+    "deskripsi": "Himpunan Mahasiswa Teknik Material ITB (MTM ITB) merupakan himpunan mahasiswa yang bersifat kekeluargaan dan keprofresian. MTM ITB memiliki semboyan berupa Majesty, Unity, Glory.",
+    "hari_jadi": "30 September 1998",
+    "visi": "MTM ITB yang mendorong swakarsa dan harmoni dalam pemberdayaan anggotanya untuk berkontribusi dan menginspirasi kebermanfaatan bagi sesama",
+    "alamat_sekretariat": "Selasar Labtek Biru",
+    "media_sosial": "IG: @mtmitb @materialsinfo.itb",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_MTM_ITB_1VQqH30StzjhseRkvbPpyn964yr9fnP8n.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=z4fhMLt2SfF5L3ioU6eAgmjObOU%3D&Expires=1726414002"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_MTM_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=IcLH8f%2FW0WCtCTjRTIz5X%2BarIUg%3D&Expires=1726414006",
+    "fakultas": "FTMD"
+  },
+  {
+    "nama_lembaga": "KMKL-ITB",
+    "deskripsi": "Keluarga Mahasiswa Teknik Kelautan ITB (KMKL-ITB) adalah himpunan mahasiswa yang menaungi mahasiswa Program Studi Sarjana Teknik Kelautan ITB dan berlokasi di gedung MRK ITB. Kegiatan kami berfokus pada kebutuhan anggota dan mengutamakan budaya apresiasi dalam berbagai kegiatan kami.",
+    "hari_jadi": "23 September 1995",
+    "visi": "Mengeskalasi KMKL-ITB sebagai poros pengembangan progresif yang inklusif guna mengoptimalkan aktualisasi potensi diri anggotanya.",
+    "alamat_sekretariat": "Gedung Heritage Kelautan",
+    "media_sosial": "IG: kmkl_itb\nLinkedIn : KMKL ITB\nWeb: kmkl.ocean.itb.ac.id",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_KMKL-ITB_1KzhuI1Byzf5JJolhzluYcOynGXoSWxEd.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=k5VWWNHD%2BMo83vq9XAI2InIxnss%3D&Expires=1726414014",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_KMKL-ITB_1ueI7nMFK7_nGRCshqpUDVgXoi7L9Jt-K.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=xhMohZW53Ijor1JHoVN33Ut4rf0%3D&Expires=1726414021"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_KMKL-ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=40qaKG8eniSPIex7VpKZnKtKmkU%3D&Expires=1726414025",
+    "fakultas": "FTSL"
+  },
+  {
+    "nama_lembaga": "KMPN",
+    "deskripsi": "Keluarga Mahasiswa Teknik Penerbangan (KMPN) adalah organisasi mahasiswa program studi Teknik Dirgantara yang berfokus pada pengembangan kemampuan dan pengetahuan di bidang kedirgantaraan. Dengan semangat untuk menjelajahi langit dan melampaui batas-batas teknologi, KMPN menyediakan wadah bagi mahasiswa Teknik Dirgantara ITB untuk terlibat dalam berbagai kegiatan ekstrakurikuler yang inovatif dan berorientasi pada industri. Dengan komitmen untuk mencetak generasi insinyur dirgantara yang unggul, KMPN berperan selayaknya sebuah wadah yang luas bagaikan langit bagi inovasi dan kemajuan di bidang kedirgantaraan, menjadikan anggotanya siap menghadapi tantangan dan peluang di masa depan.",
+    "hari_jadi": "6 Agustus 1997",
+    "visi": "KMPN sebagai langit tempat insan dirgantara memanifestasikan isi pikirannya menjadi sosok intelektual untuk riset bangsa",
+    "alamat_sekretariat": "Jalan D, ITB Ganesha",
+    "media_sosial": "IG: kmpn_itb\nLinkedIn: KMPN ITB\nMedium: pwkkmpnitb",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_KMPN_134_g03x6mjdGKvGwWkctlFdeOoKNwHx2.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=nTDu%2FKj2fOj29XJPLoMQpGYNLGU%3D&Expires=1726414032",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_KMPN_1K97AejgNrlmKf6Q27XydX-BZtSQbe_yM.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=2mNocp8hyavIaynVNiJq%2F7rtZ%2FQ%3D&Expires=1726414042"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_KMPN.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=HbPMbTJ5XZv4vCXAgS1v6pt1K%2BQ%3D&Expires=1726414045",
+    "fakultas": "FTMD"
+  },
+  {
+    "nama_lembaga": "HIMAREKTA \"Agrapana\" ITB",
+    "deskripsi": "Himpunan Mahasiswa Rekayasa Pertanian \"Agrapana\" ITB atau HIMAREKTA \"Agrapana\" ITB merupakan organisasi mahasiswa yang menaungi program studi Rekayasa Pertanian. Agrapana berasal dari bahasa sansekerta yang berarti sumber hidup yang utama. Setiap mahasiswa Rekayasa Pertanian ITB diharapkan dapat menjadi sumber utama kehidupan bagi dirinya sendiri, keluarga dan kerabat, organisasi, almamater, serta bangsa dan negaranya. HIMAREKTA \"Agrapana\" ITB memiliki tiga nilai dasar, yaitu profesionalitas, solidaritas, serta kreatif dan inovatif.",
+    "hari_jadi": "11 April 2014",
+    "visi": "Mengobarkan semangat kemahasiswaan anggota HIMAREKTA \"Agrapana\u201d ITB melalui pengembangan anggota, pengukuhan citra himpunan, pengabdian masyarakat, dan manifestasi inovasi anggota",
+    "alamat_sekretariat": "Lantai 1 Labtek 1A ITB Jatinangor",
+    "media_sosial": "IG: himarekta_agrapana\nLinkedln: agrapana-itb",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HIMAREKTA_%22Agrapana%22_ITB_1hkzz4SSrYGIGEX-qbttjfVHFu5pO9kSq.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=Kr9xmKZi8k6WIldwZ7U7ORgRBKw%3D&Expires=1726414052",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HIMAREKTA_%22Agrapana%22_ITB_1bouB_XuuU0LRxLUBJr2hx5kyo1S75zbL.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=yyJb8YiGP6UCYoOhXhrjhwfUDLs%3D&Expires=1726414057"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HIMAREKTA_%22Agrapana%22_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=kRQhpxlnmef%2BYTS2KambvXqHEfQ%3D&Expires=1726414062",
+    "fakultas": "SITH-R"
+  },
+  {
+    "nama_lembaga": "HIMA TG \"TERRA\" ITB",
+    "deskripsi": "Himpunan Mahasiswa Teknik Geofisika \u201cTERRA\u201d Institut Teknologi Bandung (HIMA TG \u201cTERRA\u201d ITB) hadir sebagai wadah berhimpun bagi mahasiswa S1 program studi Teknik Geofisika ITB, baik yang berada di Kampus Ganesha maupun Kampus Cirebon.",
+    "hari_jadi": "13 Juli 1998",
+    "visi": "HIMA TG \u201cTERRA\u201d ITB memiliki tujuan yakni :\n\nMempererat rasa kekeluargaan dan mengusahakan kesejahteraan anggota, menunjang penyelenggaraan pendidikan di ITB dalam pencapaian tujuan pendidikan nasional, dan membimbing serta menyalurkan cipta, karsa dan karya mahasiswa Teknik Geofisika ITB dalam rangka membentuk sarjana teknik geofisika yang menjunjung tinggi nilai-nilai kebenaran dan profesionalisme. \n\nMemelihara dan mempererat rasa kekeluargaan serta mengusahakan kesejahteraan material dan spiritual anggota HIMA TG \u201cTERRA\u201d ITB dalam proses pembaharuan menuju ke arah perbaikan dunia perguruan tinggi khususnya di ITB dan perguruan tinggi di Indonesia pada umumnya.",
+    "alamat_sekretariat": "Gedung Basic Science B (BSCB) Lantai 2, ITB Ganesha",
+    "media_sosial": "IG : terra.itb\nTiktok : terra.itb",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HIMA_TG_%22TERRA%22_ITB_1wueWIHOwzrYa6-8M3yCT7M596-WO3Enc.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=kodYGknqjoZGrkIBvQKptmrupUA%3D&Expires=1726414068",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HIMA_TG_%22TERRA%22_ITB_1m4MCxCHBZb5d0UVyuXLS4C5lUFsR_Ykq.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=xqtUANd3qiov3AIDXyIY09zW2kU%3D&Expires=1726414072"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HIMA_TG_%22TERRA%22_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=clWg1L1aStSIPEN5mlLG4QrDXn4%3D&Expires=1726414075",
+    "fakultas": "FTTM"
+  },
+  {
+    "nama_lembaga": "BSO HIMA TG \"TERRA\" ITB",
+    "deskripsi": "BSO HIMA TG \"TERRA\" ITB adalah organisasi berbasis keprofesian Teknik Geofisika yang menjadi wadah bagi mahasiswa sarjana Program Studi Teknik Geofisika ITB Multikampus Cirebon.",
+    "hari_jadi": "20 Februari 2022",
+    "visi": "BSO HIMA TG \"TERRA\" ITB sebagai rumah tumbuh-kembang dengan semangat kekeluargaan dan keprofesian yang membangun untuk menjawab tantangan kebutuhan masa kini dan masa depan.",
+    "alamat_sekretariat": "Lt. 3, Gedung A, ITB Cirebon",
+    "media_sosial": "IG : bsoterra.itb",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_BSO_HIMA_TG_%22TERRA%22_ITB_1e8zSfAYqwmY1fm0dLCJZ1VExwk6_I4Ua.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=iaTy0SvPIxXy8p85Q%2FPYcJIqmCU%3D&Expires=1726414079",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_BSO_HIMA_TG_%22TERRA%22_ITB_15gA9VbflZb7AePyBayye_-82pHTXs3mq.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=ljUVxUdcW7k9nx%2BohQpHe2jmM1I%3D&Expires=1726414083"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_BSO_HIMA_TG_%22TERRA%22_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=6UX2mFfAjnrs762N17Y42ZI5sU0%3D&Expires=1726414087",
+    "fakultas": "FTTM"
+  },
+  {
+    "nama_lembaga": "IMT \u201cSignum\u201d ITB",
+    "deskripsi": "Ikatan Mahasiswa Telekomunikasi (IMT) \u201cSignum\u201d ITB merupakan Himpunan Mahasiswa Jurusan Teknik Telekomunikasi ITB. Kata \u201cSignum\u201d pada nama IMT \u201cSignum\u201d ITB berarti \u201cSinyal\u201d dalam Bahasa Latin. Selain itu, kata \u201cSinyal\u201d sendiri bisa berarti sebagai \u201cPertanda\u201dsehingga IMT \u201cSignum\u201d ITB berharap agar tetap dan terus menjadi pertanda bagi eksistensi keilmuan Teknik Telekomunikasi di Indonesia",
+    "hari_jadi": "14 Februari 2016",
+    "visi": "IMT \u201cSignum\u201d ITB sebagai rumah kolaborasi yang bermanfaat bagi telekomunikasi bangsa",
+    "alamat_sekretariat": "Gedung LTRGM ITB",
+    "media_sosial": "IG : @imtsignumitb",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/manual/compressed_imt_kegiatan.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=iPVKM1odknWaJe%2FzxrsccbZcfII%3D&Expires=1726415451"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_IMT_%E2%80%9CSignum%E2%80%9D_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=dWo%2Bt6ZmouUNXV6c9yyYiqBkDPE%3D&Expires=1726414094",
+    "fakultas": "STEI"
+  },
+  {
+    "nama_lembaga": "HMME \"Atmosphaira\" ITB",
+    "deskripsi": "HMME \"Atmosphaira\" ITB bertujuan sebagai wadah pengembangan anggota dan manajemen talenta untuk menghadapi tantangan masyarakat dan berkontribusi positif. Dengan pendekatan integratif, organisasi ini membentuk anggota kompeten akademis, serta berjiwa sosial dan kepemimpinan. HMME \"Atmosphaira\" ITB berkomitmen untuk terus berkembang dan turut memajukan keilmuan meteorologi. Fokusnya pada inovasi, kolaborasi, serta memperkuat kebersamaan melalui program pengembangan keilmuan, soft skills, dan kemitraan strategis.",
+    "hari_jadi": "19 September 2008",
+    "visi": "HMME \"Atmosphaira\" ITB sebagai wadah pengembangan anggota dan manajemen talenta dalam menghadapi tantangan bermasyarakat.",
+    "alamat_sekretariat": "Labtek XI",
+    "media_sosial": "Instagram:  @atmosphairaitb\nTiktok: @atmosphaira_itb\nYoutube: @HMME_Atmosphaira_ITB",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMME_%22Atmosphaira%22_ITB_1Pvr7eIdb9BbxAQldq8_vZOJVvBMBUKrw.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=NTsHtPgD0Dkqs3vnW20rGfso2CE%3D&Expires=1726414110",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMME_%22Atmosphaira%22_ITB_1t1fmlMoNvFP-ohLCUk1tp4uo-gRbqDgW.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=%2FNGPQEOrOqxH21doo7qFaE7yAs4%3D&Expires=1726414129"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HMME_%22Atmosphaira%22_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=M2BY4%2FdNcBJVyuI3NELA2OLbwFA%3D&Expires=1726414133",
+    "fakultas": "FITB"
+  },
+  {
+    "nama_lembaga": "KMSR ITB",
+    "deskripsi": "Keluarga Mahasiswa Seni Rupa (KMSR ITB) adalah himpunan Fakultas Seni Rupa dan Desain yang menaungi INDDES (Industrial Design Student Society) IPPDIG (Ikatan Pemuda Pemudi Desain Grafis), IMDI (Ikatan Mahasiswa Desain Interior), VASA (Visual Art Student Aggregate), dan Terikat (Tembikar dan Ikat).",
+    "hari_jadi": "12 September 1947",
+    "visi": "KMSR yang berkesinambungan dan berdampak",
+    "alamat_sekretariat": "Lapangan Merah, Gedung CAD ITB Ganesha",
+    "media_sosial": "ig: @kmsr_itb @lapanganmerah",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_KMSR_ITB_1S0MCKhOJoKexpsj-mb2bVCEBUNsS7cQc.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=fzP482uvFHCANSSOYzXnt7Sa0ao%3D&Expires=1726414136",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_KMSR_ITB_1JahOskiQBzqSzhSgD1c-w4icYUfVcg3O.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=wbpQ9RAWviSx7FVG%2BEdlzC1blW0%3D&Expires=1726414140"
+    ],
+    "logo_lembaga": "https://oskm-production-bucket.sgp1.cdn.digitaloceanspaces.com/lembaga/manual/KMSRxx_400x400.jpg",
+    "fakultas": "FSRD"
+  },
+  {
+    "nama_lembaga": "HMTB \"RINUVA\" ITB",
+    "deskripsi": "Himpunan Mahasiswa Teknik Bioenergi dan Kemurgi \"RINUVA\" ITB adalah wadah pengembangan diri bagi mahasiswa Teknik Bioenergi dan Kemurgi yang sesuai dengan kebutuhan anggotanya serta ikatan kekeluargaan antar massa HMTB guna menumbuhkan rasa kepemilikan dan kebanggaan atas HMTB",
+    "hari_jadi": "14 Mei 2017",
+    "visi": "HMTB yang adaptif sebagai wadah yang berorientasi pada kesejahteraan dan pengembangan anggotanya serta menginisiasi anggotanya berkarya aktif untuk mencapai kebermanfaatan\t",
+    "alamat_sekretariat": "Gedung Labtek II Kampus ITB Jatinangor",
+    "media_sosial": "IG : hmtb.itb\nTiktok : hmtb.itb\nYoutube : HMTB \"RINUVA\" ITB",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMTB_%22RINUVA%22_ITB_1SPSFbC0LWPbrOaAK4frrNgaRCQnif0vD.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=v3LWrHZ4DVxqU%2BVNSY3C5GAkSXI%3D&Expires=1726414151",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMTB_%22RINUVA%22_ITB_1cdm_Li5nhJAGZrol_X4Tmt2MAiTJbudM.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=Uy%2BRrzqNFvGYvaU08ruOHshzz3Q%3D&Expires=1726414159"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HMTB_%22RINUVA%22_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=zIvCh7YvvCsqAJqcXB701nP5M88%3D&Expires=1726414163",
+    "fakultas": "FTI"
+  },
+  {
+    "nama_lembaga": "HMTM \"PATRA\" ITB",
+    "deskripsi": "HMTM \u201cPATRA\u201d ITB yang didirikan pada tanggal 24 Desember 1963 ini merupakan himpunan mahasiswa program studi yang memenuhi kebutuhan mahasiswa dalam hal keprofesian teknik perminyakan dan bergerak di bidang energi, baik minyak dan gas, ataupun panas bumi. Di dalam HMTM \u201cPATRA\u201d ITB terdapat Badan Kelengkapan yang terdiri dari Badan Pengurus, Badan Perwakilan Angkatan, dan Badan Kesenatoran.",
+    "hari_jadi": "24 Desember 1963",
+    "visi": "HMTM \u201cPATRA\u201d ITB sebagai pelita keberdampakan anggotanya yang signifikan untuk menjawab tantangan energi kini dan nanti.",
+    "alamat_sekretariat": "Lantai Dasar Gedung Teknik Perminyakan Baru Labtek IV Selatan",
+    "media_sosial": "Website: hmtmpatraitb.or.id\nIG: hmtmpatraitb\nIG Kajian: kanalpatraitb",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMTM_%22PATRA%22_ITB_1KTbHG6zQSU_PeWeyufGudtlUIXMaGX0s.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=M31ZwUWYX1K7S%2BKVg9GzCPhuPVk%3D&Expires=1726414167",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMTM_%22PATRA%22_ITB_1FR_KmAhMbtjtwe1xSsj2_zUMt4pjG4rl.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=G04zkDD97n4ZNNr49GE0mKanVVc%3D&Expires=1726414172"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HMTM_%22PATRA%22_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=GiX9YRmxenptrHlKIC3JBqJgFN8%3D&Expires=1726414175",
+    "fakultas": "FTTM"
+  },
+  {
+    "nama_lembaga": "Komisariat HMTM \"PATRA\" ITB",
+    "deskripsi": "Komisariat Himpunan Mahasiswa Teknik Perminyakan \"PATRA\" ITB berlokasi di Kampus Cirebon yang merupakan cabang daripada Himpunan Mahasiswa Teknik Perminyakan \"PATRA\" ITB yang berada di Kampus Ganesha. Komisariat HMTM \"PATRA\" ITB sebagai wadah aktualisasi mahasiswa jurusan Teknik Perminyakan ITB yang mengedepankan kekeluargaan dalam pengembangan diri dan berkarya.",
+    "hari_jadi": "11 Desember 2022",
+    "visi": "Komisariat HMTM \"PATRA\" ITB Sebagai Cakra Pergerakan Bagi Anggotanya Menuju Nirmala Kemandirian Energi Indonesia",
+    "alamat_sekretariat": "Lantai 3 Gedung Multifungsi B ITB Cirebon",
+    "media_sosial": "IG : komisariat_hmtmpatraitb",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_Komisariat_HMTM_%22PATRA%22_ITB_19kKiA6YFRsPAYAifpCfiaQn9_793pvuM.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=0Ffng6VirU98ObFaJpE0%2Fi3Hob8%3D&Expires=1726414184",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_Komisariat_HMTM_%22PATRA%22_ITB_16B_8uGK5LO4n6nL5g-vG4SrBoR8jJZlU.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=Q5mkjJt8ZPgDdnV4ZkOchUy7DMg%3D&Expires=1726414192"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_Komisariat_HMTM_%22PATRA%22_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=KCDhM03wmL5RBdMXoaNxmn69uXU%3D&Expires=1726414196",
+    "fakultas": "FTTM"
+  },
+  {
+    "nama_lembaga": "HMK 'AMISCA' ITB",
+    "deskripsi": "Himpunan Mahasiswa Kimia \u2018Amicorum Scientiae Chemicae Associatio\u2019 Institut Teknologi Bandung merupakan himpunan berbasis keilmuan kimia yang memiliki tujuan terciptanya manusia yang dinamis dan kritis dalam mengembangkan ilmu kimia yang bertanggung jawab untuk dirinya sendiri, lingkungan, dan Tuhan Yang Maha Esa. HMK 'AMISCA' ITB memiliki mimpi yang besar dalam mewadahi anggotanya agar dapat mengembangkan diri dan berkarya untuk memajukan keilmuan kimia.",
+    "hari_jadi": "10 Februari 1956",
+    "visi": "HMK \u2018AMISCA\u2019 ITB sebagai wadah pengembangan diri yang inklusif, menyenangkan, dan mengedepankan kekeluargaan",
+    "alamat_sekretariat": "Jalan H Kampus Ganesha ITB. Lebih lengkapnya di persimpangan Jalan 7 dengan jalan H Kampus Ganesha ITB",
+    "media_sosial": "IG: amiscaitb",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMK_%27AMISCA%27_ITB_1-REkzhDTkse-isPs57lolLgZQwCkw5lN.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=zVk%2FF4wSkMjkroghAS%2B%2B1viInuU%3D&Expires=1726414204",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMK_%27AMISCA%27_ITB_1-Dvm_h7bZude-hzO4IMYrLZwMW3O8Z4Y.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=dlHWHIc%2BaUa0RwZo0XEYVLJR6ig%3D&Expires=1726414212"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HMK_%27AMISCA%27_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=FOUf%2BgkgTv8xq0crMlU5x2U3wVU%3D&Expires=1726414217",
+    "fakultas": "FMIPA"
+  },
+  {
+    "nama_lembaga": "IMK \"ARTHA\" ITB",
+    "deskripsi": "Ikatan Mahasiswa Kewirausahaan \"ARTHA\" ITB adalah himpunan mahasiswa Sarjana Kewirausahaan Sekola Bisnis dan Manajemen ITB. IMK \"ARTHA\" ITB menjadi wadah dan sarana eksplorasi diri bagi massanya di bidang bisnis dan kewirausahaan. Tak hanya menjadi wadah bagi massa nya, IMK juga berkomitmen untuk terus memberikan dampak terhadap lingkungan dan masyarakat agar tumbuh bersama sama dalam mendukung kemajuan ekonomi dan kehidupan bangsa Indonesia.",
+    "hari_jadi": "15 Oktober 2015",
+    "visi": "Menjadi himpunan proaktif yang kokoh secara internal dan mampu membentuk anggotanya menjadi pemimpin masa depan yang unggul melalui pengembangan skill dan pengetahuan berbasis keilmuan kewirausahaan serta dapat bertanggung jawab terhadap masyarakat dan etika ilmu yang dimilikinya untuk mencapai perbaikan progresif.",
+    "alamat_sekretariat": "Labtek XIX, Gedung Freeport SBM ITB Lt 1",
+    "media_sosial": "IG : imkartha\nTiktok : imkartha\nLinkedIn : IMK Artha ITB\nEmial : Imkartha@sbm-itb.ac.id",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_IMK_%22ARTHA%22_ITB_1y6Ooyw08ifgNdhn4g9C0qn2UewAS7G5D.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=qW%2Fi%2BAcuKNlZvDtJnZtlG7wwy3w%3D&Expires=1726414226",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_IMK_%22ARTHA%22_ITB_1Owf5rnQ2oNVpTnDqjUZKrVnLICaoH67D.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=7aVT1nh5K7T%2BPQR1yi8UbkjQIyQ%3D&Expires=1726414231"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_IMK_%22ARTHA%22_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=hDkUogOQmmscQqi4DzNhuJlEUNU%3D&Expires=1726414236",
+    "fakultas": "SBM"
+  },
+  {
+    "nama_lembaga": "HMTG \"GEA\" ITB",
+    "deskripsi": "Himpunan Mahasiswa Teknik Geologi \"GEA\" Institut Teknologi Bandung merupakan organisasi kemahasiswaan di kampus Ganesha yang berbasis keilmuan geologi. Diresmikan pada tanggal 6 Mei 1955 oleh Prof. Sampoerno, himpunan ini dulu bernama Perhimpunan Mahasiswa Geologi Bandung (PMGB) dan merupakan pecahan dari Persatuan Mahasiswa Geologi dan Pertambangan (PMGP). Himpunan ini memiliki 2 program unggulan yakni Geohumanism yang merupakan kegiatan sosial masyarakat dan Geology Student Competition (GSC) yang merupakan kompetisi geologi bertaraf Internasional.",
+    "hari_jadi": "6 Mei 1955",
+    "visi": "Mewujudkan HMTG \"GEA\" ITB yang persisten, inovatif, dan kolaboratif sebagai langkah awal menguasai dunia.",
+    "alamat_sekretariat": "Basement Gedung Teknik Geologi ITB",
+    "media_sosial": "IG: suaragea\nYouTube: @SuaraGEA\nSpotify: suaraGEA",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMTG_%22GEA%22_ITB_11hSUsupMWWR8PWKohUBnGNUaMe0Ru8Ut.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=Bbn1WcslEbL14CGjj5oekgYbcHc%3D&Expires=1726414247",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMTG_%22GEA%22_ITB_1j7VaLkcSYBirJt7Mntrl5DW17LBQs_1_.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=FLb5xRGeRHbLc%2Biz81WwHfQThWI%3D&Expires=1726414258"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HMTG_%22GEA%22_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=eDOxBReDkTiOSdUquypFT5aUS2I%3D&Expires=1726414261",
+    "fakultas": "FITB"
+  },
+  {
+    "nama_lembaga": "IMG-ITB",
+    "deskripsi": "Ikatan Mahasiswa Geodesi ITB",
+    "hari_jadi": "16 September 1952",
+    "visi": "#PotensiEksistensi",
+    "alamat_sekretariat": "Persimpangan Jalan J & Jalan 6",
+    "media_sosial": "IG: imgitb\nYoutube: Ikatan Mahasiswa Geodesi ITB\nWebsite: imgitb.com",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_IMG-ITB_1blVT2g6oXjqM9Z9_D8hCWsTTXf1Xi4JB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=P%2BGQHAnP9YjXojCKtXfeaF5kMiI%3D&Expires=1726414271",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_IMG-ITB_1t7BWkzMyICE0KYA7qoCT12caWU-R6Ta-.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=jnV6SJG5XLgwr2EIDPlf%2BrUWsUU%3D&Expires=1726414281"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_IMG-ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=COQIFLFlmCKsvxx1YFh3bElLMTw%3D&Expires=1726414284",
+    "fakultas": "FITB"
+  },
+  {
+    "nama_lembaga": "HMP PL ITB Komisariat",
+    "deskripsi": "HMP PL ITB Komisariat merupakan sebuah wadah berhimpun yang terbentuk atas dasar keinginan untuk ikut mengisi kemerdekaan dengan cara memfasilitasi para anggotanya untuk melakukan pergerakan dalam ragam bentuknya",
+    "hari_jadi": "26 April 2018",
+    "visi": "HMP PL ITB Komisariat yang mengedepankan \nEskalasi (Eksistensi, Kalibrasi, Inovasi)",
+    "alamat_sekretariat": "Gedung A Lt. 3 ITB Cirebon",
+    "media_sosial": "Instagram: hmp_itb_komis\nTiktok: hmp_itb_komis",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMP_PL_ITB_Komisariat_114F5QbCN49myA7qvNSuxiX2ynJYHStWC.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=ath7mKAaFJ7DkejX3pU90LXC1fQ%3D&Expires=1726414288",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMP_PL_ITB_Komisariat_1pkCLVvlmqAoXHS3-9RvN3j9hYySdCE6a.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=RrrU0mvW0bnQfK%2F53u5Ebkn6w5E%3D&Expires=1726414294"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HMP_PL_ITB_Komisariat.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=ZhLi6%2B5exKKqaMqUyPy6wUwoobo%3D&Expires=1726414299",
+    "fakultas": "SAPPK"
+  },
+  {
+    "nama_lembaga": "HMIF ITB",
+    "deskripsi": "Himpunan Mahasiswa Informatika ITB (HMIF ITB) adalah sebuah organisasi yang beranggotakan mahasiswa ITB yang berkeprofesian keinformatikaan. HMIF ITB Menaungi 2 program studi di fakultas STEI-K, yaitu Teknik Informatika serta Sistem dan Teknologi Informasi. Memiliki 3 sekretariat, 2 di Kampus Ganesha (Lantai 1 dan Lantai 4 Labtek V) dan 1 di Kampus Jatinangor (Lantai 1 GKU 1).",
+    "hari_jadi": "10 November 1982",
+    "visi": "VISI\nMewujudkan Nirmana Akselerasi Potensi HMIF\n\nMISI\n1. HMIF ITB dapat menjadi rumah belajar yang nyaman bagi setiap anggotanya\n2. HMIF ITB dapat menjadi wahana setiap anggota untuk lebih dekat dengan potensi keprofesiannya \n3. HMIF ITB dapat memanfaatkan berbagai potensinya untuk menunjukkan eksistensi jati dirinya di berbagai struktur sosial",
+    "alamat_sekretariat": "Lantai 1 dan Lantai 4 Labtek V (Kampus Ganesha), serta Lantai 1 GKU 1 (Kampus Jatinangor)",
+    "media_sosial": "IG: @hmif_itb\nX: @HMIF_ITB\nYoutube: HMIF ITB",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMIF_ITB_1zmvDEGpnM6ohzW1S5Fgv9DvDAQweCfJO.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=GXIzgWiZnEOsX0Ij6UnteHSYdAo%3D&Expires=1726414307",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMIF_ITB_13orMcXN653kgZdOpqWkrlpfPqbaXaiQ1.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=f1O9jgivazhU5ynfa%2BGKQ2RKdxQ%3D&Expires=1726414314"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HMIF_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=IdpP43Ch%2BAWOHpB8bsMBfGv%2B9bA%3D&Expires=1726414317",
+    "fakultas": "STEI"
+  },
+  {
+    "nama_lembaga": "HIMAMIKRO \u201cArchaea\u201d ITB",
+    "deskripsi": "Berawal dari keinginan luhur untuk membantu proses pembentukan sarjana-sarjana Mikrobiologi yang siap mengabdi kepada Bangsa dan Negara, lahirlah Himpunan Mahasiswa Mikrobiologi \u201cArchaea\u201d ITB sebagai sebuah wadah aktualisasi diri berdasarkan kesamaan dasar profesi, dalam suasana kekeluargaan yang bersifat adil, aspiratif, partisipatif, transparan, serta berlandaskan kebenaran ilmiah.",
+    "hari_jadi": "27 Maret 2013",
+    "visi": "Mewujudkan HIMAMIKRO \u201cArchaea\u201d ITB yang senantiasa tumbuh sebagai wadah pengembangan diri bagi anggotanya",
+    "alamat_sekretariat": "Lembah TVST ITB Kampus Ganesha",
+    "media_sosial": "IG: archaea_itb\nX: @Archaea_ITB\nWebsite: archaea.sith.itb.ac.id",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HIMAMIKRO_%E2%80%9CArchaea%E2%80%9D_ITB_1vV0-tpfS-lBiaFs-NfR1SuB-x5fSksVc.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=FVemg2aJUU7cbOPwpv1HmrF16ic%3D&Expires=1726414323",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HIMAMIKRO_%E2%80%9CArchaea%E2%80%9D_ITB_1A4fO9ophGXID5b3b9IKEWB1jX3YhxlRK.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=Hw0WqlPSSnX5%2BECNtDWpGj2cwOk%3D&Expires=1726414327"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HIMAMIKRO_%E2%80%9CArchaea%E2%80%9D_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=4uiHJZJnfndbL5APVSYD%2BqEqKVI%3D&Expires=1726414331",
+    "fakultas": "SITH-S"
+  },
+  {
+    "nama_lembaga": "HMT-ITB",
+    "deskripsi": "Himpunan Mahasiswa Tambang Institut Teknologi Bandung merupakan suatu wadah berkembang bagi seluruh anggotanya dengan ikatan kekeluargaan yang erat dan kekal antar anggota guna menyebarkan kecintaan pada pertambangan kepada anggota dan masyarakat dengan tujuan memajukan pertambangan demi pembangunan",
+    "hari_jadi": "15 Mei 1955",
+    "visi": "Merevolusi HMT-ITB untuk memulihkan muruahnya\nsebagai wadah yang berorientasi kepada anggotanya\ndengan berhaluan semangat progresivitas",
+    "alamat_sekretariat": "Labtek 4 Utara, Bagian Barat. Lantai 1, Jalan 9 ITB",
+    "media_sosial": "IG : yudhabumi\nYoutube : HMT-ITB\n",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMT-ITB_19Lbfi8EloZbMhKrOCwWZbvSYUoeszkow.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=57wHI2Bn0fNa%2FrS2gPJjUQn6aAE%3D&Expires=1726414338",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMT-ITB_17h04Jg9hBr9zp1q9YnkxK_ZpDPzrigP1.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=aJNkPAIS%2F8%2BppnXQG98cVDLDDLI%3D&Expires=1726414346"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HMT-ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=lyttQ1yAbGia5Ee3ZKQJZFhCRbk%3D&Expires=1726414349",
+    "fakultas": "FTTM"
+  },
+  {
+    "nama_lembaga": "HMS ITB",
+    "deskripsi": "Himpunan Mahasiswa Sipil Institut Teknologi Bandung (HMS ITB) merupakan organisasi yang menaungi mahasiswa S1 teknik sipil ITB. Himpunan yang terbentuk pada 30 Mei 1954 ini berdiri untuk waktu yang tidak ditentukan dan memiliki ciri khas identitas berupa jaket hijau tua dengan logo atau lambang di bagian dada sebelah kirinya. HMS ITB bukan sekedar apa yang dipandang dan yang dikisahkan, melainkan setiap pergerakan, juga kebersamaan.",
+    "hari_jadi": "30 Mei 1954",
+    "visi": "HMS ITB sebagai fondasi yang terintegrasi untuk mengeksplorasi pengembangan diri dengan rasa nyaman serta kebermanfaatan potensi anggotanya terhadap masyarakat Indonesia",
+    "alamat_sekretariat": "Gedung Program Studi Teknik Sipil ITB",
+    "media_sosial": "IG : hms.itb",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMS_ITB_1a8Q55hqXLyRMK5LzsiIpCW0WQ5-x-3mL.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=l9fkd2mf4VHYlWQfkj8X5VLczcA%3D&Expires=1726414354",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMS_ITB_1APHGhwuoT5EnGGpfry1c-ZOQ1BGR4FbX.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=929QYDj8Cw%2BhAxoRc%2FYSsNA9AgE%3D&Expires=1726414358"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HMS_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=uXChW4EJya4SPL0SME%2F9x9WzHxM%3D&Expires=1726414361",
+    "fakultas": "FTSL"
+  },
+  {
+    "nama_lembaga": "HIMABIO \u201cNymphaea\u201d ITB",
+    "deskripsi": "Himpunan Mahasiswa Biologi (HIMABIO) \u201cNymphaea\u201d ITB merupakan organisasi kemahasiswaan bagi mahasiswa Program Studi Sarjana Biologi yang bersifat kokurikuler sebagai suatu wadah untuk mengaktualisasikan diri secara terorganisasi berdasarkan kesamaan dasar profesi di Institut Teknologi Bandung. HIMABIO \u201cNymphaea\u201d ITB merupakan salah satu himpunan mahasiswa Biologi tertua di Indonesia dan berkedudukan di Institut Teknologi Bandung dengan kegiatan-kegiatan yang dominan dilaksanakan di kampus ITB Ganesha.",
+    "hari_jadi": "1 Maret 1951",
+    "visi": "Himpunan mahasiswa yang proaktif dalam pengembangan pendidikan\ndan cipta karya ilmu teknologi hayati untuk mengelola sumber daya hayati\nbagi kesejahteraan masyarakat dalam rangka menata kehidupan bangsa.",
+    "alamat_sekretariat": "Labtek XI ITB Ganesha",
+    "media_sosial": "IG: @nymphaea_itb\nX: @nymphaeaitb\nYoutube: Nymphaea ITB",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HIMABIO_%E2%80%9CNymphaea%E2%80%9D_ITB_1JT2i17AItV4pUiEgcXuxll2xdDv77_Yt.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=XE4oeASPXdgDLSEC0UkaikfgOJY%3D&Expires=1726414369",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HIMABIO_%E2%80%9CNymphaea%E2%80%9D_ITB_1CItcut0cJPkVkLjsWSURqM8bRNXvMsoS.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=LvvB0NUwvs%2BSjEEw3vB%2B0HFzo7g%3D&Expires=1726414373"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HIMABIO_%E2%80%9CNymphaea%E2%80%9D_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=zm6jyNX8WNcNonWnXQjI%2BEu%2Bixs%3D&Expires=1726414377",
+    "fakultas": "SITH-S"
+  },
+  {
+    "nama_lembaga": "IMMG ITB",
+    "deskripsi": "Ikatan Mahasiswa Metalurgi (IMMG) ITB adalah sebuah organisasi yang beranggotakan mahasiswa tingkat sarjana Teknik Metalurgi ITB. IMMG ITB adalah organisasi yang berlandaskan kekeluargaan dan keprofesian. Di dalam organisasi ini terdapat banyak kegiatan yang menunjang pendidikan formal dan merupakan sarana untuk pendidikan non formal seperti pendidikan karakter dan kepribadian.",
+    "hari_jadi": "05 Oktober 2007",
+    "visi": "IMMG ITB dalam Simfoni Kohesivitas yang Berkelanjutan untuk Mewujudkan Pemimpin Masa Depan yang Berkarakter",
+    "alamat_sekretariat": "Selatan laboratorium Pengolahan Bahan Galian (PBG), Gd tambang. Jalan Ganesha No.10, Lb. Siliwangi, Kecamatan Coblong, Kota Bandung, Jawa Barat 40132",
+    "media_sosial": "IG: @immgitb\nLinkedin: Ikatan Mahasiswa Metalurgi (IMMG) ITB",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_IMMG_ITB_1A9qnTfmALlcRWzHsaX5BhNWK81PjCpk7.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=qRs7PJjw28sLG180dfibr5ZvgGA%3D&Expires=1726414392",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_IMMG_ITB_1re1H9PWi-CfVqadK3TRqKXrfT9zvz_xl.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=mAIxctLKHo0ZfaHxN3TPT9Xoc20%3D&Expires=1726414402"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_IMMG_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=64tBxs01ZfXRNbVDXJuXQP16acY%3D&Expires=1726414406",
+    "fakultas": "FTTM"
+  },
+  {
+    "nama_lembaga": "HIMATEK-ITB",
+    "deskripsi": "Himpunan Mahasiswa Teknik Kimia Institut Teknologi Bandung (HIMATEK-ITB) merupakan organisasi kemahasiswaan nonprofit milik mahasiswa Teknik Kimia ITB. HIMATEK-ITB didirikan pada 26 September 1952 dan berperan sebagai sarana untuk mengembangkan diri menuju manusia dewasa seutuhnya. HIMATEK-ITB beridentitaskan jaket hitam dengan dua garis putih dan logo di lengan kanan.",
+    "hari_jadi": "26 September 1952",
+    "visi": "HIMATEK-ITB menjadi pusat pertumbuhan yang nyaman dan suportif serta berdampak positif bagi masyarakat sebagai komunitas yang apresiatif, inovatif, dan kolaboratif.",
+    "alamat_sekretariat": "Labtek X",
+    "media_sosial": "IG: @himatekitb\nTiktok: @himatekitb\nX: @HIMATEK_ITB",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HIMATEK-ITB_1Jgmmu_QbyOUS774rZ04CI5YpVRAgtFaF.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=%2FhD9PBKUV0XvhympvzwmT34X13Y%3D&Expires=1726414413",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HIMATEK-ITB_1Uu2vfFlOoJy3FoqACIcO2MehTZ7bzj8R.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=A2DV4SnxhKJY4r1jb53nCleZgBo%3D&Expires=1726414417"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HIMATEK-ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=78l%2Bg0J1DedrH23e2N2kbl0%2BDB8%3D&Expires=1726414421",
+    "fakultas": "FTI"
+  },
+  {
+    "nama_lembaga": "HMPG ITB",
+    "deskripsi": "HMPG ITB is a student organization operating under the umbrella of the Faculty of Industrial Technology at Jatinangor, specializing in the Food Engineering program. Its members are Food Engineering students who have undergone a series of specific stages. HMPG ITB was established on May 12, 2017.",
+    "hari_jadi": "12 Mei 2017",
+    "visi": "Memaksimalkan potensi HMPG ITB dengan hal hal bermutu dan berguna demi pendewasaan diri anggota HMPG ITB.",
+    "alamat_sekretariat": "Labtek IA FTI Jatinangor",
+    "media_sosial": "IG: @hmpgitb\nTiktok: @hmpgitb\nYoutube: @hmpgitb5788",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMPG_ITB_16sB7dD_Vee9KrST1byOvC-zru1SAwRXP.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=v6HuyptazI2yopGJ3C46dIYRCq0%3D&Expires=1726414429",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMPG_ITB_1RTKkxXT5Xxhbimzwn89RjDfeQXSmZBe8.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=osq2GqgNTXRUbwhGNcuDNVdXS3Y%3D&Expires=1726414435"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HMPG_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=N%2BEIqb81HARMQIuT85NKhgQGe6w%3D&Expires=1726414439",
+    "fakultas": "FTI"
+  },
+  {
+    "nama_lembaga": "IMDI ITB",
+    "deskripsi": "IMDI-ITB atau Ikatan Mahasiswa Sesain Interior ITB adalah organisasi mahasiswa di bawah Program Studi Desain Interior, ITB, didirikan pada 1985. Berazaskan Pancasila, organisasi ini bertujuan menjadi wadah mahasiswa untuk berorganisasi, mendukung pendidikan, dan menanamkan tanggung jawab sosial. IMDI-ITB adalah bagian dari Keluarga Mahasiswa ITB dan tergabung dalam Keluarga Mahasiswa Seni Rupa ITB.",
+    "hari_jadi": "6 Desember 1985",
+    "visi": "1. Sebagai tempat berorganisasi bagi mahasiswa Program Studi Desain Interior\nITB.\n2. Berperan serta dalam mencapai tujuan pendidikan dan pengajaran di Program\nStudi Desain Interior dengan sebaik-baiknya.\n3. Mengusahakan dan menyelenggarakan kepentingan-kepentingan mahasiswa\nDesain Interior khususnya dan mahasiswa Fakutas Seni Rupa dan Desain\nserta ITB umumnya, dalam bidang keprofesian, akademik, dan organisasi.\n4. Menanamkan rasa tanggung jawab kepada mahasiswa dan kesadaran untuk\nmengisi kehidupan masyarakat serta membawa kearah tatanan kehidupan\nyang harmonis",
+    "alamat_sekretariat": "CADL Lt 7",
+    "media_sosial": "@imdi",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_IMDI_ITB_17mKHbfnbHrNYXFDqUruQeLnBlN7uwaN6.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=UHNJgN85K8T9LRTCVB6GYWKafD4%3D&Expires=1726414445",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_IMDI_ITB_1QuBEKlQaqHrnUeG-vTGLH_uSQW7QuKGa.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=feTFoq%2FPVMqR6P0pq%2BiT9BHoFhY%3D&Expires=1726414448"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_IMDI_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=%2FizVLk5IRUJbofkdimULgpvoyG8%3D&Expires=1726414452",
+    "fakultas": "FSRD"
+  },
+  {
+    "nama_lembaga": "HMPP 'Vadra' ITB",
+    "deskripsi": "Nama 'Vadra' berasal dari padanan kata Vardana dan Raksaka. Vardana berarti kemakmuran sedangkan Raksaka adalah penjaga. Secara utuh, 'Vadra' memiliki arti Penjaga Kemakmuran. Makna dari 'Vadra', yakni menjadikan himpunan sebagai wadah para insan untuk bergerak bersama dalam mengembangkan potensi dan meneruskan kebermanfaatan dalam ranah Teknologi Pascapanen.",
+    "hari_jadi": "22 Mei 2017",
+    "visi": "Menjadikan HMPP \u2018Vadra\u2019 ITB sebagai himpunan yang bersinergi, berkarakter, serta mengoptimalisasi fungsionalitas himpunan sebagai wadah dan fasilitator bagi para anggotanya",
+    "alamat_sekretariat": "Lantai Dasar, Labtek IA, ITB Kampus Jatinangor",
+    "media_sosial": "IG : hmppvadra.itb",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMPP_%27Vadra%27_ITB_1HLXVq1Wsw0OFpejTAdpq-40QAazCPYrO.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=y5VfigJR0tbKQAyR1Cwk%2FglgV%2BY%3D&Expires=1726414462",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMPP_%27Vadra%27_ITB_1jR1n37sor_VTSpQ3fzKOi2rVOX9sT29m.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=52dGJEyNb5IyHt6A1%2FOoh77UeQY%3D&Expires=1726414469"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HMPP_%27Vadra%27_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=ALzyrPwOFEvQug7vW8Tnm8mZDuc%3D&Expires=1726414472",
+    "fakultas": "SITH-R"
+  },
+  {
+    "nama_lembaga": "HMF 'Ars Praeparandi' ITB",
+    "deskripsi": "HMF 'Ars Praeparandi' ITB adalah organisasi profesional berbasis kefarmasian yang terdiri dari mahasiswa sarjana dari Program Studi Sains dan Teknologi Farmasi serta Farmasi Klinik dan Komunitas di Institut Teknologi Bandung. HMF 'AP' ITB didirikan pada 17 Desember 1954 di Bandung dan diberi nama Himpunan 'Ars Praeparandi' oleh Prof. Goei The, di mana 'Ars Praeparandi' berarti seni meracik. Saat ini, jumlah anggota aktif HMF adalah 413 orang.",
+    "hari_jadi": "17 Desember 1954",
+    "visi": "HMF \u2018Ars Praeparandi\u2019 ITB menjadi ruang narasi karya dalam menyuarkan ilmu kefarmasian sebagai langkah awal menciptakan masyarakat sehat",
+    "alamat_sekretariat": "Basement Labtek VII",
+    "media_sosial": "IG : @arspraeparandi\nX : @arspraeparandi\nYoutube : -",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMF_%27Ars_Praeparandi%27_ITB_1t72GNDmuT31kSN8cqDa3B8WfqhFlgul1.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=lwBfHBIMs5X31%2Ft8P6p%2BJFxIxO4%3D&Expires=1726414478",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMF_%27Ars_Praeparandi%27_ITB_1EOWEv_qY-8pXIOrSXMUaxkls6Payg1bQ.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=Vm9FbzwyYwb2zxriW1hoLxYdzss%3D&Expires=1726414485"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HMF_%27Ars_Praeparandi%27_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=wx7hvutRslQ7wIR5q8RUclFt6Tw%3D&Expires=1726414488",
+    "fakultas": "SF"
+  },
+  {
+    "nama_lembaga": "HMM ITB",
+    "deskripsi": "Himpunan Mahasiswa Mesin (HMM) Institut Teknologi Bandung adalah organisasi resmi yang menghimpun mahasiswa jurusan mesin di lingkungan Institut Teknologi Bandung. Sebagai organisasi mahasiswa, kami secara simultan berupaya mengembangkan kemampuan study dengan asas solidarity guna berkontribusi bagi society di sekitar kami.",
+    "hari_jadi": "Desember 1946",
+    "visi": "Sebuah wadah organisasi mahasiswa teknik mesin ITB yang bertujuan untuk memberikan dampak besar melalui teknologi, inovasi, dan kegiatan sosial serta membina kesejahteraan anggotanya",
+    "alamat_sekretariat": "Jl. D ITB, Lebak Siliwangi, Kecamatan Coblong, Kota Bandung, Indonesia.",
+    "media_sosial": "IG: @hmm_itb\nLinkedIn: Himpunan Mahasiswa Mesin ITB\nWebsite: www.hmm-itb.com",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMM_ITB_1yAwHdx5TM3uLLF_bXYzxyz8Iq-MgvDWV.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=oddCd28iSxB9n3Gxrepz9StfOFU%3D&Expires=1726414493",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HMM_ITB_10EqDxKXGQCagOX86jvrqh5Q-vj-Mvont.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=lQo2GKB3%2F4r%2BpybvOFxX36RT8Mg%3D&Expires=1726414499"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HMM_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=XWrYBT03ICH8FLJLckIJiv805OM%3D&Expires=1726414503",
+    "fakultas": "FTMD"
+  },
+  {
+    "nama_lembaga": "HIMAFI ITB",
+    "deskripsi": "Himpunan Mahasiswa Fisika Institut Teknologi Bandung (HIMAFI ITB), sebuah wadah belajar dan berkembang bersama bagi mahasiswa program studi fisika ITB untuk menuju tujuan dan kesuksesan bersama",
+    "hari_jadi": "6 Mei 1967",
+    "visi": "Membawa himpunan mahasiswa fisika ITB ke arah yang progresif serta saling terintegrasi",
+    "alamat_sekretariat": "Jl. B Institut Teknologi Bandung Kampus Ganesha",
+    "media_sosial": "IG : himafi.itb\nX : @HIMAFI_ITB",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HIMAFI_ITB_1GDar4R8ILPaIurjRZ5CSItGXufDzyi-o.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=KQULf7X43YeFL2zYGGmwnzugtg8%3D&Expires=1726414509",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HIMAFI_ITB_1TplHl-wI_KXBjE_ZCmleakRr16UOqZFw.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=2Tnzpf%2FyQZtxslcMK1z0HE%2BD4QI%3D&Expires=1726414516"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HIMAFI_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=6EJv7tQOS45Iuy%2FaJvXTXkMVbRw%3D&Expires=1726414520",
+    "fakultas": "FMIPA"
+  },
+  {
+    "nama_lembaga": "KMIL ITB",
+    "deskripsi": "Keluarga Mahasiswa Infrastruktur Lingkungan Institut Teknologi Bandung (KMIL ITB) merupakan himpunan mahasiswa jurusan Rekayasa Infrastruktur Lingkungan yang bergerak pada bidang sanitasi, air bersih, persampahan, dll. KMIL berdiri tanggal 9 Februari 2015, aktif berkontribusi dalam meningkatkan akses sanitasi dan lingkungan yang aman serta layak melalui program pengabdian masyarakat seperti Go RIL in Action, ENVRZ!, serta National Water and Sanitation Festival (NWSF).",
+    "hari_jadi": "9 Februari 2015",
+    "visi": "KMIL menjadi rumah yang dicintai dan dibanggakan anggotanya, agar dapat memberikan wadah berdinamika yang aman dan nyaman, untuk terus berkolaborasi menciptakan sesuatu yang berdampak bagi lingkungan.",
+    "alamat_sekretariat": "Gedung Kuliah Labtek 1B ITB Jatinangor",
+    "media_sosial": "IG: kmil_itb",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_KMIL_ITB_1AGd0hy-28XzymePtgypM9cwPY73A6JLB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=ZOPifjyNZ1a3KeFs655XQB1LoHo%3D&Expires=1726414525"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_KMIL_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=uSZnABhFkeffdMzOMSjK2AYVOSo%3D&Expires=1726414530",
+    "fakultas": "FTSL"
+  },
+  {
+    "nama_lembaga": "Himastron ITB",
+    "deskripsi": "Himpunan Mahasiswa Astronomi (Himastron) ITB merupakan organisasi yang beranggotakan mahasiswa dari program studi astronomi di ITB. Himastron ITB didirikan berdasarkan kebutuhan mahasiswa astronomi ITB untuk dapat memiliki wadah berorganisasi.",
+    "hari_jadi": "19 Oktober 1965",
+    "visi": "\u201cHimastron yang adaptif dan menjadi fasilitas mewujudkan mimpi yang berlandaskan\nkekeluargaan dan keilmuan Astronomi\u201d",
+    "alamat_sekretariat": "Labtek Mekanika Tanah (Labtek I)",
+    "media_sosial": "ig: himastronitb\nX: @Himastron_ITB\nYoutube: HIMASTRON ITB\nMedium: @himastron_itb",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_Himastron_ITB_1eM2n2pY9IOD2Pn0ZRKXu-B5cqVjxnw50.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=wgaIihG0dsdWc8rXEOWpUTVe3XE%3D&Expires=1726414534",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_Himastron_ITB_1rV-NRDUqNw0t_nq-3Jjgl_Y-A7iD1h_p.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=X46KTZ0LSKz%2BA0Nx9zXrfZYdS5g%3D&Expires=1726414541"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_Himastron_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=irYxhIngF%2Bc1ZIGqXWhsuPFV%2F%2Fk%3D&Expires=1726414545",
+    "fakultas": "FMIPA"
+  },
+  {
+    "nama_lembaga": "HME ITB",
+    "deskripsi": "Himpunan Mahasiswa Elektroteknik ITB merupakan himpunan untuk mahasiswa Teknik Elektro, Teknik Tenaga Listrik, dan Teknik Biomedis. Sejak 5 Desember 1949, HME ITB sudah mencetak banyak prestasi, sejarah, dan pengabdian masyarakat. Pada tahun 2024 ini, HME ITB memiliki banyak program yang menarik dan baru, mulai dari lomba robotik, beasiswa BP, hingga sertifikasi profesi gratis bagi anggotanya.",
+    "hari_jadi": "5 Desember 1949",
+    "visi": "HME ITB sebagai wadah menarik bagi anggotanya untuk berkembang menjadi versi terbaik dari diri mereka",
+    "alamat_sekretariat": "Basement Labtek VIII ITB Ganesha",
+    "media_sosial": "IG: hmeitb\nYoutube: HME ITB\nLinkedin: HME ITB",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HME_ITB_1vXiDI0t2BVZonOiGXZkSLRBcFRJVKGH-.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=%2BITP8MXYD13Ifl94%2FAMCEmZPblc%3D&Expires=1726414549",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HME_ITB_1LNHGT_AbYQ04BaN-vdhmS3tqA9YkHXpD.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=dcZEScZ3Tu8mpcTNC1tYsXUQyz4%3D&Expires=1726414553"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HME_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=%2BRuTnGchGXrmsQc0iC2ol%2F%2FkXGg%3D&Expires=1726414557",
+    "fakultas": "STEI"
+  },
+  {
+    "nama_lembaga": "HIMATIKA ITB",
+    "deskripsi": "Himpunan Mahasiswa Matematika ITB. \nSebuah himpunan berbasis program studi matematika dan aktuaria ITB yang mengedepankan kekeluargaan dengan berpedoman pada nilai pancasila. Himpunan yang diisi oleh kawan yang dapat berpikir secara kritis, logis, serta matematis",
+    "hari_jadi": "23 November 1960",
+    "visi": "HIMATIKA ITB sebagai rumah inklusif yang berkolaborasi untuk menciptakan inovasi dan mengoptimalkan potensi anggotanya dalam pengabdian untuk masyarakat Indonesia",
+    "alamat_sekretariat": "Labtek I ITB Ganesha",
+    "media_sosial": "IG: himatikaitb\nX: himatikaitb\nYoutube: HIMATIKA ITB",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HIMATIKA_ITB_1V_ARfJsqm3PutLeU_1HO2zDuq3U3fVYD.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=ActOkaL0TvoMa4VQSv4r61BX3jE%3D&Expires=1726414561",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HIMATIKA_ITB_1OKpSnb1ctLiRsdyOfaEskF4mRJu4u08F.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=w59QtwNYiwuNKSZZFS%2F21P2PRwU%3D&Expires=1726414565"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HIMATIKA_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=r56mHvqADcy9INUmAiHnszsEJeo%3D&Expires=1726414569",
+    "fakultas": "FMIPA"
+  },
+  {
+    "nama_lembaga": "HIMASDA-ITB",
+    "deskripsi": "Himpunan Mahasiswa Sumber Daya Air ITB atau Himasda-ITB merupakan suatu organisasi non-profit yang menyatukan mahasiswa yang memiliki latar belakang yang sama yaitu Mahasiswa Teknik dan Pengelolaan Sumber Daya Air. Menjadi wadah berhimpun, menjadi tempat berkembang dan bereksplorasi bagi massanya.\n",
+    "hari_jadi": "23 juli 2015 Berdasarkan SK Dekan FTSL",
+    "visi": "Himasda-ITB sebagai penunjang karier, rumah bereksplorasi, dan menciptakan sumber daya yang bertanggung jawab, menebar kebaikan, dan berempati.",
+    "alamat_sekretariat": "Basement Labtek 1B ITB Jatinangor",
+    "media_sosial": "IG: @himasda_itb\nX: @himasdaitb\nYt: @himasdaitb9137",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HIMASDA-ITB_1wpg3TAUbTu9u_gPU0pahKCYMcBfcQAwY.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=swSfPbyOuoAStfPVbhlOy%2F9q31c%3D&Expires=1726414573",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HIMASDA-ITB_12VSEvxJI4zrkjOEDfMD2M7miQKTQOW3n.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=W2kvgVJsXi9iyBzdH5yc2EXopP8%3D&Expires=1726414576",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HIMASDA-ITB_1iDqBZL9dINw0lWA19whb5__nLA_YfhZm.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=kPyYwrGmG8l2GCks9xGad7Z5joo%3D&Expires=1726414581",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HIMASDA-ITB_1iMkv5Lz0HLEMbOxUR-1T7YFANgIPnQRw.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=z69ldTOQgRlmzvU9NG%2BIzOUh2Fc%3D&Expires=1726414584",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_HIMASDA-ITB_1BfxpDT11KWMzqwn1sdoXl-V6HO4dAwd1.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=nt5xHZzAYJogIdPXmqHbi4rUOUM%3D&Expires=1726414589"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_HIMASDA-ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=Jww4lHfAmZOexIEuNcuj4MEZpfQ%3D&Expires=1726414593",
+    "fakultas": "FTSL"
+  },
+  {
+    "nama_lembaga": "Kongres KM ITB",
+    "deskripsi": "Kongres Keluarga Mahasiswa Institut Teknologi Bandung, selanjutnya disingkat Kongres\nKM ITB, adalah lembaga pemegang kekuasaan legislatif di tingkat pusat dalam\nkehidupan kemahasiswaan di Institut Teknologi Bandung yang merupakan perwakilan\ndari mahasiswa yang terorganisasi dalam Himpunan Mahasiswa Jurusan di Institut\nTeknologi Bandung. Kongres KM ITB menjalankan dua fungsi utama di\ndalam KM ITB, yaitu fungsi legislasi dan fungsi pengawasan. Fungsi legislasi adalah\nfungsi membentuk peraturan dan perundang-undangan di dalam KM ITB, sementara\nfungsi pengawasan adalah fungsi mengawasi keberjalanan KM ITB. Oleh karena itu,\nKongres KM ITB memegang peran tertinggi dalam KM ITB. Penentuan dan pengawasan atas pelaksanaan orientasi kehidupan organisasi kemahasiswaan dilakukan oleh seluruh anggota KM ITB melalui Kongres KM ITB sebagai perwujudan dari kedaulatan tertinggi dalam organisasi kemahasiswaan ITB.",
+    "hari_jadi": "19 Januari 1996",
+    "visi": "Visi Kongres KM ITB 2024/2025: \nKongres KM ITB yang merajut relevansi melalui pemberdayaan anggotanya dalam membentuk sistem progresif dan pengawasan objektif sebagai upaya keterdampakkan demi bertautnya massa KM ITB\n",
+    "alamat_sekretariat": "CC Barat ITB Ganesha",
+    "media_sosial": "IG: kongres.kmitb\nX: LIFEATKONGS\nYoutube: KONGRES KM ITB",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_Kongres_KM_ITB_16tzVp-n3zAo6U1X2sY-8klF69Pif5jMw.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=y8lkyqkQkY2yGf1jvGKkGEuouPI%3D&Expires=1726414597",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_Kongres_KM_ITB_11FuJuA084mvX8eWioVq630erNFVMBW28.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=ogug2aJsVhsSyhq9QjC4NQSyOhY%3D&Expires=1726414600"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_Kongres_KM_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=1P22y2%2FpcefkftZxPqx7xVmLfoE%3D&Expires=1726414604",
+    "fakultas": ""
+  }
+]
