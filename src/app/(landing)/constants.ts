@@ -75,23 +75,24 @@ export const xlargeSponsor = [
     src: "/sponsor/grab.png",
     alt: "grab",
     size: "xlarge",
+    hasVideo: true,
   },
 ];
 
 export const largeSponsor = [
-  { src: "/sponsor/wardah.png", alt: "wardah", size: "xlarge" },
+  { src: "/sponsor/wardah.png", alt: "wardah", size: "xlarge", hasVideo: true },
   { src: "/sponsor/emina.png", alt: "emina", size: "large", hasVideo: true },
   { src: "/sponsor/kahf.png", alt: "kahf", size: "large", hasVideo: true },
 ];
 
 export const mediumSponsor = [
-  { src: "/sponsor/bjb.png", alt: "bjb", size: "medium" },
-  { src: "/sponsor/promag.png", alt: "promag", size: "medium" },
+  { src: "/sponsor/bjb.png", alt: "bjb", size: "medium", hasVideo: true },
+  { src: "/sponsor/promag.png", alt: "promag", size: "medium", hasVideo: true },
   { src: "/sponsor/gery.png", alt: "gery", size: "medium", hasVideo: true },
   { src: "/sponsor/himalaya.jpg", alt: "himalaya", size: "medium" },
   { src: "/sponsor/lm.png", alt: "lm", size: "medium", hasVideo: true },
-  { src: "/sponsor/rohde.jpg", alt: "rohde", size: "medium" },
-  { src: "/sponsor/ganesha.png", alt: "ganesha", size: "medium" },
+  { src: "/sponsor/rohde.jpg", alt: "rohde", size: "medium", hasVideo: true },
+  { src: "/sponsor/ganesha.png", alt: "ganesha", size: "medium", hasVideo: true },
 ];
 
 export const smallSponsor = [
