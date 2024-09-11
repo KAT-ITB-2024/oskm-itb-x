@@ -643,17 +643,73 @@
     "fakultas": "FTSL"
   },
   {
-    "nama_lembaga": "Kongres KM ITB",
-    "deskripsi": "Kongres Keluarga Mahasiswa Institut Teknologi Bandung, selanjutnya disingkat Kongres\nKM ITB, adalah lembaga pemegang kekuasaan legislatif di tingkat pusat dalam\nkehidupan kemahasiswaan di Institut Teknologi Bandung yang merupakan perwakilan\ndari mahasiswa yang terorganisasi dalam Himpunan Mahasiswa Jurusan di Institut\nTeknologi Bandung. Kongres KM ITB menjalankan dua fungsi utama di\ndalam KM ITB, yaitu fungsi legislasi dan fungsi pengawasan. Fungsi legislasi adalah\nfungsi membentuk peraturan dan perundang-undangan di dalam KM ITB, sementara\nfungsi pengawasan adalah fungsi mengawasi keberjalanan KM ITB. Oleh karena itu,\nKongres KM ITB memegang peran tertinggi dalam KM ITB. Penentuan dan pengawasan atas pelaksanaan orientasi kehidupan organisasi kemahasiswaan dilakukan oleh seluruh anggota KM ITB melalui Kongres KM ITB sebagai perwujudan dari kedaulatan tertinggi dalam organisasi kemahasiswaan ITB.",
-    "hari_jadi": "19 Januari 1996",
-    "visi": "Visi Kongres KM ITB 2024/2025: \nKongres KM ITB yang merajut relevansi melalui pemberdayaan anggotanya dalam membentuk sistem progresif dan pengawasan objektif sebagai upaya keterdampakkan demi bertautnya massa KM ITB\n",
-    "alamat_sekretariat": "CC Barat ITB Ganesha",
-    "media_sosial": "IG: kongres.kmitb\nX: LIFEATKONGS\nYoutube: KONGRES KM ITB",
+    "nama_lembaga": "HMTL ITB",
+    "deskripsi": "Himpunan Mahasiswa Teknik Lingkungan ITB",
+    "hari_jadi": "10 November 1962",
+    "visi": "HMTL ITB sebagai Arunika yang dapat memberi kehangatan dan pengaruh kepada dirinya dan lingkungan Indonesia",
+    "alamat_sekretariat": "Jalan 6 ITB Ganesha",
+    "media_sosial": "IG: @hmtl_itb\nX: @HMTL_ITB",
     "foto_kegiatan": [
-      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_Kongres_KM_ITB_16tzVp-n3zAo6U1X2sY-8klF69Pif5jMw.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=y8lkyqkQkY2yGf1jvGKkGEuouPI%3D&Expires=1726414597",
-      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/foto_kegiatan_Kongres_KM_ITB_11FuJuA084mvX8eWioVq630erNFVMBW28.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=ogug2aJsVhsSyhq9QjC4NQSyOhY%3D&Expires=1726414600"
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/foto_kegiatan_HMTL_ITB_1pnr6oIBblI-hlyAZ7KdM2JTO27Ai0hOA.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=TS2AVSqoI%2Bnir6tcpX%2BKGeGexIw%3D&Expires=1726578021",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/foto_kegiatan_HMTL_ITB_17pMsaCP2xJ6X9ChEY4ougGrI1n9kHEAP.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=trMWwCM%2BqsWGLREalxqlNpDPR54%3D&Expires=1726578202"
     ],
-    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/hmps/logo_lembaga_Kongres_KM_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=1P22y2%2FpcefkftZxPqx7xVmLfoE%3D&Expires=1726414604",
-    "fakultas": ""
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/logo_lembaga_HMTL_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=9hGgLnMaouNWY%2FnCK7DB0xCJnTc%3D&Expires=1726578209",
+    "fakultas": "FTSL"
+  },
+  {
+    "nama_lembaga": "HMFT-ITB",
+    "deskripsi": "Himpunan Mahasiswa Fisika Teknik ITB (HMFT-ITB) merupakan organisasi kemahasiswaan bagi mahasiswa Program Studi Sarjana Teknik Fisika di Institut Teknologi Bandung.",
+    "hari_jadi": "17 Desember 1953",
+    "visi": "Transformasi HMFT-ITB menjadi Ruang Belajar, Berkarya, dan Berbagi untuk Membangun Aksi sebagai Individu dan Bersama",
+    "alamat_sekretariat": "Lembah TVST ITB Ganesha",
+    "media_sosial": "IG: hmft_itb\nX: @hmft_itb\nLinkedIn: HMFT-ITB",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/foto_kegiatan_HMFT-ITB_1HEIjR0TU9G1IlVTcm9IpsUxE7Jg7WIbI.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=AmMrybDbQFBIOAJqB1lYInVKPmg%3D&Expires=1726578352",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/foto_kegiatan_HMFT-ITB_1wsdWfmrXhgxp9nP7R5MRrGxlYlfy-YdN.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=5VWzKYiCQ5Oj7qfVn8To8M7PL30%3D&Expires=1726578492"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/logo_lembaga_HMFT-ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=0DAbNHeko4fYLMEEFLy3xHj2HTo%3D&Expires=1726578540",
+    "fakultas": "FMIPA"
+  },
+  {
+    "nama_lembaga": "INDDES ITB",
+    "deskripsi": "INDDES ITB adalah Industrial Design Student Society atau Himpunan Mahasiswa Desain Produk ITB.",
+    "hari_jadi": "14 Februari 1978",
+    "visi": "Pengembangan INDDES ITB sebagai wadah bersinergi dan peningkatan kompetensi di ranah desain produk.",
+    "alamat_sekretariat": "Gedung CADL Lt. 7",
+    "media_sosial": "IG: inddesitb\nTiktok: inddesitb",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/foto_kegiatan_INDDES_ITB_1WnfbpgnGXsbB-gG7lb0E-mY8EK4BlJTF.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=lSyuMAA3x1oIDsGIPpccL4meHUM%3D&Expires=1726578588"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/logo_lembaga_INDDES_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=GA%2FYYQLJ%2B45U5q%2FDQxL4b0iVQyU%3D&Expires=1726578593",
+    "fakultas": "FSRD"
+  },
+  {
+    "nama_lembaga": "VASA",
+    "deskripsi": "Visual Art Student Aggregate",
+    "hari_jadi": "5 Mei 2015",
+    "visi": "VASA sebagai paguyuban seni rupa itb yang harmonis, berkualitas, dan berdampak.",
+    "alamat_sekretariat": "Lapangan Merah Gedung Seni Rupa",
+    "media_sosial": "Ig: @kotakmerah, youtube: kotakmerah",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/foto_kegiatan_VASA_18_OuZi1gya3f55gMLZTm-atRTQTeBydp.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=5HPg6BRALRs18yGL3pzkm2A4%2Fqs%3D&Expires=1726579383",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/foto_kegiatan_VASA_1lx4YTfykRz48-mHf-Seb770y4GUCR40z.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=yfu74dWnlSIAtrmgXN0U2qIc5xA%3D&Expires=1726579461"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/logo_lembaga_VASA.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=ZNTG5gb0VrKK7WXg0N1gZ6zEcdM%3D&Expires=1726579467",
+    "fakultas": "FSRD"
+  },  
+  {
+    "nama_lembaga": "Komisariat HMT-ITB",
+    "deskripsi": "Komisariat HMT-ITB adalah bagian dari Himpunan Mahasiswa Tambang Institut Teknologi Bandung yang berkedudukan di Program Studi Teknik Pertambangan ITB selain Kampus Ganesha yaitu pada ITB Kampus Cirebon. Komisariat HMT-ITB memiliki kepengurusan yang berbeda dan mandiri dari HMT-ITB namun masih menjaga ikatannya melalui wisuda, dies natalis, dan program kerja bersama. Anggota Komisariat HMT-ITB adalah mahasiswa yang sedang menjalani program S1 Teknik Pertambangan pada selain Kampus Ganesha.",
+    "hari_jadi": "15 Mei 195",
+    "visi": "-Menciptakan, memelihara ikatan kekeluargaan yang erat di antara para mahasiswa Jurusan Teknik Pertambangan Institut Teknologi Bandung serta melangsungkan ikatan yang kekal setelah tamat belajar.\n-Membina, mengembangkan, serta menyebarkan kecintaan pada ilmu pertambangan kepada anggota khususnya, masyarakat umumnya.\n-Mengusahakan kesejahteraan material maupun spiritual serta membela kepentingan anggotanya",
+    "alamat_sekretariat": "Lantai 3 Gedung B, ITB Kampus Cirebon",
+    "media_sosial": "Ig : @komisariathmtitb x : @khmtitb YouTube : Komisariat HMT-ITB",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/foto_kegiatan_Komisariat_HMT-ITB_1309tkoGMhxnQdsYi3b40UfCMkTpH2XS6.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=yFpEvarT%2F5lCwcgVrEAXKYFCR7w%3D&Expires=1726579581",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/foto_kegiatan_Komisariat_HMT-ITB_1X6lw33-fWNuZ0hHYzJkOSyoa27C5jPF8.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=0Skxwifa42U7U7kWuBknr9ZLDJQ%3D&Expires=1726579608",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/foto_kegiatan_Komisariat_HMT-ITB_1OaqiuJp33gAgZf0yCPXVF__RSMBSYuCC.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=bebSj0UxeD3p8IN52nX23mM%2FQdc%3D&Expires=1726579624"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/logo_lembaga_Komisariat_HMT-ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=Jn1XIrtCJtBqiif1ExcHyfXVtiM%3D&Expires=1726579630",
+    "fakultas": "FTTM"
   }
 ]

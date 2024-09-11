@@ -64,5 +64,18 @@
       "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/ukm_agama/foto_kegiatan_KMH_ITB_1Yhu6j2yyzem3KXCgjhX1aw4DQQR3ilAm.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=1xnYKPCSELNurZMTF1AWCKPMQ%2Bo%3D&Expires=1726412734"
     ],
     "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/ukm_agama/logo_lembaga_KMH_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=%2FSXIkGzPYBXrZdG%2BBSuH7xw0jnE%3D&Expires=1726412738"
+  },
+  {
+    "nama_lembaga": "KMB",
+    "deskripsi": "Keluarga Mahasiswa Buddhis (KMB) Dhammañano ITB adalah Unit Kegiatan Mahasiswa rumpun agama sebagai wadah kegiatan bagi para mahasiswa yang beragama Buddhis di ITB",
+    "hari_jadi": "4 Oktober 1991",
+    "visi": "Menjadikan KMB Dhammañano ITB sebagai keluarga yang inklusif, apresiatif, dan bertanggung jawab untuk melestarikan ajaran buddhisme agar memberikan dampak potitif bagi sekitar.",
+    "alamat_sekretariat": "Sunken Court E-09, ITB, Jl. Ganesha 10, Bandung",
+    "media_sosial": "IG : kmb_itb",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/foto_kegiatan_KMB_1QXS9jGogOpq2YdzWfDvFJdu6qCnDmq5l.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=sVXvp6n%2FhCDLzvibj1ZtU7leUWA%3D&Expires=1726581281",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/foto_kegiatan_KMB_1-2a6UIi5jydQ_XvLryERQeF_nkIT_Wbd.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=zw7Pv3Djp%2FIzqV4%2Byvd%2BmjuShz8%3D&Expires=1726581342"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/logo_lembaga_KMB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=WBlM%2BZZxfAtmrYWYWTxBk9d6zgo%3D&Expires=1726581395"
   }
 ]

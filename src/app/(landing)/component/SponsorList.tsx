@@ -12,6 +12,12 @@ const videoMap = {
   gojek: "https://drive.google.com/file/d/10n-MbKGaFrPpuyZTI7rOoppc9Q5VRE-U/preview",
   gery: "https://drive.google.com/file/d/1vJBZCMRNc5caStBJ4aCSi_Pp7fB-yrMj/preview",
   lm: "https://drive.google.com/file/d/1dnjPELx8a1nXlPOro5gJfF9J7QaVCHE3/preview",
+  promag: "https://drive.google.com/file/d/1O0A8AJrvxKWU5fUfnjIaeMNBJR9vIj80/preview",
+  bjb: "https://drive.google.com/file/d/1TjqFYmjC8aVHRbhto3ogmC-yExvpDAO1/preview",
+  ganesha: "https://drive.google.com/file/d/1_rDMEthQNC1uQF88Q7KyczedrIY7GNlz/preview",
+  wardah: "https://drive.google.com/file/d/1L_9reEujiFaB1xy5RPNz9VSKDu46p70s/preview",
+  rohde: "https://drive.google.com/file/d/1L2T6LxFYY2d5MCwco4vzsS36JgZq0Yfk/preview",
+  grab: "https://drive.google.com/file/d/1Wali8Rb1bxwovXdTElevCWjBB_4hT3h7/preview",
   hidden: "",
 };
 
