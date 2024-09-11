@@ -190,5 +190,44 @@
       "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/ukm_pendidikan/foto_kegiatan_Rakata_1_l0J_yw3uGkAC5KUxOAUCPfr0SusotW6.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=K25GzOeVsxOcHN1B8o9rEmbbVyM%3D&Expires=1726413803"
     ],
     "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/ukm_pendidikan/logo_lembaga_Rakata.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=Xg%2B%2BkpUtp%2BuesWU%2BYGzbuos0bO4%3D&Expires=1726413807"
+  },
+  {
+    "nama_lembaga": "KSR PMI ITB",
+    "deskripsi": "Korps Sukarela (KSR) PMI Unit ITB berdiri pada 29 Februari 2000 sebagai suatu wadah kepalangmerahan yang keanggotaannya terbuka terhadap mahasiswa ITB yang berminat terhadap kegiatan kemanusiaan. KSR PMI Unit ITB memiliki susunan kepengurusan organisasi yang terdiri dari BPH (Badan Pengurus Harian) serta kepanitian acara yang berada di bawah koordinasi BPH.",
+    "hari_jadi": "29 Februari 2000",
+    "visi": "KSR PMI Unit ITB sebagai rumah berkolaborasi\n dan bersinergi dalam pengembangan diri terkait\n kepalangmerahan dan kemanusiaan yang \nmenjunjung tinggi rasa saling memiliki antar\n anggotanya",
+    "alamat_sekretariat": "Saraga",
+    "media_sosial": "IG: ksrpmi_itb",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/foto_kegiatan_KSR_PMI_ITB_1hbT1wuPLzwNjNbtAXzmCUWdmjUDOq7EZ.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=XS8Hi%2FXZ%2Fb9fKXBioUIa05UJvlc%3D&Expires=1726580065",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/foto_kegiatan_KSR_PMI_ITB_1yKDdiG3KEAhdEciuUCQFAjEMCYRZWY-V.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=j5Q3fQdiar9LLwAaliiBe0g5m44%3D&Expires=1726580077"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/logo_lembaga_KSR_PMI_ITB.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=n5gyxDL%2BbzkE12RmqcblOqK3lss%3D&Expires=1726580135"
+  },
+  {
+    "nama_lembaga": "Aksantara",
+    "deskripsi": "Aksantara ITB adalah Unit Kegiatan Mahasiswa yang fokus pada pengembangan teknologi wahana nirawak atau biasa disebut Drone. Setiap tahunnya, Aksantara berpartisipasi dalam lomba drone nasional maupun internasional, serta aktif melakukan riset dalam bidang aerodinamika, kendali robot, propulsi, pemetaan, dan lain-lain.",
+    "hari_jadi": "13 Mei 2013",
+    "visi": "Aksantara sebagai wadah mahasiswa untuk meningkatkan riset dan mengembangkan teknologi UAV dalam rangka memacu pengembangan kemandirian teknologi Indonesia.",
+    "alamat_sekretariat": "PMO ITB",
+    "media_sosial": "IG: aksantaraitb\nYoutube: Aksantara ITB",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/foto_kegiatan_Aksantara_1oaMvcK2eG1MlZcgh4GIArR9EwDgvYaid.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=5wQYyZWnGOodOpcrYNBam4Gdqww%3D&Expires=1726580164",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/foto_kegiatan_Aksantara_1mBsC0TldtYRcgq_nd3gTXhlCXT6ZbtFw.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=GqE4W5XZLGBMywHjzH0lymARN%2BE%3D&Expires=1726580276"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/logo_lembaga_Aksantara.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=1r8xRqr3lkqNZDstVmN8VTxa37Y%3D&Expires=1726580282"
+  },
+  {
+    "nama_lembaga": "Cerberus",
+    "deskripsi": "Cerberus Racing Team is a dedicated group of students from ITB that was united by a focus to innovate and grow in the automotive field. As a team, our objective is to develop our member's technical proficiency and collaborative teamwork that are crucial for achieving success in one's professional career.",
+    "hari_jadi": "April 2022",
+    "visi": "ITB students may contribute in innovating technology and worldwide automotive industries.",
+    "alamat_sekretariat": "-",
+    "media_sosial": "IG: @cerberusracingitb\nTikTok: @cerberusracingitb\nYouTube: Cerberus Racing Team ITB",
+    "foto_kegiatan": [
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/foto_kegiatan_Cerberus_1lwaNyt8BdwMyYwIKLdGW6xAAQJceHWh7.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=aETWQ5mg7vDymdos1XG5sfZ1pd8%3D&Expires=1726580490",
+      "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/foto_kegiatan_Cerberus_1PAxASVrZIm3eoHeE1g_fV7ogPy0LN9Vj.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=896ywVl9t5%2BqxcbyRABs9dBl4vo%3D&Expires=1726580561"
+    ],
+    "logo_lembaga": "https://sgp1.digitaloceanspaces.com/oskm-production-bucket/lembaga/lembaga_tambahan/logo_lembaga_Cerberus.jpg?AWSAccessKeyId=DO007ZUT2PXB3Q2E2W4V&Signature=GJenGeERhW8yKBSQtGoodZc74nc%3D&Expires=1726580575"
   }
 ]
