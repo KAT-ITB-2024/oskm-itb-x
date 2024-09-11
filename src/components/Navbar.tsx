@@ -44,7 +44,7 @@ function Navbar() {
               <ul className="flex flex-col items-center gap-8 font-rem text-[#0010A4]">
                 <li>
                   <Link
-                    href="about-us"
+                    href="/about-us"
                     className={
                       pathname === "/about-us"
                         ? "font-bold underline decoration-2 underline-offset-4"
@@ -56,7 +56,7 @@ function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="merchandise"
+                    href="/merchandise"
                     className={
                       pathname === "/merchandise"
                         ? "font-bold underline decoration-2 underline-offset-4"
@@ -68,7 +68,7 @@ function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="interactive-map"
+                    href="/interactive-map"
                     className={
                       pathname === "/interactive-map"
                         ? "font-bold underline decoration-2 underline-offset-4"
@@ -80,7 +80,7 @@ function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="article"
+                    href="/article"
                     className={
                       pathname === "/article"
                         ? "font-bold underline decoration-2 underline-offset-4"
@@ -92,7 +92,7 @@ function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="itb-x"
+                    href="/itb-x"
                     className={
                       pathname === "/itb-x"
                         ? "font-bold underline decoration-2 underline-offset-4"
@@ -117,7 +117,7 @@ function Navbar() {
           <ul className="hidden items-center gap-8 font-rem text-[#0010A4] lg:flex xl:gap-12">
             <li>
               <Link
-                href="about-us"
+                href="/about-us"
                 className={
                   pathname === "/about-us"
                     ? "font-bold underline decoration-2 underline-offset-4"
@@ -129,7 +129,7 @@ function Navbar() {
             </li>
             <li>
               <Link
-                href="merchandise"
+                href="/merchandise"
                 className={
                   pathname === "/merchandise"
                     ? "font-bold underline decoration-2 underline-offset-4"
@@ -141,7 +141,7 @@ function Navbar() {
             </li>
             <li>
               <Link
-                href="interactive-map"
+                href="/interactive-map"
                 className={
                   pathname === "/interactive-map"
                     ? "font-bold underline decoration-2 underline-offset-4"
@@ -153,7 +153,7 @@ function Navbar() {
             </li>
             <li>
               <Link
-                href="article"
+                href="/article"
                 className={
                   pathname === "/article"
                     ? "font-bold underline decoration-2 underline-offset-4"
@@ -165,7 +165,7 @@ function Navbar() {
             </li>
             <li>
               <Link
-                href="itb-x"
+                href="/itb-x"
                 className={
                   pathname === "/itb-x"
                     ? "font-bold underline decoration-2 underline-offset-4"
