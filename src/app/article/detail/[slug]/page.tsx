@@ -72,8 +72,8 @@ const Page: React.FC = () => {
               />
             </div>
                     
-            <div className="mb-10 w-full max-w-[70rem] px-[5%] bg-white py-10 rounded-xl">
-              <div className="prose text-base md:text-lg">
+            <div className="mb-10 w-full max-w-[60rem] px-[5%] bg-white py-10 rounded-xl ">
+              <div className="prose text-base md:text-lg w-full text-justify">
               {documentToReactComponents(article.content?.json)}
               </div>
             </div>
