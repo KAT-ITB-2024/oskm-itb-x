@@ -94,7 +94,7 @@ export default function Page() {
 
       <div className="z-10">
         {currentCards?.length > 0 ? (
-          <div className="grid w-full gap-8 md:grid-cols-4">
+          <div className="grid w-full gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {currentCards.map((card) => (
               <Card
                 key={card.id}
